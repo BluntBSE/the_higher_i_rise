@@ -48,6 +48,9 @@ static func getWordResource(id: String):
 	var word = IWord.new()
 	
 	var resource = load(file)
+	if !resource:
+		print("No resource found!")
+		return null
 	word.id = resource.id
 	word.text = resource.text
 	word.bbcode = resource.bbcode
@@ -59,7 +62,32 @@ static func getWordResource(id: String):
 
 
 static func applyStyling(word: IWord):
-	pass
+	var principles = (word.principles)
+	#Get all principle integers
+	#Find out which is the greatest.
+	#Apply the correct color.
+	var text = ""
+	var principle_string = str(principles)
+	text += "[hint="+principle_string+"]"
+	text += "[u]"
+
+	#eventually, anyway.
+	#Plus, possible unprincipled words?
+	#For now:
+	if principles.has("winter"):
+		text += "[color=" + Principles.winter.color + "]"
+		text += word.text
+		text += "[/color]"
+	
+	if principles.has("grail"):
+		text += "[color=" + Principles.grail.color + "]"
+		text += word.text
+		text += "[/color]"
+		
+	text += "[/u]"
+	text += "[/hint]"
+		
+	return text
 
 static func getWordFromSlot(interaction: Interaction, slot: String):
 	#This function will take a slot, like "slot_1", and return the word that is stored in the _slots dictionary of the interaction.
@@ -81,9 +109,16 @@ static func parseText(input_string: String, interaction: Interaction):
 	
 	for slot in interaction.slots:
 		var word = getWordResource(interaction.slots[slot])
+		
+		if !word:
+			print("No word found!")
+			return "WORD NOT FOUND"
+		print("WORD ENTERS AS:")
+		print(word)
+		word = applyStyling(word)	
 		#Here is where we would add anything to modify it to be a sentence...
 		
-		text = text.replace("<" + slot + "/>", word.text)
+		text = text.replace("<" + slot + "/>", word)
 
 	return text
 # Called when the node enters the scene tree for the first time.

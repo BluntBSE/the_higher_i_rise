@@ -82,6 +82,7 @@ func _init(reference, args): #usually self, {args}. Here, an interaction
 	_reference = reference
 	_args = args
 	state_machine = _reference.state_machine
+	print (Principles.lantern)
 	
 
 # Called when the node enters the scene tree for the first time.

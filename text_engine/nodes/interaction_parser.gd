@@ -1,4 +1,4 @@
-extends Stateful2D
+extends StatefulControl
 class_name InteractionParser
 
 

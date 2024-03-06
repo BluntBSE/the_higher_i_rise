@@ -1,5 +1,5 @@
-extends Control
-class_name StatefulControl
+extends Node2D
+class_name Stateful2D
 
 
 class StateMachine:

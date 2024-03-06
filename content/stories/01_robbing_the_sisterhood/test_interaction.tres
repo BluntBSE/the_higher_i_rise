@@ -8,11 +8,12 @@ base_bg_color = Color(0.301961, 0.298039, 0.803922, 1)
 display_title = ""
 text = "You are in a dark, damp alleyway sandwiched between a failed deli and St. Jude's School for Blind Girls. Here the smell of votive incense mingles with weeks-old sauerkraut and, recently, the smell of blood.
 
-You are dead here, and your killer is feeling awfully smug.
+You are <slot_1/> here, and your killer is feeling awfully <slot_2/>.
 
 If only there was something you could do about it."
 slots = {
-"slot_1": "noun_hello"
+"slot_1": "adj_dead",
+"slot_2": "adj_smug"
 }
 options = [{
 "id": "test_interaction_opt_1",
