@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://8joc6cl3vm4v"]
+
+[ext_resource type="Script" path="res://text_engine/resources/interaction.gd" id="1_7i2c8"]
+
+[resource]
+script = ExtResource("1_7i2c8")
+base_bg_color = Color(0.301961, 0.298039, 0.803922, 1)
+display_title = ""
+text = "You are in a dark, damp alleyway sandwiched between a failed deli and St. Jude's School for Blind Girls. Here the smell of votive incense mingles with weeks-old sauerkraut and, recently, the smell of blood.
+
+You are dead here, and your killer is feeling awfully smug.
+
+If only there was something you could do about it."
+slots = {
+"slot_1": "noun_hello"
+}
+options = [{
+"id": "test_interaction_opt_1",
+"links_to": "test_interaction_2",
+"text": "go to option 2"
+}]

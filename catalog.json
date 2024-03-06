@@ -1,0 +1,11 @@
+{"words":
+	[
+		{
+			"id": "noun.hello",
+			"word": "Hello",
+			"part_speech": "interjection",
+			"aspects": [],
+			"principles": {"lantern": 1}
+		}
+	]
+}

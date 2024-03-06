@@ -1,0 +1,35 @@
+{
+	"demo.interaction":
+		{
+		
+		"base_bg_color": "#FFFFFF",
+		"text": "<slot_1/> world. This is an example of text to be parsed. Here's an example of it continuing on with a linebreak.",
+		"slots": {
+			"slot_1": "noun.hello"
+		},
+		"options": [
+			{
+				"id": "demo.interaction.opt1",
+				"links_to": "demo.interaction.2",
+				"effect": "add_winter_function",
+				"effect_value": 1,
+				"conditions_slot": {
+					"slot_1": [
+						"noun.hello"
+					]
+				}
+			},
+			{
+				"id": "demo.interaction.opt2",
+				"links_to": "demo.interaction.3",
+				"effect": "add_winter_function",
+				"effect_value": 1,
+				"conditions_aspect": {
+					"lantern":1
+				}
+			}
+		]
+		
+		
+	}
+}

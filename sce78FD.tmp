@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnsnni08j3gds"]
+
+[ext_resource type="Script" path="res://text_engine/nodes/interaction_parser.gd" id="1_8fet0"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 325)
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Node2" type="Node" parent="."]
+
+[node name="interaction_parser" type="Node2D" parent="."]
+script = ExtResource("1_8fet0")
+
+[node name="interaction_bg" type="ColorRect" parent="interaction_parser"]
+offset_right = 1153.0
+offset_bottom = 649.0
+color = Color(0.145098, 0.145098, 0.145098, 1)
+
+[node name="text_content" type="RichTextLabel" parent="interaction_parser"]
+offset_left = 57.0
+offset_top = 75.0
+offset_right = 445.0
+offset_bottom = 230.0
+bbcode_enabled = true
+text = "I am a whole bunch of text"
+
+[node name="options_content" type="RichTextLabel" parent="interaction_parser"]
+offset_left = 33.0
+offset_top = 300.0
+offset_right = 421.0
+offset_bottom = 455.0
+bbcode_enabled = true
+text = "I am a whole bunch of options"
+
+[connection signal="meta_hover_ended" from="interaction_parser/text_content" to="interaction_parser" method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="interaction_parser/text_content" to="interaction_parser" method="_on_text_content_meta_hover_started"]
+[connection signal="meta_clicked" from="interaction_parser/options_content" to="interaction_parser" method="_on_options_content_meta_clicked"]
+[connection signal="meta_hover_ended" from="interaction_parser/options_content" to="interaction_parser" method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="interaction_parser/options_content" to="interaction_parser" method="_on_text_content_meta_hover_started"]

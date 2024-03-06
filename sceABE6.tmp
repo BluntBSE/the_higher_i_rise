@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnsnni08j3gds"]
+
+[ext_resource type="Script" path="res://text_engine/interaction_parser.gd" id="1_8fet0"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 325)
+
+[node name="replace_me_with_sprite_2d" type="ColorRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 649.0
+color = Color(0.145098, 0.145098, 0.145098, 1)
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Node2" type="Node" parent="."]
+
+[node name="interaction_parser" type="Node2D" parent="."]
+script = ExtResource("1_8fet0")
+
+[node name="text_content" type="RichTextLabel" parent="interaction_parser"]
+offset_left = 57.0
+offset_top = 75.0
+offset_right = 445.0
+offset_bottom = 230.0
+text = "I am a whole bunch of text"
