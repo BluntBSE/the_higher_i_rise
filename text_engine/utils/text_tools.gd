@@ -46,7 +46,6 @@ static func getWordResource(id: String):
 	var catalog_dir = "res://content/catalogs/IWords/"
 	var file = getResourceFromDirectory(catalog_dir, id)
 	var word = IWord.new()
-	
 	var resource = load(file)
 	if !resource:
 		print("No resource found!")
@@ -60,30 +59,34 @@ static func getWordResource(id: String):
 	return word
 	print("Invalid word id!")
 
+static func determineGreatestPrinciple(principles:Dictionary):
+	var greatest_val = 0
+	var greatest_principle = "none"
+	for principle in principles.keys():
+		if principles[principle] > greatest_val:
+			greatest_val = principles[principle]
+			greatest_principle = str(principle)
+	return greatest_principle
+		
 
-static func applyStyling(word: IWord):
+static func applyStyling(word: IWord): #"Styling" is a misnomer since this also determines the URL link. Better name?
 	var principles = (word.principles)
 	#Get all principle integers
 	#Find out which is the greatest.
 	#Apply the correct color.
 	var text = ""
 	var principle_string = str(principles)
+	var greatest_principle = determineGreatestPrinciple(principles)
 	text += "[hint="+principle_string+"]"
 	text += "[u]"
-
-	#eventually, anyway.
-	#Plus, possible unprincipled words?
-	#For now:
-	if principles.has("winter"):
-		text += "[color=" + Principles.winter.color + "]"
-		text += word.text
-		text += "[/color]"
+	text += "[url=" + word.id + "]"
 	
-	if principles.has("grail"):
-		text += "[color=" + Principles.grail.color + "]"
+	if greatest_principle != "none":
+		text += "[color=" + Principles[greatest_principle].color + "]"
 		text += word.text
 		text += "[/color]"
 		
+	text += "[/url]"
 	text += "[/u]"
 	text += "[/hint]"
 		
