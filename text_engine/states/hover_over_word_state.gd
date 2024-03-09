@@ -1,5 +1,5 @@
 extends EmptyState
-class_name SwapWordState
+class_name HoverWordContentState
 '''
 class_name EmptyState
 
@@ -17,6 +17,24 @@ class_name EmptyState
 var _args 
 var _reference #usually 'self'
 var state_machine #state machine attached to the reference passed in
+
+func applyHover(word: IWord, reference): #'Reference' is a reference to interaction_parser, or a similar component that tracks whether it's got hover on it
+
+	var text = ""
+	#Check if this word is currently hovered. If it is...
+ 
+	
+	#Check if this word is currently selected. If it is...
+	
+	
+
+	text += "[url=" + word.id + "]"
+	
+		
+
+		
+	return text
+
 
 func getSlotKey(word):
 	var slots = _reference.active_interaction.slots
@@ -38,29 +56,19 @@ func parseInteraction(interaction: Interaction):
 	
 
 func stateEnter(args):
-	print("Entering swap word state")
+	print("Entering select word content state")
 	_args = args
 	print(_args)
 
 func stateUpdate(dt):
 	#Save the word id in _args to a variable in the _self reference, "selected_word"
-	var first_word = _reference.selected_word
-	var first_slot = _reference.selected_slot
-	var second_word = _args
-	var second_slot = getSlotKey(_args)
-	print(_args + " FOUND AT " + second_slot)
-	var interaction = _reference.active_interaction #Clone??? Reference in memory might not be enough. Consider .New()
-	interaction.slots[first_slot] = second_word
-	interaction.slots[second_slot] = first_word
-	_reference.active_interaction = interaction
-	
-	
-	_reference.selected_word = null	
-	_reference.selected_slot = null
-	
+	print("Hello from selection update")
+	print(_args)
+	_reference.selected_word = _args
+	_reference.selected_slot = getSlotKey(_args)
 	print("Found " + _args + "in slot: " + getSlotKey(_args) )
 	#Do any styling here
-	_reference.state_machine.Change("load_interaction", interaction)
+	_reference.state_machine.Change("finished", null)
 	#Determine what slot in the current interaction contains the word id
 	#save that to a selected_slot in the _self reference?
 	return null

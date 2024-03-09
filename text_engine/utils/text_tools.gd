@@ -77,6 +77,12 @@ static func applyStyling(word: IWord): #"Styling" is a misnomer since this also 
 	var text = ""
 	var principle_string = str(principles)
 	var greatest_principle = determineGreatestPrinciple(principles)
+	#Check if this word is currently hovered. If it is...
+ 
+	
+	#Check if this word is currently selected. If it is...
+	
+	
 	text += "[hint="+principle_string+"]"
 	text += "[u]"
 	text += "[url=" + word.id + "]"

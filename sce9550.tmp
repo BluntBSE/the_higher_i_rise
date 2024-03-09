@@ -1,0 +1,86 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnsnni08j3gds"]
+
+[ext_resource type="Script" path="res://text_engine/nodes/interaction_parser.gd" id="1_8fet0"]
+[ext_resource type="Theme" uid="uid://b5cu5776o44se" path="res://text_engine/resources/theme.tres" id="1_c3704"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Node" type="Node" parent="."]
+
+[node name="interaction_parser" type="Control" parent="."]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_c3704")
+script = ExtResource("1_8fet0")
+
+[node name="interaction_bg" type="ColorRect" parent="interaction_parser"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.403922, 0.337255, 0.713726, 1)
+
+[node name="interaction_fg" type="ColorRect" parent="interaction_parser"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = -450.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.705882, 0.486275, 0.521569, 1)
+
+[node name="text_title" type="RichTextLabel" parent="interaction_parser"]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 123.0
+offset_right = 996.0
+offset_bottom = 235.0
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[u]An Obscure Alley[/u]"
+
+[node name="text_content" type="RichTextLabel" parent="interaction_parser"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 305.0
+offset_right = 1023.0
+offset_bottom = 838.0
+bbcode_enabled = true
+text = "I am a whole bunch of text"
+
+[node name="options_content" type="RichTextLabel" parent="interaction_parser"]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 813.0
+offset_right = 546.0
+offset_bottom = 968.0
+bbcode_enabled = true
+text = "I am a whole bunch of options"
+
+[connection signal="meta_hover_ended" from="interaction_parser/text_title" to="interaction_parser" method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="interaction_parser/text_title" to="interaction_parser" method="_on_text_content_meta_hover_started"]
+[connection signal="meta_clicked" from="interaction_parser/text_content" to="interaction_parser" method="_on_text_content_meta_clicked"]
+[connection signal="meta_hover_ended" from="interaction_parser/text_content" to="interaction_parser" method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="interaction_parser/text_content" to="interaction_parser" method="_on_text_content_meta_hover_started"]
+[connection signal="meta_clicked" from="interaction_parser/options_content" to="interaction_parser" method="_on_options_content_meta_clicked"]
+[connection signal="meta_hover_ended" from="interaction_parser/options_content" to="interaction_parser" method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="interaction_parser/options_content" to="interaction_parser" method="_on_text_content_meta_hover_started"]

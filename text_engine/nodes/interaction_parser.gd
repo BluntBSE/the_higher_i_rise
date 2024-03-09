@@ -43,6 +43,8 @@ var default_interaction = TextTools.getInteractionResource(default_interaction_i
 
 var selected_word = null
 var selected_slot = null
+var hovered_word = null
+var hovered_slot = null
 
 
 
@@ -79,11 +81,30 @@ func _process(delta):
 	state_machine.stateUpdate(delta)
 	pass
 
+func getSlotKey(_word):
+	var slots = active_interaction.slots
+	for slot in slots:
+		if slots[slot] == _word:
+			return str(slot)
+		else:
+			print("No slot found for: " + str(_word))
+
+func highlight_word_from_content(word):
+	#Seemed like a bit much to make its own state, so...	
+	var content_node = get_node('interaction_parser/text_content')
+	var text = content_node.text
+	
+
+
+
+	pass
+
 
 func _on_text_content_meta_hover_started(meta): #Aka when the user hovers over a URL
 	#Display popup at mouse location
 	print("Entered hover")
 	print(meta)
+	highlight_word_from_content(meta)
 	pass # Replace with function body.
 
 
