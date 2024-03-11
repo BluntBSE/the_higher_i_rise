@@ -1,4 +1,7 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://b5cu5776o44se"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://b5cu5776o44se"]
+
+[ext_resource type="FontFile" uid="uid://co5vsscgrr63x" path="res://text_engine/resources/fonts/CrimsonText-Bold.ttf" id="1_hxedq"]
+[ext_resource type="FontFile" uid="uid://ywagpyk071of" path="res://text_engine/resources/fonts/CrimsonText-Italic.ttf" id="2_ljisv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xh3hh"]
 content_margin_left = 4.0
@@ -49,5 +52,7 @@ RichTextLabel/constants/table_h_separation = 3
 RichTextLabel/constants/table_v_separation = 3
 RichTextLabel/constants/text_highlight_h_padding = 3
 RichTextLabel/constants/text_highlight_v_padding = 3
+RichTextLabel/fonts/bold_font = ExtResource("1_hxedq")
+RichTextLabel/fonts/italics_font = ExtResource("2_ljisv")
 RichTextLabel/styles/focus = SubResource("StyleBoxFlat_xh3hh")
 RichTextLabel/styles/normal = SubResource("StyleBoxEmpty_sa2pa")

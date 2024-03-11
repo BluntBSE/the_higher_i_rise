@@ -18,39 +18,34 @@ var _args
 var _reference #usually 'self'
 var state_machine #state machine attached to the reference passed in
 
-func getSlotKey(word):
-	var slots = _reference.active_interaction.slots
-	for slot in slots:
-		if slots[slot] == word:
-			return str(slot)
-		else:
-			print("No slot found for: " + str(word))
-	
-
 
 func parseInteraction(interaction: Interaction):
 	
 	var output_node = _reference.get_node('text_content')
-	print(output_node)
 	var interaction_text = interaction.text
 	output_node.Text = interaction_text
 	
 	
 
 func stateEnter(args):
-	print("Entering select word content state")
 	_args = args
-	print(_args)
 
 func stateUpdate(dt):
 	#Save the word id in _args to a variable in the _self reference, "selected_word"
-	print("Hello from selection update")
-	print(_args)
 	_reference.selected_word = _args
-	_reference.selected_slot = getSlotKey(_args)
-	print("Found " + _args + "in slot: " + getSlotKey(_args) )
+	var slot_key = TextTools.getSlotKey(_args, _reference)
+	_reference.selected_slot = slot_key
 	#Do any styling here
-	_reference.state_machine.Change("finished", null)
+	var interaction = _reference.active_interaction
+	var interaction_text = interaction.text
+	var slot_str = "[b]<" + slot_key + "/>[/b]" #Match the style tags from the highlight function
+	var selected_str = TextEffects.selected.open + "<" + slot_key + "/>" + TextEffects.selected.close
+	var replaced_text = interaction_text.replace(slot_str, selected_str)
+	interaction.text = replaced_text
+	
+	_reference.hovered_slot = null
+	_reference.state_machine.Change("load_interaction", interaction)
+	
 	#Determine what slot in the current interaction contains the word id
 	#save that to a selected_slot in the _self reference?
 	return null

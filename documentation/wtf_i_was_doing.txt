@@ -1,0 +1,1 @@
+NEXT UP: Fix the tag removal not working in swap_word_state.gd

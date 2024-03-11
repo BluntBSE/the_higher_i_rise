@@ -43,7 +43,6 @@ func parseOptions(interaction: Interaction):
 			output_text += option.text
 			output_text += '[/url]'
 		
-		print(output_text)
 
 	output_node.text = output_text
 
@@ -72,7 +71,6 @@ func stateEnter(args: Interaction):
 func stateUpdate(dt):
 	parseInteraction(_args)
 	parseOptions(_args)
-	print("Loaded interaction")
 	_reference.state_machine.Change("finished", null) #No arguments required for the  "finished" state, I think
 
 	pass
@@ -82,7 +80,6 @@ func _init(reference, args): #usually self, {args}. Here, an interaction
 	_reference = reference
 	_args = args
 	state_machine = _reference.state_machine
-	print (Principles.lantern)
 	
 
 # Called when the node enters the scene tree for the first time.

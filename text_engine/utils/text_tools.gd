@@ -27,6 +27,13 @@ static func getResourceFromDirectory(directory: String, file_name: String) -> St
 
 	return file_path
 
+
+static func getSlotKey(word, reference): #reference usually points to the interaction parser node
+	var slots = reference.active_interaction.slots
+	for slot in slots:
+		if slots[slot] == word:
+			return str(slot)
+
 	
 static func getInteractionResource(id: String):
 	var story_dir = "res://content/stories"
@@ -88,9 +95,15 @@ static func applyStyling(word: IWord): #"Styling" is a misnomer since this also 
 	text += "[url=" + word.id + "]"
 	
 	if greatest_principle != "none":
+		text += "[font_size=32]"
+		text += "[outline_size=4]"
+		text += "[outline_color=" + "black" + "]"
 		text += "[color=" + Principles[greatest_principle].color + "]"
 		text += word.text
 		text += "[/color]"
+		text += "[/outline_color]"
+		text += "[/outline_size]"
+		text += "[/font_size]"
 		
 	text += "[/url]"
 	text += "[/u]"
@@ -122,12 +135,11 @@ static func parseText(input_string: String, interaction: Interaction):
 		if !word:
 			print("No word found!")
 			return "WORD NOT FOUND"
-		print("WORD ENTERS AS:")
-		print(word)
 		word = applyStyling(word)	
 		#Here is where we would add anything to modify it to be a sentence...
 		
 		text = text.replace("<" + slot + "/>", word)
+
 
 	return text
 # Called when the node enters the scene tree for the first time.

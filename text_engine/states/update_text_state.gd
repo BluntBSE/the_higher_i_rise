@@ -22,14 +22,12 @@ var state_machine #state machine attached to the reference passed in
 func parseInteraction(interaction: Interaction):
 	
 	var output_node = _reference.get_node('text_content')
-	print(output_node)
 	var interaction_text = interaction.text
 	output_node.Text = interaction_text
 	
 	
 
 func stateEnter(args):
-	print("Entering update text state state")
 	_args = args
 
 func stateUpdate(dt):

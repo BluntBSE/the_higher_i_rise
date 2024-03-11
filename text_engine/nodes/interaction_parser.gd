@@ -68,10 +68,9 @@ func _init():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
-	print("Interaction parser fired _ready")
+
 	var moo =  {}.keys()
-	active_interaction = load("res://dialogue/chapter_test/test_interaction.tres") #Replace this 
+	active_interaction = load("res://content/stories/01_robbing_the_sisterhood/test_interaction.tres") #Replace this 
 	state_machine.Change("load_interaction", default_interaction)
 	pass # Replace with function body.
 
@@ -86,13 +85,47 @@ func getSlotKey(_word):
 	for slot in slots:
 		if slots[slot] == _word:
 			return str(slot)
-		else:
-			print("No slot found for: " + str(_word))
 
+
+#Should hovering be its own state? Seems a touch much
 func highlight_word_from_content(word):
-	#Seemed like a bit much to make its own state, so...	
-	var content_node = get_node('interaction_parser/text_content')
+
+	if hovered_slot != null	:
+
+		return
+	
+	var content_node = get_node('text_content')
 	var text = content_node.text
+	#Compare the echoed meta to the stored slots.
+	#Wrap <slot_1> or whatever in [b] [/b] tags.
+	var interaction_text = active_interaction.text
+
+	var slot_key = getSlotKey(word)
+	if slot_key == selected_slot:
+		return
+	var slot_str = "<" + slot_key + "/>" #We're replacing the actual string  '<slot_1/>'.
+	var styled_slot = TextEffects.hover.open + slot_str + TextEffects.hover.close #Need to save hover and selection to variables tbh
+	var replaced_text = interaction_text.replace(slot_str, styled_slot)
+	var new_interaction = active_interaction #Not sure if this is in place or a copy
+	new_interaction.text = replaced_text
+	hovered_slot = slot_key
+	state_machine.Change("load_interaction", new_interaction)
+	
+func remove_highlight_from_word(word):
+	if hovered_slot == null:
+		return
+	var content_node = get_node("text_content")
+	var interaction_text = active_interaction.text
+	var slot_key = getSlotKey(word)
+	var slot_str = "[b]<" + slot_key + "/>[/b]" #Match the style tags from the highlight function
+	var basic_str = "<" + slot_key + "/>"
+	var replaced_text = interaction_text.replace(slot_str, basic_str)
+	var new_interaction = active_interaction
+	new_interaction.text = replaced_text
+	hovered_slot = null
+	state_machine.Change("load_interaction", new_interaction)
+	
+	pass
 	
 
 
@@ -102,14 +135,15 @@ func highlight_word_from_content(word):
 
 func _on_text_content_meta_hover_started(meta): #Aka when the user hovers over a URL
 	#Display popup at mouse location
-	print("Entered hover")
-	print(meta)
 	highlight_word_from_content(meta)
 	pass # Replace with function body.
 
 
 func _on_text_content_meta_hover_ended(meta): #When the user stops hovering over a URL
 	#Remove the popup created by the hover method
+	#if selected_slot == null:
+	remove_highlight_from_word(meta)
+	
 	pass # Replace with function body.
 
 

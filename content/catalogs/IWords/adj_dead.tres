@@ -10,7 +10,6 @@ bbcode = ""
 part_speech = "adj"
 aspects = ["greeting"]
 principles = {
-"lantern": 3,
 "moth": 1,
 "winter": 2
 }

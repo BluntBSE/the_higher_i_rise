@@ -23,15 +23,13 @@ func getSlotKey(word):
 	for slot in slots:
 		if slots[slot] == word:
 			return str(slot)
-		else:
-			print("No slot found for: " + str(word))
+	return null
 	
 
 
 func parseInteraction(interaction: Interaction):
 	
 	var output_node = _reference.get_node('text_content')
-	print(output_node)
 	var interaction_text = interaction.text
 	output_node.Text = interaction_text
 	
@@ -40,7 +38,7 @@ func parseInteraction(interaction: Interaction):
 func stateEnter(args):
 	print("Entering swap word state")
 	_args = args
-	print(_args)
+
 
 func stateUpdate(dt):
 	#Save the word id in _args to a variable in the _self reference, "selected_word"
@@ -48,17 +46,30 @@ func stateUpdate(dt):
 	var first_slot = _reference.selected_slot
 	var second_word = _args
 	var second_slot = getSlotKey(_args)
-	print(_args + " FOUND AT " + second_slot)
 	var interaction = _reference.active_interaction #Clone??? Reference in memory might not be enough. Consider .New()
 	interaction.slots[first_slot] = second_word
 	interaction.slots[second_slot] = first_word
+	var interaction_text = interaction.text
+	var open_tags = TextEffects.selected.open
+	var close_tags = TextEffects.selected.close
+	var replaced_str = interaction_text.replace(open_tags, '')
+	replaced_str = replaced_str.replace(close_tags,'')
+	#Remove anything left by hover, too.
+	var open_hover = TextEffects.hover.open
+	var close_hover = TextEffects.hover.close
+	replaced_str = replaced_str.replace(open_hover, '')
+	replaced_str = replaced_str.replace(close_hover,'')
+	interaction.text = replaced_str
+	var random_string = "random string"
+	var new_string = random_string.replace("string", "potato")
 	_reference.active_interaction = interaction
+	_reference.hovered_slot = null
 	
 	
 	_reference.selected_word = null	
 	_reference.selected_slot = null
 	
-	print("Found " + _args + "in slot: " + getSlotKey(_args) )
+
 	#Do any styling here
 	_reference.state_machine.Change("load_interaction", interaction)
 	#Determine what slot in the current interaction contains the word id
