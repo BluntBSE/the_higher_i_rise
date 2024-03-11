@@ -34,15 +34,45 @@ func parseOptions(interaction: Interaction):
 	var output_text = ""
 	var index = 0
 	if len(interaction.options) > 0:
-		for option in interaction.options:
-			if index > 0:
-				output_text = output_text+"[p]"
-			output_text += '[url="'
-			output_text += option.links_to
-			output_text += '"]'
-			output_text += option.text
-			output_text += '[/url]'
+		#get the state of the parsers slots & player aspects
+		#TODO: player aspects
+		for option:Dictionary in interaction.options:
+			#Check the relevant slot in 
+			var conditions_met = false
+			var specific_word_array = [] #array of bools. All true == all specific words met
+			var specific_word_condition = option.conditions_word
+			var specific_word_slots = specific_word_condition.keys()
 		
+			for slot in specific_word_slots:
+			
+				if specific_word_condition[slot]:
+					if _reference.active_interaction.slots[slot] == specific_word_condition[slot].specific_id:
+						specific_word_array.append(true)
+					else:
+						specific_word_array.append(false)
+					
+			if specific_word_array.has(false):	
+				print("BLARP")
+				if index > 0:
+					output_text = output_text+"[p]"
+				output_text += '[hint="'
+				output_text += option.hint_tooltip
+				output_text += '"]'
+				output_text += option.hint
+				output_text += "[/hint]"
+						
+				pass
+			
+			if !specific_word_array.has(false):
+			#Index 0 is to make sure we don't put a paragraph tag on the first one
+				if index > 0:
+					output_text = output_text+"[p]"
+				output_text += '[url="'
+				output_text += option.links_to
+				output_text += '"]'
+				output_text += option.text
+				output_text += '[/url]'
+			
 
 	output_node.text = output_text
 

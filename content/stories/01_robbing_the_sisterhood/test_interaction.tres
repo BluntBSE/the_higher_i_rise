@@ -9,15 +9,20 @@ display_title = ""
 text = "You are in a dark, damp alleyway sandwiched between a failed deli and St. Jude's School for Blind Girls. Here the smell of votive incense mingles with weeks-old sauerkraut and, recently, the smell of blood.
 
 You are <slot_1/> here, and your killer is feeling awfully <slot_2/>.
-
-If only there was something you could do about it."
+"
 slots = {
 "slot_1": "adj_dead",
 "slot_2": "adj_smug"
 }
 options = [{
+"conditions_word": {
+"slot_1": {
+"specific_id": "adj_smug"
+}
+},
 "hint": "If only there was something you could do about it...",
+"hint_tooltip": "If you click words with the right aspect, you might change their position.",
 "id": "test_interaction_opt_1",
 "links_to": "test_interaction_2",
-"text": "go to option 2"
+"text": "Of course..."
 }]
