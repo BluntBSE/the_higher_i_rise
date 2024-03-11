@@ -37,8 +37,18 @@ Example
 				"links_to": "demo.interaction.3",
 				"effect": "add_winter_function",
 				"effect_value": 1,
+				"hint": "This is a hint message..."
 				"conditions_aspect": {
 					"lantern":1
+				},
+				"conditions_word"{
+					"slot_1":{
+							"specific_id": "adj_foo",
+							"part_speech": "verb",
+							"aspects": ["greeting"],
+							"principles": ["lantern"] 
+							
+							}
 				}
 			}
 		]

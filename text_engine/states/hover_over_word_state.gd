@@ -49,21 +49,17 @@ func getSlotKey(word):
 func parseInteraction(interaction: Interaction):
 	
 	var output_node = _reference.get_node('text_content')
-	print(output_node)
 	var interaction_text = interaction.text
 	output_node.Text = interaction_text
 	
 	
 
 func stateEnter(args):
-	print("Entering select word content state")
 	_args = args
-	print(_args)
 
 func stateUpdate(dt):
 	#Save the word id in _args to a variable in the _self reference, "selected_word"
-	print("Hello from selection update")
-	print(_args)
+
 	_reference.selected_word = _args
 	_reference.selected_slot = getSlotKey(_args)
 	print("Found " + _args + "in slot: " + getSlotKey(_args) )
