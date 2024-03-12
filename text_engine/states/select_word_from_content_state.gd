@@ -38,6 +38,7 @@ func stateUpdate(dt):
 	#Do any styling here
 	var interaction = _reference.active_interaction
 	var interaction_text = interaction.text
+	#Have to HANDLE WOUNDS here too
 	var slot_str = "[b]<" + slot_key + "/>[/b]" #Match the style tags from the highlight function
 	var selected_str = TextEffects.selected.open + "<" + slot_key + "/>" + TextEffects.selected.close
 	var replaced_text = interaction_text.replace(slot_str, selected_str)

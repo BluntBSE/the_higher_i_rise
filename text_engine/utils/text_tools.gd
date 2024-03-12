@@ -38,15 +38,17 @@ static func getSlotKey(word, reference): #reference usually points to the intera
 static func getInteractionResource(id: String):
 	var story_dir = "res://content/stories"
 	var file = getResourceFromDirectory(story_dir, id)
-	var output_interaction = Interaction.new()
+	#Why did I do this? Probably to intercept it if I want...
+	#var output_interaction = Interaction.new()
 	var resource = load(file)
-	
-	if resource:
-		output_interaction.base_bg_color = resource.base_bg_color
-		output_interaction.text = resource.text
-		output_interaction.slots = resource.slots
-		output_interaction.options = resource.options
-		return output_interaction
+	#Why the fuck did I do this.
+	#if resource:
+		#output_interaction.base_bg_color = resource.base_bg_color
+		#output_interaction.text = resource.text
+		#output_interaction.slots = resource.slots
+		#output_interaction.options = resource.options
+		#return output_interaction
+	return resource
 	print("Invalid interaction id! Or something more sinister")
 
 static func getWordResource(id: String):
@@ -74,6 +76,16 @@ static func determineGreatestPrinciple(principles:Dictionary):
 			greatest_val = principles[principle]
 			greatest_principle = str(principle)
 	return greatest_principle
+	
+static func applyWound(wound: IWord):
+	var new_word = IWord.new()
+	new_word = wound #New instance allows us to pass it to the apply styling function with no issues. I hope.
+	var text = ""
+	text += "[shake rate=40.0 level=30 connected=1]"
+	text += wound.text
+	text += "[/shake]"
+	new_word.text = text
+	return new_word
 		
 
 static func applyStyling(word: IWord): #"Styling" is a misnomer since this also determines the URL link. Better name?
@@ -84,14 +96,14 @@ static func applyStyling(word: IWord): #"Styling" is a misnomer since this also 
 	var text = ""
 	var principle_string = str(principles)
 	var greatest_principle = determineGreatestPrinciple(principles)
-	#Check if this word is currently hovered. If it is...
- 
+	#Consider putting hover stuff in here. Currently it's not. Not sure if it's better outside or in.
 	
-	#Check if this word is currently selected. If it is...
+	
+
 	
 	
 	text += "[hint="+principle_string+"]"
-	text += "[u]"
+	#text += "[u]"
 	text += "[url=" + word.id + "]"
 	
 	if greatest_principle != "none":
@@ -106,7 +118,7 @@ static func applyStyling(word: IWord): #"Styling" is a misnomer since this also 
 		text += "[/font_size]"
 		
 	text += "[/url]"
-	text += "[/u]"
+	#text += "[/u]"
 	text += "[/hint]"
 		
 	return text
@@ -123,22 +135,34 @@ static func parseText(input_string: String, interaction: Interaction):
 	#This word is stored in the _slots dictionary of the interaction, and is retrieved by the "slot_1", "slot_2", etc. keys.
 	#This function will also handle any other flags that we might want to use in the future.
 	#For example, we might want to use a flag like <player_name> to refer to the player's name, or /n for a newline.
-	
+
 	var text = input_string
 	#First, we'll replace the slots
 
-	
-	
 	for slot in interaction.slots:
 		var word = getWordResource(interaction.slots[slot])
 		
 		if !word:
 			print("No word found!")
 			return "WORD NOT FOUND"
-		word = applyStyling(word)	
+		word = applyStyling(word)
 		#Here is where we would add anything to modify it to be a sentence...
 		
 		text = text.replace("<" + slot + "/>", word)
+		
+	#SPEECH, THE SWORD
+	if interaction.get("wounds").is_empty() == false:
+		for wound in interaction.wounds:
+			var wound_word = getWordResource(interaction.wounds[wound])
+			if !wound_word:
+				print("No wound found!")
+			var wound_IWord = applyWound(wound_word)
+			var word_text = applyStyling(wound_IWord)
+			#Currently I like wounds more without the underlines	
+			text = text.replace( "<" + wound + "/>", word_text)
+	
+	
+		
 
 
 	return text

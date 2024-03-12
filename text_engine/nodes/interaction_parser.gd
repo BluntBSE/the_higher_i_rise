@@ -70,7 +70,6 @@ func _init():
 func _ready():
 
 	var moo =  {}.keys()
-	active_interaction = load("res://content/stories/01_robbing_the_sisterhood/test_interaction.tres") #Replace this 
 	state_machine.Change("load_interaction", default_interaction)
 	pass # Replace with function body.
 
@@ -161,6 +160,10 @@ func _on_text_content_meta_clicked(meta):
 	#Still determining whether or not this is the place to save the variable, as words can exist in inventory outside of it.
 	#Update the effect on the text to indicate it has beeen selected
 	if selected_word == null:
+		#CHECK IF THE WORD IN THE META IS A SLOT OR A WOUND, THEN ACT ACCORDINGLY
+		
+		if !active_interaction.wounds.is_empty(): #If it has at least one wound....
+			return
 		state_machine.Change("select_word_from_content", meta)
 	else:
 		state_machine.Change("swap_word", meta)

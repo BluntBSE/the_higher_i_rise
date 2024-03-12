@@ -8,6 +8,8 @@ class_name Interaction #Interactive Word
 @export_multiline var text: String
 @export var slots: Dictionary = {"slot_1": "#ID69"}
 @export var options: Array
+@export var wounds: Dictionary = {}
+@export var some_var = "Not overridden yet"
 
 """
 Example

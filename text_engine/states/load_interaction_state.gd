@@ -52,7 +52,6 @@ func parseOptions(interaction: Interaction):
 						specific_word_array.append(false)
 					
 			if specific_word_array.has(false):	
-				print("BLARP")
 				if index > 0:
 					output_text = output_text+"[p]"
 				output_text += '[hint="'
@@ -85,6 +84,8 @@ func parseInteraction(interaction: Interaction):
 		_text = interaction.text
 		_slots = interaction.slots
 		_options = interaction.options
+		print("WOUNDS????")
+
 		
 		#Apply - This may be moved to its own state at some point.
 		var output_text = TextTools.parseText(_text, interaction)
@@ -96,7 +97,12 @@ func parseInteraction(interaction: Interaction):
 		
 
 func stateEnter(args: Interaction):
+	print("MY FUCKIN ARGS:")
+	print (args.text)
+	print(args)
+	print(args.wounds)
 	_args = args
+	print("END ARGS")
 
 func stateUpdate(dt):
 	parseInteraction(_args)

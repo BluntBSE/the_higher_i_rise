@@ -92,8 +92,6 @@ I am a whole bunch of text. This is the placeholder you should never seen
 I am a whole bunch of text. This is the placeholder you should never seen
 I am a whole bunch of text. This is the placeholder you should never seen
 "
-meta_underlined = false
-hint_underlined = false
 
 [node name="options_content" type="RichTextLabel" parent="interaction_parser"]
 layout_mode = 0

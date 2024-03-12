@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://c6oxp432os42n"]
+
+[ext_resource type="Script" path="res://text_engine/resources/interactive_word.gd" id="1_m2tig"]
+
+[resource]
+script = ExtResource("1_m2tig")
+id = "noun_wound"
+text = "wound"
+bbcode = ""
+part_speech = "noun"
+aspects = ["greeting"]
+principles = {
+"edge": 1,
+"knock": 2,
+"winter": 1
+}

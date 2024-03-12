@@ -60,8 +60,6 @@ func stateUpdate(dt):
 	replaced_str = replaced_str.replace(open_hover, '')
 	replaced_str = replaced_str.replace(close_hover,'')
 	interaction.text = replaced_str
-	var random_string = "random string"
-	var new_string = random_string.replace("string", "potato")
 	_reference.active_interaction = interaction
 	_reference.hovered_slot = null
 	

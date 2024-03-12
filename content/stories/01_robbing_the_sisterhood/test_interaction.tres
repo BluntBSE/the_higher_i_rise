@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_7i2c8")
 base_bg_color = Color(0.466667, 0.45098, 0.435294, 1)
-display_title = ""
+display_title = "FOO"
 text = "You are in a dark, damp alleyway sandwiched between a failed deli and St. Jude's School for Blind Girls. Here the smell of votive incense mingles with weeks-old sauerkraut and, recently, the smell of blood.
 
 You are <slot_1/> here, and your killer is feeling awfully <slot_2/>.
@@ -26,3 +26,5 @@ options = [{
 "links_to": "test_interaction_2",
 "text": "Of course..."
 }]
+wounds = {}
+some_var = "THIS VAR HAS BEEN UPDATED"
