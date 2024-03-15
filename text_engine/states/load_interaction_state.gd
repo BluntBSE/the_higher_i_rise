@@ -84,7 +84,7 @@ func parseInteraction(interaction: Interaction):
 		_text = interaction.text
 		_slots = interaction.slots
 		_options = interaction.options
-		print("WOUNDS????")
+		
 
 		
 		#Apply - This may be moved to its own state at some point.
@@ -97,12 +97,7 @@ func parseInteraction(interaction: Interaction):
 		
 
 func stateEnter(args: Interaction):
-	print("MY FUCKIN ARGS:")
-	print (args.text)
-	print(args)
-	print(args.wounds)
 	_args = args
-	print("END ARGS")
 
 func stateUpdate(dt):
 	parseInteraction(_args)

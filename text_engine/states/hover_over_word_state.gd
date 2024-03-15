@@ -59,7 +59,7 @@ func stateEnter(args):
 
 func stateUpdate(dt):
 	#Save the word id in _args to a variable in the _self reference, "selected_word"
-
+	
 	_reference.selected_word = _args
 	_reference.selected_slot = getSlotKey(_args)
 	print("Found " + _args + "in slot: " + getSlotKey(_args) )

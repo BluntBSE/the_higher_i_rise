@@ -149,7 +149,7 @@ theme_override_font_sizes/normal_font_size = 34
 bbcode_enabled = true
 text = "[center][u]Aspects[/u][/center]"
 
-[node name="side_panel2" type="ColorRect" parent="interaction_parser/side_panel"]
+[node name="aspects_panel" type="ColorRect" parent="interaction_parser/side_panel"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 1
 anchors_preset = 15
@@ -162,7 +162,7 @@ offset_bottom = -27.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="side_panel3" type="ColorRect" parent="interaction_parser/side_panel"]
+[node name="memory_panel" type="ColorRect" parent="interaction_parser/side_panel"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
 offset_left = 22.0

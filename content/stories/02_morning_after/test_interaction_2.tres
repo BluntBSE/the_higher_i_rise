@@ -12,6 +12,8 @@ slots = {
 }
 options = []
 wounds = {
-"wound_1": "noun_wound"
+"wound_1": {
+"word_id": "noun_wound"
+}
 }
 some_var = "Not overridden yet"

@@ -160,11 +160,22 @@ func _on_text_content_meta_clicked(meta):
 	#Still determining whether or not this is the place to save the variable, as words can exist in inventory outside of it.
 	#Update the effect on the text to indicate it has beeen selected
 	if selected_word == null:
+		var is_wound = false
 		#CHECK IF THE WORD IN THE META IS A SLOT OR A WOUND, THEN ACT ACCORDINGLY
+		#If the meta == a word in any wound key, process it as a wound.
+		if active_interaction.wounds.size() > 0:
+			var all_wounds = active_interaction.wounds.keys()
+			for wound in all_wounds:
+				if active_interaction.wounds[wound].wound_id == meta:
+					print("Word is a wound!")
+					is_wound = true
+					break
 		
-		if !active_interaction.wounds.is_empty(): #If it has at least one wound....
-			return
-		state_machine.Change("select_word_from_content", meta)
+		if is_wound == false:			
+			state_machine.Change("select_word_from_content", meta)
+		if is_wound == true:
+			pass
+			#handle_wound()
 	else:
 		state_machine.Change("swap_word", meta)
 		pass

@@ -153,7 +153,7 @@ static func parseText(input_string: String, interaction: Interaction):
 	#SPEECH, THE SWORD
 	if interaction.get("wounds").is_empty() == false:
 		for wound in interaction.wounds:
-			var wound_word = getWordResource(interaction.wounds[wound])
+			var wound_word = getWordResource(interaction.wounds[wound].word_id)
 			if !wound_word:
 				print("No wound found!")
 			var wound_IWord = applyWound(wound_word)

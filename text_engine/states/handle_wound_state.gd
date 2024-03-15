@@ -1,5 +1,5 @@
 extends EmptyState
-class_name HandleWoundState
+class_name FinishedTextState
 '''
 class_name EmptyState
 
@@ -18,7 +18,6 @@ var _args
 var _reference #usually 'self'
 var state_machine #state machine attached to the reference passed in
 
-func loadWoundToPanel
 	
 
 func stateEnter(args):
