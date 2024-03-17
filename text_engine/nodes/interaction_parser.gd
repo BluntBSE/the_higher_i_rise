@@ -149,9 +149,9 @@ func _on_text_content_meta_hover_ended(meta): #When the user stops hovering over
 func _on_options_content_meta_clicked(meta):
 	#get interaction by ID
 
-	var interaction_to_load = TextTools.getInteractionResource(meta)
+	#var interaction_to_load = TextTools.getInteractionResource(meta)
 
-	state_machine.Change("choose_option", interaction_to_load)
+	state_machine.Change("choose_option", meta)
 	#change state
 	pass # Replace with function body.
 

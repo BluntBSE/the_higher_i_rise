@@ -34,8 +34,8 @@ func stateEnter(args):
 	_args = args
 	memory_panel = _reference.get_node("side_panel/memory_panel")
 func stateUpdate(dt):
-	#Add the wound_id to the aspects_panel wound_inventory
-	memory_panel.wound_inventory.push_back(_args)
+	#Add the wound_id to the aspects_panel mem_inventory
+	memory_panel.mem_inventory.push_back(_args)
 	
 	#Either trigger a state update on the side panel, or directly update the aspects
 	#In the aspect panel

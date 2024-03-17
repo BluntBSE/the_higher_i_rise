@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bnavdp6d7uysg"
-path="res://.godot/imported/CrimsonText-SemiBold.ttf-c7b35aa5578eebef0da637b17821e9e3.fontdata"
+path="res://.godot/imported/CrimsonText-SemiBold.ttf-e67e3f4f55991a80815e4e41a8235632.fontdata"
 
 [deps]
 
-source_file="res://text_engine/resources/fonts/CrimsonText-SemiBold.ttf"
-dest_files=["res://.godot/imported/CrimsonText-SemiBold.ttf-c7b35aa5578eebef0da637b17821e9e3.fontdata"]
+source_file="res://text_engine/resources/UI/fonts/CrimsonText-SemiBold.ttf"
+dest_files=["res://.godot/imported/CrimsonText-SemiBold.ttf-e67e3f4f55991a80815e4e41a8235632.fontdata"]
 
 [params]
 

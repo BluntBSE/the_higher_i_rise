@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bqgs8w3jlj2bo"]
 
-[ext_resource type="Script" path="res://text_engine/resources/interaction.gd" id="1_q5ama"]
+[ext_resource type="Script" path="res://text_engine/resources/interaction.gd" id="1_qetxn"]
 
 [resource]
-script = ExtResource("1_q5ama")
+script = ExtResource("1_qetxn")
 base_bg_color = Color(0.301961, 0.298039, 0.803922, 1)
 display_title = ""
 text = "A wound no more"
@@ -11,6 +11,7 @@ slots = {
 "slot_1": "noun_hello"
 }
 options = [{
+"functions": [["remove_memory", ["noun_wound"]]],
 "links_to": "test_interaction_2",
 "text": "Return"
 }]

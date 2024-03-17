@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=6 format=3 uid="uid://b5cu5776o44se"]
 
-[ext_resource type="FontFile" uid="uid://co5vsscgrr63x" path="res://text_engine/resources/fonts/CrimsonText-Bold.ttf" id="1_hxedq"]
-[ext_resource type="FontFile" uid="uid://ywagpyk071of" path="res://text_engine/resources/fonts/CrimsonText-Italic.ttf" id="2_ljisv"]
+[ext_resource type="FontFile" uid="uid://co5vsscgrr63x" path="res://text_engine/resources/UI/fonts/CrimsonText-Bold.ttf" id="1_hxedq"]
+[ext_resource type="FontFile" uid="uid://ywagpyk071of" path="res://text_engine/resources/UI/fonts/CrimsonText-Italic.ttf" id="2_ljisv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xh3hh"]
 content_margin_left = 4.0

@@ -1,8 +1,7 @@
 extends ColorRect
 
 var state_machine = StateMachine2.new()
-var wound_inventory = []#Array of strings containing word ids, like "noun_wound"
-
+var mem_inventory = []#Array of strings containing word ids, like "noun_wound"
 
 func _init():
 	#Add various states to the state_machine here

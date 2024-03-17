@@ -37,9 +37,8 @@ static func getSlotKey(word, reference): #reference usually points to the intera
 	
 static func getInteractionResource(id: String):
 	var story_dir = "res://content/stories"
-	print("ID Came into getInteraction Resource as: " + id)
 	var file = getResourceFromDirectory(story_dir, id)
-	print("Path to file from getResourceFromDirectory: " +file)
+
 	#Why did I do this? Probably to intercept it if I want...
 	#var output_interaction = Interaction.new()
 	var resource = load(file)
