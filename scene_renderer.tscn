@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnsnni08j3gds"]
+[gd_scene load_steps=8 format=3 uid="uid://cnsnni08j3gds"]
 
 [ext_resource type="Script" path="res://text_engine/nodes/interaction_parser.gd" id="1_8fet0"]
 [ext_resource type="Theme" uid="uid://b5cu5776o44se" path="res://text_engine/resources/theme.tres" id="1_c3704"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://co5vsscgrr63x" path="res://text_engine/resources/fonts/CrimsonText-Bold.ttf" id="4_yks1q"]
 [ext_resource type="FontFile" uid="uid://ywagpyk071of" path="res://text_engine/resources/fonts/CrimsonText-Italic.ttf" id="5_uaeq6"]
 [ext_resource type="FontFile" uid="uid://b51v2ipfr6ldx" path="res://text_engine/resources/fonts/CrimsonText-BoldItalic.ttf" id="6_1caf4"]
+[ext_resource type="Script" path="res://memory_panel.gd" id="7_whlsl"]
 
 [node name="Node2D" type="Control"]
 custom_minimum_size = Vector2(1920, 1080)
@@ -169,6 +170,7 @@ offset_left = 22.0
 offset_top = 121.0
 offset_right = 233.0
 offset_bottom = 534.0
+script = ExtResource("7_whlsl")
 
 [connection signal="meta_hover_ended" from="interaction_parser/text_title" to="interaction_parser" method="_on_text_content_meta_hover_ended"]
 [connection signal="meta_hover_started" from="interaction_parser/text_title" to="interaction_parser" method="_on_text_content_meta_hover_started"]

@@ -1,1 +1,6 @@
 NEXT UP: Fix the tag removal not working in swap_word_state.gd
+
+
+NOTES:
+	
+	You hardly use state.exit(), could be good for animating transitions when we get there.

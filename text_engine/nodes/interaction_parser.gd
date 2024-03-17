@@ -59,17 +59,17 @@ func updateData(interaction):
 func _init():
 	#Probably just need an update_interaction state, not text + update text
 	state_machine.Add("finished", FinishedTextState.new(self, "arg_to_finished_init"))
-	state_machine.Add("load_interaction", LoadInteractionState.new(self, "hello"))
+	state_machine.Add("load_interaction", LoadInteractionState.new(self, "init load interaction state"))
 	state_machine.Add("choose_option", ChooseOptionState.new(self, "init choose option state"))
 	state_machine.Add("select_word_from_content", SelectWordFromContentState.new(self, "init choose word from content state"))
 	state_machine.Add("swap_word", SwapWordState.new(self, "init swap word state"))
+	state_machine.Add("handle_wound", HandleWoundState.new(self, "init handle wound state"))
 	#state_machine.Add("update_interaction", UpdateTextState.new(self,"arg_to_uinteraction_init"))
 	#state_machine.Add("update_text", UpdateTextState.new(self, "arg_to_update_init")) 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 
-	var moo =  {}.keys()
 	state_machine.Change("load_interaction", default_interaction)
 	pass # Replace with function body.
 
@@ -148,7 +148,9 @@ func _on_text_content_meta_hover_ended(meta): #When the user stops hovering over
 
 func _on_options_content_meta_clicked(meta):
 	#get interaction by ID
+
 	var interaction_to_load = TextTools.getInteractionResource(meta)
+
 	state_machine.Change("choose_option", interaction_to_load)
 	#change state
 	pass # Replace with function body.
@@ -166,16 +168,15 @@ func _on_text_content_meta_clicked(meta):
 		if active_interaction.wounds.size() > 0:
 			var all_wounds = active_interaction.wounds.keys()
 			for wound in all_wounds:
-				if active_interaction.wounds[wound].wound_id == meta:
-					print("Word is a wound!")
+				if active_interaction.wounds[wound].word_id == meta:
+					
 					is_wound = true
 					break
 		
 		if is_wound == false:			
 			state_machine.Change("select_word_from_content", meta)
 		if is_wound == true:
-			pass
-			#handle_wound()
+			state_machine.Change("handle_wound", meta)
 	else:
 		state_machine.Change("swap_word", meta)
 		pass

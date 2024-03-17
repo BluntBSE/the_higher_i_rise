@@ -39,31 +39,46 @@ func parseOptions(interaction: Interaction):
 		for option:Dictionary in interaction.options:
 			#Check the relevant slot in 
 			var conditions_met = false
-			var specific_word_array = [] #array of bools. All true == all specific words met
-			var specific_word_condition = option.conditions_word
-			var specific_word_slots = specific_word_condition.keys()
-		
-			for slot in specific_word_slots:
+			#if the option has word conditions of any type....
+	
+			if option.has("conditions_word"):
+				var specific_word_array = [] #array of bools. All true == all specific words met
+				
+				var specific_word_condition = option.conditions_word
+				var specific_word_slots = specific_word_condition.keys()
 			
-				if specific_word_condition[slot]:
-					if _reference.active_interaction.slots[slot] == specific_word_condition[slot].specific_id:
-						specific_word_array.append(true)
-					else:
-						specific_word_array.append(false)
-					
-			if specific_word_array.has(false):	
-				if index > 0:
-					output_text = output_text+"[p]"
-				output_text += '[hint="'
-				output_text += option.hint_tooltip
-				output_text += '"]'
-				output_text += option.hint
-				output_text += "[/hint]"
+				for slot in specific_word_slots:
+				
+					if specific_word_condition[slot]:
+						if _reference.active_interaction.slots[slot] == specific_word_condition[slot].specific_id:
+							specific_word_array.append(true)
+						else:
+							specific_word_array.append(false)
 						
-				pass
+				if specific_word_array.has(false):	
+					if index > 0:
+						output_text = output_text+"[p]"
+					output_text += '[hint="'
+					output_text += option.hint_tooltip
+					output_text += '"]'
+					output_text += option.hint
+					output_text += "[/hint]"
+							
+					pass
+				
+				if !specific_word_array.has(false):
+				#Index 0 is to make sure we don't put a paragraph tag on the first one
+					if index > 0:
+						output_text = output_text+"[p]"
+					output_text += '[url="'
+					output_text += option.links_to
+					output_text += '"]'
+					output_text += option.text
+					output_text += '[/url]'
 			
-			if !specific_word_array.has(false):
-			#Index 0 is to make sure we don't put a paragraph tag on the first one
+			#If the option has no word or (TODO), aspect conditions, simply print the option
+			if !option.has("conditions_word"):
+				conditions_met = true
 				if index > 0:
 					output_text = output_text+"[p]"
 				output_text += '[url="'
@@ -71,7 +86,7 @@ func parseOptions(interaction: Interaction):
 				output_text += '"]'
 				output_text += option.text
 				output_text += '[/url]'
-			
+				
 
 	output_node.text = output_text
 

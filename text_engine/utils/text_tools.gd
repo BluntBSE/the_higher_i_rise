@@ -37,11 +37,13 @@ static func getSlotKey(word, reference): #reference usually points to the intera
 	
 static func getInteractionResource(id: String):
 	var story_dir = "res://content/stories"
+	print("ID Came into getInteraction Resource as: " + id)
 	var file = getResourceFromDirectory(story_dir, id)
+	print("Path to file from getResourceFromDirectory: " +file)
 	#Why did I do this? Probably to intercept it if I want...
 	#var output_interaction = Interaction.new()
 	var resource = load(file)
-	#Why the fuck did I do this.
+	#Why the fuck did I do this? It's an opportunity to modify interactions at their point of loading...but that's not a good idea
 	#if resource:
 		#output_interaction.base_bg_color = resource.base_bg_color
 		#output_interaction.text = resource.text

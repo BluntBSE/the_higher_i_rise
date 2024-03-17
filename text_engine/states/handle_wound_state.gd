@@ -1,5 +1,5 @@
 extends EmptyState
-class_name FinishedTextState
+class_name HandleWoundState
 '''
 class_name EmptyState
 
@@ -17,17 +17,36 @@ class_name EmptyState
 var _args 
 var _reference #usually 'self'
 var state_machine #state machine attached to the reference passed in
+var memory_panel
 
+func determine_wound_number(word_id:String, wound_dict:Dictionary):
+	for wound in wound_dict:
+		if wound_dict[wound].word_id == word_id:
+			print("Wound slot determined to be " + wound)
+			return str(wound)
+		else:
+			print("Could not find wound's word ID in the wound list")
+			return null
+	
 	
 
 func stateEnter(args):
 	_args = args
-
+	memory_panel = _reference.get_node("side_panel/memory_panel")
 func stateUpdate(dt):
-
-	pass
+	#Add the wound_id to the aspects_panel wound_inventory
+	memory_panel.wound_inventory.push_back(_args)
+	
+	#Either trigger a state update on the side panel, or directly update the aspects
+	#In the aspect panel
+	
+	#Last, transition to wherever the wound_link points to.
 	#If text is done updating, we should do state_machine.Change("finished")
+	var wound_slot = determine_wound_number(_args, _reference.active_interaction.wounds)
 
+	var next_interaction_id = _reference.active_interaction.wounds[wound_slot].wound_link
+	var next_interaction = TextTools.getInteractionResource(next_interaction_id)
+	state_machine.Change("load_interaction", next_interaction)
 func _init(reference, args=null): #usually self, {args}
 	_reference = reference
 	_args = args
