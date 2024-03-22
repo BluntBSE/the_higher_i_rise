@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4ywgxp1malgn"]
+
+[ext_resource type="Script" path="res://memory.gd" id="1_fdpd8"]
+
+[node name="memory_bg" type="ColorRect"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 101.0
+grow_horizontal = 2
+color = Color(0.607843, 0.45098, 0.498039, 1)
+script = ExtResource("1_fdpd8")
+
+[node name="memory_fg" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = -6.0
+offset_bottom = 94.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="word_text" type="RichTextLabel" parent="memory_fg"]
+layout_mode = 0
+offset_right = 199.0
+offset_bottom = 87.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Default Memory"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

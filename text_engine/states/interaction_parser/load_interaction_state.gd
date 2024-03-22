@@ -115,11 +115,11 @@ func stateEnter(args: Interaction):
 	_args = args
 
 func stateUpdate(dt):
+	#TODO: Somehow need to clear any selected words, etc.
 	parseInteraction(_args)
 	parseOptions(_args)
 	_reference.state_machine.Change("finished", null) #No arguments required for the  "finished" state, I think
 
-	pass
 	#If text is done updating, we should do state_machine.Change("finished")
 
 func _init(reference, args): #usually self, {args}. Here, an interaction

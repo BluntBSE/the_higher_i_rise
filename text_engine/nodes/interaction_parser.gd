@@ -35,7 +35,7 @@ Example:
 <slot_1/> world. This is an example of text to be parsed. Here's an example of it continuing on with a linebreak.
 
 '''
-var state_machine: StateMachine = StateMachine.new()
+var state_machine: StateMachine2 = StateMachine2.new()
 var _current_text: String = ""
 var active_interaction: Interaction = Interaction.new()
 var default_interaction_id = "test_interaction" 
@@ -66,12 +66,13 @@ func _init():
 	state_machine.Add("handle_wound", HandleWoundState.new(self, "init handle wound state"))
 	#state_machine.Add("update_interaction", UpdateTextState.new(self,"arg_to_uinteraction_init"))
 	#state_machine.Add("update_text", UpdateTextState.new(self, "arg_to_update_init")) 
-
+	#DEBUG ONLY
+	#state_machine.Add("debug", FinishedMemoriesState.new(self, "init new memories wtf"))
 # Called when the node enters the scene tree for the first time.
 func _ready():
-
+	#state_machine.Change("debug", null)
 	state_machine.Change("load_interaction", default_interaction)
-	pass # Replace with function body.
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -88,7 +89,7 @@ func getSlotKey(_word):
 
 #Should hovering be its own state? Seems a touch much
 func highlight_word_from_content(word):
-
+	print("highlight_word_from_content(): you shouldnt see this on an option")
 	if hovered_slot != null	:
 
 		return
@@ -134,6 +135,7 @@ func remove_highlight_from_word(word):
 
 func _on_text_content_meta_hover_started(meta): #Aka when the user hovers over a URL
 	#Display popup at mouse location
+	print("Text content meta...allegedly")
 	highlight_word_from_content(meta)
 	pass # Replace with function body.
 

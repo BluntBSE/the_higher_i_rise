@@ -178,6 +178,8 @@ script = ExtResource("7_whlsl")
 [connection signal="meta_hover_ended" from="interaction_parser/text_content" to="interaction_parser" method="_on_text_content_meta_hover_ended"]
 [connection signal="meta_hover_started" from="interaction_parser/text_content" to="interaction_parser" method="_on_text_content_meta_hover_started"]
 [connection signal="meta_clicked" from="interaction_parser/options_content" to="interaction_parser" method="_on_options_content_meta_clicked"]
+[connection signal="meta_hover_ended" from="interaction_parser/options_content" to="interaction_parser" method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="interaction_parser/options_content" to="interaction_parser" method="_on_text_content_meta_hover_started"]
 [connection signal="meta_hover_ended" from="interaction_parser/side_panel/text_title" to="interaction_parser" method="_on_text_content_meta_hover_ended"]
 [connection signal="meta_hover_started" from="interaction_parser/side_panel/text_title" to="interaction_parser" method="_on_text_content_meta_hover_started"]
 [connection signal="meta_hover_ended" from="interaction_parser/side_panel/aspects_title" to="interaction_parser" method="_on_text_content_meta_hover_ended"]

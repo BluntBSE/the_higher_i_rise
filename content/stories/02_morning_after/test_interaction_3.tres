@@ -6,7 +6,7 @@
 script = ExtResource("1_qetxn")
 base_bg_color = Color(0.301961, 0.298039, 0.803922, 1)
 display_title = ""
-text = "A wound no more"
+text = "A wound no more. But perhaps a <slot_1/>"
 slots = {
 "slot_1": "noun_hello"
 }

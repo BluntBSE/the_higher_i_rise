@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cnsnni08j3gds"]
+[gd_scene load_steps=9 format=3 uid="uid://cnsnni08j3gds"]
 
 [ext_resource type="Script" path="res://text_engine/nodes/interaction_parser.gd" id="1_8fet0"]
 [ext_resource type="Theme" uid="uid://b5cu5776o44se" path="res://text_engine/resources/UI/theme.tres" id="1_c3704"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://ywagpyk071of" path="res://text_engine/resources/UI/fonts/CrimsonText-Italic.ttf" id="5_uaeq6"]
 [ext_resource type="FontFile" uid="uid://b51v2ipfr6ldx" path="res://text_engine/resources/UI/fonts/CrimsonText-BoldItalic.ttf" id="6_1caf4"]
 [ext_resource type="Script" path="res://memory_panel.gd" id="7_whlsl"]
+[ext_resource type="PackedScene" uid="uid://b4ywgxp1malgn" path="res://text_engine/packed_scenes/memory_bg.tscn" id="8_wj6nh"]
 
 [node name="Node2D" type="Control"]
 custom_minimum_size = Vector2(1920, 1080)
@@ -20,6 +21,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="interaction_parser" type="Control" parent="."]
+visible = false
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 1
 anchors_preset = 15
@@ -172,12 +174,20 @@ offset_right = 233.0
 offset_bottom = 534.0
 script = ExtResource("7_whlsl")
 
+[node name="memory_bg" parent="interaction_parser/side_panel/memory_panel" instance=ExtResource("8_wj6nh")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+grow_horizontal = 1
+
 [connection signal="meta_hover_ended" from="interaction_parser/text_title" to="interaction_parser" method="_on_text_content_meta_hover_ended"]
 [connection signal="meta_hover_started" from="interaction_parser/text_title" to="interaction_parser" method="_on_text_content_meta_hover_started"]
 [connection signal="meta_clicked" from="interaction_parser/text_content" to="interaction_parser" method="_on_text_content_meta_clicked"]
 [connection signal="meta_hover_ended" from="interaction_parser/text_content" to="interaction_parser" method="_on_text_content_meta_hover_ended"]
 [connection signal="meta_hover_started" from="interaction_parser/text_content" to="interaction_parser" method="_on_text_content_meta_hover_started"]
 [connection signal="meta_clicked" from="interaction_parser/options_content" to="interaction_parser" method="_on_options_content_meta_clicked"]
+[connection signal="meta_hover_ended" from="interaction_parser/options_content" to="interaction_parser" method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="interaction_parser/options_content" to="interaction_parser" method="_on_text_content_meta_hover_started"]
 [connection signal="meta_hover_ended" from="interaction_parser/side_panel/text_title" to="interaction_parser" method="_on_text_content_meta_hover_ended"]
 [connection signal="meta_hover_started" from="interaction_parser/side_panel/text_title" to="interaction_parser" method="_on_text_content_meta_hover_started"]
 [connection signal="meta_hover_ended" from="interaction_parser/side_panel/aspects_title" to="interaction_parser" method="_on_text_content_meta_hover_ended"]

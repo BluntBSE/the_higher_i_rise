@@ -1,5 +1,5 @@
 extends EmptyState
-class_name FinishedTextState
+class_name SelectedMemoryState
 '''
 class_name EmptyState
 
@@ -19,15 +19,22 @@ var _reference #usually 'self'
 var state_machine #state machine attached to the reference passed in
 
 
-	
-
 func stateEnter(args):
+	_reference.color = "#FF00FF"
 	_args = args
 
-func stateUpdate(dt):
 
+func stateUpdate(dt):
+	if Input.is_action_just_released("left_click"):
+		_reference.state_machine.Change("finished", null)
+	
+func stateExit():
 	pass
+	
 	#If text is done updating, we should do state_machine.Change("finished")
+	
+func stateHandleInput():
+	print("Handling input from hovered memory state")
 
 func _init(reference, args=null): #usually self, {args}
 	_reference = reference

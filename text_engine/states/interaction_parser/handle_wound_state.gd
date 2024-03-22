@@ -31,14 +31,17 @@ func determine_wound_number(word_id:String, wound_dict:Dictionary):
 	
 
 func stateEnter(args):
+	
 	_args = args
 	memory_panel = _reference.get_node("side_panel/memory_panel")
 func stateUpdate(dt):
+	#TODO: If the player already has a word, consider making it impossible to take it
 	#Add the wound_id to the aspects_panel mem_inventory
 	memory_panel.mem_inventory.push_back(_args)
 	
 	#Either trigger a state update on the side panel, or directly update the aspects
 	#In the aspect panel
+	memory_panel.state_machine.Change("refresh", null)
 	
 	#Last, transition to wherever the wound_link points to.
 	#If text is done updating, we should do state_machine.Change("finished")

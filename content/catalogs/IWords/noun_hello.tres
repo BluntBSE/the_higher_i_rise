@@ -9,4 +9,6 @@ text = "hello"
 bbcode = ""
 part_speech = "noun"
 aspects = ["greeting"]
-principles = {}
+principles = {
+"heart": 1
+}

@@ -1,4 +1,7 @@
-NEXT UP: Fix the tag removal not working in swap_word_state.gd
+NEXT UP:
+	Going back to the wound screen after you've selected "hello" causes a crash for some reason
+	Connect signals from single memory to the parser
+	Swap em!
 
 
 NOTES:

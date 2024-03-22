@@ -41,6 +41,7 @@ func stateEnter(args):
 
 
 func stateUpdate(dt):
+
 	#Save the word id in _args to a variable in the _self reference, "selected_word"
 	var first_word = _reference.selected_word
 	var first_slot = _reference.selected_slot
