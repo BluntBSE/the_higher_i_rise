@@ -45,9 +45,17 @@ var selected_word = null
 var selected_slot = null
 var hovered_word = null
 var hovered_slot = null
+var selected_memory = null
 
+func _on_select_memory(memory):
+	print("Select memory fired with")
+	print(memory)
+	var word_id = memory.word_id
+	selected_memory = word_id
+	print("Updated selected memory to  " + memory.word_id)
+	
 
-
+	
 
 
 func updateData(interaction):
@@ -64,10 +72,10 @@ func _init():
 	state_machine.Add("select_word_from_content", SelectWordFromContentState.new(self, "init choose word from content state"))
 	state_machine.Add("swap_word", SwapWordState.new(self, "init swap word state"))
 	state_machine.Add("handle_wound", HandleWoundState.new(self, "init handle wound state"))
-	#state_machine.Add("update_interaction", UpdateTextState.new(self,"arg_to_uinteraction_init"))
-	#state_machine.Add("update_text", UpdateTextState.new(self, "arg_to_update_init")) 
-	#DEBUG ONLY
-	#state_machine.Add("debug", FinishedMemoriesState.new(self, "init new memories wtf"))
+	state_machine.Add("swap_memory", SwapMemoryState.new(self, "init swap memory state"))
+	#state_machine.Add("fade_in", FadeInTextState.new(self, "init fade out text state"))
+	#state_machine.Add("fade_out", FadeOutTextState.new(self, "init fade out text state"))
+	state_machine.Add("load_option", LoadOptionState.new(self, "init load option state"))
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#state_machine.Change("debug", null)
@@ -78,7 +86,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	state_machine.stateUpdate(delta)
-	pass
+
 
 func getSlotKey(_word):
 	var slots = active_interaction.slots
@@ -94,13 +102,15 @@ func highlight_word_from_content(word):
 
 		return
 	
-	var content_node = get_node('text_content')
+	var content_node = get_node('interaction_fg/text_content')
 	var text = content_node.text
 	#Compare the echoed meta to the stored slots.
 	#Wrap <slot_1> or whatever in [b] [/b] tags.
 	var interaction_text = active_interaction.text
 
 	var slot_key = getSlotKey(word)
+	if slot_key == null:
+		return
 	if slot_key == selected_slot:
 		return
 	var slot_str = "<" + slot_key + "/>" #We're replacing the actual string  '<slot_1/>'.
@@ -114,7 +124,7 @@ func highlight_word_from_content(word):
 func remove_highlight_from_word(word):
 	if hovered_slot == null:
 		return
-	var content_node = get_node("text_content")
+	var content_node = get_node("interaction_fg/text_content")
 	var interaction_text = active_interaction.text
 	var slot_key = getSlotKey(word)
 	var slot_str = "[b]<" + slot_key + "/>[/b]" #Match the style tags from the highlight function
@@ -137,33 +147,29 @@ func _on_text_content_meta_hover_started(meta): #Aka when the user hovers over a
 	#Display popup at mouse location
 	print("Text content meta...allegedly")
 	highlight_word_from_content(meta)
-	pass # Replace with function body.
+
 
 
 func _on_text_content_meta_hover_ended(meta): #When the user stops hovering over a URL
 	#Remove the popup created by the hover method
-	#if selected_slot == null:
 	remove_highlight_from_word(meta)
 	
-	pass # Replace with function body.
 
 
 func _on_options_content_meta_clicked(meta):
-	#get interaction by ID
-
-	#var interaction_to_load = TextTools.getInteractionResource(meta)
 
 	state_machine.Change("choose_option", meta)
-	#change state
-	pass # Replace with function body.
+
 
 
 func _on_text_content_meta_clicked(meta):
-	#Meta should equal the ID&filename of the word being sought.
+
 	#Save the first thing clicked to memory. Perhaps a variable called "first_selected"
 	#Still determining whether or not this is the place to save the variable, as words can exist in inventory outside of it.
 	#Update the effect on the text to indicate it has beeen selected
-	if selected_word == null:
+	
+	
+	if selected_word == null and selected_memory == null:
 		var is_wound = false
 		#CHECK IF THE WORD IN THE META IS A SLOT OR A WOUND, THEN ACT ACCORDINGLY
 		#If the meta == a word in any wound key, process it as a wound.
@@ -171,15 +177,17 @@ func _on_text_content_meta_clicked(meta):
 			var all_wounds = active_interaction.wounds.keys()
 			for wound in all_wounds:
 				if active_interaction.wounds[wound].word_id == meta:
-					
 					is_wound = true
 					break
-		
 		if is_wound == false:			
 			state_machine.Change("select_word_from_content", meta)
 		if is_wound == true:
 			state_machine.Change("handle_wound", meta)
-	else:
+	if selected_word != null and selected_memory == null:
 		state_machine.Change("swap_word", meta)
-		pass
+	if selected_word == null and selected_memory != null:
+		var args = [meta, selected_memory]
+		print("Merp")
+		#This listens for clicks in the body of the parser. For clicks on the memory itself, refer to the memory object.
+		state_machine.Change("swap_memory", args)
 	pass # Replace with function body.

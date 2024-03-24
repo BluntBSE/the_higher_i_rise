@@ -1,7 +1,6 @@
 extends Node
-
-
 class_name EmptyState
+
 
 func stateUpdate(dt):
 	pass

@@ -21,7 +21,7 @@ var state_machine #state machine attached to the reference passed in
 
 func parseInteraction(interaction: Interaction):
 	
-	var output_node = _reference.get_node('text_content')
+	var output_node = _reference.get_node('interaction_fg/text_content')
 	var interaction_text = interaction.text
 	output_node.Text = interaction_text
 	

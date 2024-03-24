@@ -23,7 +23,6 @@ static func getResourceFromDirectory(directory: String, file_name: String) -> St
 
 			current_file = dir.get_next()
 
-		#dir.list_dir_end()
 
 	return file_path
 
@@ -147,8 +146,7 @@ static func parseText(input_string: String, interaction: Interaction):
 			print("No word found!")
 			return "WORD NOT FOUND"
 		word = applyStyling(word)
-		#Here is where we would add anything to modify it to be a sentence...
-		
+		#Here is where we would add anything to modify it to be a sentence, such as capitalization.
 		text = text.replace("<" + slot + "/>", word)
 		
 	#SPEECH, THE SWORD

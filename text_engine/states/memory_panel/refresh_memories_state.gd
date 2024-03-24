@@ -39,10 +39,17 @@ func stateUpdate(dt):
 		print(memory)
 		#spawn_memory_card(offset)
 		#assign spawned card to panel
-		var child_node = load("res://text_engine/packed_scenes/memory_bg.tscn").instantiate()
+		var child_node = load("res://text_engine/packed_scenes/single_memory.tscn").instantiate()
 		child_node.unpack(memory)
 		_reference.add_child(child_node)
+		#Subscribe parser to child signals
+		var root = child_node.get_tree().get_root()
+		var parser = root.get_node("interaction_parser") #TODO: Eventually, interaction_parser won't be the root and we have to change this.
+		var callback = parser._on_select_memory
+		child_node.memory_selected.connect(callback)
+		#Positioning
 		child_node.global_position = child_node.global_position + Vector2(0, calc_offset)
+		#Increment index
 		index += 1
 
 	#Choosing not to refresh constantly, but perhaps we could.

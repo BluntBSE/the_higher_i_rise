@@ -1,8 +1,10 @@
 NEXT UP:
-	Going back to the wound screen after you've selected "hello" causes a crash for some reason
-	Connect signals from single memory to the parser
-	Swap em!
-
+	Fade in and out of text
+	Populate aspects
+	Make sure options can be revealed with the appropriate aspects
+	Create a fixed data type for Interactions so we don't run into future issues
+	Modify background color based on aspects
+	
 
 NOTES:
 	

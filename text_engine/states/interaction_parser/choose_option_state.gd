@@ -17,7 +17,12 @@ class_name EmptyState
 var _args 
 var _reference #usually 'self'
 var state_machine #state machine attached to the reference passed in
-
+var title_node
+var content_node
+var options_node
+var portrait_node_0
+var portrait_node_1
+var a #alpha, for fading
 
 func executeFunctions(functions:Array):
 	#Functions arrive in the form of: [ ["function_id", [arg_1, arg_2_, arg_3], ["function_id_2", [args...] ]
@@ -50,18 +55,37 @@ func determineOptionIndex(interaction_id):
 	print("No matching option index found")
 
 func stateEnter(args):
-	
+	print("Entered choose option state")
+	a = 1.0
 	_args = args
-
+	title_node = _reference.get_node("interaction_fg/text_title")
+	content_node = _reference.get_node("interaction_fg/text_content")
+	options_node = _reference.get_node("interaction_fg/options_content")
+	portrait_node_0 = _reference.get_node("interaction_fg/portrait_controller/portrait_0")
+	portrait_node_1 = _reference.get_node("Interaction_fg/portrait_controller/portrait_1")
+	
 func stateUpdate(dt):
+	_reference.selected_word = null
 	var index = determineOptionIndex(_args)
+	#fade out
+	if !(is_equal_approx(a, 0.0)):
+		a = lerp(a, 0.0, .2) #TODO: Add smoothstep
+		title_node.modulate.a = a
+		content_node.modulate.a = a
+		options_node.modulate.a = a
+		portrait_node_0.modulate.a = a
+		portrait_node_0.modulate.a =a
+		return
+
+	#need to wait for complete...
 	if !_reference.active_interaction.options[index].has("functions"):
 		print("No functions found on this option")
 	if _reference.active_interaction.options[index].has("functions"):
 		var funcs_to_execute = _reference.active_interaction.options[index].functions
 		executeFunctions(funcs_to_execute)
 		var interaction_to_load = TextTools.getInteractionResource(_args)
-		_reference.state_machine.Change("load_interaction", interaction_to_load)
+		#load option is used to fade in/out
+		_reference.state_machine.Change("load_option", interaction_to_load)
 	
 	#If text is done updating, we should do state_machine.Change("finished")
 

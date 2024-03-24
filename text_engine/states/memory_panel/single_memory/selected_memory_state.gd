@@ -20,11 +20,15 @@ var state_machine #state machine attached to the reference passed in
 
 
 func stateEnter(args):
+
 	_reference.color = "#FF00FF"
 	_args = args
+	_reference.memory_selected.emit(_reference)
 
 
 func stateUpdate(dt):
+	
+	
 	if Input.is_action_just_released("left_click"):
 		_reference.state_machine.Change("finished", null)
 	

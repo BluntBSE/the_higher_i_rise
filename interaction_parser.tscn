@@ -1,0 +1,247 @@
+[gd_scene load_steps=11 format=3 uid="uid://cnsnni08j3gds"]
+
+[ext_resource type="Theme" uid="uid://b5cu5776o44se" path="res://text_engine/resources/UI/theme.tres" id="1_jfsr4"]
+[ext_resource type="Script" path="res://text_engine/nodes/interaction_parser.gd" id="2_p6xha"]
+[ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="3_lg1bg"]
+[ext_resource type="FontFile" uid="uid://co5vsscgrr63x" path="res://text_engine/resources/UI/fonts/CrimsonText-Bold.ttf" id="4_r42yl"]
+[ext_resource type="FontFile" uid="uid://ywagpyk071of" path="res://text_engine/resources/UI/fonts/CrimsonText-Italic.ttf" id="5_dyqar"]
+[ext_resource type="FontFile" uid="uid://b51v2ipfr6ldx" path="res://text_engine/resources/UI/fonts/CrimsonText-BoldItalic.ttf" id="6_g52ou"]
+[ext_resource type="Script" path="res://memory_panel.gd" id="7_2r5jd"]
+[ext_resource type="Texture2D" uid="uid://bvwkeu64x7qx6" path="res://content/images/portraits/gristwood.png" id="7_kwyv0"]
+[ext_resource type="Texture2D" uid="uid://ctjy60erxr2jl" path="res://content/images/portraits/benefactorf.png" id="8_0a4j4"]
+[ext_resource type="Texture2D" uid="uid://rdfwu0i44ysm" path="res://content/images/aspects/moth.png" id="10_dsca8"]
+
+[node name="interaction_parser" type="Control"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_jfsr4")
+script = ExtResource("2_p6xha")
+
+[node name="interaction_bg" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.466667, 0.45098, 0.435294, 1)
+
+[node name="interaction_fg" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = 33.0
+offset_right = -450.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00784314, 0.227451, 0.356863, 1)
+
+[node name="text_title" type="RichTextLabel" parent="interaction_fg"]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 73.0
+offset_right = 946.0
+offset_bottom = 185.0
+theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[u]An Obscure Alley[/u]"
+
+[node name="text_content" type="RichTextLabel" parent="interaction_fg"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 175.0
+offset_right = 973.0
+offset_bottom = 708.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_lg1bg")
+theme_override_fonts/bold_font = ExtResource("4_r42yl")
+theme_override_fonts/italics_font = ExtResource("5_dyqar")
+theme_override_fonts/bold_italics_font = ExtResource("6_g52ou")
+theme_override_font_sizes/normal_font_size = 28
+theme_override_font_sizes/bold_font_size = 28
+theme_override_font_sizes/italics_font_size = 28
+theme_override_font_sizes/bold_italics_font_size = 28
+theme_override_font_sizes/mono_font_size = 28
+bbcode_enabled = true
+text = "I am a whole bunch of text. This is the placeholder you should never see.
+I am a whole bunch of text. This is the placeholder you should never seen
+
+
+I am a whole bunch of text. This is the placeholder you should never seen
+I am a whole bunch of text. This is the placeholder you should never seen
+
+I am a whole bunch of text. This is the placeholder you should never seen
+I am a whole bunch of text. This is the placeholder you should never seen
+I am a whole bunch of text. This is the placeholder you should never seen
+"
+meta_underlined = false
+hint_underlined = false
+
+[node name="options_content" type="RichTextLabel" parent="interaction_fg"]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 681.0
+offset_right = 961.0
+offset_bottom = 836.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+bbcode_enabled = true
+text = "I am a whole bunch of options"
+
+[node name="portrait_controller" type="Control" parent="interaction_fg"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="portrait_0" type="Control" parent="interaction_fg/portrait_controller"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="img" type="TextureRect" parent="interaction_fg/portrait_controller/portrait_0"]
+layout_mode = 0
+offset_left = 1126.0
+offset_top = 171.0
+offset_right = 1626.0
+offset_bottom = 771.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_kwyv0")
+
+[node name="text_bg" type="ColorRect" parent="interaction_fg/portrait_controller/portrait_0"]
+layout_mode = 0
+offset_left = 1126.0
+offset_top = 411.0
+offset_right = 1326.0
+offset_bottom = 447.0
+
+[node name="label" type="RichTextLabel" parent="interaction_fg/portrait_controller/portrait_0/text_bg"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 37.0
+bbcode_enabled = true
+text = "[center]Gristwood[/center]"
+
+[node name="portrait_1" type="Control" parent="interaction_fg/portrait_controller"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="img" type="TextureRect" parent="interaction_fg/portrait_controller/portrait_1"]
+layout_mode = 0
+offset_left = 1126.0
+offset_top = 490.0
+offset_right = 1638.0
+offset_bottom = 1104.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("8_0a4j4")
+
+[node name="text_bg" type="ColorRect" parent="interaction_fg/portrait_controller/portrait_1"]
+layout_mode = 0
+offset_left = 1126.0
+offset_top = 730.0
+offset_right = 1326.0
+offset_bottom = 766.0
+
+[node name="label" type="RichTextLabel" parent="interaction_fg/portrait_controller/portrait_1/text_bg"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 37.0
+bbcode_enabled = true
+text = "[center]Lady Piper
+[/center]"
+
+[node name="side_panel" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1506.0
+offset_top = 35.0
+offset_right = -164.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00784314, 0.227451, 0.356863, 1)
+
+[node name="text_title" type="RichTextLabel" parent="side_panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -84.0
+offset_top = 43.0
+offset_right = 92.0
+offset_bottom = 155.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
+theme_override_font_sizes/normal_font_size = 34
+bbcode_enabled = true
+text = "[center][u]Memories[/u][/center]"
+
+[node name="aspects_title" type="RichTextLabel" parent="side_panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.0
+offset_top = 547.0
+offset_right = 73.0
+offset_bottom = 659.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
+theme_override_font_sizes/normal_font_size = 34
+bbcode_enabled = true
+text = "[center][u]Aspects[/u][/center]"
+
+[node name="aspects_panel" type="ColorRect" parent="side_panel"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = 616.0
+offset_right = -23.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="memory_panel" type="ColorRect" parent="side_panel"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 22.0
+offset_top = 121.0
+offset_right = 233.0
+offset_bottom = 534.0
+script = ExtResource("7_2r5jd")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1779.0
+offset_top = 38.0
+offset_right = 1887.0
+offset_bottom = 146.0
+icon = ExtResource("10_dsca8")
+
+[connection signal="meta_hover_ended" from="interaction_fg/text_title" to="." method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="interaction_fg/text_title" to="." method="_on_text_content_meta_hover_started"]
+[connection signal="meta_clicked" from="interaction_fg/text_content" to="." method="_on_text_content_meta_clicked"]
+[connection signal="meta_hover_ended" from="interaction_fg/text_content" to="." method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="interaction_fg/text_content" to="." method="_on_text_content_meta_hover_started"]
+[connection signal="meta_clicked" from="interaction_fg/options_content" to="." method="_on_options_content_meta_clicked"]
+[connection signal="meta_hover_ended" from="side_panel/text_title" to="." method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="side_panel/text_title" to="." method="_on_text_content_meta_hover_started"]
+[connection signal="meta_hover_ended" from="side_panel/aspects_title" to="." method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="side_panel/aspects_title" to="." method="_on_text_content_meta_hover_started"]

@@ -18,17 +18,26 @@ class_name EmptyState
 var _args 
 var _reference #usually 'self'
 var state_machine #state machine attached to the reference passed in
+var root # For finding and identifying the parser
+var parser
 
 
 func stateEnter(args):
+	root = _reference.get_tree().get_root()
+	parser = root.get_node('interaction_parser')
 	_reference.color = _reference.highlight_color
 	_args = args
-#TODO: Register the interaction parser with this memory so we can emit signals to it
+	_reference.memory_selected.emit(_reference)	
+
 
 func stateUpdate(dt):
-		#TODO: emit a signal to the interaction parser allowing it to be aware of the word swap.
+	
 		if Input.is_action_just_released("left_click"):
-			_reference.state_machine.Change("selected", null)
+			if parser.selected_word == null:
+				_reference.state_machine.Change("selected", null)
+			else:
+				var args = [parser.selected_word, _reference.word_id]
+				parser.state_machine.Change("swap_memory", args)
 		
 		if _reference.is_hovered == false:
 			_reference.state_machine.Change("finished", null)

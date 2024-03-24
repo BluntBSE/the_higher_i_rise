@@ -4,15 +4,20 @@ class_name Memory
 var base_color = '#9b737f'
 var highlight_color = '#ebdb87'
 var is_hovered = false
-
 var state_machine = StateMachine2.new()
+var word_id = null
+var random_variable = "foo_baby"
+signal memory_selected
 
 #Essentially the constructor function we'll use when loading this as a packed scene.
-func unpack(word_id):
+func unpack(_word_id):
+	self.word_id = _word_id #For ease of access later.
 	var text_node = find_child("word_text")
-	var word_to_load = TextTools.getWordResource(word_id)
+	var word_to_load = TextTools.getWordResource(_word_id)
+	var greatest_principle = TextTools.determineGreatestPrinciple(word_to_load.principles)
+	base_color = Principles[greatest_principle].color
 	text_node.text = word_to_load.text
-#This is the constructor, n'est-ce pas?
+
 
 func _init():
 	color = base_color

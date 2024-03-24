@@ -1,14 +1,14 @@
 [gd_scene load_steps=2 format=3 uid="uid://b4ywgxp1malgn"]
 
-[ext_resource type="Script" path="res://memory.gd" id="1_fdpd8"]
+[ext_resource type="Script" path="res://memory.gd" id="1_lng3w"]
 
-[node name="memory_bg" type="ColorRect"]
+[node name="single_memory" type="ColorRect"]
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 101.0
 grow_horizontal = 2
 color = Color(0.607843, 0.45098, 0.498039, 1)
-script = ExtResource("1_fdpd8")
+script = ExtResource("1_lng3w")
 
 [node name="memory_fg" type="ColorRect" parent="."]
 layout_mode = 1

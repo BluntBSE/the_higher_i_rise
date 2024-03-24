@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://8joc6cl3vm4v"]
 
-[ext_resource type="Script" path="res://text_engine/resources/interaction.gd" id="1_7i2c8"]
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_wn83b"]
 
 [resource]
-script = ExtResource("1_7i2c8")
+script = ExtResource("1_wn83b")
 base_bg_color = Color(0.466667, 0.45098, 0.435294, 1)
-display_title = "FOO"
+display_title = "An Obscure Alley"
 text = "You are in a dark, damp alleyway sandwiched between a failed deli and St. Jude's School for Blind Girls. Here the smell of votive incense mingles with weeks-old sauerkraut and, recently, the smell of blood.
 
 You are <slot_1/> here, and your killer is feeling awfully <slot_2/>.
@@ -28,4 +28,4 @@ options = [{
 "text": "Of course..."
 }]
 wounds = {}
-some_var = "THIS VAR HAS BEEN UPDATED"
+portraits = ["bechet"]

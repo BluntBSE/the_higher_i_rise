@@ -1,5 +1,10 @@
 extends EmptyState
 class_name LoadInteractionState
+
+
+##This generic loadinteractionstate is used for ALL instances of an interaction loading
+##Including hovers, swaps, etc. It is NOT to be used for switching as a consequence of an option
+
 '''
 class_name EmptyState
 
@@ -23,6 +28,37 @@ var _base_bg_color: Color = Color(1.0, 1.0, 1.0, 1.0)
 var _text: String
 var _slots: Dictionary = {"slot_1": "#ID69"}
 var _options: Array
+var _title: String
+
+func parsePortraits(interaction: Interaction):
+	if !interaction:
+		print("null interaction in parsePortraits")
+		return null 
+	#Hide all existing portrait nodes.
+	var portrait_0 = _reference.get_node('interaction_fg/portrait_controller/portrait_0')
+	var portrait_1 = _reference.get_node('interaction_fg/portrait_controller/portrait_1')
+	portrait_0.visible = false
+	portrait_1.visible = false
+	
+		
+	if interaction.portraits.size() > 0: 
+		for index in interaction.portraits.size():
+			var output_name = "portrait_" + str(index) #e.g: find "portrait_1"
+			var portrait_name = interaction.portraits[index]
+			portrait_name = portrait_name
+			var respath = TextTools.getResourceFromDirectory('res://content/catalogs/characters/', portrait_name)
+			var res = load(respath)
+			var img = Image.new()
+			img.load(res.portrait)
+			var portrait_node = _reference.get_node('interaction_fg/portrait_controller/'+output_name)
+			portrait_node.visible = true
+			var img_node = portrait_node.get_node('img')
+			img_node.set_texture(ImageTexture.create_from_image(img))
+			var text_node = portrait_node.get_node('text_bg/label')
+			text_node.text = "[center]" + res.display_name + "[/center]"
+
+		
+		
 
 func parseOptions(interaction: Interaction):
 	#What to do when null interaction arrives?
@@ -30,7 +66,7 @@ func parseOptions(interaction: Interaction):
 		print("null interaction in parseOptions")
 		return null #Probably should do an EmptyInteraction class
 	
-	var output_node = _reference.get_node('options_content')
+	var output_node = _reference.get_node('interaction_fg/options_content')
 	var output_text = ""
 	var index = 0
 	if len(interaction.options) > 0:
@@ -93,18 +129,21 @@ func parseOptions(interaction: Interaction):
 func parseInteraction(interaction: Interaction):
 	#Store
 	if interaction:
-		var output_node = _reference.get_node('text_content')
+		var output_title = _reference.get_node("interaction_fg/text_title")
+		var output_node = _reference.get_node('interaction_fg/text_content')
 		var output_bg = _reference.get_node('interaction_bg')
 		_base_bg_color = interaction.base_bg_color
 		_text = interaction.text
 		_slots = interaction.slots
 		_options = interaction.options
+		_title = interaction.display_title
 		
 
 		
 		#Apply - This may be moved to its own state at some point.
 		var output_text = TextTools.parseText(_text, interaction)
 		output_node.text = output_text
+		output_title.text = "[u]"+_title+"[/u]"
 		#output_node.append_text(output_text) #Append is recommended for rapid drawing, but not appropriate here.
 		output_bg.color = _base_bg_color
 		_reference.active_interaction = interaction #this may or may not be redundant. I think it might be useful if we can recycle this to use modified interactions from choose_option, which is why I've done it.
@@ -113,13 +152,21 @@ func parseInteraction(interaction: Interaction):
 
 func stateEnter(args: Interaction):
 	_args = args
+	
+func stateExit():
+	print("Load exit fired")
+	
+
+		#Switch state/return
+	return null
 
 func stateUpdate(dt):
 	#TODO: Somehow need to clear any selected words, etc.
+	parsePortraits(_args)
 	parseInteraction(_args)
 	parseOptions(_args)
-	_reference.state_machine.Change("finished", null) #No arguments required for the  "finished" state, I think
-
+	_reference.state_machine.Change("finished", null)
+	
 	#If text is done updating, we should do state_machine.Change("finished")
 
 func _init(reference, args): #usually self, {args}. Here, an interaction
