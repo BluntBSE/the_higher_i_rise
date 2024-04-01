@@ -65,6 +65,7 @@ static func getWordResource(id: String):
 	word.part_speech = resource.part_speech
 	word.aspects = resource.aspects
 	word.principles = resource.principles
+	word.description = resource.description
 	return word
 	print("Invalid word id!")
 
@@ -76,6 +77,19 @@ static func determineGreatestPrinciple(principles:Dictionary):
 			greatest_val = principles[principle]
 			greatest_principle = str(principle)
 	return greatest_principle
+	
+static func sortPrinciples(principles:Dictionary):
+	var keys = principles.keys()
+	var comparator = func _compare_values(a, b):
+		if principles[a] >= principles[b]:
+			return true
+		else:
+			return false
+
+	keys.sort_custom(comparator)
+	return keys
+			
+	
 	
 static func applyWound(wound: IWord):
 	var new_word = IWord.new()
@@ -138,16 +152,16 @@ static func parseText(input_string: String, interaction: Interaction):
 
 	var text = input_string
 	#First, we'll replace the slots
-
-	for slot in interaction.slots:
-		var word = getWordResource(interaction.slots[slot])
-		
-		if !word:
-			print("No word found!")
-			return "WORD NOT FOUND"
-		word = applyStyling(word)
-		#Here is where we would add anything to modify it to be a sentence, such as capitalization.
-		text = text.replace("<" + slot + "/>", word)
+	if interaction.slots.has("slot_1"):
+		for slot in interaction.slots:
+			var word = getWordResource(interaction.slots[slot])
+			
+			if !word:
+				print("No word found!")
+				return "WORD NOT FOUND"
+			word = applyStyling(word)
+			#Here is where we would add anything to modify it to be a sentence, such as capitalization.
+			text = text.replace("<" + slot + "/>", word)
 		
 	#SPEECH, THE SWORD
 	if interaction.get("wounds").is_empty() == false:

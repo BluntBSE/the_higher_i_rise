@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://0n2vbthqxfhy"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_u0th7"]
+
+[resource]
+script = ExtResource("1_u0th7")
+id = "noun_scissors"
+text = "scissors"
+bbcode = ""
+part_speech = "noun"
+description = "\"In gi rum imus noc te et con sumi snip snip snip\""
+aspects = ["plural", "tool"]
+principles = {
+"moth": 3
+}

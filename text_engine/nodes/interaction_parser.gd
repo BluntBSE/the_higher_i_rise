@@ -1,46 +1,13 @@
 extends StatefulControl
 class_name InteractionParser
 
-
-'''
-Example:
-	
-{
-	"interactions": [
-		{
-			"id": "demo.interaction",
-			"base_bg_color": "#FFFFFF",
-			"text": "<slot_1/> world. This is an example of text to be parsed. Here's an example of it continuing on with a linebreak.",
-			"slots": {
-				"slot_1": "noun_hello"
-			},
-			"options": [
-				{
-					"id": "demo.interaction.opt1",
-					"links_to": "demo.interaction.2",
-					"effect": "add_winter_function",
-					"effect_value": 1,
-					"conditions_slot": {
-						"slot_1": [
-							"noun_hello"
-						]
-					}
-				},
-
-			]
-		}
-	]
-}
-
-<slot_1/> world. This is an example of text to be parsed. Here's an example of it continuing on with a linebreak.
-
-'''
 var state_machine: StateMachine2 = StateMachine2.new()
 var _current_text: String = ""
 var active_interaction: Interaction = Interaction.new()
 var default_interaction_id = "test_interaction" 
 var default_interaction = TextTools.getInteractionResource(default_interaction_id)
 
+var can_hover = true
 var selected_word = null
 var selected_slot = null
 var hovered_word = null
@@ -48,11 +15,8 @@ var hovered_slot = null
 var selected_memory = null
 
 func _on_select_memory(memory):
-	print("Select memory fired with")
-	print(memory)
 	var word_id = memory.word_id
 	selected_memory = word_id
-	print("Updated selected memory to  " + memory.word_id)
 	
 
 	
@@ -97,9 +61,10 @@ func getSlotKey(_word):
 
 #Should hovering be its own state? Seems a touch much
 func highlight_word_from_content(word):
-	print("highlight_word_from_content(): you shouldnt see this on an option")
 	if hovered_slot != null	:
-
+		return
+	
+	if can_hover == false:
 		return
 	
 	var content_node = get_node('interaction_fg/text_content')
@@ -135,12 +100,6 @@ func remove_highlight_from_word(word):
 	hovered_slot = null
 	state_machine.Change("load_interaction", new_interaction)
 	
-	pass
-	
-
-
-
-	pass
 
 
 func _on_text_content_meta_hover_started(meta): #Aka when the user hovers over a URL
@@ -163,7 +122,6 @@ func _on_options_content_meta_clicked(meta):
 
 
 func _on_text_content_meta_clicked(meta):
-
 	#Save the first thing clicked to memory. Perhaps a variable called "first_selected"
 	#Still determining whether or not this is the place to save the variable, as words can exist in inventory outside of it.
 	#Update the effect on the text to indicate it has beeen selected
@@ -187,7 +145,6 @@ func _on_text_content_meta_clicked(meta):
 		state_machine.Change("swap_word", meta)
 	if selected_word == null and selected_memory != null:
 		var args = [meta, selected_memory]
-		print("Merp")
 		#This listens for clicks in the body of the parser. For clicks on the memory itself, refer to the memory object.
 		state_machine.Change("swap_memory", args)
 	pass # Replace with function body.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cnsnni08j3gds"]
+[gd_scene load_steps=11 format=3 uid="uid://cnsnni08j3gds"]
 
 [ext_resource type="Theme" uid="uid://b5cu5776o44se" path="res://text_engine/resources/UI/theme.tres" id="1_jfsr4"]
 [ext_resource type="Script" path="res://text_engine/nodes/interaction_parser.gd" id="2_p6xha"]
@@ -9,7 +9,6 @@
 [ext_resource type="Script" path="res://memory_panel.gd" id="7_2r5jd"]
 [ext_resource type="Texture2D" uid="uid://bvwkeu64x7qx6" path="res://content/images/portraits/gristwood.png" id="7_kwyv0"]
 [ext_resource type="Texture2D" uid="uid://ctjy60erxr2jl" path="res://content/images/portraits/benefactorf.png" id="8_0a4j4"]
-[ext_resource type="Theme" uid="uid://b8pgkx4ittskt" path="res://test_theme.tres" id="9_swfoe"]
 [ext_resource type="Texture2D" uid="uid://rdfwu0i44ysm" path="res://content/images/aspects/moth.png" id="10_dsca8"]
 
 [node name="interaction_parser" type="Control"]
@@ -181,32 +180,30 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -98.0
-offset_top = 38.0
-offset_right = 78.0
-offset_bottom = 150.0
+offset_left = -84.0
+offset_top = 43.0
+offset_right = 92.0
+offset_bottom = 155.0
 grow_horizontal = 2
-theme = ExtResource("9_swfoe")
 theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
 theme_override_font_sizes/normal_font_size = 34
 bbcode_enabled = true
-text = "[u]Speech[/u]"
+text = "[center][u]Memories[/u][/center]"
 
 [node name="aspects_title" type="RichTextLabel" parent="side_panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -129.0
-offset_top = 380.0
-offset_right = 26.0
-offset_bottom = 492.0
+offset_left = -82.0
+offset_top = 547.0
+offset_right = 73.0
+offset_bottom = 659.0
 grow_horizontal = 2
-theme = ExtResource("9_swfoe")
 theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
 theme_override_font_sizes/normal_font_size = 34
 bbcode_enabled = true
-text = "[center][u]Aspect[/u][/center]"
+text = "[center][u]Aspects[/u][/center]"
 
 [node name="aspects_panel" type="ColorRect" parent="side_panel"]
 custom_minimum_size = Vector2(50, 50)
@@ -215,83 +212,20 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 25.0
-offset_top = 448.0
+offset_top = 616.0
 offset_right = -23.0
 offset_bottom = -27.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.792157, 0.898039, 0.984314, 0)
 
 [node name="memory_panel" type="ColorRect" parent="side_panel"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
 offset_left = 22.0
-offset_top = 104.0
+offset_top = 121.0
 offset_right = 233.0
-offset_bottom = 367.0
-color = Color(0.792157, 0.898039, 0.984314, 0)
+offset_bottom = 534.0
 script = ExtResource("7_2r5jd")
-
-[node name="VFlowContainer" type="VBoxContainer" parent="side_panel/memory_panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.995
-anchor_bottom = 0.829
-offset_left = -1.0
-offset_right = 0.0549927
-offset_bottom = -0.0270081
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 30
-
-[node name="RichTextLabel" type="RichTextLabel" parent="side_panel/memory_panel/VFlowContainer"]
-clip_contents = false
-custom_minimum_size = Vector2(0, 10)
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/default_color = Color(0.858824, 0.905882, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_lg1bg")
-theme_override_fonts/italics_font = ExtResource("5_dyqar")
-theme_override_fonts/bold_italics_font = ExtResource("6_g52ou")
-bbcode_enabled = true
-text = "n. [i]Wound[/i]"
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="side_panel/memory_panel/VFlowContainer"]
-clip_contents = false
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/default_color = Color(0.858824, 0.905882, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_lg1bg")
-theme_override_fonts/italics_font = ExtResource("5_dyqar")
-theme_override_fonts/bold_italics_font = ExtResource("6_g52ou")
-bbcode_enabled = true
-text = "n. [i]Opportunity[/i]"
-fit_content = true
-
-[node name="RichTextLabel3" type="RichTextLabel" parent="side_panel/memory_panel/VFlowContainer"]
-clip_contents = false
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/default_color = Color(0.858824, 0.905882, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_lg1bg")
-theme_override_fonts/italics_font = ExtResource("5_dyqar")
-theme_override_fonts/bold_italics_font = ExtResource("6_g52ou")
-bbcode_enabled = true
-text = "n. [i]Opportunity[/i]"
-fit_content = true
-
-[node name="RichTextLabel4" type="RichTextLabel" parent="side_panel/memory_panel/VFlowContainer"]
-clip_contents = false
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/default_color = Color(0.858824, 0.905882, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_lg1bg")
-theme_override_fonts/italics_font = ExtResource("5_dyqar")
-theme_override_fonts/bold_italics_font = ExtResource("6_g52ou")
-bbcode_enabled = true
-text = "n. [i]Opportunity[/i]"
-fit_content = true
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

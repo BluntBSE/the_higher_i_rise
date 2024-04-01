@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dllv7pn8v6g5r"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_kwhfh"]
+
+[resource]
+script = ExtResource("1_kwhfh")
+id = "noun_chance"
+text = "chance"
+bbcode = ""
+part_speech = "noun"
+aspects = ["greeting"]
+principles = {
+"moth": 2
+}

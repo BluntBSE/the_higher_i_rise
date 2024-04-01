@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="THIR_1"
-run/main_scene="res://interaction_parser.tscn"
+run/main_scene="res://design_mock_5.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 

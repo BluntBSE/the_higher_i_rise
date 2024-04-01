@@ -166,7 +166,7 @@ func stateEnter(args: Interaction):
 	portrait_node_1 = _reference.get_node("Interaction_fg/portrait_controller/portrait_1")
 	
 func stateExit():
-	print("Load exit fired")
+
 	
 
 		#Switch state/return
@@ -174,19 +174,21 @@ func stateExit():
 
 func stateUpdate(dt):
 	#TODO: Somehow need to clear any selected words, etc.
+	_reference.can_hover = false
+	_reference.selected_word = null
+	_reference.hovered_word = null
+	_reference.hovered_slot = null
 	parsePortraits(_args)
 	parseInteraction(_args)
 	parseOptions(_args)
-	print("Whattup")
 	#Fade in
 	if !(is_equal_approx(a, 1.0)):
-		a = lerp(a, 1.0, .05) #TODO: Add smoothstep
+		a = lerp(a, 1.0, .1) #TODO: Add smoothstep
 		title_node.modulate.a = a
 		content_node.modulate.a = a
 		options_node.modulate.a = a
 		portrait_node_0.modulate.a = a
 		portrait_node_0.modulate.a = a
-		print("Not faded in")
 		return	
 		
 	_reference.state_machine.Change("finished", null)

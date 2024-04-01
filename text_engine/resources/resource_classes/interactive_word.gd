@@ -7,8 +7,10 @@ extends Resource
 @export var text: String = "default_word"
 @export var bbcode: String
 @export var part_speech: String
+@export var description: String
 @export var aspects: Array
 @export var principles: Dictionary
+
 
 """
 {"words":

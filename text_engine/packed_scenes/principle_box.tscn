@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://djbnikf7df3s5"]
+
+[ext_resource type="Script" path="res://text_engine/nodes/principle_box.gd" id="1_ciwt7"]
+[ext_resource type="Texture2D" uid="uid://rdfwu0i44ysm" path="res://content/images/aspects/moth.png" id="2_hqgdg"]
+[ext_resource type="Theme" uid="uid://b5cu5776o44se" path="res://text_engine/resources/UI/theme.tres" id="3_73um0"]
+[ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="4_vg8dm"]
+
+[node name="principle_box_3" type="HBoxContainer"]
+custom_minimum_size = Vector2(150, 100)
+script = ExtResource("1_ciwt7")
+
+[node name="principle_img" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_hqgdg")
+
+[node name="principle_num" type="RichTextLabel" parent="."]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_73um0")
+theme_override_fonts/normal_font = ExtResource("4_vg8dm")
+theme_override_font_sizes/normal_font_size = 70
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
+bbcode_enabled = true
+text = "2"

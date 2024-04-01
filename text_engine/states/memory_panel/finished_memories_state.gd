@@ -21,7 +21,6 @@ var state_machine #state machine attached to the reference passed in
 
 
 func stateEnter(args):
-	print("Entered finished memory state")
 	_args = args
 
 func stateUpdate(dt):
@@ -29,7 +28,7 @@ func stateUpdate(dt):
 	#print("State update from finished memories state")
 	
 func stateExit():
-	print("Exiting finished memory state")
+	pass
 	
 	#If text is done updating, we should do state_machine.Change("finished")
 

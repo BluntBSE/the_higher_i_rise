@@ -28,20 +28,23 @@ func stateEnter(args):
 
 func stateUpdate(dt):
 	#Delete all children (rendered words), as we are refreshing the list.
-	var children = _reference.get_children()
+	var organizer = _reference.get_node("card_organizer")
+	var children = organizer.get_children()
 	for child in children:
 		child.queue_free()
 	var memories = _reference.mem_inventory
 	var index = 0
-	var offset = 100
+	var offset = 50
 	for memory in memories:
 		var calc_offset = (index * offset)
 		print(memory)
 		#spawn_memory_card(offset)
 		#assign spawned card to panel
-		var child_node = load("res://text_engine/packed_scenes/single_memory.tscn").instantiate()
+		var child_node = load("res://text_engine/packed_scenes/word_card.tscn").instantiate()
 		child_node.unpack(memory)
-		_reference.add_child(child_node)
+	
+		organizer.add_child(child_node) 
+		child_node.position=Vector2(0,0)
 		#Subscribe parser to child signals
 		var root = child_node.get_tree().get_root()
 		var parser = root.get_node("interaction_parser") #TODO: Eventually, interaction_parser won't be the root and we have to change this.

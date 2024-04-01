@@ -8,6 +8,7 @@ id = "noun_hello"
 text = "hello"
 bbcode = ""
 part_speech = "noun"
+description = ""
 aspects = ["greeting"]
 principles = {
 "heart": 1

@@ -1,33 +1,57 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4ywgxp1malgn"]
+[gd_scene load_steps=4 format=3 uid="uid://b4ywgxp1malgn"]
 
-[ext_resource type="Script" path="res://memory.gd" id="1_lng3w"]
+[ext_resource type="Script" path="res://text_engine/nodes/memory.gd" id="1_lng3w"]
+[ext_resource type="Theme" uid="uid://b8pgkx4ittskt" path="res://test_theme.tres" id="2_8cbbm"]
+[ext_resource type="FontFile" uid="uid://ywagpyk071of" path="res://text_engine/resources/UI/fonts/CrimsonText-Italic.ttf" id="3_jud0b"]
 
 [node name="single_memory" type="ColorRect"]
+custom_minimum_size = Vector2(0, 100)
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 101.0
 grow_horizontal = 2
 color = Color(0.607843, 0.45098, 0.498039, 1)
 script = ExtResource("1_lng3w")
 
 [node name="memory_fg" type="ColorRect" parent="."]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
-offset_left = 6.0
-offset_top = 7.0
-offset_right = -6.0
-offset_bottom = 94.0
+anchor_bottom = 1.0
 grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
+color = Color(0.627451, 0, 0.654902, 1)
 
 [node name="word_text" type="RichTextLabel" parent="memory_fg"]
-layout_mode = 0
-offset_right = 199.0
-offset_bottom = 87.0
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.5
+offset_top = -45.0
+offset_right = 73.5
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
+theme = ExtResource("2_8cbbm")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-text = "Default Memory"
+theme_override_fonts/italics_font = ExtResource("3_jud0b")
+bbcode_enabled = true
+text = "[i]Default Memory[/i]"
+
+[node name="ColorRect" type="ColorRect" parent="memory_fg"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 49.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

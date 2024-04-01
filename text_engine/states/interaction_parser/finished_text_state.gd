@@ -23,6 +23,7 @@ var state_machine #state machine attached to the reference passed in
 	
 
 func stateEnter(args):
+	_reference.can_hover = true
 	_args = args
 
 func stateUpdate(dt):

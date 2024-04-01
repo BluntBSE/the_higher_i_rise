@@ -1,16 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://cnsnni08j3gds"]
+[gd_scene load_steps=12 format=3 uid="uid://bc8dxlyaa7bf5"]
 
-[ext_resource type="Theme" uid="uid://b5cu5776o44se" path="res://text_engine/resources/UI/theme.tres" id="1_jfsr4"]
-[ext_resource type="Script" path="res://text_engine/nodes/interaction_parser.gd" id="2_p6xha"]
-[ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="3_lg1bg"]
-[ext_resource type="FontFile" uid="uid://co5vsscgrr63x" path="res://text_engine/resources/UI/fonts/CrimsonText-Bold.ttf" id="4_r42yl"]
-[ext_resource type="FontFile" uid="uid://ywagpyk071of" path="res://text_engine/resources/UI/fonts/CrimsonText-Italic.ttf" id="5_dyqar"]
-[ext_resource type="FontFile" uid="uid://b51v2ipfr6ldx" path="res://text_engine/resources/UI/fonts/CrimsonText-BoldItalic.ttf" id="6_g52ou"]
-[ext_resource type="Script" path="res://memory_panel.gd" id="7_2r5jd"]
-[ext_resource type="Texture2D" uid="uid://bvwkeu64x7qx6" path="res://content/images/portraits/gristwood.png" id="7_kwyv0"]
-[ext_resource type="Texture2D" uid="uid://ctjy60erxr2jl" path="res://content/images/portraits/benefactorf.png" id="8_0a4j4"]
-[ext_resource type="Theme" uid="uid://b8pgkx4ittskt" path="res://test_theme.tres" id="9_swfoe"]
-[ext_resource type="Texture2D" uid="uid://rdfwu0i44ysm" path="res://content/images/aspects/moth.png" id="10_dsca8"]
+[ext_resource type="Theme" uid="uid://b5cu5776o44se" path="res://text_engine/resources/UI/theme.tres" id="1_jr4b4"]
+[ext_resource type="Script" path="res://text_engine/nodes/interaction_parser.gd" id="2_dsrak"]
+[ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="3_ga25k"]
+[ext_resource type="FontFile" uid="uid://co5vsscgrr63x" path="res://text_engine/resources/UI/fonts/CrimsonText-Bold.ttf" id="4_a7b7n"]
+[ext_resource type="FontFile" uid="uid://ywagpyk071of" path="res://text_engine/resources/UI/fonts/CrimsonText-Italic.ttf" id="5_d04ya"]
+[ext_resource type="FontFile" uid="uid://b51v2ipfr6ldx" path="res://text_engine/resources/UI/fonts/CrimsonText-BoldItalic.ttf" id="6_5ybhw"]
+[ext_resource type="Texture2D" uid="uid://bvwkeu64x7qx6" path="res://content/images/portraits/gristwood.png" id="7_5qslo"]
+[ext_resource type="Texture2D" uid="uid://ctjy60erxr2jl" path="res://content/images/portraits/benefactorf.png" id="8_dvsvr"]
+[ext_resource type="Theme" uid="uid://b8pgkx4ittskt" path="res://test_theme.tres" id="9_81x3p"]
+[ext_resource type="Script" path="res://memory_panel.gd" id="10_hskfk"]
+[ext_resource type="Texture2D" uid="uid://rdfwu0i44ysm" path="res://content/images/aspects/moth.png" id="11_cqekc"]
 
 [node name="interaction_parser" type="Control"]
 unique_name_in_owner = true
@@ -21,8 +21,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_jfsr4")
-script = ExtResource("2_p6xha")
+theme = ExtResource("1_jr4b4")
+script = ExtResource("2_dsrak")
 
 [node name="interaction_bg" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(50, 50)
@@ -66,10 +66,10 @@ offset_top = 175.0
 offset_right = 973.0
 offset_bottom = 708.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_lg1bg")
-theme_override_fonts/bold_font = ExtResource("4_r42yl")
-theme_override_fonts/italics_font = ExtResource("5_dyqar")
-theme_override_fonts/bold_italics_font = ExtResource("6_g52ou")
+theme_override_fonts/normal_font = ExtResource("3_ga25k")
+theme_override_fonts/bold_font = ExtResource("4_a7b7n")
+theme_override_fonts/italics_font = ExtResource("5_d04ya")
+theme_override_fonts/bold_italics_font = ExtResource("6_5ybhw")
 theme_override_font_sizes/normal_font_size = 28
 theme_override_font_sizes/bold_font_size = 28
 theme_override_font_sizes/italics_font_size = 28
@@ -117,7 +117,7 @@ offset_top = 171.0
 offset_right = 1626.0
 offset_bottom = 771.0
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("7_kwyv0")
+texture = ExtResource("7_5qslo")
 
 [node name="text_bg" type="ColorRect" parent="interaction_fg/portrait_controller/portrait_0"]
 layout_mode = 0
@@ -145,7 +145,7 @@ offset_top = 490.0
 offset_right = 1638.0
 offset_bottom = 1104.0
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("8_0a4j4")
+texture = ExtResource("8_dvsvr")
 
 [node name="text_bg" type="ColorRect" parent="interaction_fg/portrait_controller/portrait_1"]
 layout_mode = 0
@@ -181,28 +181,28 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -98.0
-offset_top = 38.0
-offset_right = 78.0
-offset_bottom = 150.0
+offset_left = -84.0
+offset_top = 43.0
+offset_right = 92.0
+offset_bottom = 155.0
 grow_horizontal = 2
-theme = ExtResource("9_swfoe")
+theme = ExtResource("9_81x3p")
 theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
 theme_override_font_sizes/normal_font_size = 34
 bbcode_enabled = true
-text = "[u]Speech[/u]"
+text = "[center][u]Speech[/u][/center]"
 
 [node name="aspects_title" type="RichTextLabel" parent="side_panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -129.0
-offset_top = 380.0
-offset_right = 26.0
-offset_bottom = 492.0
+offset_left = -82.0
+offset_top = 426.0
+offset_right = 73.0
+offset_bottom = 538.0
 grow_horizontal = 2
-theme = ExtResource("9_swfoe")
+theme = ExtResource("9_81x3p")
 theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
 theme_override_font_sizes/normal_font_size = 34
 bbcode_enabled = true
@@ -215,12 +215,12 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 25.0
-offset_top = 448.0
+offset_top = 488.0
 offset_right = -23.0
 offset_bottom = -27.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.792157, 0.898039, 0.984314, 0)
+color = Color(0.792157, 0.898039, 0.984314, 1)
 
 [node name="memory_panel" type="ColorRect" parent="side_panel"]
 custom_minimum_size = Vector2(50, 50)
@@ -228,70 +228,9 @@ layout_mode = 0
 offset_left = 22.0
 offset_top = 104.0
 offset_right = 233.0
-offset_bottom = 367.0
-color = Color(0.792157, 0.898039, 0.984314, 0)
-script = ExtResource("7_2r5jd")
-
-[node name="VFlowContainer" type="VBoxContainer" parent="side_panel/memory_panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.995
-anchor_bottom = 0.829
-offset_left = -1.0
-offset_right = 0.0549927
-offset_bottom = -0.0270081
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 30
-
-[node name="RichTextLabel" type="RichTextLabel" parent="side_panel/memory_panel/VFlowContainer"]
-clip_contents = false
-custom_minimum_size = Vector2(0, 10)
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/default_color = Color(0.858824, 0.905882, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_lg1bg")
-theme_override_fonts/italics_font = ExtResource("5_dyqar")
-theme_override_fonts/bold_italics_font = ExtResource("6_g52ou")
-bbcode_enabled = true
-text = "n. [i]Wound[/i]"
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="side_panel/memory_panel/VFlowContainer"]
-clip_contents = false
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/default_color = Color(0.858824, 0.905882, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_lg1bg")
-theme_override_fonts/italics_font = ExtResource("5_dyqar")
-theme_override_fonts/bold_italics_font = ExtResource("6_g52ou")
-bbcode_enabled = true
-text = "n. [i]Opportunity[/i]"
-fit_content = true
-
-[node name="RichTextLabel3" type="RichTextLabel" parent="side_panel/memory_panel/VFlowContainer"]
-clip_contents = false
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/default_color = Color(0.858824, 0.905882, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_lg1bg")
-theme_override_fonts/italics_font = ExtResource("5_dyqar")
-theme_override_fonts/bold_italics_font = ExtResource("6_g52ou")
-bbcode_enabled = true
-text = "n. [i]Opportunity[/i]"
-fit_content = true
-
-[node name="RichTextLabel4" type="RichTextLabel" parent="side_panel/memory_panel/VFlowContainer"]
-clip_contents = false
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/default_color = Color(0.858824, 0.905882, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_lg1bg")
-theme_override_fonts/italics_font = ExtResource("5_dyqar")
-theme_override_fonts/bold_italics_font = ExtResource("6_g52ou")
-bbcode_enabled = true
-text = "n. [i]Opportunity[/i]"
-fit_content = true
+offset_bottom = 404.0
+color = Color(0.792157, 0.898039, 0.984314, 1)
+script = ExtResource("10_hskfk")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -299,7 +238,7 @@ offset_left = 1779.0
 offset_top = 38.0
 offset_right = 1887.0
 offset_bottom = 146.0
-icon = ExtResource("10_dsca8")
+icon = ExtResource("11_cqekc")
 
 [connection signal="meta_hover_ended" from="interaction_fg/text_title" to="." method="_on_text_content_meta_hover_ended"]
 [connection signal="meta_hover_started" from="interaction_fg/text_title" to="." method="_on_text_content_meta_hover_started"]

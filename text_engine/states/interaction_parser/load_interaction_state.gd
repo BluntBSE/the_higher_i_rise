@@ -143,7 +143,7 @@ func parseInteraction(interaction: Interaction):
 		#Apply - This may be moved to its own state at some point.
 		var output_text = TextTools.parseText(_text, interaction)
 		output_node.text = output_text
-		output_title.text = "[u]"+_title+"[/u]"
+		output_title.text = "[u][b]"+_title+"[/b][/u]"
 		#output_node.append_text(output_text) #Append is recommended for rapid drawing, but not appropriate here.
 		output_bg.color = _base_bg_color
 		_reference.active_interaction = interaction #this may or may not be redundant. I think it might be useful if we can recycle this to use modified interactions from choose_option, which is why I've done it.
@@ -154,7 +154,7 @@ func stateEnter(args: Interaction):
 	_args = args
 	
 func stateExit():
-	print("Load exit fired")
+
 	
 
 		#Switch state/return

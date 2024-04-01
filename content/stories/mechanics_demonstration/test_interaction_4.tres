@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dlop3wpc1km1q"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_p5dfr"]
+
+[resource]
+script = ExtResource("1_p5dfr")
+base_bg_color = Color(0.301961, 0.298039, 0.803922, 1)
+display_title = "Goodbye, Scissors"
+text = "Perhaps you could <wound_1/> your surroundings."
+slots = {}
+options = [{
+"functions": [["remove_memory", ["noun_wound"]]],
+"links_to": "test_interaction_2",
+"text": "Return"
+}]
+wounds = {
+"wound_1": {
+"word_id": "verb_illuminate",
+"wound_link": "test_interaction_5"
+}
+}
+portraits = []

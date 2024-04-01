@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://8joc6cl3vm4v"]
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://chjlvgebfoy4e"]
 
 [ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_wn83b"]
 
 [resource]
 script = ExtResource("1_wn83b")
-base_bg_color = Color(0.466667, 0.45098, 0.435294, 1)
+base_bg_color = Color(0.368627, 0.364706, 0.364706, 1)
 display_title = "An Obscure Alley"
 text = "You are in a dark, damp alleyway sandwiched between a failed deli and St. Jude's School for Blind Girls. Here the smell of votive incense mingles with weeks-old sauerkraut and, recently, the smell of blood.
 
@@ -28,4 +28,4 @@ options = [{
 "text": "Of course..."
 }]
 wounds = {}
-portraits = ["bechet"]
+portraits = ["bechet", "zack"]

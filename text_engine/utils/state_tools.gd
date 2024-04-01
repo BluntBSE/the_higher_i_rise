@@ -2,6 +2,7 @@ class_name StateMachine2
 
 var _stateDict = {}
 var _current = EmptyState.new();
+var current_state_id = ""
 func getCurrent():
 	return _current
 func Add(state_id:String, state):
@@ -15,6 +16,7 @@ func Change(state_id:String, args):
 	var next = _stateDict[state_id]
 	next.stateEnter(args)
 	_current = next
+	current_state_id = state_id
 	
 #To call any parent functionality (presently none), call super()
 

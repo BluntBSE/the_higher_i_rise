@@ -1,15 +1,13 @@
 [gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://licw2ejq88sj"]
 
-[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_kd6rb"]
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_d3xh4"]
 
 [resource]
-script = ExtResource("1_kd6rb")
+script = ExtResource("1_d3xh4")
 base_bg_color = Color(0.301961, 0.298039, 0.803922, 1)
 display_title = "A Wound"
 text = "Here is a <wound_1/>"
-slots = {
-"slot_1": "noun_hello"
-}
+slots = {}
 options = []
 wounds = {
 "wound_1": {
@@ -17,4 +15,4 @@ wounds = {
 "wound_link": "test_interaction_3"
 }
 }
-portraits = []
+portraits = ["zack"]

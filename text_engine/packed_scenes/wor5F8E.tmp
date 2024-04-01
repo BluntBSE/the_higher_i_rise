@@ -1,0 +1,168 @@
+[gd_scene load_steps=9 format=3 uid="uid://caiyn6qcqclct"]
+
+[ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="1_dnyaf"]
+[ext_resource type="Script" path="res://text_engine/nodes/word_card.gd" id="1_vcvdc"]
+[ext_resource type="FontFile" uid="uid://ywagpyk071of" path="res://text_engine/resources/UI/fonts/CrimsonText-Italic.ttf" id="2_l3ajn"]
+[ext_resource type="FontFile" uid="uid://b51v2ipfr6ldx" path="res://text_engine/resources/UI/fonts/CrimsonText-BoldItalic.ttf" id="3_0n4bc"]
+[ext_resource type="Texture2D" uid="uid://cw5v5hcn2p1b3" path="res://content/images/aspects/winter.png" id="4_0kr36"]
+[ext_resource type="PackedScene" uid="uid://djbnikf7df3s5" path="res://text_engine/packed_scenes/principles_container.tscn" id="5_8qohc"]
+[ext_resource type="Theme" uid="uid://b5cu5776o44se" path="res://text_engine/resources/UI/theme.tres" id="5_um0yh"]
+[ext_resource type="Texture2D" uid="uid://dsb60ub827nfw" path="res://content/images/aspects/edge.png" id="6_3xfjm"]
+
+[node name="word_card" type="VBoxContainer"]
+custom_minimum_size = Vector2(0, 220)
+offset_top = 87.0
+offset_right = 380.0
+offset_bottom = 307.0
+size_flags_vertical = 0
+script = ExtResource("1_vcvdc")
+
+[node name="word_card_bg" type="ColorRect" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.952941, 0.894118, 0.839216, 1)
+
+[node name="word_card_heading" type="ColorRect" parent="word_card_bg"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 39.0
+grow_horizontal = 2
+size_flags_vertical = 3
+color = Color(0.843137, 0.694118, 0.54902, 1)
+
+[node name="word_title" type="RichTextLabel" parent="word_card_bg/word_card_heading"]
+clip_contents = false
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 15.0
+offset_right = -184.0
+offset_bottom = 32.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0.858824, 0.905882, 1, 1)
+theme_override_fonts/normal_font = ExtResource("1_dnyaf")
+theme_override_fonts/italics_font = ExtResource("2_l3ajn")
+theme_override_fonts/bold_italics_font = ExtResource("3_0n4bc")
+theme_override_font_sizes/normal_font_size = 0
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 0
+bbcode_enabled = true
+text = "[i][color=#000000]n. Scissors[/color]"
+fit_content = true
+
+[node name="word_definition" type="RichTextLabel" parent="word_card_bg/word_card_heading"]
+clip_contents = false
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 10.0
+offset_top = 49.0
+offset_right = -15.0
+offset_bottom = 129.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0.858824, 0.905882, 1, 1)
+theme_override_fonts/normal_font = ExtResource("1_dnyaf")
+theme_override_fonts/italics_font = ExtResource("2_l3ajn")
+theme_override_fonts/bold_italics_font = ExtResource("3_0n4bc")
+theme_override_font_sizes/normal_font_size = 0
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 0
+bbcode_enabled = true
+text = "[i][color=#000000]\"In gi rum imus noc te et con sumi snip snip snip\"[/color]"
+fit_content = true
+
+[node name="word_aspects" type="RichTextLabel" parent="word_card_bg/word_card_heading"]
+modulate = Color(0.454902, 0.337255, 0.215686, 1)
+clip_contents = false
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 8.0
+offset_top = 178.0
+offset_right = -191.0
+offset_bottom = 218.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0.858824, 0.905882, 1, 1)
+theme_override_fonts/normal_font = ExtResource("1_dnyaf")
+theme_override_fonts/italics_font = ExtResource("2_l3ajn")
+theme_override_fonts/bold_italics_font = ExtResource("3_0n4bc")
+theme_override_font_sizes/normal_font_size = 0
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 0
+bbcode_enabled = true
+text = "[i]noun, tool[/i]"
+fit_content = true
+
+[node name="principles_container" type="HBoxContainer" parent="word_card_bg/word_card_heading"]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 2.0
+offset_right = 690.0
+offset_bottom = 102.0
+scale = Vector2(0.32, 0.32)
+
+[node name="principle_box_3" parent="word_card_bg/word_card_heading/principles_container" instance=ExtResource("5_8qohc")]
+layout_mode = 2
+
+[node name="principle_box_2" type="HBoxContainer" parent="word_card_bg/word_card_heading/principles_container"]
+custom_minimum_size = Vector2(150, 100)
+layout_mode = 2
+
+[node name="principle_img" type="TextureRect" parent="word_card_bg/word_card_heading/principles_container/principle_box_2"]
+layout_mode = 2
+texture = ExtResource("6_3xfjm")
+
+[node name="principle_num" type="RichTextLabel" parent="word_card_bg/word_card_heading/principles_container/principle_box_2"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_um0yh")
+theme_override_fonts/normal_font = ExtResource("1_dnyaf")
+theme_override_font_sizes/normal_font_size = 70
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
+bbcode_enabled = true
+text = "1"
+
+[node name="principle_box_1" type="HBoxContainer" parent="word_card_bg/word_card_heading/principles_container"]
+custom_minimum_size = Vector2(150, 100)
+layout_mode = 2
+
+[node name="principle_img" type="TextureRect" parent="word_card_bg/word_card_heading/principles_container/principle_box_1"]
+layout_mode = 2
+texture = ExtResource("4_0kr36")
+
+[node name="principle_num" type="RichTextLabel" parent="word_card_bg/word_card_heading/principles_container/principle_box_1"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_um0yh")
+theme_override_fonts/normal_font = ExtResource("1_dnyaf")
+theme_override_font_sizes/normal_font_size = 70
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
+bbcode_enabled = true
+text = "1"
+
+[node name="aspects_divider" type="ColorRect" parent="word_card_bg"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 176.0
+offset_right = 362.0
+offset_bottom = 177.0
+color = Color(0.843137, 0.694118, 0.54902, 1)

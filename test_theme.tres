@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b8pgkx4ittskt"]
+
+[ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="1_hwemr"]
+
+[resource]
+default_font = ExtResource("1_hwemr")

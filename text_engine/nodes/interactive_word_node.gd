@@ -1,6 +1,6 @@
 extends Node
 class_name IWord
-
+#Why do I have both a resource and a logical node equivalent?
 
 
 
@@ -8,6 +8,7 @@ var id: String = "default_word"
 var text: String = "default_word"
 var bbcode: String
 var part_speech: String
+var description: String = "default description"
 var aspects: Array
 var principles: Dictionary
 

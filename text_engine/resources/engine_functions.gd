@@ -2,11 +2,8 @@ extends Node
 class_name EngineFunctions
 
 
-
-func print_string(string:String):
-	print("Firing print_string")
+func print_string(string):
 	print(string)
-
 func remove_memory(word_id:String):
 	var current_tree = get_tree()
 	var current_parent = get_parent()

@@ -67,14 +67,14 @@ func stateUpdate(dt):
 	#In the aspect panel
 	memory_panel.state_machine.Change("refresh", null)
 	
-	
-	
+
 	#Last, transition to wherever the wound_link points to.
 	#If text is done updating, we should do state_machine.Change("finished")
 	var wound_slot = determine_wound_number(_args, _reference.active_interaction.wounds)
 
 	var next_interaction_id = _reference.active_interaction.wounds[wound_slot].wound_link
 	var next_interaction = TextTools.getInteractionResource(next_interaction_id)
+	#_reference.can_hover = true
 	state_machine.Change("load_option", next_interaction)
 func _init(reference, args=null): #usually self, {args}
 	_reference = reference

@@ -44,11 +44,8 @@ func executeFunctions(functions:Array):
 
 	
 func determineOptionIndex(interaction_id):
-	print("Interaction ID arg is:: " + interaction_id)
 	var index = 0
 	for option in _reference.active_interaction.options:
-		print("Option link")
-		print(option.links_to)
 		if option.links_to == interaction_id:
 			return index
 			index += 1		

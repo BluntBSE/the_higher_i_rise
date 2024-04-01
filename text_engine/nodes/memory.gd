@@ -1,5 +1,5 @@
 extends ColorRect
-class_name Memory
+#class_name Memory
 
 var base_color = '#9b737f'
 var highlight_color = '#ebdb87'

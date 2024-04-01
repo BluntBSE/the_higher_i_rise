@@ -8,9 +8,9 @@ id = "noun_wound"
 text = "wound"
 bbcode = ""
 part_speech = "noun"
-aspects = ["greeting"]
+description = "\"To open certain Ways, one must first open oneself. \""
+aspects = ["entrance", "malady"]
 principles = {
 "edge": 1,
-"knock": 2,
-"winter": 1
+"knock": 2
 }
