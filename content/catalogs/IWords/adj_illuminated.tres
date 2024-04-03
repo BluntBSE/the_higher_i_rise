@@ -1,13 +1,13 @@
 [gd_resource type="Resource" load_steps=2 format=3 uid="uid://1p75vfh0yrai"]
 
-[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_qikqw"]
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_16mtl"]
 
 [resource]
-script = ExtResource("1_qikqw")
-id = "verb_illuminate"
-text = "illuminate"
+script = ExtResource("1_16mtl")
+id = "adj_illuminated"
+text = "illuminated"
 bbcode = ""
-part_speech = "verb"
+part_speech = "adjective"
 description = "\"Light LEAKS through the CRACKS. I am BRIGHTER than I EVER was.\""
 aspects = ["revelation"]
 principles = {

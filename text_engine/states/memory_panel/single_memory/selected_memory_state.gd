@@ -20,8 +20,6 @@ var state_machine #state machine attached to the reference passed in
 
 
 func stateEnter(args):
-
-	_reference.color = "#FF00FF"
 	_args = args
 	_reference.memory_selected.emit(_reference)
 

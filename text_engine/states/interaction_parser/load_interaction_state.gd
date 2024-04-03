@@ -76,7 +76,7 @@ func parseOptions(interaction: Interaction):
 			#Check the relevant slot in 
 			var conditions_met = false
 			#if the option has word conditions of any type....
-	
+			
 			if option.has("conditions_word"):
 				var specific_word_array = [] #array of bools. All true == all specific words met
 				
@@ -92,20 +92,27 @@ func parseOptions(interaction: Interaction):
 							specific_word_array.append(false)
 						
 				if specific_word_array.has(false):	
-					if index > 0:
-						output_text = output_text+"[p]"
+					if index > 0:#Thought this was necessary for options rendering. Still not convinced it isn't, but evidence isn't in my favor.
+						pass
+					#TODO: Strongly consider replacing the single rich text area that contains all options
+					#With child nodes similar to how memories are handled in the side panel
+					#You could get more precise control over spacing and aesthetics
+					output_text = output_text+"[p]"
+					output_text = output_text+"[color=#ffffff88]"
 					output_text += '[hint="'
 					output_text += option.hint_tooltip
 					output_text += '"]'
 					output_text += option.hint
 					output_text += "[/hint]"
-							
+					output_text += "[/color]"
+						
 					pass
 				
 				if !specific_word_array.has(false):
 				#Index 0 is to make sure we don't put a paragraph tag on the first one
 					if index > 0:
-						output_text = output_text+"[p]"
+						pass
+					output_text = output_text+"[p]"
 					output_text += '[url="'
 					output_text += option.links_to
 					output_text += '"]'

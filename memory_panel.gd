@@ -1,7 +1,7 @@
 extends ColorRect
 
 var state_machine: StateMachine2 = StateMachine2.new()
-var mem_inventory = []#Array of strings containing word ids, like "noun_wound"
+var mem_inventory = ["noun_wound"]#Array of strings containing word ids, like "noun_wound"
 
 func _init():
 	#Add various states to the state_machine here"))
@@ -16,7 +16,7 @@ func _init():
 	pass
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#state_machine.Change("refresh", null)
+	state_machine.Change("refresh", null)
 
 
 	

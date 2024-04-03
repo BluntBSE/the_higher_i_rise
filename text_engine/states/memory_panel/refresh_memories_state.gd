@@ -23,6 +23,7 @@ var state_machine #state machine attached to the reference passed in
 	
 
 func stateEnter(args):
+	print("Entered memory refresh")
 	_args = args
 
 func stateUpdate(dt):
@@ -36,7 +37,6 @@ func stateUpdate(dt):
 	var offset = 50
 	for memory in memories:
 		var calc_offset = (index * offset)
-		print(memory)
 		#spawn_memory_card(offset)
 		#assign spawned card to panel
 		var child_node = load("res://text_engine/packed_scenes/word_card.tscn").instantiate()

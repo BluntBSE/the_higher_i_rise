@@ -7,7 +7,8 @@ script = ExtResource("1_2np4p")
 id = "adj_dead"
 text = "dead"
 bbcode = ""
-part_speech = "adj"
+part_speech = "adjective"
+description = "\"'Dead' is not the same thing as 'dormant'\""
 aspects = ["greeting"]
 principles = {
 "moth": 1,

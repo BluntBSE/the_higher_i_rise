@@ -15,8 +15,8 @@ options = [{
 }]
 wounds = {
 "wound_1": {
-"word_id": "verb_illuminate",
-"wound_link": "test_interaction_5"
+"word_id": "adj_illuminated",
+"wound_link": "test_interaction"
 }
 }
 portraits = []

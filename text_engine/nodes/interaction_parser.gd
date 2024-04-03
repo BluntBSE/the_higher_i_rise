@@ -15,6 +15,7 @@ var hovered_slot = null
 var selected_memory = null
 
 func _on_select_memory(memory):
+	print("Parser says, on_select_memory fired")
 	var word_id = memory.word_id
 	selected_memory = word_id
 	
@@ -125,23 +126,30 @@ func _on_text_content_meta_clicked(meta):
 	#Update the effect on the text to indicate it has beeen selected
 	
 	
+	var is_wound = false
 	if selected_word == null and selected_memory == null:
-		var is_wound = false
+		
 		#CHECK IF THE WORD IN THE META IS A SLOT OR A WOUND, THEN ACT ACCORDINGLY
 		#If the meta == a word in any wound key, process it as a wound.
 		if active_interaction.wounds.size() > 0:
 			var all_wounds = active_interaction.wounds.keys()
 			for wound in all_wounds:
 				if active_interaction.wounds[wound].word_id == meta:
+					print("Yes verily I do believe this to be a wound")
 					is_wound = true
 					break
-		if is_wound == false:			
-			state_machine.Change("select_word_from_content", meta)
-		if is_wound == true:
-			state_machine.Change("handle_wound", meta)
-	if selected_word != null and selected_memory == null:
+	if is_wound == false:
+		#Big title is happening because of the select_word logic I bet.
+		print("Select word from content about to fire")			
+		state_machine.Change("select_word_from_content", meta)
+	if is_wound == true:
+		print("Handle wound about to fire")
+		state_machine.Change("handle_wound", meta)
+	if selected_word != null and selected_memory == null and is_wound == false:
+		print("swap word about to fire")
 		state_machine.Change("swap_word", meta)
-	if selected_word == null and selected_memory != null:
+	if selected_word == null and selected_memory != null and is_wound == false:
+		print("swap memory about to fire")
 		var args = [meta, selected_memory]
 		#This listens for clicks in the body of the parser. For clicks on the memory itself, refer to the memory object.
 		state_machine.Change("swap_memory", args)

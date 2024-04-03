@@ -1,7 +1,7 @@
 NEXT UP:
 	BUG(?): Debug message sometimes shows that portraits aren't being found...even though they are fading?
 	BUG: Sometimes the interaction doesn't load or doesn't fade in properly??? Possible lerp issue
-	BUG: After hovering a word, something goes awry with the words added to the word inventory...
+	BUG: After swapping a word between inventory and playspace, the titles get weird.
 	BUG(?): Get to the bottom of that image load debuggger image thing.
 	With individual words, in the refresh memory state, you use a combination of both relative and global position. Let's not?
 	FIX YOUR LERPS: Your fade lerp is goofed. You check for it being finished. You actually need to increment it to 1.0 with delta. Weight is actually "portion complete"

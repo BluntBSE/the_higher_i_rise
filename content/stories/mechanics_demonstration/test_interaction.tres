@@ -26,6 +26,18 @@ options = [{
 "id": "test_interaction_opt_1",
 "links_to": "test_interaction_2",
 "text": "Of course..."
+}, {
+"conditions_word": {
+"slot_1": {
+"specific_id": "adj_smug"
+}
+},
+"functions": [["print_string", ["hello world"]]],
+"hint": "Bloop",
+"hint_tooltip": "If you click words with the right aspect, you might change their position.",
+"id": "test_interaction_opt_1",
+"links_to": "test_interaction_2",
+"text": "A third way"
 }]
 wounds = {}
 portraits = ["bechet", "zack"]

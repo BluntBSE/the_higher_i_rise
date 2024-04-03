@@ -31,7 +31,7 @@ func stateEnter(args):
 	root = _reference.get_tree().get_root()
 	parser = root.get_node('interaction_parser')
 	_args = args
-	_reference.memory_selected.emit(_reference)	
+	#_reference.memory_selected.emit(_reference)	
 	_reference.z_index = 1
 
 
