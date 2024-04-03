@@ -21,7 +21,6 @@ func _on_select_memory(memory):
 
 	
 
-
 func updateData(interaction):
 	
 	pass
@@ -104,7 +103,6 @@ func remove_highlight_from_word(word):
 
 func _on_text_content_meta_hover_started(meta): #Aka when the user hovers over a URL
 	#Display popup at mouse location
-	print("Text content meta...allegedly")
 	highlight_word_from_content(meta)
 
 

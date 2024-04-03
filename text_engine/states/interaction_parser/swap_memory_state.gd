@@ -36,7 +36,6 @@ func parseInteraction(interaction: Interaction):
 	
 
 func stateEnter(args):
-	print("Entering swap memory state")
 	_args = args
 
 

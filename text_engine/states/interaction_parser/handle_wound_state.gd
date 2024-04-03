@@ -71,7 +71,6 @@ func stateUpdate(dt):
 	#Last, transition to wherever the wound_link points to.
 	#If text is done updating, we should do state_machine.Change("finished")
 	var wound_slot = determine_wound_number(_args, _reference.active_interaction.wounds)
-
 	var next_interaction_id = _reference.active_interaction.wounds[wound_slot].wound_link
 	var next_interaction = TextTools.getInteractionResource(next_interaction_id)
 	#_reference.can_hover = true

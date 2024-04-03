@@ -20,10 +20,10 @@ var state_machine #state machine attached to the reference passed in
 
 
 func stateEnter(args):
-	_reference.color = _reference.base_color
 	_args = args
 
 func stateUpdate(dt):
+
 	if _reference.is_hovered == true:
 		_reference.state_machine.Change("hovered", null)
 		

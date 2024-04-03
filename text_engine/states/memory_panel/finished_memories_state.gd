@@ -25,7 +25,7 @@ func stateEnter(args):
 
 func stateUpdate(dt):
 	pass
-	#print("State update from finished memories state")
+	
 	
 func stateExit():
 	pass

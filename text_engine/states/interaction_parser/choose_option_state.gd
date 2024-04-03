@@ -49,10 +49,9 @@ func determineOptionIndex(interaction_id):
 		if option.links_to == interaction_id:
 			return index
 			index += 1		
-	print("No matching option index found")
+	push_error("No matching option index found")
 
 func stateEnter(args):
-	print("Entered choose option state")
 	a = 1.0
 	_args = args
 	title_node = _reference.get_node("interaction_fg/text_title")
@@ -76,7 +75,7 @@ func stateUpdate(dt):
 
 	#need to wait for complete...
 	if !_reference.active_interaction.options[index].has("functions"):
-		print("No functions found on this option")
+		push_error("No functions found on this option")
 	if _reference.active_interaction.options[index].has("functions"):
 		var funcs_to_execute = _reference.active_interaction.options[index].functions
 		executeFunctions(funcs_to_execute)

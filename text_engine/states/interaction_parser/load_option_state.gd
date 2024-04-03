@@ -38,7 +38,6 @@ var a #alpha, for fading
 
 func parsePortraits(interaction: Interaction):
 	if !interaction:
-		print("null interaction in parsePortraits")
 		return null 
 	#Hide all existing portrait nodes.
 	var portrait_0 = _reference.get_node('interaction_fg/portrait_controller/portrait_0')
@@ -69,7 +68,6 @@ func parsePortraits(interaction: Interaction):
 func parseOptions(interaction: Interaction):
 	#What to do when null interaction arrives?
 	if !interaction:
-		print("null interaction in parseOptions")
 		return null #Probably should do an EmptyInteraction class
 	
 	var output_node = _reference.get_node('interaction_fg/options_content')

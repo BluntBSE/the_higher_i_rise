@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dspl466usuh45"]
+[gd_scene load_steps=16 format=3 uid="uid://dspl466usuh45"]
 
 [ext_resource type="Theme" uid="uid://b5cu5776o44se" path="res://text_engine/resources/UI/theme.tres" id="1_itvbg"]
 [ext_resource type="Script" path="res://text_engine/nodes/interaction_parser.gd" id="2_1nh7a"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ctjy60erxr2jl" path="res://content/images/portraits/benefactorf.png" id="8_bgjrn"]
 [ext_resource type="Theme" uid="uid://b8pgkx4ittskt" path="res://test_theme.tres" id="9_r5u8t"]
 [ext_resource type="Script" path="res://memory_panel.gd" id="10_1ypcv"]
+[ext_resource type="PackedScene" uid="uid://caiyn6qcqclct" path="res://text_engine/packed_scenes/word_card.tscn" id="11_kkxbp"]
 [ext_resource type="Texture2D" uid="uid://rdfwu0i44ysm" path="res://content/images/aspects/moth.png" id="13_figh2"]
 [ext_resource type="Texture2D" uid="uid://btfqqn1ckfu0d" path="res://content/images/aspects/secrethistories.png" id="14_exdqh"]
 [ext_resource type="Texture2D" uid="uid://yhbrxqwgllni" path="res://content/images/aspects/lantern.png" id="15_sj1i7"]
@@ -228,6 +229,10 @@ offset_right = -8.0
 offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="word_card" parent="side_panel/memory_panel/card_organizer" instance=ExtResource("11_kkxbp")]
+layout_mode = 0
+scale = Vector2(1.25, 1.25)
 
 [node name="aspects_title" type="RichTextLabel" parent="side_panel"]
 layout_mode = 1

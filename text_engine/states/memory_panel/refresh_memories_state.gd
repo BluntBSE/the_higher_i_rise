@@ -23,7 +23,6 @@ var state_machine #state machine attached to the reference passed in
 	
 
 func stateEnter(args):
-	print("Entered refresh state")
 	_args = args
 
 func stateUpdate(dt):
@@ -45,19 +44,18 @@ func stateUpdate(dt):
 	
 		organizer.add_child(child_node) 
 		child_node.position=Vector2(0,0)
+		child_node.position = child_node.position + Vector2(0, calc_offset)
 		#Subscribe parser to child signals
 		var root = child_node.get_tree().get_root()
 		var parser = root.get_node("interaction_parser") #TODO: Eventually, interaction_parser won't be the root and we have to change this.
 		var callback = parser._on_select_memory
 		child_node.memory_selected.connect(callback)
 		#Positioning
-		child_node.global_position = child_node.global_position + Vector2(0, calc_offset)
 		#Increment index
 		index += 1
 
 	#Choosing not to refresh constantly, but perhaps we could.
-	_reference.state_machine.Change("finished", null)
-	#If text is done updating, we should do state_machine.Change("finished")
+	_reference.state_machine.Change("finished", null)	
 
 func _init(reference, args=null): #usually self, {args}
 	_reference = reference

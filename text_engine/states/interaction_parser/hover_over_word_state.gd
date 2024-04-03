@@ -42,7 +42,7 @@ func getSlotKey(word):
 		if slots[slot] == word:
 			return str(slot)
 		else:
-			print("No slot found for: " + str(word))
+			push_error("No slot found for: " + str(word))
 	
 
 
@@ -62,7 +62,6 @@ func stateUpdate(dt):
 	
 	_reference.selected_word = _args
 	_reference.selected_slot = getSlotKey(_args)
-	print("Found " + _args + "in slot: " + getSlotKey(_args) )
 	#Do any styling here
 	_reference.state_machine.Change("finished", null)
 	#Determine what slot in the current interaction contains the word id

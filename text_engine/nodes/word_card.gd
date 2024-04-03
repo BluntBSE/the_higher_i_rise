@@ -58,15 +58,13 @@ func unpack(_word_id):
 func _init():
 	pass
 	#color = base_color
-	#state_machine.Add("finished", FinishedMemoryState.new(self, "init finished memory state"))
-	#state_machine.Add("hovered", HoveredMemoryState.new(self, "init hovered memory state"))
-	#state_machine.Add("selected", SelectedMemoryState.new(self, "init selected memory state"))
+	state_machine.Add("finished", FinishedMemoryState.new(self, "init finished memory state"))
+	state_machine.Add("hovered", HoveredMemoryState.new(self, "init hovered memory state"))
+	state_machine.Add("selected", SelectedMemoryState.new(self, "init selected memory state"))
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(self.ANCHOR_BEGIN)
 	pass
-	#unpack("adj_smug") #Default word. Should be replaced.
-	#state_machine.Change("finished", null)
+	state_machine.Change("finished", null)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

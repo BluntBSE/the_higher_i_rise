@@ -49,7 +49,7 @@ static func getInteractionResource(id: String):
 		#output_interaction.options = resource.options
 		#return output_interaction
 	return resource
-	print("Invalid interaction id! Or something more sinister")
+	push_error("Invalid interaction id! Or something more sinister")
 
 static func getWordResource(id: String):
 	var catalog_dir = "res://content/catalogs/IWords/"
@@ -57,7 +57,7 @@ static func getWordResource(id: String):
 	var word = IWord.new()
 	var resource = load(file)
 	if !resource:
-		print("No resource found!")
+		push_error("No resource found!")
 		return null
 	word.id = resource.id
 	word.text = resource.text
@@ -67,7 +67,7 @@ static func getWordResource(id: String):
 	word.principles = resource.principles
 	word.description = resource.description
 	return word
-	print("Invalid word id!")
+	push_error("Invalid word id!")
 
 static func determineGreatestPrinciple(principles:Dictionary):
 	var greatest_val = 0
@@ -157,7 +157,7 @@ static func parseText(input_string: String, interaction: Interaction):
 			var word = getWordResource(interaction.slots[slot])
 			
 			if !word:
-				print("No word found!")
+				push_error("No word found!")
 				return "WORD NOT FOUND"
 			word = applyStyling(word)
 			#Here is where we would add anything to modify it to be a sentence, such as capitalization.

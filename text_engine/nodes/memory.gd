@@ -26,7 +26,6 @@ func _init():
 	state_machine.Add("selected", SelectedMemoryState.new(self, "init selected memory state"))
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#unpack("adj_smug") #Default word. Should be replaced.
 	state_machine.Change("finished", null)
 
 
