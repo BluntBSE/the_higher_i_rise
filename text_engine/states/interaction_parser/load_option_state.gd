@@ -1,7 +1,7 @@
 extends EmptyState
 class_name LoadOptionState
 
-##T##Distinct from LoadInteractionState as this has a fade_in process.
+##TODO: ???##Distinct from LoadInteractionState as this has a fade_in process.
  
 '''
 class_name EmptyState
@@ -35,6 +35,8 @@ var options_node
 var portrait_node_0
 var portrait_node_1
 var a #alpha, for fading
+var t = 0.0 #Used for controlling animations
+var original_color
 
 func parsePortraits(interaction: Interaction):
 	if !interaction:
@@ -63,73 +65,53 @@ func parsePortraits(interaction: Interaction):
 			text_node.text = "[center]" + res.display_name + "[/center]"
 
 		
-		
-
-func parseOptions(interaction: Interaction):
-	#What to do when null interaction arrives?
+func parseOptions2(interaction: Interaction):
 	if !interaction:
-		return null #Probably should do an EmptyInteraction class
-	
-	var output_node = _reference.get_node('interaction_fg/options_content')
-	var output_text = ""
-	var index = 0
-	if len(interaction.options) > 0:
-		#get the state of the parsers slots & player aspects
-		#TODO: player aspects
-		for option:Dictionary in interaction.options:
-			#Check the relevant slot in 
-			var conditions_met = false
-			#if the option has word conditions of any type....
-	
-			if option.has("conditions_word"):
-				var specific_word_array = [] #array of bools. All true == all specific words met
-				
-				var specific_word_condition = option.conditions_word
-				var specific_word_slots = specific_word_condition.keys()
+		push_error("null interaction in parseOptions")
+		return null 
+	#Clear options before updating them
+	var output_container = _reference.find_child("options_container")
+	for child in output_container.get_children():
+		child.queue_free()
+	for option in interaction.options:
+		var conditions_met = false
+		if option.has("conditions_word"):
+			var specific_word_array = [] #array of bools. All true == all specific words met
+			var specific_word_condition = option.conditions_word
+			var specific_word_slots = specific_word_condition.keys()
+			for slot in specific_word_slots:
 			
-				for slot in specific_word_slots:
-				
-					if specific_word_condition[slot]:
-						if _reference.active_interaction.slots[slot] == specific_word_condition[slot].specific_id:
-							specific_word_array.append(true)
-						else:
-							specific_word_array.append(false)
+				if specific_word_condition[slot]:
+					if _reference.active_interaction.slots[slot] == specific_word_condition[slot].specific_id:
+						specific_word_array.append(true)
+					else:
+						specific_word_array.append(false)
 						
 				if specific_word_array.has(false):	
-					if index > 0:
-						output_text = output_text+"[p]"
-					output_text += '[hint="'
-					output_text += option.hint_tooltip
-					output_text += '"]'
-					output_text += option.hint
-					output_text += "[/hint]"
-							
-					pass
-				
+					#Load hint version if there is an unmet condition
+					var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
+					var content = '[hint="'
+					content += option.hint_tooltip
+					content += '"]'
+					content += option.hint
+					content += "[/hint]"
+					option_node.unpack(content, _reference) #Load content into the option node
+					output_container.add_child(option_node) #Assign to organizer on screen
 				if !specific_word_array.has(false):
-				#Index 0 is to make sure we don't put a paragraph tag on the first one
-					if index > 0:
-						output_text = output_text+"[p]"
-					output_text += '[url="'
-					output_text += option.links_to
-					output_text += '"]'
-					output_text += option.text
-					output_text += '[/url]'
+					#Else, load real version
+					var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
+					var content = '[url="'
+					content += option.links_to
+					content += '"]'
+					content += option.text
+					content += '[/url]'
+					option_node.unpack(content, _reference)
+					output_container.add_child(option_node)	
+				#No conditions? Load normally
+				if !option.has("conditions_word"):
+					conditions_met = true
 			
-			#If the option has no word or (TODO), aspect conditions, simply print the option
-			if !option.has("conditions_word"):
-				conditions_met = true
-				if index > 0:
-					output_text = output_text+"[p]"
-				output_text += '[url="'
-				output_text += option.links_to
-				output_text += '"]'
-				output_text += option.text
-				output_text += '[/url]'
-				
-
-	output_node.text = output_text
-
+			
 func parseInteraction(interaction: Interaction):
 	#Store
 	if interaction:
@@ -141,9 +123,7 @@ func parseInteraction(interaction: Interaction):
 		_slots = interaction.slots
 		_options = interaction.options
 		_title = interaction.display_title
-		
-
-		
+	
 		#Apply - This may be moved to its own state at some point.
 		var output_text = TextTools.parseText(_text, interaction)
 		output_node.text = output_text
@@ -156,11 +136,12 @@ func parseInteraction(interaction: Interaction):
 		
 
 func stateEnter(args: Interaction):
+	t = 0.0
 	a = 0.0 #Start invisible, become visible
 	_args = args
 	title_node = _reference.get_node("interaction_fg/text_title")
 	content_node = _reference.get_node("interaction_fg/text_content")
-	options_node = _reference.get_node("interaction_fg/options_content")
+	options_node = _reference.get_node("interaction_fg/options_organizer")
 	portrait_node_0 = _reference.get_node("interaction_fg/portrait_controller/portrait_0")
 	portrait_node_1 = _reference.get_node("Interaction_fg/portrait_controller/portrait_1")
 	
@@ -171,7 +152,9 @@ func stateExit():
 		#Switch state/return
 	return null
 
+
 func stateUpdate(dt):
+	t = t + dt
 	#TODO: Somehow need to clear any selected words, etc.
 	_reference.can_hover = false
 	_reference.selected_word = null
@@ -179,16 +162,17 @@ func stateUpdate(dt):
 	_reference.hovered_slot = null
 	parsePortraits(_args)
 	parseInteraction(_args)
-	parseOptions(_args)
+	parseOptions2(_args)
 	#Fade in
-	if !(is_equal_approx(a, 1.0)):
-		a = lerp(a, 1.0, .1) #TODO: Add smoothstep
-		title_node.modulate.a = a
-		content_node.modulate.a = a
-		options_node.modulate.a = a
-		portrait_node_0.modulate.a = a
-		portrait_node_0.modulate.a = a
-		return	
+
+	title_node.modulate = title_node.modulate.lerp(Color(1.0,1.0,1.0,1.0), t)
+	content_node.modulate = content_node.modulate.lerp(Color(1.0,1.0,1.0,1.0), t)
+	options_node.modulate = options_node.modulate.lerp(Color(1.0,1.0,1.0,1.0), t)
+	portrait_node_0.modulate = portrait_node_0.modulate.lerp(Color(1.0,1.0,1.0,1.0), t)
+	
+	if t < .2:
+		return
+
 		
 	_reference.state_machine.Change("finished", null)
 	

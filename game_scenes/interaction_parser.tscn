@@ -1,19 +1,21 @@
-[gd_scene load_steps=15 format=3 uid="uid://dspl466usuh45"]
+[gd_scene load_steps=17 format=3 uid="uid://beimt6ww35m54"]
 
-[ext_resource type="Theme" uid="uid://b5cu5776o44se" path="res://text_engine/resources/UI/theme.tres" id="1_itvbg"]
-[ext_resource type="Script" path="res://text_engine/nodes/interaction_parser.gd" id="2_1nh7a"]
-[ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="3_8wlph"]
-[ext_resource type="FontFile" uid="uid://co5vsscgrr63x" path="res://text_engine/resources/UI/fonts/CrimsonText-Bold.ttf" id="4_bqebp"]
-[ext_resource type="FontFile" uid="uid://ywagpyk071of" path="res://text_engine/resources/UI/fonts/CrimsonText-Italic.ttf" id="5_pxjms"]
-[ext_resource type="FontFile" uid="uid://b51v2ipfr6ldx" path="res://text_engine/resources/UI/fonts/CrimsonText-BoldItalic.ttf" id="6_7dw8n"]
-[ext_resource type="Texture2D" uid="uid://bvwkeu64x7qx6" path="res://content/images/portraits/gristwood.png" id="7_sr5il"]
-[ext_resource type="Texture2D" uid="uid://ctjy60erxr2jl" path="res://content/images/portraits/benefactorf.png" id="8_bgjrn"]
-[ext_resource type="Theme" uid="uid://b8pgkx4ittskt" path="res://test_theme.tres" id="9_r5u8t"]
-[ext_resource type="Script" path="res://memory_panel.gd" id="10_1ypcv"]
-[ext_resource type="Texture2D" uid="uid://rdfwu0i44ysm" path="res://content/images/aspects/moth.png" id="13_figh2"]
-[ext_resource type="Texture2D" uid="uid://btfqqn1ckfu0d" path="res://content/images/aspects/secrethistories.png" id="14_exdqh"]
-[ext_resource type="Texture2D" uid="uid://yhbrxqwgllni" path="res://content/images/aspects/lantern.png" id="15_sj1i7"]
-[ext_resource type="Texture2D" uid="uid://bq16ga14wh62f" path="res://content/images/aspects/heart.png" id="16_4jyc8"]
+[ext_resource type="Theme" uid="uid://b5cu5776o44se" path="res://text_engine/resources/UI/theme.tres" id="1_krh5l"]
+[ext_resource type="Script" path="res://text_engine/nodes/interaction_parser.gd" id="2_x1duu"]
+[ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="3_2livl"]
+[ext_resource type="FontFile" uid="uid://co5vsscgrr63x" path="res://text_engine/resources/UI/fonts/CrimsonText-Bold.ttf" id="4_1irjp"]
+[ext_resource type="FontFile" uid="uid://ywagpyk071of" path="res://text_engine/resources/UI/fonts/CrimsonText-Italic.ttf" id="5_i2u26"]
+[ext_resource type="FontFile" uid="uid://b51v2ipfr6ldx" path="res://text_engine/resources/UI/fonts/CrimsonText-BoldItalic.ttf" id="6_ativf"]
+[ext_resource type="Texture2D" uid="uid://bvwkeu64x7qx6" path="res://content/images/portraits/gristwood.png" id="7_56jfr"]
+[ext_resource type="Texture2D" uid="uid://ctjy60erxr2jl" path="res://content/images/portraits/benefactorf.png" id="8_8wlu6"]
+[ext_resource type="PackedScene" uid="uid://c37hmyricmehv" path="res://text_engine/packed_scenes/single_option.tscn" id="9_or5x1"]
+[ext_resource type="Theme" uid="uid://b8pgkx4ittskt" path="res://test_theme.tres" id="9_p17ku"]
+[ext_resource type="Script" path="res://memory_panel.gd" id="10_c3yyu"]
+[ext_resource type="Texture2D" uid="uid://rdfwu0i44ysm" path="res://content/images/aspects/moth.png" id="11_4jxd7"]
+[ext_resource type="PackedScene" uid="uid://dxncpx8tc4a73" path="res://text_engine/packed_scenes/aspect_item.tscn" id="12_u4j84"]
+[ext_resource type="Texture2D" uid="uid://btfqqn1ckfu0d" path="res://content/images/aspects/secrethistories.png" id="13_6lhj8"]
+[ext_resource type="Texture2D" uid="uid://yhbrxqwgllni" path="res://content/images/aspects/lantern.png" id="14_1djmk"]
+[ext_resource type="Texture2D" uid="uid://bq16ga14wh62f" path="res://content/images/aspects/heart.png" id="15_ef4xy"]
 
 [node name="interaction_parser" type="Control"]
 unique_name_in_owner = true
@@ -24,8 +26,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_itvbg")
-script = ExtResource("2_1nh7a")
+theme = ExtResource("1_krh5l")
+script = ExtResource("2_x1duu")
 
 [node name="interaction_bg" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(50, 50)
@@ -58,8 +60,8 @@ offset_top = 73.0
 offset_right = 946.0
 offset_bottom = 185.0
 theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
-theme_override_fonts/normal_font = ExtResource("3_8wlph")
-theme_override_fonts/bold_font = ExtResource("4_bqebp")
+theme_override_fonts/normal_font = ExtResource("3_2livl")
+theme_override_fonts/bold_font = ExtResource("4_1irjp")
 theme_override_font_sizes/normal_font_size = 40
 theme_override_font_sizes/bold_font_size = 58
 bbcode_enabled = true
@@ -72,10 +74,10 @@ offset_top = 175.0
 offset_right = 973.0
 offset_bottom = 708.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_8wlph")
-theme_override_fonts/bold_font = ExtResource("4_bqebp")
-theme_override_fonts/italics_font = ExtResource("5_pxjms")
-theme_override_fonts/bold_italics_font = ExtResource("6_7dw8n")
+theme_override_fonts/normal_font = ExtResource("3_2livl")
+theme_override_fonts/bold_font = ExtResource("4_1irjp")
+theme_override_fonts/italics_font = ExtResource("5_i2u26")
+theme_override_fonts/bold_italics_font = ExtResource("6_ativf")
 theme_override_font_sizes/normal_font_size = 28
 theme_override_font_sizes/bold_font_size = 28
 theme_override_font_sizes/italics_font_size = 28
@@ -90,16 +92,6 @@ You are <slot_1/> here, and your killer is feeling awfully <slot_2/>.
 "
 meta_underlined = false
 hint_underlined = false
-
-[node name="options_content" type="RichTextLabel" parent="interaction_fg"]
-layout_mode = 0
-offset_left = 108.0
-offset_top = 681.0
-offset_right = 961.0
-offset_bottom = 836.0
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-bbcode_enabled = true
-text = "I am a whole bunch of options"
 
 [node name="portrait_controller" type="Control" parent="interaction_fg"]
 anchors_preset = 0
@@ -118,7 +110,7 @@ offset_top = 171.0
 offset_right = 1626.0
 offset_bottom = 771.0
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("7_sr5il")
+texture = ExtResource("7_56jfr")
 
 [node name="text_bg" type="ColorRect" parent="interaction_fg/portrait_controller/portrait_0"]
 layout_mode = 0
@@ -146,7 +138,7 @@ offset_top = 490.0
 offset_right = 1638.0
 offset_bottom = 1104.0
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("8_bgjrn")
+texture = ExtResource("8_8wlu6")
 
 [node name="text_bg" type="ColorRect" parent="interaction_fg/portrait_controller/portrait_1"]
 layout_mode = 0
@@ -162,6 +154,49 @@ offset_bottom = 37.0
 bbcode_enabled = true
 text = "[center]Lady Piper
 [/center]"
+
+[node name="options_organizer" type="Control" parent="interaction_fg"]
+anchors_preset = 0
+offset_left = 108.0
+offset_top = 549.0
+offset_right = 902.0
+offset_bottom = 902.0
+
+[node name="options_content" type="RichTextLabel" parent="interaction_fg/options_organizer"]
+visible = false
+layout_mode = 0
+offset_top = 43.0
+offset_right = 853.0
+offset_bottom = 198.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+bbcode_enabled = true
+text = "I am a whole bunch of options"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="interaction_fg/options_organizer"]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="options_container" type="VBoxContainer" parent="interaction_fg/options_organizer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="option_bg" parent="interaction_fg/options_organizer/ScrollContainer/options_container" instance=ExtResource("9_or5x1")]
+layout_mode = 2
+
+[node name="option_bg2" parent="interaction_fg/options_organizer/ScrollContainer/options_container" instance=ExtResource("9_or5x1")]
+layout_mode = 2
+
+[node name="option_bg3" parent="interaction_fg/options_organizer/ScrollContainer/options_container" instance=ExtResource("9_or5x1")]
+layout_mode = 2
+
+[node name="option_bg4" parent="interaction_fg/options_organizer/ScrollContainer/options_container" instance=ExtResource("9_or5x1")]
+layout_mode = 2
 
 [node name="side_panel" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(50, 50)
@@ -187,11 +222,11 @@ offset_top = 129.0
 offset_right = 193.0
 offset_bottom = 241.0
 grow_horizontal = 2
-theme = ExtResource("9_r5u8t")
+theme = ExtResource("9_p17ku")
 theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
-theme_override_fonts/bold_font = ExtResource("4_bqebp")
-theme_override_fonts/italics_font = ExtResource("5_pxjms")
-theme_override_fonts/bold_italics_font = ExtResource("6_7dw8n")
+theme_override_fonts/bold_font = ExtResource("4_1irjp")
+theme_override_fonts/italics_font = ExtResource("5_i2u26")
+theme_override_fonts/bold_italics_font = ExtResource("6_ativf")
 theme_override_font_sizes/normal_font_size = 40
 theme_override_font_sizes/bold_font_size = 40
 theme_override_font_sizes/italics_font_size = 40
@@ -216,7 +251,7 @@ offset_right = -17.0
 offset_bottom = 633.0
 grow_horizontal = 2
 color = Color(0.792157, 0.898039, 0.984314, 0)
-script = ExtResource("10_1ypcv")
+script = ExtResource("10_c3yyu")
 
 [node name="card_organizer" type="Control" parent="side_panel/memory_panel"]
 custom_minimum_size = Vector2(0, 200)
@@ -239,10 +274,10 @@ offset_top = 628.0
 offset_right = 177.0
 offset_bottom = 685.0
 grow_horizontal = 2
-theme = ExtResource("9_r5u8t")
+theme = ExtResource("9_p17ku")
 theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
-theme_override_fonts/bold_font = ExtResource("4_bqebp")
-theme_override_fonts/italics_font = ExtResource("5_pxjms")
+theme_override_fonts/bold_font = ExtResource("4_1irjp")
+theme_override_fonts/italics_font = ExtResource("5_i2u26")
 theme_override_font_sizes/normal_font_size = 40
 theme_override_font_sizes/bold_font_size = 40
 theme_override_font_sizes/italics_font_size = 40
@@ -284,44 +319,24 @@ theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 40
 columns = 4
 
-[node name="aspect_item_1" type="HBoxContainer" parent="side_panel/aspects_panel/aspect_grid"]
+[node name="aspect_item_1" parent="side_panel/aspects_panel/aspect_grid" instance=ExtResource("12_u4j84")]
 layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_1"]
-layout_mode = 2
-texture = ExtResource("14_exdqh")
-
-[node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_1"]
-custom_minimum_size = Vector2(70, 0)
-layout_direction = 2
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("1_itvbg")
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_8wlph")
-theme_override_font_sizes/normal_font_size = 70
-theme_override_font_sizes/bold_font_size = 0
-theme_override_font_sizes/italics_font_size = 0
-theme_override_font_sizes/bold_italics_font_size = 0
-theme_override_font_sizes/mono_font_size = 0
-bbcode_enabled = true
-text = "16"
 
 [node name="aspect_item_2" type="HBoxContainer" parent="side_panel/aspects_panel/aspect_grid"]
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_2"]
 layout_mode = 2
-texture = ExtResource("14_exdqh")
+texture = ExtResource("13_6lhj8")
 
 [node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_2"]
 custom_minimum_size = Vector2(70, 0)
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_itvbg")
+theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_8wlph")
+theme_override_fonts/normal_font = ExtResource("3_2livl")
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
 theme_override_font_sizes/italics_font_size = 0
@@ -335,16 +350,16 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_3"]
 layout_mode = 2
-texture = ExtResource("14_exdqh")
+texture = ExtResource("13_6lhj8")
 
 [node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_3"]
 custom_minimum_size = Vector2(70, 0)
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_itvbg")
+theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_8wlph")
+theme_override_fonts/normal_font = ExtResource("3_2livl")
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
 theme_override_font_sizes/italics_font_size = 0
@@ -358,16 +373,16 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_4"]
 layout_mode = 2
-texture = ExtResource("14_exdqh")
+texture = ExtResource("13_6lhj8")
 
 [node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_4"]
 custom_minimum_size = Vector2(70, 0)
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_itvbg")
+theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_8wlph")
+theme_override_fonts/normal_font = ExtResource("3_2livl")
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
 theme_override_font_sizes/italics_font_size = 0
@@ -381,16 +396,16 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_5"]
 layout_mode = 2
-texture = ExtResource("14_exdqh")
+texture = ExtResource("13_6lhj8")
 
 [node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_5"]
 custom_minimum_size = Vector2(70, 0)
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_itvbg")
+theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_8wlph")
+theme_override_fonts/normal_font = ExtResource("3_2livl")
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
 theme_override_font_sizes/italics_font_size = 0
@@ -404,16 +419,16 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_9"]
 layout_mode = 2
-texture = ExtResource("14_exdqh")
+texture = ExtResource("13_6lhj8")
 
 [node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_9"]
 custom_minimum_size = Vector2(70, 0)
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_itvbg")
+theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_8wlph")
+theme_override_fonts/normal_font = ExtResource("3_2livl")
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
 theme_override_font_sizes/italics_font_size = 0
@@ -427,16 +442,16 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_6"]
 layout_mode = 2
-texture = ExtResource("14_exdqh")
+texture = ExtResource("13_6lhj8")
 
 [node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_6"]
 custom_minimum_size = Vector2(70, 0)
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_itvbg")
+theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_8wlph")
+theme_override_fonts/normal_font = ExtResource("3_2livl")
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
 theme_override_font_sizes/italics_font_size = 0
@@ -450,16 +465,16 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_10"]
 layout_mode = 2
-texture = ExtResource("14_exdqh")
+texture = ExtResource("13_6lhj8")
 
 [node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_10"]
 custom_minimum_size = Vector2(70, 0)
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_itvbg")
+theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_8wlph")
+theme_override_fonts/normal_font = ExtResource("3_2livl")
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
 theme_override_font_sizes/italics_font_size = 0
@@ -473,16 +488,16 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_7"]
 layout_mode = 2
-texture = ExtResource("15_sj1i7")
+texture = ExtResource("14_1djmk")
 
 [node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_7"]
 custom_minimum_size = Vector2(70, 0)
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_itvbg")
+theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_8wlph")
+theme_override_fonts/normal_font = ExtResource("3_2livl")
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
 theme_override_font_sizes/italics_font_size = 0
@@ -496,16 +511,16 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_11"]
 layout_mode = 2
-texture = ExtResource("15_sj1i7")
+texture = ExtResource("14_1djmk")
 
 [node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_11"]
 custom_minimum_size = Vector2(70, 0)
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_itvbg")
+theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_8wlph")
+theme_override_fonts/normal_font = ExtResource("3_2livl")
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
 theme_override_font_sizes/italics_font_size = 0
@@ -519,7 +534,7 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_8"]
 layout_mode = 2
-texture = ExtResource("16_4jyc8")
+texture = ExtResource("15_ef4xy")
 stretch_mode = 6
 
 [node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_8"]
@@ -527,9 +542,9 @@ custom_minimum_size = Vector2(70, 0)
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_itvbg")
+theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_8wlph")
+theme_override_fonts/normal_font = ExtResource("3_2livl")
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
 theme_override_font_sizes/italics_font_size = 0
@@ -543,7 +558,7 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_12"]
 layout_mode = 2
-texture = ExtResource("16_4jyc8")
+texture = ExtResource("15_ef4xy")
 stretch_mode = 6
 
 [node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_12"]
@@ -551,9 +566,9 @@ custom_minimum_size = Vector2(70, 0)
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_itvbg")
+theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_8wlph")
+theme_override_fonts/normal_font = ExtResource("3_2livl")
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
 theme_override_font_sizes/italics_font_size = 0
@@ -573,10 +588,10 @@ offset_top = 12.0
 offset_right = 176.0
 offset_bottom = 69.0
 grow_horizontal = 2
-theme = ExtResource("9_r5u8t")
+theme = ExtResource("9_p17ku")
 theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
-theme_override_fonts/bold_font = ExtResource("4_bqebp")
-theme_override_fonts/italics_font = ExtResource("5_pxjms")
+theme_override_fonts/bold_font = ExtResource("4_1irjp")
+theme_override_fonts/italics_font = ExtResource("5_i2u26")
 theme_override_font_sizes/normal_font_size = 40
 theme_override_font_sizes/bold_font_size = 40
 theme_override_font_sizes/italics_font_size = 40
@@ -591,14 +606,14 @@ offset_top = 37.0
 offset_right = 1917.0
 offset_bottom = 145.0
 scale = Vector2(0.68, 0.68)
-icon = ExtResource("13_figh2")
+icon = ExtResource("11_4jxd7")
 
 [connection signal="meta_hover_ended" from="interaction_fg/text_title" to="." method="_on_text_content_meta_hover_ended"]
 [connection signal="meta_hover_started" from="interaction_fg/text_title" to="." method="_on_text_content_meta_hover_started"]
 [connection signal="meta_clicked" from="interaction_fg/text_content" to="." method="_on_text_content_meta_clicked"]
 [connection signal="meta_hover_ended" from="interaction_fg/text_content" to="." method="_on_text_content_meta_hover_ended"]
 [connection signal="meta_hover_started" from="interaction_fg/text_content" to="." method="_on_text_content_meta_hover_started"]
-[connection signal="meta_clicked" from="interaction_fg/options_content" to="." method="_on_options_content_meta_clicked"]
+[connection signal="meta_clicked" from="interaction_fg/options_organizer/options_content" to="." method="_on_options_content_meta_clicked"]
 [connection signal="meta_hover_ended" from="side_panel/text_title" to="." method="_on_text_content_meta_hover_ended"]
 [connection signal="meta_hover_started" from="side_panel/text_title" to="." method="_on_text_content_meta_hover_started"]
 [connection signal="meta_hover_ended" from="side_panel/aspects_title" to="." method="_on_text_content_meta_hover_ended"]

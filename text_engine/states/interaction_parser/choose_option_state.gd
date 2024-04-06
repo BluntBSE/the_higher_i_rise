@@ -23,6 +23,7 @@ var options_node
 var portrait_node_0
 var portrait_node_1
 var a #alpha, for fading
+var t# For handling animations
 
 func executeFunctions(functions:Array):
 	#Functions arrive in the form of: [ ["function_id", [arg_1, arg_2_, arg_3], ["function_id_2", [args...] ]
@@ -53,17 +54,20 @@ func determineOptionIndex(interaction_id):
 
 func stateEnter(args):
 	a = 1.0
+	t = 0.0
 	_args = args
 	title_node = _reference.get_node("interaction_fg/text_title")
 	content_node = _reference.get_node("interaction_fg/text_content")
-	options_node = _reference.get_node("interaction_fg/options_content")
+	options_node = _reference.get_node("interaction_fg/options_organizer")
 	portrait_node_0 = _reference.get_node("interaction_fg/portrait_controller/portrait_0")
 	portrait_node_1 = _reference.get_node("Interaction_fg/portrait_controller/portrait_1")
 	
 func stateUpdate(dt):
+	t += dt
 	_reference.selected_word = null
 	var index = determineOptionIndex(_args)
 	#fade out
+	"""
 	if !(is_equal_approx(a, 0.0)):
 		a = lerp(a, 0.0, .2) #TODO: Add smoothstep
 		title_node.modulate.a = a
@@ -73,6 +77,14 @@ func stateUpdate(dt):
 		portrait_node_0.modulate.a =a
 		return
 
+	"""
+	title_node.modulate = title_node.modulate.lerp(Color(1.0,1.0,1.0,0.0), t)
+	content_node.modulate = content_node.modulate.lerp(Color(1.0,1.0,1.0,0.0), t)
+	options_node.modulate = options_node.modulate.lerp(Color(1.0,1.0,1.0,0.0), t)
+	portrait_node_0.modulate = portrait_node_0.modulate.lerp(Color(1.0,1.0,1.0,0.0), t)
+	
+	if t < .15:
+		return
 	#need to wait for complete...
 	if !_reference.active_interaction.options[index].has("functions"):
 		push_error("No functions found on this option")

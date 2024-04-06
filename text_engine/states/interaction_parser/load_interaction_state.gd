@@ -58,81 +58,53 @@ func parsePortraits(interaction: Interaction):
 			text_node.text = "[center]" + res.display_name + "[/center]"
 
 		
-		
-
-func parseOptions(interaction: Interaction):
-	#What to do when null interaction arrives?
+func parseOptions2(interaction: Interaction):
 	if !interaction:
-		print("null interaction in parseOptions")
-		return null #Probably should do an EmptyInteraction class
-	
-	var output_node = _reference.get_node('interaction_fg/options_content')
-	var output_text = ""
-	var index = 0
-	if len(interaction.options) > 0:
-		#get the state of the parsers slots & player aspects
-		#TODO: player aspects
-		for option:Dictionary in interaction.options:
-			#Check the relevant slot in 
-			var conditions_met = false
-			#if the option has word conditions of any type....
+		push_error("null interaction in parseOptions")
+		return null 
+	#Clear options before updating them
+	var output_container = _reference.find_child("options_container")
+	for child in output_container.get_children():
+		child.queue_free()
+	for option in interaction.options:
+		var conditions_met = false
+		if option.has("conditions_word"):
+			var specific_word_array = [] #array of bools. All true == all specific words met
+			var specific_word_condition = option.conditions_word
+			var specific_word_slots = specific_word_condition.keys()
+			for slot in specific_word_slots:
 			
-			if option.has("conditions_word"):
-				var specific_word_array = [] #array of bools. All true == all specific words met
-				
-				var specific_word_condition = option.conditions_word
-				var specific_word_slots = specific_word_condition.keys()
-			
-				for slot in specific_word_slots:
-				
-					if specific_word_condition[slot]:
-						if _reference.active_interaction.slots[slot] == specific_word_condition[slot].specific_id:
-							specific_word_array.append(true)
-						else:
-							specific_word_array.append(false)
+				if specific_word_condition[slot]:
+					if _reference.active_interaction.slots[slot] == specific_word_condition[slot].specific_id:
+						specific_word_array.append(true)
+					else:
+						specific_word_array.append(false)
 						
 				if specific_word_array.has(false):	
-					if index > 0:#Thought this was necessary for options rendering. Still not convinced it isn't, but evidence isn't in my favor.
-						pass
-					#TODO: Strongly consider replacing the single rich text area that contains all options
-					#With child nodes similar to how memories are handled in the side panel
-					#You could get more precise control over spacing and aesthetics
-					output_text = output_text+"[p]"
-					output_text = output_text+"[color=#ffffff88]"
-					output_text += '[hint="'
-					output_text += option.hint_tooltip
-					output_text += '"]'
-					output_text += option.hint
-					output_text += "[/hint]"
-					output_text += "[/color]"
-						
-					pass
-				
+					#Load hint version if there is an unmet condition
+					var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
+					var content = '[hint="'
+					content += option.hint_tooltip
+					content += '"]'
+					content += option.hint
+					content += "[/hint]"
+					option_node.unpack(content, _reference) #Load content into the option node
+					output_container.add_child(option_node) #Assign to organizer on screen
 				if !specific_word_array.has(false):
-				#Index 0 is to make sure we don't put a paragraph tag on the first one
-					if index > 0:
-						pass
-					output_text = output_text+"[p]"
-					output_text += '[url="'
-					output_text += option.links_to
-					output_text += '"]'
-					output_text += option.text
-					output_text += '[/url]'
+					#Else, load real version
+					var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
+					var content = '[url="'
+					content += option.links_to
+					content += '"]'
+					content += option.text
+					content += '[/url]'
+					option_node.unpack(content, _reference)
+					output_container.add_child(option_node)	
+				#No conditions? Load normally
+				if !option.has("conditions_word"):
+					conditions_met = true
 			
-			#If the option has no word or (TODO), aspect conditions, simply print the option
-			if !option.has("conditions_word"):
-				conditions_met = true
-				if index > 0:
-					output_text = output_text+"[p]"
-				output_text += '[url="'
-				output_text += option.links_to
-				output_text += '"]'
-				output_text += option.text
-				output_text += '[/url]'
-				
-
-	output_node.text = output_text
-
+	
 func parseInteraction(interaction: Interaction):
 	#Store
 	if interaction:
@@ -171,7 +143,7 @@ func stateUpdate(dt):
 	#TODO: Somehow need to clear any selected words, etc.
 	parsePortraits(_args)
 	parseInteraction(_args)
-	parseOptions(_args)
+	parseOptions2(_args)
 	_reference.state_machine.Change("finished", null)
 	
 	#If text is done updating, we should do state_machine.Change("finished")

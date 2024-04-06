@@ -69,8 +69,6 @@ func highlight_word_from_content(word):
 	
 	var content_node = get_node('interaction_fg/text_content')
 	var text = content_node.text
-	#Compare the echoed meta to the stored slots.
-	#Wrap <slot_1> or whatever in [b] [/b] tags.
 	var interaction_text = active_interaction.text
 
 	var slot_key = getSlotKey(word)
@@ -115,7 +113,7 @@ func _on_text_content_meta_hover_ended(meta): #When the user stops hovering over
 
 
 func _on_options_content_meta_clicked(meta):
-
+	print("Parser attempting to fire options")
 	state_machine.Change("choose_option", meta)
 
 

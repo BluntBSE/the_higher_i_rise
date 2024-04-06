@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://c37hmyricmehv"]
+
+[ext_resource type="Script" path="res://text_engine/nodes/single_option.gd" id="1_ena0y"]
+
+[node name="option_bg" type="ColorRect"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(700, 50)
+mouse_filter = 2
+script = ExtResource("1_ena0y")
+
+[node name="option_content" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.86
+offset_left = 37.0
+offset_top = 8.0
+offset_right = -37.0
+offset_bottom = 2.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+bbcode_enabled = true
+text = "I am some text"
+
+[node name="option_bullet" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 21.0
+offset_right = 31.0
+offset_bottom = 31.0
+mouse_filter = 2
+
+[connection signal="meta_clicked" from="option_content" to="." method="_on_option_content_meta_clicked"]

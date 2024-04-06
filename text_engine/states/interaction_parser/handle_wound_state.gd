@@ -44,7 +44,7 @@ func stateEnter(args):
 	_args = args
 	title_node = _reference.get_node("interaction_fg/text_title")
 	content_node = _reference.get_node("interaction_fg/text_content")
-	options_node = _reference.get_node("interaction_fg/options_content")
+	options_node = _reference.get_node("interaction_fg/options_organizer")
 	portrait_node_0 = _reference.get_node("interaction_fg/portrait_controller/portrait_0")
 	portrait_node_1 = _reference.get_node("Interaction_fg/portrait_controller/portrait_1")
 		
