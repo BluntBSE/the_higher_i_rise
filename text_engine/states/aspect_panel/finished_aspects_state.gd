@@ -1,5 +1,5 @@
 extends EmptyState
-class_name FinishedMemoriesState
+class_name FinishedAspectsState
 
 
 '''

@@ -20,9 +20,11 @@ var state_machine #state machine attached to the reference passed in
 
 
 func stateEnter(args):
+	_reference.get_node("pulse_shader_rect").visible = false
+	_reference.scale = Vector2(1.0,1.0)
 	_args = args
 
-func stateUpdate(dt):
+func stateUpdate(_dt):
 
 	if _reference.is_hovered == true:
 		_reference.state_machine.Change("hovered", null)
@@ -48,5 +50,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass

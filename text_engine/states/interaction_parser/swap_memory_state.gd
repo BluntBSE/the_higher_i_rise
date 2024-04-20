@@ -39,7 +39,7 @@ func stateEnter(args):
 	_args = args
 
 
-func stateUpdate(dt):
+func stateUpdate(_dt):
 	var memory_panel = _reference.get_node('side_panel/memory_panel')
 	#Save the word id in _args to a variable in the _self reference, "selected_word"
 	var word_in_parser = _args[0]
@@ -89,5 +89,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass

@@ -38,10 +38,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(1, 0.984314, 0.882353, 1)
+color = Color(0.85098, 0.74902, 0.0313726, 1)
 
 [node name="interaction_fg" type="ColorRect" parent="."]
-z_index = 1
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 1
 anchors_preset = 15

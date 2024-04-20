@@ -74,7 +74,7 @@ func parseOptions2(interaction: Interaction):
 	for child in output_container.get_children():
 		child.queue_free()
 	for option in interaction.options:
-		var conditions_met = false
+		var _conditions_met = false
 		if option.has("conditions_word"):
 			var specific_word_array = [] #array of bools. All true == all specific words met
 			var specific_word_condition = option.conditions_word
@@ -109,7 +109,7 @@ func parseOptions2(interaction: Interaction):
 					output_container.add_child(option_node)	
 				#No conditions? Load normally
 				if !option.has("conditions_word"):
-					conditions_met = true
+					_conditions_met = true
 			
 			
 func parseInteraction(interaction: Interaction):
@@ -190,5 +190,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://caiyn6qcqclct"]
+[gd_scene load_steps=12 format=3 uid="uid://caiyn6qcqclct"]
 
 [ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="1_dnyaf"]
 [ext_resource type="Script" path="res://text_engine/nodes/word_card.gd" id="1_vcvdc"]
@@ -8,19 +8,33 @@
 [ext_resource type="PackedScene" uid="uid://djbnikf7df3s5" path="res://text_engine/packed_scenes/principle_box.tscn" id="5_qjhee"]
 [ext_resource type="Theme" uid="uid://b5cu5776o44se" path="res://text_engine/resources/UI/theme.tres" id="5_um0yh"]
 [ext_resource type="Texture2D" uid="uid://dsb60ub827nfw" path="res://content/images/aspects/edge.png" id="6_3xfjm"]
+[ext_resource type="Shader" path="res://text_engine/shaders/2d_glow_shader_2.gdshader" id="9_7kut5"]
 
-[node name="word_card" type="VBoxContainer"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_648tn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_01fsu"]
+shader = ExtResource("9_7kut5")
+shader_parameter/glow_color = Color(0.886275, 0.823529, 0.74902, 0.0431373)
+shader_parameter/glow_power = 2.0
+shader_parameter/glow_shift = 1.0
+shader_parameter/glow_radius = 1.0
+
+[node name="word_card" type="Control"]
 custom_minimum_size = Vector2(0, 220)
+layout_mode = 3
+anchors_preset = 0
 offset_left = -1.0
 offset_right = 379.0
 offset_bottom = 220.0
 size_flags_vertical = 0
-mouse_filter = 0
 mouse_default_cursor_shape = 2
 script = ExtResource("1_vcvdc")
 
 [node name="word_card_bg" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_648tn")
 layout_mode = 2
+offset_right = 380.0
+offset_bottom = 199.0
 size_flags_vertical = 3
 mouse_filter = 2
 color = Color(0.952941, 0.894118, 0.839216, 1)
@@ -34,9 +48,71 @@ offset_bottom = 39.0
 grow_horizontal = 2
 size_flags_vertical = 3
 mouse_filter = 2
-color = Color(0.843137, 0.694118, 0.54902, 1)
+color = Color(0.752941, 0.564706, 0.368627, 1)
 
-[node name="word_title" type="RichTextLabel" parent="word_card_bg/word_card_heading"]
+[node name="principles_container" type="HBoxContainer" parent="word_card_bg/word_card_heading"]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 3.0
+offset_right = 690.0
+offset_bottom = 103.0
+scale = Vector2(0.32, 0.32)
+mouse_filter = 2
+alignment = 2
+
+[node name="principle_box_3" parent="word_card_bg/word_card_heading/principles_container" instance=ExtResource("5_qjhee")]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="principle_box_2" type="HBoxContainer" parent="word_card_bg/word_card_heading/principles_container"]
+use_parent_material = true
+custom_minimum_size = Vector2(150, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="principle_img" type="TextureRect" parent="word_card_bg/word_card_heading/principles_container/principle_box_2"]
+layout_mode = 2
+texture = ExtResource("6_3xfjm")
+
+[node name="principle_num" type="RichTextLabel" parent="word_card_bg/word_card_heading/principles_container/principle_box_2"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_um0yh")
+theme_override_fonts/normal_font = ExtResource("1_dnyaf")
+theme_override_font_sizes/normal_font_size = 70
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
+bbcode_enabled = true
+text = "1"
+
+[node name="principle_box_1" type="HBoxContainer" parent="word_card_bg/word_card_heading/principles_container"]
+use_parent_material = true
+custom_minimum_size = Vector2(150, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="principle_img" type="TextureRect" parent="word_card_bg/word_card_heading/principles_container/principle_box_1"]
+layout_mode = 2
+texture = ExtResource("4_0kr36")
+
+[node name="principle_num" type="RichTextLabel" parent="word_card_bg/word_card_heading/principles_container/principle_box_1"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_um0yh")
+theme_override_fonts/normal_font = ExtResource("1_dnyaf")
+theme_override_font_sizes/normal_font_size = 70
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
+bbcode_enabled = true
+text = "1"
+
+[node name="word_title" type="RichTextLabel" parent="word_card_bg"]
 clip_contents = false
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 1
@@ -44,7 +120,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_left = 15.0
 offset_right = -184.0
-offset_bottom = 32.0
+offset_bottom = 40.0
 grow_horizontal = 2
 size_flags_vertical = 0
 mouse_filter = 2
@@ -60,7 +136,7 @@ bbcode_enabled = true
 text = "[i]n. Scissors"
 fit_content = true
 
-[node name="word_description" type="RichTextLabel" parent="word_card_bg/word_card_heading"]
+[node name="word_description" type="RichTextLabel" parent="word_card_bg"]
 clip_contents = false
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 1
@@ -85,17 +161,27 @@ bbcode_enabled = true
 text = "[i]\"In gi rum imus noc te et con sumi snip snip snip\""
 fit_content = true
 
-[node name="word_aspects" type="RichTextLabel" parent="word_card_bg/word_card_heading"]
+[node name="aspects_divider" type="ColorRect" parent="word_card_bg"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 155.0
+offset_right = 362.0
+offset_bottom = 156.0
+mouse_filter = 2
+color = Color(0.843137, 0.694118, 0.54902, 1)
+
+[node name="word_aspects" type="RichTextLabel" parent="word_card_bg"]
 modulate = Color(0.454902, 0.337255, 0.215686, 1)
 clip_contents = false
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = -1
 anchor_right = 1.0
+anchor_bottom = 0.991
 offset_left = 8.0
-offset_top = 178.0
+offset_top = 157.0
 offset_right = -12.0
-offset_bottom = 218.0
+offset_bottom = -21.02
 grow_horizontal = 2
 size_flags_vertical = 0
 mouse_filter = 2
@@ -111,74 +197,15 @@ bbcode_enabled = true
 text = "noun, tool"
 fit_content = true
 
-[node name="principles_container" type="HBoxContainer" parent="word_card_bg/word_card_heading"]
+[node name="pulse_shader_rect" type="ColorRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_01fsu")
 layout_mode = 0
-offset_left = 232.0
-offset_top = 2.0
-offset_right = 690.0
-offset_bottom = 102.0
-scale = Vector2(0.32, 0.32)
-mouse_filter = 2
-alignment = 2
-
-[node name="principle_box_3" parent="word_card_bg/word_card_heading/principles_container" instance=ExtResource("5_qjhee")]
-layout_mode = 2
-mouse_filter = 2
-
-[node name="principle_box_2" type="HBoxContainer" parent="word_card_bg/word_card_heading/principles_container"]
-custom_minimum_size = Vector2(150, 100)
-layout_mode = 2
-mouse_filter = 2
-
-[node name="principle_img" type="TextureRect" parent="word_card_bg/word_card_heading/principles_container/principle_box_2"]
-layout_mode = 2
-texture = ExtResource("6_3xfjm")
-
-[node name="principle_num" type="RichTextLabel" parent="word_card_bg/word_card_heading/principles_container/principle_box_2"]
-layout_direction = 2
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("5_um0yh")
-theme_override_fonts/normal_font = ExtResource("1_dnyaf")
-theme_override_font_sizes/normal_font_size = 70
-theme_override_font_sizes/bold_font_size = 0
-theme_override_font_sizes/italics_font_size = 0
-theme_override_font_sizes/bold_italics_font_size = 0
-theme_override_font_sizes/mono_font_size = 0
-bbcode_enabled = true
-text = "1"
-
-[node name="principle_box_1" type="HBoxContainer" parent="word_card_bg/word_card_heading/principles_container"]
-custom_minimum_size = Vector2(150, 100)
-layout_mode = 2
-mouse_filter = 2
-
-[node name="principle_img" type="TextureRect" parent="word_card_bg/word_card_heading/principles_container/principle_box_1"]
-layout_mode = 2
-texture = ExtResource("4_0kr36")
-
-[node name="principle_num" type="RichTextLabel" parent="word_card_bg/word_card_heading/principles_container/principle_box_1"]
-layout_direction = 2
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("5_um0yh")
-theme_override_fonts/normal_font = ExtResource("1_dnyaf")
-theme_override_font_sizes/normal_font_size = 70
-theme_override_font_sizes/bold_font_size = 0
-theme_override_font_sizes/italics_font_size = 0
-theme_override_font_sizes/bold_italics_font_size = 0
-theme_override_font_sizes/mono_font_size = 0
-bbcode_enabled = true
-text = "1"
-
-[node name="aspects_divider" type="ColorRect" parent="word_card_bg"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 176.0
-offset_right = 362.0
-offset_bottom = 177.0
-mouse_filter = 2
-color = Color(0.843137, 0.694118, 0.54902, 1)
+offset_left = 1.0
+offset_right = 1119.0
+offset_bottom = 588.0
+scale = Vector2(0.34, 0.34)
+mouse_filter = 1
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

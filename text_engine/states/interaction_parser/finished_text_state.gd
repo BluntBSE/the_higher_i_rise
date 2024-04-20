@@ -26,7 +26,7 @@ func stateEnter(args):
 	_reference.can_hover = true
 	_args = args
 
-func stateUpdate(dt):
+func stateUpdate(_dt):
 	pass
 	#If text is done updating, we should do state_machine.Change("finished")
 
@@ -42,5 +42,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass

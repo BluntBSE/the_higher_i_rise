@@ -48,7 +48,7 @@ func stateEnter(args):
 	portrait_node_0 = _reference.get_node("interaction_fg/portrait_controller/portrait_0")
 	portrait_node_1 = _reference.get_node("Interaction_fg/portrait_controller/portrait_1")
 		
-func stateUpdate(dt):
+func stateUpdate(_dt):
 	#TODO: If the player already has a word, consider making it impossible to take it
 	#Add the wound_id to the aspects_panel mem_inventory
 	if !(is_equal_approx(a, 0.0)):
@@ -87,5 +87,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass

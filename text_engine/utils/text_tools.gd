@@ -49,7 +49,7 @@ static func getInteractionResource(id: String):
 		#output_interaction.options = resource.options
 		#return output_interaction
 	return resource
-	push_error("Invalid interaction id! Or something more sinister")
+	
 
 static func getWordResource(id: String):
 	var catalog_dir = "res://content/catalogs/IWords/"
@@ -67,7 +67,7 @@ static func getWordResource(id: String):
 	word.principles = resource.principles
 	word.description = resource.description
 	return word
-	push_error("Invalid word id!")
+	
 
 static func determineGreatestPrinciple(principles:Dictionary):
 	var greatest_val = 0
@@ -137,10 +137,7 @@ static func applyStyling(word: IWord): #"Styling" is a misnomer since this also 
 		
 	return text
 
-static func getWordFromSlot(interaction: Interaction, slot: String):
-	#This function will take a slot, like "slot_1", and return the word that is stored in the _slots dictionary of the interaction.
-	#This word is stored in the _slots dictionary of the interaction, and is retrieved by the "slot_1", "slot_2", etc. keys.
-	pass
+
 
 
 
@@ -185,5 +182,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass

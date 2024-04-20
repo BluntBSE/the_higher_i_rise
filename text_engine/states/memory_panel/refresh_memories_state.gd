@@ -23,10 +23,9 @@ var state_machine #state machine attached to the reference passed in
 	
 
 func stateEnter(args):
-	print("Entered memory refresh")
 	_args = args
 
-func stateUpdate(dt):
+func stateUpdate(_dt):
 	#Delete all children (rendered words), as we are refreshing the list.
 	var organizer = _reference.get_node("card_organizer")
 	var children = organizer.get_children()
@@ -47,8 +46,6 @@ func stateUpdate(dt):
 		child_node.position = child_node.position + Vector2(0, calc_offset)
 		#Subscribe parser to child signals
 		var root:Node = child_node.get_tree().get_root()
-		print(root)
-		print(root.get_tree_string_pretty())
 		var parser = root.get_node("main/interaction_parser") #TODO: Eventually, interaction_parser won't be the root and we have to change this.
 		var callback = parser._on_select_memory
 		child_node.memory_selected.connect(callback)
@@ -71,5 +68,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass

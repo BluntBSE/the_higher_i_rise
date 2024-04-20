@@ -17,7 +17,7 @@ func _init():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	state_machine.Change("refresh", null)
-
+	
 
 	
 	pass # Replace with function body.

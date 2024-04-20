@@ -2,11 +2,11 @@ extends Node
 class_name EmptyState
 
 
-func stateUpdate(dt):
+func stateUpdate(_dt):
 	pass
 func stateHandleInput():
 	pass
-func stateEnter(args):
+func stateEnter(_args):
 	pass
 func stateExit():
 	pass
@@ -17,5 +17,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass

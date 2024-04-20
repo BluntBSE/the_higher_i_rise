@@ -20,7 +20,9 @@ options = [{
 "specific_id": "adj_smug"
 }
 },
-"functions": [["print_string", ["hello world"]]],
+"functions": [["print_string", ["hello world"]], ["update_aspects", [{
+"devil": 1
+}]]],
 "hint": "If only there was something you could do about it...",
 "hint_tooltip": "If you click words with the right aspect, you might change their position.",
 "id": "test_interaction_opt_1",

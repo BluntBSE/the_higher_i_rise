@@ -30,7 +30,7 @@ func parseInteraction(interaction: Interaction):
 func stateEnter(args):
 	_args = args
 
-func stateUpdate(dt):
+func stateUpdate(_dt):
 	#Save the word id in _args to a variable in the _self reference, "selected_word"
 	_reference.selected_word = _args
 	var slot_key = TextTools.getSlotKey(_args, _reference)
@@ -63,5 +63,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass

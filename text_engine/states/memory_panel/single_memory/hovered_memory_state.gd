@@ -29,7 +29,8 @@ func stateEnter(args):
 	t = 0.0
 	start_pos = _reference.position
 	root = _reference.get_tree().get_root()
-	parser = root.get_node('interaction_parser')
+	print(root)
+	parser = root.get_node('main/interaction_parser')
 	_args = args
 	#_reference.memory_selected.emit(_reference)	
 	_reference.z_index = 1
@@ -37,15 +38,16 @@ func stateEnter(args):
 
 func stateUpdate(dt):
 	t += dt*.8
-	_reference.scale = _reference.scale.lerp(Vector2(1.20,1.20), t)
+	var target_scale = Vector2(1.20,1.20)
+	_reference.scale = _reference.scale.lerp(target_scale, t)
 	var target_pos = start_pos + Vector2(-100,0)
 	_reference.position = _reference.position.lerp(target_pos, t)
 	
 	
-
 	if Input.is_action_just_released("left_click"):
+		
 		if parser.selected_word == null:
-			_reference.state_machine.Change("selected", null)
+			_reference.state_machine.Change("selected", {"start_pos":start_pos, "hover_pos": target_pos, "hover_scale": target_scale})
 		else:
 			var args = [parser.selected_word, _reference.word_id]
 			parser.state_machine.Change("swap_memory", args)
@@ -56,8 +58,8 @@ func stateUpdate(dt):
 	
 func stateExit():
 	_reference.position = start_pos
-	_reference.scale = Vector2(1.0,1.0)
-	_reference.z_index = 0
+
+	#_reference.z_index = 0
 	pass
 	
 	#If text is done updating, we should do state_machine.Change("finished")
@@ -78,5 +80,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass

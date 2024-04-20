@@ -8,7 +8,7 @@ id = "adj_smug"
 text = "smug"
 bbcode = ""
 part_speech = "adjective"
-description = ""
+description = "\"The fruit of victory, real or imagined.\""
 aspects = ["greeting"]
 principles = {
 "edge": 1

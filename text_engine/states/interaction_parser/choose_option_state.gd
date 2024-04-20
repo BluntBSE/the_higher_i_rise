@@ -41,7 +41,7 @@ func executeFunctions(functions:Array):
 			_engine_functions.callv(function_id, function_args)
 			#Do I need to delete that _engine_functions? Queue_free does that. Might as well.
 			_engine_functions.queue_free()
-	pass
+	
 
 	
 func determineOptionIndex(interaction_id):
@@ -49,8 +49,10 @@ func determineOptionIndex(interaction_id):
 	for option in _reference.active_interaction.options:
 		if option.links_to == interaction_id:
 			return index
+		else:
 			index += 1		
-	push_error("No matching option index found")
+			
+	#push_error("No matching option index found")
 
 func stateEnter(args):
 	a = 1.0
@@ -109,5 +111,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass

@@ -5,7 +5,7 @@ func unpack(content:String, parser:Control):
 	var output_node:RichTextLabel = get_node("option_content")
 	output_node.text = content
 	_parser = parser
-	output_node.meta_clicked.connect(fuck)
+	#output_node.meta_clicked.connect(fuck)
 	#Register this items "meta_clicked" event to the parent.
 	
 	pass
@@ -16,13 +16,11 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 
 
-func fuck():
-	print("fuck")
 #Idk why I couldn't connect these directly...TODO: Fix it! Make this a proper "connect" in the unpack function >:(
 func _on_option_content_meta_clicked(meta):
 	_parser._on_options_content_meta_clicked(meta)

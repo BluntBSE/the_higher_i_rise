@@ -48,12 +48,12 @@ func parsePortraits(interaction: Interaction):
 			portrait_name = portrait_name
 			var respath = TextTools.getResourceFromDirectory('res://content/catalogs/characters/', portrait_name)
 			var res = load(respath)
-			var img = Image.new()
-			img.load(res.portrait)
+			#var img = Image.new()
+			#img.load(res.portrait)
 			var portrait_node = _reference.get_node('interaction_fg/portrait_controller/'+output_name)
 			portrait_node.visible = true
 			var img_node = portrait_node.get_node('img')
-			img_node.set_texture(ImageTexture.create_from_image(img))
+			img_node.set_texture(load(res.portrait))
 			var text_node = portrait_node.get_node('text_bg/label')
 			text_node.text = "[center]" + res.display_name + "[/center]"
 
@@ -67,7 +67,7 @@ func parseOptions2(interaction: Interaction):
 	for child in output_container.get_children():
 		child.queue_free()
 	for option in interaction.options:
-		var conditions_met = false
+		#var conditions_met = false
 		if option.has("conditions_word"):
 			var specific_word_array = [] #array of bools. All true == all specific words met
 			var specific_word_condition = option.conditions_word
@@ -102,7 +102,8 @@ func parseOptions2(interaction: Interaction):
 					output_container.add_child(option_node)	
 				#No conditions? Load normally
 				if !option.has("conditions_word"):
-					conditions_met = true
+					pass
+					#conditions_met = true
 			
 	
 func parseInteraction(interaction: Interaction):
@@ -139,7 +140,7 @@ func stateExit():
 		#Switch state/return
 	return null
 
-func stateUpdate(dt):
+func stateUpdate(_dt):
 	#TODO: Somehow need to clear any selected words, etc.
 	parsePortraits(_args)
 	parseInteraction(_args)
@@ -160,5 +161,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass

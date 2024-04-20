@@ -2,7 +2,7 @@ extends StatefulControl
 class_name InteractionParser
 
 var state_machine: StateMachine2 = StateMachine2.new()
-var _current_text: String = ""
+#var _current_text: String = ""
 var active_interaction: Interaction = Interaction.new()
 var default_interaction_id = "test_interaction" 
 var default_interaction = TextTools.getInteractionResource(default_interaction_id)
@@ -22,7 +22,7 @@ func _on_select_memory(memory):
 
 	
 
-func updateData(interaction):
+func updateData(_interaction):
 	
 	pass
 
@@ -87,7 +87,7 @@ func highlight_word_from_content(word):
 func remove_highlight_from_word(word):
 	if hovered_slot == null:
 		return
-	var content_node = get_node("interaction_fg/text_content")
+	#var content_node = get_node("interaction_fg/text_content")
 	var interaction_text = active_interaction.text
 	var slot_key = getSlotKey(word)
 	var slot_str = "[b]<" + slot_key + "/>[/b]" #Match the style tags from the highlight function

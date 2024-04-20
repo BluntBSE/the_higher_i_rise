@@ -8,7 +8,7 @@ id = "adj_dead"
 text = "dead"
 bbcode = ""
 part_speech = "adjective"
-description = "\"'Dead' is not the same thing as 'dormant'\""
+description = "\"Usually this means they aren't moving. Usually.\""
 aspects = ["greeting"]
 principles = {
 "moth": 1,

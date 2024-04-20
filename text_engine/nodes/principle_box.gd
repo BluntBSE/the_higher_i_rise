@@ -1,11 +1,11 @@
 extends HBoxContainer
 
 func unpack(principle:String, value:int):
-	var img = Image.new()
+	#var img = Image.new()
 	var icon_path = Principles[principle].icon
-	img.load(icon_path)
+	#img.load(icon_path)
 	var img_node = find_child("principle_img")
-	img_node.set_texture(ImageTexture.create_from_image(img))
+	img_node.set_texture(load(icon_path))
 	var number_node = find_child("principle_num")
 	number_node.text = str(value)
 
@@ -16,5 +16,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
