@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://d0g7si24jqqbu"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_ydk5i"]
+
+[resource]
+script = ExtResource("1_ydk5i")
+id = "noun_fountain"
+text = "fountain"
+bbcode = ""
+part_speech = "noun"
+description = "\"For being wet in moderation.\""
+aspects = ["plural", "tool"]
+principles = {
+"grail": 1
+}

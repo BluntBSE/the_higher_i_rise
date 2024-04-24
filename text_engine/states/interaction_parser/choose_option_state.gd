@@ -55,12 +55,14 @@ func determineOptionIndex(interaction_id):
 	#push_error("No matching option index found")
 
 func stateEnter(args):
+	print("Chose an option")
 	a = 1.0
 	t = 0.0
 	_args = args
 	title_node = _reference.get_node("interaction_fg/text_title")
 	content_node = _reference.get_node("interaction_fg/text_content")
 	options_node = _reference.get_node("interaction_fg/options_organizer")
+	#Does finding nodes not work if the nodes aren't visible? Getting an odd, seemingly unserious error about it.
 	portrait_node_0 = _reference.get_node("interaction_fg/portrait_controller/portrait_0")
 	portrait_node_1 = _reference.get_node("Interaction_fg/portrait_controller/portrait_1")
 	
@@ -89,7 +91,11 @@ func stateUpdate(dt):
 		return
 	#need to wait for complete...
 	if !_reference.active_interaction.options[index].has("functions"):
-		push_error("No functions found on this option")
+		var interaction_to_load = TextTools.getInteractionResource(_args)
+		#load option is used to fade in/out
+
+		_reference.state_machine.Change("load_option", interaction_to_load)
+		#push_error("No functions found on this option")
 	if _reference.active_interaction.options[index].has("functions"):
 		var funcs_to_execute = _reference.active_interaction.options[index].functions
 		executeFunctions(funcs_to_execute)

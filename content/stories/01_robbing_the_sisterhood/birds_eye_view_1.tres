@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://6wyni4fnou16"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_vno7c"]
+
+[resource]
+script = ExtResource("1_vno7c")
+base_bg_color = Color(1, 0.890196, 0, 1)
+display_title = "Bird's Eye View"
+text = "Your consciousness expands until you are floating over the entire school. It's a U-shaped brick building, maybe five stories tall, with a little courtyard garden in the front. Up here the sounds of New York, with its motor carriages and its street cars, relax into a dull roar."
+slots = {}
+options = [{
+"id": "foo",
+"links_to": "birds_eye_view_2",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

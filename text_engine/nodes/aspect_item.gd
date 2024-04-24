@@ -11,6 +11,7 @@ func unpack(aspect_name, value = null):
 	texture_node = find_child("texture_node")
 	value_node = find_child("value_node")
 	texture_node.texture = load(texture_path)
+	tooltip_text = resource.display_name
 	if value != null:
 		value_node.text = str(value)
 	aspect_id = resource.aspect_id

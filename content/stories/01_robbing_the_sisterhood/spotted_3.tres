@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b4d6xw0gwbknl"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_syasg"]
+
+[resource]
+script = ExtResource("1_syasg")
+base_bg_color = Color(1, 0.890196, 0, 1)
+display_title = ""
+text = "[font_size=70]When you could be a <wound_1/>[/font_size]"
+slots = {}
+options = []
+wounds = {
+"wound_1": {
+"word_id": "noun_revelation",
+"wound_link": "silence"
+}
+}
+portraits = []

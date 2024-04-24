@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bfinw0vl4f0ma"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_w4y0u"]
+
+[resource]
+script = ExtResource("1_w4y0u")
+base_bg_color = Color(0.368627, 0.364706, 0.364706, 1)
+display_title = "Bird's Eye View"
+text = "The scene below is peaceful, with a small crowd of blind girls taking their lunch in the garden while a nun looks on from beside the  <slot_1/>
+
+On one side of the garden's iron gate, curious <slot_2/> stop to watch, and mostly they are disappointed. The girls eat well and chattily.
+
+On the other side, a flock of <slot_3/> shuffles around the <slot_4/>, enjoying the free bread."
+slots = {
+"slot_1": "noun_front_door",
+"slot_2": "noun_tourists",
+"slot_3": "noun_birds",
+"slot_4": "noun_fountain"
+}
+options = [{
+"conditions_word": {
+"slot_3": {
+"specific_id": "noun_tourists"
+},
+"slot_4": {
+"specific_id": "noun_front_door"
+}
+},
+"hint": "The only way in is through the front door",
+"hint_tooltip": "Perhaps tourists and birds have something in common.",
+"links_to": "adjacent_history_1",
+"text": "Time for a bake sale?"
+}]
+wounds = {}
+portraits = []

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bru21lytkiahk"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_y1nnm"]
+
+[resource]
+script = ExtResource("1_y1nnm")
+base_bg_color = Color(0, 0, 0, 1)
+display_title = "silence"
+text = ""
+slots = {}
+options = [{
+"links_to": "screaming",
+"text": "..."
+}]
+wounds = {}
+portraits = ["schaefer"]

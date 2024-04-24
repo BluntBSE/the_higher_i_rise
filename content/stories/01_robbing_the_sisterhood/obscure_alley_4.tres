@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b4xnkcipkkv3v"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_bmfdk"]
+
+[resource]
+script = ExtResource("1_bmfdk")
+base_bg_color = Color(0.368627, 0.364706, 0.364706, 1)
+display_title = "An Obscure Alley"
+text = "Somewhere behind the windowless brick wall of the school, the Sisterhood of the Knot has hidden the Eyes of St. Lucia. You're not supposed to know that, but if the Sisterhood had its way, nobody would know anything ever. No wonder they like having a blind saint. You wonder what they'd think if they knew what Lucy [i]really[/i] wanted.
+
+\"Young maiden blinds herself to keep her purity?\"  Propaganda if you ever heard it.
+
+You place your palm against the wall, and...
+"
+slots = {}
+options = [{
+"id": "obscure_alley_5_opt_1",
+"links_to": "labyrinth_ward_1",
+"text": "Open your mind"
+}]
+wounds = {}
+portraits = []

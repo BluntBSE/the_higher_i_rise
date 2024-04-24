@@ -70,11 +70,13 @@ func parseOptions2(interaction: Interaction):
 		push_error("null interaction in parseOptions")
 		return null 
 	#Clear options before updating them
+	print(interaction.options)
 	var output_container = _reference.find_child("options_container")
+	print(output_container)
 	for child in output_container.get_children():
 		child.queue_free()
 	for option in interaction.options:
-		var _conditions_met = false
+		#var conditions_met = false
 		if option.has("conditions_word"):
 			var specific_word_array = [] #array of bools. All true == all specific words met
 			var specific_word_condition = option.conditions_word
@@ -86,31 +88,40 @@ func parseOptions2(interaction: Interaction):
 						specific_word_array.append(true)
 					else:
 						specific_word_array.append(false)
-						
-				if specific_word_array.has(false):	
-					#Load hint version if there is an unmet condition
-					var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
-					var content = '[hint="'
-					content += option.hint_tooltip
-					content += '"]'
-					content += option.hint
-					content += "[/hint]"
-					option_node.unpack(content, _reference) #Load content into the option node
-					output_container.add_child(option_node) #Assign to organizer on screen
-				if !specific_word_array.has(false):
-					#Else, load real version
-					var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
-					var content = '[url="'
-					content += option.links_to
-					content += '"]'
-					content += option.text
-					content += '[/url]'
-					option_node.unpack(content, _reference)
-					output_container.add_child(option_node)	
+					
+			if specific_word_array.has(false):	
+				#Load hint version if there is an unmet condition
+				var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
+				var content = '[hint="'
+				content += option.hint_tooltip
+				content += '"]'
+				content += option.hint
+				content += "[/hint]"
+				option_node.unpack(content, _reference) #Load content into the option node
+				output_container.add_child(option_node) #Assign to organizer on screen
+			if !specific_word_array.has(false):
+				#Else, load real version
+				var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
+				var content = '[url="'
+				content += option.links_to
+				content += '"]'
+				content += option.text
+				content += '[/url]'
+				option_node.unpack(content, _reference)
+				output_container.add_child(option_node)	
 				#No conditions? Load normally
-				if !option.has("conditions_word"):
-					_conditions_met = true
-			
+		if !option.has("conditions_word"):
+				var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
+				var content = '[url="'
+				content += option.links_to
+				content += '"]'
+				content += option.text
+				content += '[/url]'
+				option_node.unpack(content, _reference)
+				output_container.add_child(option_node)	
+		#conditions_met = true
+
+				
 			
 func parseInteraction(interaction: Interaction):
 	#Store
@@ -162,7 +173,7 @@ func stateUpdate(dt):
 	_reference.hovered_slot = null
 	parsePortraits(_args)
 	parseInteraction(_args)
-	parseOptions2(_args)
+	TextTools.parseOptions(_reference, _args)
 	#Fade in
 
 	title_node.modulate = title_node.modulate.lerp(Color(1.0,1.0,1.0,1.0), t)

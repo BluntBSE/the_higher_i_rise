@@ -121,7 +121,7 @@ static func applyStyling(word: IWord): #"Styling" is a misnomer since this also 
 	text += "[url=" + word.id + "]"
 	
 	if greatest_principle != "none":
-		text += "[font_size=32]"
+		#text += "[font_size=32]"
 		text += "[outline_size=4]"
 		text += "[outline_color=" + "black" + "]"
 		text += "[color=" + Principles[greatest_principle].color + "]"
@@ -129,7 +129,7 @@ static func applyStyling(word: IWord): #"Styling" is a misnomer since this also 
 		text += "[/color]"
 		text += "[/outline_color]"
 		text += "[/outline_size]"
-		text += "[/font_size]"
+		#text += "[/font_size]"
 		
 	text += "[/url]"
 	#text += "[/u]"
@@ -168,7 +168,8 @@ static func parseText(input_string: String, interaction: Interaction):
 				print("No wound found!")
 			var wound_IWord = applyWound(wound_word)
 			var word_text = applyStyling(wound_IWord)
-			#Currently I like wounds more without the underlines	
+			#Currently I like wounds more without the underlines
+			print(word_text)	
 			text = text.replace( "<" + wound + "/>", word_text)
 	
 	
@@ -177,6 +178,63 @@ static func parseText(input_string: String, interaction: Interaction):
 
 	return text
 # Called when the node enters the scene tree for the first time.
+
+static func parseOptions(_reference, interaction: Interaction):
+	if !interaction:
+		push_error("null interaction in parseOptions")
+		return null 
+	#Clear options before updating them
+	var output_container = _reference.find_child("options_container")
+	for child in output_container.get_children():
+		child.queue_free()
+	for option in interaction.options:
+		#var conditions_met = false
+		if option.has("conditions_word"):
+			var specific_word_array = [] #array of bools. All true == all specific words met
+			var specific_word_condition = option.conditions_word
+			var specific_word_slots = specific_word_condition.keys()
+			for slot in specific_word_slots:
+			
+				if specific_word_condition[slot]:
+					if _reference.active_interaction.slots[slot] == specific_word_condition[slot].specific_id:
+						specific_word_array.append(true)
+					else:
+						specific_word_array.append(false)
+					
+			if specific_word_array.has(false):	
+				#Load hint version if there is an unmet condition
+				var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
+				var content = '[hint="'
+				content += option.hint_tooltip
+				content += '"]'
+				content += option.hint
+				content += "[/hint]"
+				option_node.unpack(content, _reference) #Load content into the option node
+				output_container.add_child(option_node) #Assign to organizer on screen
+			if !specific_word_array.has(false):
+				#Else, load real version
+				var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
+				var content = '[url="'
+				content += option.links_to
+				content += '"]'
+				content += option.text
+				content += '[/url]'
+				option_node.unpack(content, _reference)
+				output_container.add_child(option_node)	
+				#No conditions? Load normally
+		if !option.has("conditions_word"):
+				var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
+				var content = '[url="'
+				content += option.links_to
+				content += '"]'
+				content += option.text
+				content += '[/url]'
+				option_node.unpack(content, _reference)
+				output_container.add_child(option_node)	
+		#conditions_met = true
+
+		
+
 func _ready():
 	pass # Replace with function body.
 

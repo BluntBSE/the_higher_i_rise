@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cx6rmyt48lr42"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_bsotg"]
+
+[resource]
+script = ExtResource("1_bsotg")
+base_bg_color = Color(0.368627, 0.364706, 0.364706, 1)
+display_title = "An Obscure Alley"
+text = "The young novice on the ground lies sprawled in an unnatural position. Her hands are still tight around the body of her rifle, but the rest of her...
+
+You haven't had to make an adjustment like [i]that[/i] in a long time..
+
+This one was inexperienced enough to use a gun, but she was smart enough to recognize what you are. And to try and kill you. If this is how the Sisterhood is teaching them these days, then you'll have to be even more careful than you planned. The older ones won't make the same mistake."
+slots = {}
+options = [{
+"id": "obscure_alley_2_opt_1",
+"links_to": "obscure_alley_4",
+"text": "Return to the task at hand"
+}]
+wounds = {}
+portraits = ["novice"]

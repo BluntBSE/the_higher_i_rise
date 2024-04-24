@@ -5,6 +5,7 @@
 [node name="option_bg" type="ColorRect"]
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(700, 50)
+size_flags_vertical = 10
 mouse_filter = 2
 script = ExtResource("1_ena0y")
 

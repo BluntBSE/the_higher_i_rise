@@ -8,6 +8,7 @@ id = "noun_chance"
 text = "chance"
 bbcode = ""
 part_speech = "noun"
+description = ""
 aspects = ["greeting"]
 principles = {
 "moth": 2

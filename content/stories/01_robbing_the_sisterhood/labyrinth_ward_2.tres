@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://djay8vo0bqppy"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_amtsc"]
+
+[resource]
+script = ExtResource("1_amtsc")
+base_bg_color = Color(0.368627, 0.364706, 0.364706, 1)
+display_title = "A Labyrinth Ward"
+text = "At this range, you find it in no time: a cobalt glow seeping from underground. They must be keeping them in basement somewhere. The question is: how do *you* get there yourself? The windows are barred, the nuns are armed, and it dawns on you that in a school for blind girls, there are, of course, no mirrors."
+slots = {}
+options = [{
+"id": "do_i_even_need_this",
+"links_to": "birds_eye_view_1",
+"text": "You call upon the Watchman, who illuminates"
+}]
+wounds = {}
+portraits = []

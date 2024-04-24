@@ -9,7 +9,7 @@ text = "smug"
 bbcode = ""
 part_speech = "adjective"
 description = "\"The fruit of victory, real or imagined.\""
-aspects = ["greeting"]
+aspects = []
 principles = {
 "edge": 1
 }

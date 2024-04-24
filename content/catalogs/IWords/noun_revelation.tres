@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://c4pcbue1rebia"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_rrhxs"]
+
+[resource]
+script = ExtResource("1_rrhxs")
+id = "noun_revelation"
+text = "revelation"
+bbcode = ""
+part_speech = "noun"
+description = "\"Light LEAKS through the CRACKS. I am BRIGHTER than I EVER was.\""
+aspects = ["bright"]
+principles = {
+"forge": 2,
+"lantern": 3,
+"moth": 1
+}

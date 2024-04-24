@@ -107,23 +107,24 @@ offset_bottom = 40.0
 
 [node name="img" type="TextureRect" parent="interaction_fg/portrait_controller/portrait_0"]
 layout_mode = 0
-offset_left = 1126.0
+offset_left = 1074.0
 offset_top = 171.0
-offset_right = 1626.0
+offset_right = 1674.0
 offset_bottom = 771.0
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("7_56jfr")
+expand_mode = 1
 
 [node name="text_bg" type="ColorRect" parent="interaction_fg/portrait_controller/portrait_0"]
 layout_mode = 0
-offset_left = 1126.0
+offset_left = 1074.0
 offset_top = 411.0
-offset_right = 1326.0
+offset_right = 1314.0
 offset_bottom = 447.0
 
 [node name="label" type="RichTextLabel" parent="interaction_fg/portrait_controller/portrait_0/text_bg"]
 layout_mode = 0
-offset_right = 200.0
+offset_right = 240.0
 offset_bottom = 37.0
 bbcode_enabled = true
 text = "[center]Gristwood[/center]"
@@ -135,23 +136,24 @@ offset_bottom = 40.0
 
 [node name="img" type="TextureRect" parent="interaction_fg/portrait_controller/portrait_1"]
 layout_mode = 0
-offset_left = 1126.0
+offset_left = 1074.0
 offset_top = 490.0
-offset_right = 1638.0
-offset_bottom = 1104.0
+offset_right = 1674.0
+offset_bottom = 1090.0
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("8_8wlu6")
+expand_mode = 1
 
 [node name="text_bg" type="ColorRect" parent="interaction_fg/portrait_controller/portrait_1"]
 layout_mode = 0
-offset_left = 1126.0
+offset_left = 1074.0
 offset_top = 730.0
-offset_right = 1326.0
+offset_right = 1314.0
 offset_bottom = 766.0
 
 [node name="label" type="RichTextLabel" parent="interaction_fg/portrait_controller/portrait_1/text_bg"]
 layout_mode = 0
-offset_right = 200.0
+offset_right = 240.0
 offset_bottom = 37.0
 bbcode_enabled = true
 text = "[center]Lady Piper
@@ -180,24 +182,19 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 6.0
+offset_left = -4.0
+offset_top = 78.0
+offset_right = 2.0
+offset_bottom = -25.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="options_container" type="VBoxContainer" parent="interaction_fg/options_organizer/ScrollContainer"]
 layout_mode = 2
+size_flags_vertical = 10
 theme_override_constants/separation = 30
 
 [node name="option_bg" parent="interaction_fg/options_organizer/ScrollContainer/options_container" instance=ExtResource("9_or5x1")]
-layout_mode = 2
-
-[node name="option_bg2" parent="interaction_fg/options_organizer/ScrollContainer/options_container" instance=ExtResource("9_or5x1")]
-layout_mode = 2
-
-[node name="option_bg3" parent="interaction_fg/options_organizer/ScrollContainer/options_container" instance=ExtResource("9_or5x1")]
-layout_mode = 2
-
-[node name="option_bg4" parent="interaction_fg/options_organizer/ScrollContainer/options_container" instance=ExtResource("9_or5x1")]
 layout_mode = 2
 
 [node name="side_panel" type="ColorRect" parent="."]

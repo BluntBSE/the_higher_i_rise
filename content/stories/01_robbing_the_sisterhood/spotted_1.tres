@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dlwha8kmti6se"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_keufv"]
+
+[resource]
+script = ExtResource("1_keufv")
+base_bg_color = Color(0.368627, 0.364706, 0.364706, 1)
+display_title = "Spotted"
+text = "[M. SCHAEFER]: You don't belong here.
+
+[YOU]: I can't have a pastry?
+
+[M. SCHAEFER]: Let me be clear. If you don't leave right now, I'm going to kill you.
+
+[YOU]: In front of all these people?
+
+[M. SCHAEFER]: They won't be here for long.
+
+[YOU]: Maybe I join them in the gallery. Let me soak up some culture. It's been a while. "
+slots = {}
+options = [{
+"links_to": "spotted_2",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["schaefer"]

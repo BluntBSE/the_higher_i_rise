@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://0hn1l571drlc"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_xb075"]
+
+[resource]
+script = ExtResource("1_xb075")
+base_bg_color = Color(0.368627, 0.364706, 0.364706, 1)
+display_title = "Spotted"
+text = "You beam a smile at her while she shifts her hands. It would be imperceptible to the unaware, but you clock it right away. There's the sign of the second hour. Then, at the edge of her sleeve, she forms the twenty-seventh. It's vital to her that no-one sees what she's doing.
+
+[M. SCHAEFER]: Calyptra forbids you!
+
+Too bad she's taking so long.
+
+You allow yourself a delicious, theatrical, yawn. And then your hand shoots into the air.
+
+You never understood the nuns."
+slots = {}
+options = [{
+"links_to": "spotted_3",
+"text": "Why would you protect their ignorance..."
+}]
+wounds = {}
+portraits = ["schaefer"]

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://bg2g3yb3d3wht"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/character.gd" id="1_glv58"]
+
+[resource]
+script = ExtResource("1_glv58")
+portrait = "res://content/images/portraits/cat.png"
+display_name = "You"

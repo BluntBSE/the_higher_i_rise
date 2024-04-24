@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cppnrq71xj0jg"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_135jc"]
+
+[resource]
+script = ExtResource("1_135jc")
+base_bg_color = Color(0.368627, 0.364706, 0.364706, 1)
+display_title = "An Adjacent History"
+text = "In an adjacent history, Sister Agnes pursues her passion for baking. In an adjacent history, her pecan pie forms an important part of the Sisterhood's fundraising during the war. The patrons become curious about the school's galleries (why are there even paintings here?) and in time, the novices start serving as tour guides."
+slots = {}
+options = [{
+"id": "foo",
+"links_to": "the_nave_1",
+"text": "Join the crowd of tourists"
+}]
+wounds = {}
+portraits = []

@@ -4,7 +4,7 @@ class_name InteractionParser
 var state_machine: StateMachine2 = StateMachine2.new()
 #var _current_text: String = ""
 var active_interaction: Interaction = Interaction.new()
-var default_interaction_id = "test_interaction" 
+var default_interaction_id = "the_nave_1"
 var default_interaction = TextTools.getInteractionResource(default_interaction_id)
 
 var can_hover = true
@@ -43,6 +43,8 @@ func _init():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#state_machine.Change("debug", null)
+	var interaction = (default_interaction)
+	print(interaction.display_title)
 	state_machine.Change("load_interaction", default_interaction)
 	
 

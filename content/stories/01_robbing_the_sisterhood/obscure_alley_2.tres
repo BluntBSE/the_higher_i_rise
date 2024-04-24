@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bxoafou1jsvpc"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_ufh3k"]
+
+[resource]
+script = ExtResource("1_ufh3k")
+base_bg_color = Color(0.584314, 0.211765, 0, 1)
+display_title = "An Obscure Alley"
+text = "Just a quick swap.
+"
+slots = {}
+options = [{
+"id": "obscure_alley_2_opt_1",
+"links_to": "obscure_alley_3",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

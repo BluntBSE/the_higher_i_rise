@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://bg8pyhnw4i42x"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/character.gd" id="1_qdegl"]
+
+[resource]
+script = ExtResource("1_qdegl")
+portrait = "res://content/images/portraits/UNLISCENSED_Unusual_Nun.png"
+display_name = "M. Schaefer"

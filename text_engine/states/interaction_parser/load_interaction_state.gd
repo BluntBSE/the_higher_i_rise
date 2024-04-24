@@ -63,7 +63,9 @@ func parseOptions2(interaction: Interaction):
 		push_error("null interaction in parseOptions")
 		return null 
 	#Clear options before updating them
+	print(interaction.options)
 	var output_container = _reference.find_child("options_container")
+	print(output_container)
 	for child in output_container.get_children():
 		child.queue_free()
 	for option in interaction.options:
@@ -79,32 +81,40 @@ func parseOptions2(interaction: Interaction):
 						specific_word_array.append(true)
 					else:
 						specific_word_array.append(false)
-						
-				if specific_word_array.has(false):	
-					#Load hint version if there is an unmet condition
-					var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
-					var content = '[hint="'
-					content += option.hint_tooltip
-					content += '"]'
-					content += option.hint
-					content += "[/hint]"
-					option_node.unpack(content, _reference) #Load content into the option node
-					output_container.add_child(option_node) #Assign to organizer on screen
-				if !specific_word_array.has(false):
-					#Else, load real version
-					var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
-					var content = '[url="'
-					content += option.links_to
-					content += '"]'
-					content += option.text
-					content += '[/url]'
-					option_node.unpack(content, _reference)
-					output_container.add_child(option_node)	
+					
+			if specific_word_array.has(false):	
+				#Load hint version if there is an unmet condition
+				var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
+				var content = '[hint="'
+				content += option.hint_tooltip
+				content += '"]'
+				content += option.hint
+				content += "[/hint]"
+				option_node.unpack(content, _reference) #Load content into the option node
+				output_container.add_child(option_node) #Assign to organizer on screen
+			if !specific_word_array.has(false):
+				#Else, load real version
+				var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
+				var content = '[url="'
+				content += option.links_to
+				content += '"]'
+				content += option.text
+				content += '[/url]'
+				option_node.unpack(content, _reference)
+				output_container.add_child(option_node)	
 				#No conditions? Load normally
-				if !option.has("conditions_word"):
-					pass
-					#conditions_met = true
-			
+		if !option.has("conditions_word"):
+				var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
+				var content = '[url="'
+				content += option.links_to
+				content += '"]'
+				content += option.text
+				content += '[/url]'
+				option_node.unpack(content, _reference)
+				output_container.add_child(option_node)	
+		#conditions_met = true
+
+				
 	
 func parseInteraction(interaction: Interaction):
 	#Store
@@ -112,6 +122,9 @@ func parseInteraction(interaction: Interaction):
 		var output_title = _reference.get_node("interaction_fg/text_title")
 		var output_node = _reference.get_node('interaction_fg/text_content')
 		var output_bg = _reference.get_node('interaction_bg')
+		#This whole setting process might be better suited by returning a new interaction constructed
+		#If we even want to do any processing. Currently, in the play area, this only sets the text, color, etc.
+		#These internal _variables don't seem to be accessed
 		_base_bg_color = interaction.base_bg_color
 		_text = interaction.text
 		_slots = interaction.slots
@@ -144,7 +157,7 @@ func stateUpdate(_dt):
 	#TODO: Somehow need to clear any selected words, etc.
 	parsePortraits(_args)
 	parseInteraction(_args)
-	parseOptions2(_args)
+	TextTools.parseOptions(_reference, _args)	
 	_reference.state_machine.Change("finished", null)
 	
 	#If text is done updating, we should do state_machine.Change("finished")

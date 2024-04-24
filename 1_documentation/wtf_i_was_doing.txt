@@ -1,5 +1,6 @@
 NEXT UP:
-	Add selection highlight to words in inventory
+	Make aspects have tooltips
+	Fix the dang option render on swap
 	Make options available based on aspects
 
 	

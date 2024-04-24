@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://c7bojxjupxyvb"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_cjkjl"]
+
+[resource]
+script = ExtResource("1_cjkjl")
+base_bg_color = Color(0.368627, 0.364706, 0.364706, 1)
+display_title = "An Obscure Alley"
+text = "You are in a dark, damp alleyway sandwiched between a failed deli and St. Lucy's School for Blind Girls. Here the smell of votive incense mingles with weeks-old sauerkraut and, recently, the smell of blood.
+
+You are <slot_1/> here, and your killer is feeling awfully <slot_2/>.
+"
+slots = {
+"slot_1": "adj_dead",
+"slot_2": "adj_smug"
+}
+options = [{
+"conditions_word": {
+"slot_1": {
+"specific_id": "adj_smug"
+}
+},
+"functions": [["print_string", ["hello world"]], ["update_aspects", [{
+"devil": 1
+}]]],
+"hint": "If only there was something you could do about it...",
+"hint_tooltip": "If you click words with the right aspect, you might change their position.",
+"id": "obscure_alley_1_opt_1",
+"links_to": "obscure_alley_2",
+"text": "Of course..."
+}]
+wounds = {}
+portraits = []

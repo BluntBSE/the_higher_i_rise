@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://7msxour3p1cv"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_rbvdt"]
+
+[resource]
+script = ExtResource("1_rbvdt")
+base_bg_color = Color(0.368627, 0.364706, 0.364706, 1)
+display_title = "In the Nave"
+text = "Several novices begin dutifully distributing pastries among the group, while another launches into a spirited bit about the value of the school's mission and your donations to it. You look around while she talks, searching for any route that will take you down into the basement. The Sisters' wards make it hard to extend your senses, but not impossible, and so you start peering down hallways and galleries until you find a likely-looking staircase.
+
+And then you notice that you're being watched."
+slots = {}
+options = [{
+"links_to": "the_nave_2",
+"text": "Curses"
+}]
+wounds = {}
+portraits = []

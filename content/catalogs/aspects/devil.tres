@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_7ir5m")
 aspect_id = ""
-icon = "res://content/images/aspects/AI_devil.jpg"
-display_name = ""
-tooltip = ""
+icon = "res://content/images/aspects/red_hood.png"
+display_name = "Murders"
+tooltip = "Murders committed"

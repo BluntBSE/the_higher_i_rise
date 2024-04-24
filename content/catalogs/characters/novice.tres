@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://m8bfbwkxu1sp"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/character.gd" id="1_370ti"]
+
+[resource]
+script = ExtResource("1_370ti")
+portrait = "res://content/images/portraits/AI_novice.jpg"
+display_name = "A Novice"

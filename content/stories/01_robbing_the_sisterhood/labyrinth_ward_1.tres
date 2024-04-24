@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://d0c27ne1kf563"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_gj1du"]
+
+[resource]
+script = ExtResource("1_gj1du")
+base_bg_color = Color(0.368627, 0.364706, 0.364706, 1)
+display_title = "A Labyrinth Ward"
+text = "You feel the knots immediately. There are millions of them, curling around your spirit in a fine, sharp mesh. Clever.
+
+If they'd made a wall you'd already be inside, but nets aren't so brittle. And worse, they're [i]tempting[/i].  Even at your age you can't shake the feeling that if you just pushed a [i]little[/i] further you could squeeze your way through, slice yourself to ribbons and come back together on the other side.
+
+But there are signs here, traces from the things that tried it. You try not to look at them."
+slots = {}
+options = [{
+"id": "labyrinth_ward_1_opt_1",
+"links_to": "labyrinth_ward_2",
+"text": "Focus on the other side"
+}]
+wounds = {}
+portraits = []

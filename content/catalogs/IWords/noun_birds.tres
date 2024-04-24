@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cs74rqejpx0y"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_lpt3q"]
+
+[resource]
+script = ExtResource("1_lpt3q")
+id = "noun_birds"
+text = "birds"
+bbcode = ""
+part_speech = "noun"
+description = "\"Chirp chirp\""
+aspects = ["plural", "tool"]
+principles = {
+"moth": 1
+}
