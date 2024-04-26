@@ -2,6 +2,8 @@ extends Node
 class_name TextTools
 
 static func getResourceFromDirectory(directory: String, file_name: String) -> String:
+	#TODO: The problem is DirAccess here?
+	
 	var dir = DirAccess.open(directory)
 	var file_path = ""
 
@@ -19,6 +21,15 @@ static func getResourceFromDirectory(directory: String, file_name: String) -> St
 				var name_only = current_file.split(".")[0]
 				if name_only == file_name:
 					file_path = directory + "/" + current_file
+					#Check and see if it ends in .remap
+					#TODO: Maybe this is terrible?
+					#Should I preload ALL my content in advance? That seems bad, but
+					#This also feels hacky.
+					if file_path.ends_with(".remap"):
+						file_path = file_path.replace(".remap","")
+					if file_path.ends_with(".import"):
+						file_path = file_path.replace(".import","")
+		
 					break  # Found the file, no need to continue
 
 			current_file = dir.get_next()
@@ -37,7 +48,10 @@ static func getSlotKey(word, reference): #reference usually points to the intera
 static func getInteractionResource(id: String):
 	var story_dir = "res://content/stories"
 	var file = getResourceFromDirectory(story_dir, id)
-	var resource = load(file)
+	var resource = load(file) #Duplicate?
+	var RLed = ResourceLoader.load(file)
+	#return file
+	#TURN THIS BACK
 	return resource
 	
 

@@ -6,6 +6,10 @@ static var selected = {
 	"close": "[/b][/wave]"
 }
 
+static var locked_option = {
+	"open": "[color=]"
+}
+
 static var hover = {
 	"open": "[b]",
 	"close":"[/b]"

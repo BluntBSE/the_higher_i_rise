@@ -5,7 +5,9 @@ var state_machine: StateMachine2 = StateMachine2.new()
 #var _current_text: String = ""
 var active_interaction: Interaction = Interaction.new()
 var default_interaction_id = "obscure_alley_1"
-var default_interaction = TextTools.getInteractionResource(default_interaction_id)
+var default_interaction#Must be loaded in after initialziation
+
+
 
 var can_hover = true
 var selected_word = null
@@ -29,6 +31,7 @@ func updateData(_interaction):
 
 
 func _init():
+	
 	#Probably just need an update_interaction state, not text + update text
 	state_machine.Add("finished", FinishedTextState.new(self, "arg_to_finished_init"))
 	state_machine.Add("load_interaction", LoadInteractionState.new(self, "init load interaction state"))
@@ -42,9 +45,8 @@ func _init():
 	state_machine.Add("load_option", LoadOptionState.new(self, "init load option state"))
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	default_interaction = TextTools.getInteractionResource(default_interaction_id)
 	#state_machine.Change("debug", null)
-	var interaction = (default_interaction)
-	print(interaction.display_title)
 	state_machine.Change("load_interaction", default_interaction)
 	
 
