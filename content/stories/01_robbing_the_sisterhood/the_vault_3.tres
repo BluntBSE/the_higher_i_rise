@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://g5a83raixx5q"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_nnrda"]
+
+[resource]
+script = ExtResource("1_nnrda")
+base_bg_color = Color(1, 0.494118, 0.54902, 1)
+display_title = "The Vault"
+text = "[font_size=36]Remove the <slot_1/>![/font_size]"
+slots = {
+"slot_1": "noun_tapestry"
+}
+options = [{
+"conditions_word": {
+"slot_1": {
+"specific_id": "noun_tapestry"
+}
+},
+"hint": "NO!",
+"hint_tooltip": "",
+"links_to": "the_vault_4",
+"text": "You can't!"
+}]
+wounds = {}
+portraits = []

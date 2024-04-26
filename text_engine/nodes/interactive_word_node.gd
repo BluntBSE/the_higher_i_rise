@@ -11,6 +11,9 @@ var part_speech: String
 var description: String = "default description"
 var aspects: Array
 var principles: Dictionary
+var indef_article: String
+var def_article: String
+var plural: bool
 
 
 # Called when the node enters the scene tree for the first time.

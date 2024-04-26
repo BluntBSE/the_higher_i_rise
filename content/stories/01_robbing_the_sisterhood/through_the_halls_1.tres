@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dyvkwhjnuii8i"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_tdu6j"]
+
+[resource]
+script = ExtResource("1_tdu6j")
+base_bg_color = Color(0.243137, 0.188235, 0.196078, 1)
+display_title = "Portrait of a Saint"
+text = "You bolt down one hallway, then another, until you come to promising stairwell. You stop for a moment on the landing. You can't believe your luck.
+
+Hanging on the wall is a portrait of St. Lucy herself, mid-mutilation, with a <slot_1/> in her eye."
+slots = {
+"slot_1": "noun_wound"
+}
+options = [{
+"conditions_word": {
+"slot_1": {
+"specific_id": "noun_revelation"
+}
+},
+"hint": "An influence of Knock?",
+"hint_tooltip": "Knock is the Principle that opens Ways.",
+"id": "obscure_alley_5_opt_1",
+"links_to": "down_the_stairs_1",
+"text": "This will come in handy"
+}]
+wounds = {}
+portraits = []

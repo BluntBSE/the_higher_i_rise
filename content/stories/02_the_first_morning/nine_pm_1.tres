@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dmjgyls1jec3h"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_e61w7"]
+
+[resource]
+script = ExtResource("1_e61w7")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "9:00 P.M"
+text = "The first thing you think when you wake up is:
+
+[i]What the fuck was that?[/i]
+
+
+
+"
+slots = {}
+options = [{
+"links_to": "the_watchmans_way_3",
+"text": "And again!"
+}]
+wounds = {}
+portraits = []

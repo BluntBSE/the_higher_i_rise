@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_cjkjl")
-base_bg_color = Color(0.368627, 0.364706, 0.364706, 1)
+base_bg_color = Color(0.243137, 0.188235, 0.196078, 1)
 display_title = "An Obscure Alley"
 text = "You are in a dark, damp alleyway sandwiched between a failed deli and St. Lucy's School for Blind Girls. Here the smell of votive incense mingles with weeks-old sauerkraut and, recently, the smell of blood.
 
@@ -20,8 +20,8 @@ options = [{
 "specific_id": "adj_smug"
 }
 },
-"functions": [["print_string", ["hello world"]], ["update_aspects", [{
-"devil": 1
+"functions": [["update_aspects", [{
+"murders": 1
 }]]],
 "hint": "If only there was something you could do about it...",
 "hint_tooltip": "If you click words with the right aspect, you might change their position.",

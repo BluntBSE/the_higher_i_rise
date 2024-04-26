@@ -38,88 +38,8 @@ var a #alpha, for fading
 var t = 0.0 #Used for controlling animations
 var original_color
 
-func parsePortraits(interaction: Interaction):
-	if !interaction:
-		return null 
-	#Hide all existing portrait nodes.
-	var portrait_0 = _reference.get_node('interaction_fg/portrait_controller/portrait_0')
-	var portrait_1 = _reference.get_node('interaction_fg/portrait_controller/portrait_1')
-	portrait_0.visible = false
-	portrait_1.visible = false
-	
-		
-	if interaction.portraits.size() > 0: 
-		for index in interaction.portraits.size():
-			var output_name = "portrait_" + str(index) #e.g: find "portrait_1"
-			var portrait_name = interaction.portraits[index]
-			portrait_name = portrait_name
-			var respath = TextTools.getResourceFromDirectory('res://content/catalogs/characters/', portrait_name)
-			var res = load(respath)
-			var img = Image.new()
-			img.load(res.portrait)
-			var portrait_node = _reference.get_node('interaction_fg/portrait_controller/'+output_name)
-			portrait_node.visible = true
-			var img_node = portrait_node.get_node('img')
-			img_node.set_texture(ImageTexture.create_from_image(img))
-			var text_node = portrait_node.get_node('text_bg/label')
-			text_node.text = "[center]" + res.display_name + "[/center]"
 
-		
-func parseOptions2(interaction: Interaction):
-	if !interaction:
-		push_error("null interaction in parseOptions")
-		return null 
-	#Clear options before updating them
-	print(interaction.options)
-	var output_container = _reference.find_child("options_container")
-	print(output_container)
-	for child in output_container.get_children():
-		child.queue_free()
-	for option in interaction.options:
-		#var conditions_met = false
-		if option.has("conditions_word"):
-			var specific_word_array = [] #array of bools. All true == all specific words met
-			var specific_word_condition = option.conditions_word
-			var specific_word_slots = specific_word_condition.keys()
-			for slot in specific_word_slots:
-			
-				if specific_word_condition[slot]:
-					if _reference.active_interaction.slots[slot] == specific_word_condition[slot].specific_id:
-						specific_word_array.append(true)
-					else:
-						specific_word_array.append(false)
-					
-			if specific_word_array.has(false):	
-				#Load hint version if there is an unmet condition
-				var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
-				var content = '[hint="'
-				content += option.hint_tooltip
-				content += '"]'
-				content += option.hint
-				content += "[/hint]"
-				option_node.unpack(content, _reference) #Load content into the option node
-				output_container.add_child(option_node) #Assign to organizer on screen
-			if !specific_word_array.has(false):
-				#Else, load real version
-				var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
-				var content = '[url="'
-				content += option.links_to
-				content += '"]'
-				content += option.text
-				content += '[/url]'
-				option_node.unpack(content, _reference)
-				output_container.add_child(option_node)	
-				#No conditions? Load normally
-		if !option.has("conditions_word"):
-				var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
-				var content = '[url="'
-				content += option.links_to
-				content += '"]'
-				content += option.text
-				content += '[/url]'
-				option_node.unpack(content, _reference)
-				output_container.add_child(option_node)	
-		#conditions_met = true
+	
 
 				
 			
@@ -171,7 +91,7 @@ func stateUpdate(dt):
 	_reference.selected_word = null
 	_reference.hovered_word = null
 	_reference.hovered_slot = null
-	parsePortraits(_args)
+	ImgTools.parsePortraits(_reference, _args)
 	parseInteraction(_args)
 	TextTools.parseOptions(_reference, _args)
 	#Fade in

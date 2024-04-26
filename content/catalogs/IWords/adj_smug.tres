@@ -13,3 +13,6 @@ aspects = []
 principles = {
 "edge": 1
 }
+indef_article = "a"
+def_article = "the"
+plural = false

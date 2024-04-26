@@ -1,0 +1,2 @@
+April 25:
+	-Swapped words can now adjust articles in the text. E.g: "A door" can become "An opportunity" or "A pair of scissors"

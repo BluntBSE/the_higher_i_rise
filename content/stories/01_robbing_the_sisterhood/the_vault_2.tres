@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dcf4jiwg2ks0f"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_n5lf2"]
+
+[resource]
+script = ExtResource("1_n5lf2")
+base_bg_color = Color(0.243137, 0.188235, 0.196078, 1)
+display_title = "The Vault"
+text = "Remove the tapestry.
+"
+slots = {}
+options = [{
+"links_to": "the_vault_3",
+"text": "You can't"
+}]
+wounds = {}
+portraits = []

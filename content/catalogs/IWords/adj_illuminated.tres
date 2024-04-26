@@ -15,3 +15,6 @@ principles = {
 "lantern": 3,
 "moth": 1
 }
+indef_article = "an"
+def_article = "the"
+plural = false

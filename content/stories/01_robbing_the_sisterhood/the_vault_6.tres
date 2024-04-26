@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://74w3x5sjijax"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_auqa6"]
+
+[resource]
+script = ExtResource("1_auqa6")
+base_bg_color = Color(0.243137, 0.188235, 0.196078, 1)
+display_title = "The Vault"
+text = "Unable to move, you watch helplessly as the blade arcs towards your neck.
+
+And then, for just a moment, you see it.
+
+Yourself.
+
+A reflection in the blade, and in that reflection, <slot_1/ia> <slot_1/>.
+"
+slots = {
+"slot_1": "noun_opportunity"
+}
+options = [{
+"conditions_word": {
+"slot_1": {
+"specific_id": "noun_door"
+}
+},
+"hint": "...",
+"hint_tooltip": "",
+"links_to": "the_watchmans_way_1",
+"text": "Through the Watchman's Way"
+}]
+wounds = {}
+portraits = ["you_bea"]

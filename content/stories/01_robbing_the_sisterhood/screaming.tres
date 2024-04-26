@@ -6,11 +6,17 @@
 script = ExtResource("1_0wrlx")
 base_bg_color = Color(1, 1, 1, 1)
 display_title = "SCREAMING"
-text = ""
+text = "The crowd lets out a confused wail. The ones who survived will probably never see again. Others, you know, will never be able to [i]stop[/i].
+
+As the light leaves the room, you check your adversary. She looks dazed, but she meets your gaze with a nasty expression.
+
+[i]Damn[/i].
+
+You don't want to find out what she has in store for you when she gets up."
 slots = {}
 options = [{
-"links_to": "screaming",
-"text": "..."
+"links_to": "through_the_halls_1",
+"text": "Time to move"
 }]
 wounds = {}
 portraits = ["schaefer"]

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://ov7n0htl40qw"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_k01vy"]
+
+[resource]
+script = ExtResource("1_k01vy")
+base_bg_color = Color(0.243137, 0.188235, 0.196078, 1)
+display_title = "The Vault"
+text = "Sister Schaeffer waits for a moment. Is she waiting for you to speak?
+
+You won't give her the satisfaction. She gives you the tiniest shrug.
+
+[M. SCHAEFFER]: The world will be better without you in it.
+
+And down comes the knife."
+slots = {}
+options = [{
+"links_to": "the_vault_6",
+"text": "You can't"
+}]
+wounds = {}
+portraits = ["schaefer"]

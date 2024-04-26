@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_rbvdt")
-base_bg_color = Color(0.368627, 0.364706, 0.364706, 1)
+base_bg_color = Color(0.243137, 0.188235, 0.196078, 1)
 display_title = "In the Nave"
 text = "Several novices begin dutifully distributing pastries among the group, while another launches into a spirited bit about the value of the school's mission and your donations to it. You look around while she talks, searching for any route that will take you down into the basement. The Sisters' wards make it hard to extend your senses, but not impossible, and so you start peering down hallways and galleries until you find a likely-looking staircase.
 

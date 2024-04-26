@@ -33,7 +33,7 @@ func stateEnter(args):
 	parser = root.get_node('main/interaction_parser')
 	_args = args
 	#_reference.memory_selected.emit(_reference)	
-	_reference.z_index = 1
+	_reference.z_index += 10
 
 
 func stateUpdate(dt):
@@ -59,7 +59,7 @@ func stateUpdate(dt):
 func stateExit():
 	_reference.position = start_pos
 
-	#_reference.z_index = 0
+
 	pass
 	
 	#If text is done updating, we should do state_machine.Change("finished")

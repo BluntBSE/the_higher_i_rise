@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://00qxumnsk1ld"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_pkglj"]
+
+[resource]
+script = ExtResource("1_pkglj")
+base_bg_color = Color(0.243137, 0.188235, 0.196078, 1)
+display_title = "The Vault"
+text = "A terrible force twists you around and brings you to your knees. Pain stabs through your legs. With enormous effort, you look up into the face of Sister Schaefer.
+
+How did she get down here so quickly? How is she holding you down? [i]Where did she get that knife?[/i]
+
+She walks forwards — careful to not disturb any of the objects around her — until stands directly over you. She stares at you for a while, considering. And then she lifts her knife, huge and curved like the moon, over your head.
+"
+slots = {}
+options = [{
+"links_to": "the_vault_5",
+"text": "Beg for your life"
+}, {
+"links_to": "the_vault_5",
+"text": "Strike a deal"
+}, {
+"links_to": "the_vault_5a",
+"text": "..."
+}]
+wounds = {}
+portraits = ["schaefer"]

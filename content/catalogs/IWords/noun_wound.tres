@@ -14,3 +14,6 @@ principles = {
 "edge": 1,
 "knock": 2
 }
+indef_article = "a"
+def_article = "the"
+plural = false

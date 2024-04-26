@@ -1,6 +1,6 @@
 NEXT UP:
-	Make aspects have tooltips
-	Fix the dang option render on swap
+	Expand word resources to include grammatical particles
+	more portrait texture load issues
 	Make options available based on aspects
 
 	
@@ -14,3 +14,5 @@ NEXT UP:
 NOTES:
 	WHEN YOU'RE FINALLY DONE: using find_child() is inefficient, and you should probably do something different
 	You hardly use state.exit(), could be good for animating transitions when we get there.
+	
+	Font size 36 is a good one for modest emphasis.

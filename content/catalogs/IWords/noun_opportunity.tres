@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bfi876vcqgvuq"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_surkj"]
+
+[resource]
+script = ExtResource("1_surkj")
+id = "noun_opportunity"
+text = "opportunity"
+bbcode = ""
+part_speech = "noun"
+description = "\"Unrealized potential.\""
+aspects = []
+principles = {
+"moth": 2
+}
+indef_article = "an"
+def_article = "the"
+plural = false

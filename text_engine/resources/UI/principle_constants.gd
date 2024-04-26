@@ -46,3 +46,7 @@ static var history = {
 	"color": "#FF43F0",
 	"icon": "res://content/images/aspects/secrethistories.png"
 }
+
+static var base = {
+	"color": "#3e3032"
+}

@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_w4y0u")
-base_bg_color = Color(0.368627, 0.364706, 0.364706, 1)
+base_bg_color = Color(0.243137, 0.188235, 0.196078, 1)
 display_title = "Bird's Eye View"
 text = "The scene below is peaceful, with a small crowd of blind girls taking their lunch in the garden while a nun looks on from beside the  <slot_1/>
 

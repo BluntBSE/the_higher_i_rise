@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_gj1du")
-base_bg_color = Color(0.368627, 0.364706, 0.364706, 1)
+base_bg_color = Color(0.243137, 0.188235, 0.196078, 1)
 display_title = "A Labyrinth Ward"
 text = "You feel the knots immediately. There are millions of them, curling around your spirit in a fine, sharp mesh. Clever.
 

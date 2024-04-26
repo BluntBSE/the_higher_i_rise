@@ -13,6 +13,7 @@ class_name EmptyState
 		pass
 		
 '''
+#Choose and load interaction are different because there could be "in" and "out" states.
 #Args that get passed in through the state machine
 var _args 
 var _reference #usually 'self'
@@ -24,24 +25,6 @@ var portrait_node_0
 var portrait_node_1
 var a #alpha, for fading
 var t# For handling animations
-
-func executeFunctions(functions:Array):
-	#Functions arrive in the form of: [ ["function_id", [arg_1, arg_2_, arg_3], ["function_id_2", [args...] ]
-	for function_pair in functions:
-		var function_id = function_pair[0]
-		var function_args = function_pair[1]
-		var _engine_functions = EngineFunctions.new() 
-		#I must make the _engine_functions node a child of the _reference (interaction parser)
-		_reference.add_child(_engine_functions)
-		if !(function_id in _engine_functions):
-			print("Engine functions does not have function: " + function_id)
-			_engine_functions.queue_free()
-		else:
-		#You cannot use .callv() on a static class, so must make an instance.
-			_engine_functions.callv(function_id, function_args)
-			#Do I need to delete that _engine_functions? Queue_free does that. Might as well.
-			_engine_functions.queue_free()
-	
 
 	
 func determineOptionIndex(interaction_id):
@@ -98,7 +81,7 @@ func stateUpdate(dt):
 		#push_error("No functions found on this option")
 	if _reference.active_interaction.options[index].has("functions"):
 		var funcs_to_execute = _reference.active_interaction.options[index].functions
-		executeFunctions(funcs_to_execute)
+		TextTools.executeFunctions(_reference, funcs_to_execute)
 		var interaction_to_load = TextTools.getInteractionResource(_args)
 		#load option is used to fade in/out
 		_reference.state_machine.Change("load_option", interaction_to_load)

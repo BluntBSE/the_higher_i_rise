@@ -13,3 +13,6 @@ aspects = ["plural", "tool"]
 principles = {
 "history": 1
 }
+indef_article = "some"
+def_article = "the"
+plural = false

@@ -13,3 +13,6 @@ aspects = ["plural", "tool"]
 principles = {
 "moth": 3
 }
+indef_article = "a pair of"
+def_article = "the"
+plural = false

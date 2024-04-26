@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bllot220f0bv4"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_e4hs4"]
+
+[resource]
+script = ExtResource("1_e4hs4")
+base_bg_color = Color(0.854902, 0.854902, 0.854902, 1)
+display_title = "The Watchman's Way"
+text = "And again!"
+slots = {}
+options = [{
+"links_to": "the_watchmans_way_4",
+"text": "And again!"
+}]
+wounds = {}
+portraits = []

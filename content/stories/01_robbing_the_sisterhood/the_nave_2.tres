@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_adcpy")
-base_bg_color = Color(0.368627, 0.364706, 0.364706, 1)
+base_bg_color = Color(0.243137, 0.188235, 0.196078, 1)
 display_title = "In the Nave"
 text = "You feel her attention at the end of the nave: an old woman, dressed in a long, black habit, standing at an altar at the far end of the church. She must have been praying, privately, despite the hubbub.
 

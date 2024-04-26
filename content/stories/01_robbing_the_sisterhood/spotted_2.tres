@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_xb075")
-base_bg_color = Color(0.368627, 0.364706, 0.364706, 1)
+base_bg_color = Color(0.243137, 0.188235, 0.196078, 1)
 display_title = "Spotted"
 text = "You beam a smile at her while she shifts her hands. It would be imperceptible to the unaware, but you clock it right away. There's the sign of the second hour. Then, at the edge of her sleeve, she forms the twenty-seventh. It's vital to her that no-one sees what she's doing.
 
@@ -18,7 +18,7 @@ You never understood the nuns."
 slots = {}
 options = [{
 "links_to": "spotted_3",
-"text": "Why would you protect their ignorance..."
+"text": "Why would you worship ignorance..."
 }]
 wounds = {}
 portraits = ["schaefer"]

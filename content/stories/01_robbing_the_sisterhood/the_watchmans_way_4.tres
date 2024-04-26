@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b5kpg7y18g1hm"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_n68wy"]
+
+[resource]
+script = ExtResource("1_n68wy")
+base_bg_color = Color(0.968627, 0.968627, 0.968627, 1)
+display_title = "The Watchman's Way"
+text = "Finally you are small enough to pass through this imperfect door. In some dim way, you are aware of a dampness, of a violent spasm somewhere in the shimmering void. But it suddenly feels like a distant dream.
+
+Thinking is difficult. But you know  that you are alive, and you know also that you are very, very lucky. In the distance, your home rises like the Sun.
+
+"
+slots = {}
+options = [{
+"links_to": "nine_pm_1",
+"text": "To the House with no walls"
+}]
+wounds = {}
+portraits = []

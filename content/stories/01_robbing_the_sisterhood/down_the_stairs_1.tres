@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bqwl70hsy7k22"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_wemah"]
+
+[resource]
+script = ExtResource("1_wemah")
+base_bg_color = Color(0.243137, 0.188235, 0.196078, 1)
+display_title = "Down the Stairs"
+text = "You leave the starry-eyed saint behind as you rush down the stairs. At the bottom, where the temperature drops and the stonework becomes old and sharp, you find a brutal-looking <slot_1/>"
+slots = {
+"slot_1": "noun_door"
+}
+options = [{
+"conditions_word": {
+"slot_1": {
+"specific_id": "noun_wound"
+}
+},
+"hint": "You know what to do",
+"hint_tooltip": "Every wound is also a door.",
+"links_to": "the_vault_1",
+"text": "You will not be denied"
+}]
+wounds = {}
+portraits = []

@@ -10,6 +10,11 @@ extends Resource
 @export var description: String
 @export var aspects: Array
 @export var principles: Dictionary
+@export var indef_article: String
+@export var def_article: String
+@export var plural: bool
+#@export var gender: string
+#genders def/indef articles
 
 
 """

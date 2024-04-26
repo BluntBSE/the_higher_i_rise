@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_amtsc")
-base_bg_color = Color(0.368627, 0.364706, 0.364706, 1)
+base_bg_color = Color(0.243137, 0.188235, 0.196078, 1)
 display_title = "A Labyrinth Ward"
 text = "At this range, you find it in no time: a cobalt glow seeping from underground. They must be keeping them in basement somewhere. The question is: how do *you* get there yourself? The windows are barred, the nuns are armed, and it dawns on you that in a school for blind girls, there are, of course, no mirrors."
 slots = {}

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bt8ykthax5ofl"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_twh8g"]
+
+[resource]
+script = ExtResource("1_twh8g")
+id = "noun_tapestry"
+text = "tapestry"
+bbcode = ""
+part_speech = "noun"
+description = "\"Stories are woven in one way or another.\""
+aspects = ["tool", "art"]
+principles = {
+"heart": 1
+}

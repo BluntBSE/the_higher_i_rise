@@ -37,24 +37,16 @@ static func getSlotKey(word, reference): #reference usually points to the intera
 static func getInteractionResource(id: String):
 	var story_dir = "res://content/stories"
 	var file = getResourceFromDirectory(story_dir, id)
-
-	#Why did I do this? Probably to intercept it if I want...
-	#var output_interaction = Interaction.new()
 	var resource = load(file)
-	#Why the fuck did I do this? It's an opportunity to modify interactions at their point of loading...but that's not a good idea
-	#if resource:
-		#output_interaction.base_bg_color = resource.base_bg_color
-		#output_interaction.text = resource.text
-		#output_interaction.slots = resource.slots
-		#output_interaction.options = resource.options
-		#return output_interaction
 	return resource
 	
 
 static func getWordResource(id: String):
 	var catalog_dir = "res://content/catalogs/IWords/"
 	var file = getResourceFromDirectory(catalog_dir, id)
-	var word = IWord.new()
+	var word = IWord.new() #Is this part really necessary? This creates a logical node equivalent that we add to the tree.
+	#I think there was a good reason for creating these nodes, but now I can't recall it.
+	#TODO: Consider loading all this from resource. That'll require changes elsewhere.
 	var resource = load(file)
 	if !resource:
 		push_error("No resource found!")
@@ -66,6 +58,8 @@ static func getWordResource(id: String):
 	word.aspects = resource.aspects
 	word.principles = resource.principles
 	word.description = resource.description
+	word.indef_article = resource.indef_article
+	word.def_article = resource.def_article
 	return word
 	
 
@@ -152,13 +146,22 @@ static func parseText(input_string: String, interaction: Interaction):
 	if interaction.slots.has("slot_1"):
 		for slot in interaction.slots:
 			var word = getWordResource(interaction.slots[slot])
-			
 			if !word:
 				push_error("No word found!")
 				return "WORD NOT FOUND"
-			word = applyStyling(word)
+			var word_str = applyStyling(word)
 			#Here is where we would add anything to modify it to be a sentence, such as capitalization.
-			text = text.replace("<" + slot + "/>", word)
+			if text.contains("<" + slot + "/ia>"):
+				print("CONTAINMENT FOUND")
+				var ia_replace = "<" + slot + "/ia>"
+				print(ia_replace)
+				text = text.replace(ia_replace, word.indef_article)
+			if text.contains("<" + slot + "/ia>"):
+				print("CONTAINMENT FOUND")
+				var ia_replace = "<" + slot + "/da>"
+				print(ia_replace)
+				text = text.replace(ia_replace, word.def_article)
+			text = text.replace("<" + slot + "/>", word_str)
 		
 	#SPEECH, THE SWORD
 	if interaction.get("wounds").is_empty() == false:
@@ -233,7 +236,22 @@ static func parseOptions(_reference, interaction: Interaction):
 				output_container.add_child(option_node)	
 		#conditions_met = true
 
-		
+static func executeFunctions(_reference, functions:Array):
+	#Functions arrive in the form of: [ ["function_id", [arg_1, arg_2_, arg_3], ["function_id_2", [args...] ]
+	for function_pair in functions:
+		var function_id = function_pair[0]
+		var function_args = function_pair[1]
+		var _engine_functions = EngineFunctions.new() 
+		#I must make the _engine_functions node a child of the _reference (interaction parser)
+		_reference.add_child(_engine_functions)
+		if !(function_id in _engine_functions):
+			print("Engine functions does not have function: " + function_id)
+			_engine_functions.queue_free()
+		else:
+		#You cannot use .callv() on a static class, so must make an instance.
+			_engine_functions.callv(function_id, function_args)
+			#Do I need to delete that _engine_functions? Queue_free does that. Might as well.
+			_engine_functions.queue_free()		
 
 func _ready():
 	pass # Replace with function body.

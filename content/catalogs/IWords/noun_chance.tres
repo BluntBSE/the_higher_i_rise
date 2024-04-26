@@ -13,3 +13,6 @@ aspects = ["greeting"]
 principles = {
 "moth": 2
 }
+indef_article = "a"
+def_article = "the"
+plural = false

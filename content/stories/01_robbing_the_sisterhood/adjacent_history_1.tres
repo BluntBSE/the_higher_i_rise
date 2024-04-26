@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_135jc")
-base_bg_color = Color(0.368627, 0.364706, 0.364706, 1)
+base_bg_color = Color(0.243137, 0.188235, 0.196078, 1)
 display_title = "An Adjacent History"
 text = "In an adjacent history, Sister Agnes pursues her passion for baking. In an adjacent history, her pecan pie forms an important part of the Sisterhood's fundraising during the war. The patrons become curious about the school's galleries (why are there even paintings here?) and in time, the novices start serving as tour guides."
 slots = {}

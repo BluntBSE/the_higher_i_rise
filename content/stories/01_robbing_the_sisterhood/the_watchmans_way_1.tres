@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dcma52ucge3wl"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_rudph"]
+
+[resource]
+script = ExtResource("1_rudph")
+base_bg_color = Color(0.980392, 0.937255, 0.709804, 1)
+display_title = "The Watchman's Way"
+text = "Mirrors are sacred to the Watchman. They are the tool by which the world illuminates itself. They are a means of seeing what things are. And to His most faithful they are a door, nestled at the crossroads between The Mansus and the Wake.
+
+But knife is not a mirror. This reflection is not all of you.
+
+Doing this will hurt you badly, "
+slots = {}
+options = [{
+"links_to": "the_watchmans_way_2",
+"text": "And yet..."
+}]
+wounds = {}
+portraits = ["you_bea"]

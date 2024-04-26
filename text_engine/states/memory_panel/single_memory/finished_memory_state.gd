@@ -20,6 +20,7 @@ var state_machine #state machine attached to the reference passed in
 
 
 func stateEnter(args):
+	_reference.z_index = 0
 	_reference.get_node("pulse_shader_rect").visible = false
 	_reference.scale = Vector2(1.0,1.0)
 	_args = args

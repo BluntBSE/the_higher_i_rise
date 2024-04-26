@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dmlcdgetmbk2t"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_wjlm8"]
+
+[resource]
+script = ExtResource("1_wjlm8")
+base_bg_color = Color(0.780392, 0.780392, 0.780392, 1)
+display_title = "The Watchman's Way"
+text = "You sever yourself from your body. The world turns silver. Then, it slams around you like a trap. It is a bewildering experience that crams you in on every side. It is so tight that at first you can't even fit, but you sever yourself again."
+slots = {}
+options = [{
+"links_to": "the_watchmans_way_3",
+"text": "And again!"
+}]
+wounds = {}
+portraits = ["you_bea"]

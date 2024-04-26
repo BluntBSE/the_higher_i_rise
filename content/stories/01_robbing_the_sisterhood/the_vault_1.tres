@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dcbs15m46src0"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_fyx7t"]
+
+[resource]
+script = ExtResource("1_fyx7t")
+base_bg_color = Color(0.243137, 0.188235, 0.196078, 1)
+display_title = "The Vault"
+text = "The Sisters don't keep lights in their vault, but there is an actinic glow that suffuses the room. With it, you perceive the heaps of canvas-wrapped objects massed against the walls like trash in an attic. You wonder for a moment what other treasures the Sisters have hoarded here. What other Hours are being disgraced here? 
+
+But you are here for a purpose. For the Watchman. To prove that none of His treasures can be hidden for long.
+
+You stumble past the rarities to the very end of the room, where the glow is strongest. There is an altar, a box, a heavy tapestry from under which the the cobalt light leaks..."
+slots = {}
+options = [{
+"links_to": "the_vault_2",
+"text": "Remove the tapestry"
+}]
+wounds = {}
+portraits = []

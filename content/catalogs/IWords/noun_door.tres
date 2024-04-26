@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://015fwwhkgqyn"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_c5o46"]
+
+[resource]
+script = ExtResource("1_c5o46")
+id = "noun_door"
+text = "door"
+bbcode = ""
+part_speech = "noun"
+description = "\"The Mansus could use more of these.\""
+aspects = ["entrance"]
+principles = {
+"knock": 1
+}
+indef_article = "a"
+def_article = "the"
+plural = false

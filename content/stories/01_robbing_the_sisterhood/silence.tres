@@ -9,6 +9,9 @@ display_title = "silence"
 text = ""
 slots = {}
 options = [{
+"functions": [["update_aspects", [{
+"murders": 12
+}]]],
 "links_to": "screaming",
 "text": "..."
 }]
