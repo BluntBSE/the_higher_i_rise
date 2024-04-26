@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://dxncpx8tc4a73"]
+[gd_scene load_steps=9 format=3 uid="uid://dxncpx8tc4a73"]
 
 [ext_resource type="Script" path="res://text_engine/nodes/aspect_item.gd" id="1_1taik"]
+[ext_resource type="Shader" path="res://text_engine/shaders/aspects/aspect_emphasis.gdshader" id="1_y2bdl"]
 [ext_resource type="Texture2D" uid="uid://bh7c2oln1k0cw" path="res://content/images/aspects/AI_church.jpg" id="2_7dvx2"]
 [ext_resource type="Theme" uid="uid://b5cu5776o44se" path="res://text_engine/resources/UI/theme.tres" id="2_bj8el"]
 [ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="3_53ptm"]
+[ext_resource type="Texture2D" uid="uid://ctyfgw0don3fc" path="res://text_engine/resources/sprites/plain.png" id="6_h2g11"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_enheu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ohc33"]
+shader = ExtResource("1_y2bdl")
 
 [node name="aspect_item_1" type="HBoxContainer"]
 script = ExtResource("1_1taik")
@@ -13,6 +20,7 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
 [node name="texture_node" type="TextureRect" parent="AspectRatioContainer"]
+material = SubResource("ShaderMaterial_enheu")
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("2_7dvx2")
@@ -34,3 +42,10 @@ theme_override_font_sizes/bold_italics_font_size = 0
 theme_override_font_sizes/mono_font_size = 0
 bbcode_enabled = true
 text = "16"
+
+[node name="shader_sprite" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_ohc33")
+position = Vector2(81.5, 50.5)
+scale = Vector2(0.141493, 0.155864)
+texture = ExtResource("6_h2g11")

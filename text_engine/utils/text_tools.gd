@@ -224,9 +224,12 @@ static func parseOptions(_reference, interaction: Interaction):
 				var content = '[hint="'
 				content += option.hint_tooltip
 				content += '"]'
+				content += TextEffects.locked_option.open
 				content += option.hint
+				content += TextEffects.locked_option.close
 				content += "[/hint]"
 				option_node.unpack(content, _reference) #Load content into the option node
+				option_node.find_child("option_bullet").color.a = 0.5
 				output_container.add_child(option_node) #Assign to organizer on screen
 			if !specific_word_array.has(false):
 				#Else, load real version

@@ -1,6 +1,6 @@
 NEXT UP:
-	Expand word resources to include grammatical particles
-	more portrait texture load issues
+	Configure for diff resolutions
+	Configure for macs
 	Make options available based on aspects
 
 	

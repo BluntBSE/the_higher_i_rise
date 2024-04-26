@@ -1,6 +1,5 @@
 extends EmptyState
-class_name FinishedAspectsState
-
+class_name FinishedSingleAspectState
 
 
 '''

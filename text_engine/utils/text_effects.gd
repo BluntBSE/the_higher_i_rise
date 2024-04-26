@@ -7,7 +7,8 @@ static var selected = {
 }
 
 static var locked_option = {
-	"open": "[color=]"
+	"open": "[color=#ffffff78]",
+	"close": "[/color]"
 }
 
 static var hover = {

@@ -3,6 +3,7 @@ class_name SingleAspect
 var aspect_id
 var texture_node 
 var value_node
+var state_machine: StateMachine2 = StateMachine2.new()
 
 func unpack(aspect_name, value = null):
 	var resource_path = TextTools.getResourceFromDirectory('res://content/catalogs/aspects/', aspect_name)
@@ -17,8 +18,10 @@ func unpack(aspect_name, value = null):
 	aspect_id = resource.aspect_id
 	pass
 
-# Called when the node enters the scene tree for the first time.
+#State machines might need to go into ready and not init, but let's try it.
 func _init():
+	#state_machine.Add("emphasize", EmphasizeAspectState.new(self, "arg_to_emphasize_init")
+	#state_machine.Add("finished", FinishedTextState.new(self, "arg_to_finished_init"))
 	pass
 
 	

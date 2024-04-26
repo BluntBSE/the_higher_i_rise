@@ -18,21 +18,36 @@ class_name EmptyState
 var _args 
 var _reference:AspectPanel #usually 'self'
 var state_machine #state machine attached to the reference passed in
+var original_aspects #To be saved to when the state is entered
 
 
 func stateEnter(args):
 	_args = args
+	original_aspects = _reference.aspect_dict
 
 func stateUpdate(_dt):
+	
+	#If I want new aspects to pulse when they are added/modified, I need to record
+	#The original aspect dict.
 	#Clear existing aspect icons
 	var grid = _reference.get_node("aspect_grid")
 	for child in grid.get_children():
 		child.queue_free()
 	var aspects = _reference.aspect_dict
 	for aspect in aspects:
-		var single_aspect = load("res://text_engine/packed_scenes/aspect_item.tscn").instantiate()
+		#If it is a new aspect
+		#OR
+		#An aspect has been incremented...
+		var single_aspect:SingleAspect = load("res://text_engine/packed_scenes/aspect_item.tscn").instantiate()
 		single_aspect.unpack(aspect, aspects[aspect])
 		grid.add_child(single_aspect)
+		#Can do the check after it's been added actually to update its state.
+		if !original_aspects.has(aspect):
+			#single_aspect.state_machine.Change("emphasize", null). 
+			pass
+		if original_aspects[aspect] != aspects[aspect]:
+			#single_aspect.state_machine.change("emphasize", null).
+			pass
 
 	state_machine.Change("finished", null)
 	

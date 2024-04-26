@@ -1,2 +1,6 @@
 April 25:
 	-Swapped words can now adjust articles in the text. E.g: "A door" can become "An opportunity" or "A pair of scissors"
+
+NEXT:
+	-Made locked opens more obviously locked by fading them
+	-TODO: Add a graphical glow or something when an aspect is updated.
