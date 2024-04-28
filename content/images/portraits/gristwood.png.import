@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvwkeu64x7qx6"
-path="res://.godot/imported/gristwood.png-af42b89fe0efb6a0c14e8846f4779845.ctex"
+path="res://godot/imported/gristwood.png-af42b89fe0efb6a0c14e8846f4779845.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://content/images/portraits/gristwood.png"
-dest_files=["res://.godot/imported/gristwood.png-af42b89fe0efb6a0c14e8846f4779845.ctex"]
+dest_files=["res://godot/imported/gristwood.png-af42b89fe0efb6a0c14e8846f4779845.ctex"]
 
 [params]
 

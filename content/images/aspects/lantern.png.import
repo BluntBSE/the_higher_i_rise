@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yhbrxqwgllni"
-path="res://.godot/imported/lantern.png-c710ca1e18f58608414c582ee004cade.ctex"
+path="res://godot/imported/lantern.png-c710ca1e18f58608414c582ee004cade.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://content/images/aspects/lantern.png"
-dest_files=["res://.godot/imported/lantern.png-c710ca1e18f58608414c582ee004cade.ctex"]
+dest_files=["res://godot/imported/lantern.png-c710ca1e18f58608414c582ee004cade.ctex"]
 
 [params]
 

@@ -9,8 +9,8 @@ static var lantern = {
 static var grail = {
 	"color":"#FF614F",
 	"icon": "res://content/images/aspects/grail.png"
-}
 
+}
 static var knock = {
 	"color": "#B54EFC",
 	"icon": "res://content/images/aspects/knock.png"

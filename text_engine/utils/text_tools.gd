@@ -48,10 +48,7 @@ static func getSlotKey(word, reference): #reference usually points to the intera
 static func getInteractionResource(id: String):
 	var story_dir = "res://content/stories"
 	var file = getResourceFromDirectory(story_dir, id)
-	var resource = load(file) #Duplicate?
-	var RLed = ResourceLoader.load(file)
-	#return file
-	#TURN THIS BACK
+	var resource = load(file) #Duplicate()?
 	return resource
 	
 

@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://b2gxjrh8p0ieh"]
+
+[ext_resource type="Script" path="res://game_scenes/main_menu.gd" id="1_ksker"]
+[ext_resource type="PackedScene" uid="uid://bwn07hjfcrbcw" path="res://game_scenes/debug_quit.tscn" id="2_jfalq"]
+[ext_resource type="Shader" path="res://game_scenes/main_menu.gdshader" id="3_jtmae"]
+[ext_resource type="Texture2D" uid="uid://blwhpmnqtjrqb" path="res://content/images/mansus_y.jpg" id="4_0n8h8"]
+[ext_resource type="Theme" uid="uid://cdeurf58sje0y" path="res://text_engine/themes/main_UI.tres" id="4_jsjmn"]
+[ext_resource type="PackedScene" uid="uid://cmg6a3jhpo4y3" path="res://menu_and_ui/packed_scenes/mm_buton.tscn" id="5_hu0p4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4dajm"]
+shader = ExtResource("3_jtmae")
+
+[node name="main_menu" type="Node2D"]
+script = ExtResource("1_ksker")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_4dajm")
+scale = Vector2(1.45982, 1.45573)
+texture = ExtResource("4_0n8h8")
+centered = false
+
+[node name="ColorRect2" type="ColorRect" parent="Sprite2D"]
+offset_left = 30.0
+offset_top = 168.0
+offset_right = 631.0
+offset_bottom = 244.0
+color = Color(0.0901961, 0.0901961, 0.0901961, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D/ColorRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_jsjmn")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 0
+bbcode_enabled = true
+text = "[center]THE HIGHER I RISE[/center]"
+
+[node name="mm_button_bg" parent="Sprite2D" instance=ExtResource("5_hu0p4")]
+tooltip_text = "TEST OF THE TOOLTIP SYSTEM"
+text = "[center]Start Game[/center]"
+exec_class = "MMFunctions"
+execute = "start_game"
+
+[node name="mm_button_bg2" parent="Sprite2D" instance=ExtResource("5_hu0p4")]
+modulate = Color(1, 1, 1, 0.419608)
+offset_top = 374.383
+offset_bottom = 450.383
+color = Color(0.690196, 0.701961, 0.678431, 1)
+text = "[center]Load Game[/center]"
+
+[node name="mm_button_bg3" parent="Sprite2D" instance=ExtResource("5_hu0p4")]
+offset_left = 30.1407
+offset_top = 484.293
+offset_right = 312.141
+offset_bottom = 560.293
+text = "[center]Quit[/center]"
+exec_class = "MMFunctions"
+execute = "quit_game"
+
+[node name="Button" parent="." instance=ExtResource("2_jfalq")]
+custom_minimum_size = Vector2(50, 50)
+offset_left = 1777.0
+offset_top = 20.0
+offset_right = 1885.0
+offset_bottom = 128.0
+tooltip_text = "TEST OF THE TOOLTIP SYSTEM"

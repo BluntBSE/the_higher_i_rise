@@ -1,6 +1,8 @@
 NEXT UP:
-	Configure for diff resolutions
-	Configure for macs
+	Saving the game, loading the game. Main menu screen.
+	
+	(Done?) Configure for diff resolutions
+	(Done?)Configure for macs -- Why don't the aspects work right?
 	Make options available based on aspects
 
 	

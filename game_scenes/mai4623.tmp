@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://wdnval5ovhem"]
+
+[ext_resource type="Script" path="res://game_scenes/main.gd" id="1_6f7jw"]
+[ext_resource type="PackedScene" uid="uid://beimt6ww35m54" path="res://game_scenes/interaction_parser.tscn" id="1_vboil"]
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6f7jw")
+
+[node name="interaction_parser" parent="." instance=ExtResource("1_vboil")]
+layout_mode = 1
+
+[node name="pause_filter" type="ColorRect" parent="."]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_right = 1912.0
+offset_bottom = 1058.0
+color = Color(0.168627, 0.168627, 0.168627, 0.513726)
