@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c050ncdoay7m7"
-path="res://.godot/imported/medusa.png-8d36d731b13f6787be84e46f96750235.ctex"
+path="res://godot/imported/medusa.png-8d36d731b13f6787be84e46f96750235.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://content/images/portraits/medusa.png"
-dest_files=["res://.godot/imported/medusa.png-8d36d731b13f6787be84e46f96750235.ctex"]
+dest_files=["res://godot/imported/medusa.png-8d36d731b13f6787be84e46f96750235.ctex"]
 
 [params]
 

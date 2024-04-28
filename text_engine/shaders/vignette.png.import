@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c00lpai1wb4wb"
-path="res://.godot/imported/vignette.png-6719190b59d2510cc9ca44b67d449575.ctex"
+path="res://godot/imported/vignette.png-6719190b59d2510cc9ca44b67d449575.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://text_engine/shaders/vignette.png"
-dest_files=["res://.godot/imported/vignette.png-6719190b59d2510cc9ca44b67d449575.ctex"]
+dest_files=["res://godot/imported/vignette.png-6719190b59d2510cc9ca44b67d449575.ctex"]
 
 [params]
 

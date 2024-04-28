@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2i10b27wai31"]
+
+[ext_resource type="Script" path="res://menu_and_ui/packed_scenes/ui_button.gd" id="1_d7u1u"]
+[ext_resource type="Theme" uid="uid://cdeurf58sje0y" path="res://text_engine/themes/main_UI.tres" id="2_34m0o"]
+
+[node name="mm_button_bg" type="ColorRect"]
+offset_left = 30.0
+offset_top = 268.0
+offset_right = 312.0
+offset_bottom = 344.0
+color = Color(0.0901961, 0.0901961, 0.0901961, 1)
+script = ExtResource("1_d7u1u")
+
+[node name="button_text" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.140675
+offset_top = -0.0930163
+offset_right = 0.140686
+offset_bottom = -0.0930176
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2_34m0o")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 0
+bbcode_enabled = true
+text = "[center]Default[/center]"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

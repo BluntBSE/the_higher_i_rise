@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://daoferq1s3mhh"
-path="res://.godot/imported/zulfiya.png-09fc7d63f8051a21fcf55e96a9e85077.ctex"
+path="res://godot/imported/zulfiya.png-09fc7d63f8051a21fcf55e96a9e85077.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://content/images/portraits/zulfiya.png"
-dest_files=["res://.godot/imported/zulfiya.png-09fc7d63f8051a21fcf55e96a9e85077.ctex"]
+dest_files=["res://godot/imported/zulfiya.png-09fc7d63f8051a21fcf55e96a9e85077.ctex"]
 
 [params]
 

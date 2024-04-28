@@ -14,3 +14,18 @@ script = ExtResource("1_6f7jw")
 
 [node name="interaction_parser" parent="." instance=ExtResource("1_vboil")]
 layout_mode = 1
+
+[node name="pause_filter" type="ColorRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_right = 1912.0
+offset_bottom = 1058.0
+color = Color(0.164706, 0.164706, 0.164706, 0.701961)
+
+[node name="ColorRect" type="ColorRect" parent="pause_filter"]
+layout_mode = 0
+offset_left = 513.0
+offset_top = 227.0
+offset_right = 1010.0
+offset_bottom = 325.0
+color = Color(0.0901961, 0.0901961, 0.0901961, 1)

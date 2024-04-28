@@ -11,15 +11,21 @@ config_version=5
 [application]
 
 config/name="THIR_1"
-run/main_scene="res://game_scenes/main.tscn"
+run/main_scene="res://game_scenes/main_menu.tscn"
+config/use_hidden_project_data_directory=false
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[debug]
+
+gdscript/warnings/unused_parameter=0
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
+window/stretch/mode="viewport"
 
 [editor]
 

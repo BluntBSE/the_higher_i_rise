@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Aspect" load_steps=2 format=3 uid="uid://c5w2yd5shboa3"]
+[gd_resource type="Resource" script_class="Aspect" load_steps=2 format=3 uid="uid://bvsx8tac1b1l6"]
 
-[ext_resource type="Script" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_7ir5m"]
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_doj3u"]
 
 [resource]
-script = ExtResource("1_7ir5m")
-aspect_id = ""
+script = ExtResource("1_doj3u")
+aspect_id = "murders"
 icon = "res://content/images/aspects/red_hood.png"
 display_name = "Murders"
-tooltip = "Murders committed"
+tooltip = "Murders"

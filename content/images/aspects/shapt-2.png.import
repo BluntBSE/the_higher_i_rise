@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://veq1gh4c8yqb"
-path="res://.godot/imported/shapt-2.png-b37fab3d88935ae73c276b3186f3482f.ctex"
+path="res://godot/imported/shapt-2.png-b37fab3d88935ae73c276b3186f3482f.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://content/images/aspects/shapt-2.png"
-dest_files=["res://.godot/imported/shapt-2.png-b37fab3d88935ae73c276b3186f3482f.ctex"]
+dest_files=["res://godot/imported/shapt-2.png-b37fab3d88935ae73c276b3186f3482f.ctex"]
 
 [params]
 

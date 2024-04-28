@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://co5vsscgrr63x"
-path="res://.godot/imported/CrimsonText-Bold.ttf-2c773f4584f5189c7616908a3d22e6a0.fontdata"
+path="res://godot/imported/CrimsonText-Bold.ttf-2c773f4584f5189c7616908a3d22e6a0.fontdata"
 
 [deps]
 
 source_file="res://text_engine/resources/UI/fonts/CrimsonText-Bold.ttf"
-dest_files=["res://.godot/imported/CrimsonText-Bold.ttf-2c773f4584f5189c7616908a3d22e6a0.fontdata"]
+dest_files=["res://godot/imported/CrimsonText-Bold.ttf-2c773f4584f5189c7616908a3d22e6a0.fontdata"]
 
 [params]
 

@@ -11,12 +11,12 @@
 [ext_resource type="PackedScene" uid="uid://c37hmyricmehv" path="res://text_engine/packed_scenes/single_option.tscn" id="9_or5x1"]
 [ext_resource type="Theme" uid="uid://b8pgkx4ittskt" path="res://test_theme.tres" id="9_p17ku"]
 [ext_resource type="Script" path="res://memory_panel.gd" id="10_c3yyu"]
-[ext_resource type="Texture2D" uid="uid://rdfwu0i44ysm" path="res://content/images/aspects/moth.png" id="11_4jxd7"]
 [ext_resource type="Script" path="res://text_engine/nodes/aspects_panel.gd" id="12_6pfwr"]
 [ext_resource type="PackedScene" uid="uid://dxncpx8tc4a73" path="res://text_engine/packed_scenes/aspect_item.tscn" id="12_u4j84"]
 [ext_resource type="Texture2D" uid="uid://btfqqn1ckfu0d" path="res://content/images/aspects/secrethistories.png" id="13_6lhj8"]
 [ext_resource type="Texture2D" uid="uid://yhbrxqwgllni" path="res://content/images/aspects/lantern.png" id="14_1djmk"]
 [ext_resource type="Texture2D" uid="uid://bq16ga14wh62f" path="res://content/images/aspects/heart.png" id="15_ef4xy"]
+[ext_resource type="PackedScene" uid="uid://bwn07hjfcrbcw" path="res://game_scenes/debug_quit.tscn" id="17_mjt4e"]
 
 [node name="interaction_parser" type="Control"]
 unique_name_in_owner = true
@@ -599,15 +599,12 @@ theme_override_font_sizes/italics_font_size = 40
 bbcode_enabled = true
 text = "[i]Remember?[/i]"
 
-[node name="Button" type="Button" parent="."]
-modulate = Color(1, 1, 1, 0.47451)
+[node name="Button" parent="." instance=ExtResource("17_mjt4e")]
 layout_mode = 0
-offset_left = 1809.0
-offset_top = 37.0
-offset_right = 1917.0
-offset_bottom = 145.0
-scale = Vector2(0.68, 0.68)
-icon = ExtResource("11_4jxd7")
+offset_left = 1800.0
+offset_top = 42.0
+offset_right = 1908.0
+offset_bottom = 150.0
 
 [connection signal="meta_hover_ended" from="interaction_fg/text_title" to="." method="_on_text_content_meta_hover_ended"]
 [connection signal="meta_hover_started" from="interaction_fg/text_title" to="." method="_on_text_content_meta_hover_started"]

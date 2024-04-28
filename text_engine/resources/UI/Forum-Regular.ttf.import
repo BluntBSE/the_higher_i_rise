@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bk313mkj2cr0v"
-path="res://.godot/imported/Forum-Regular.ttf-06f6c264817f8f4084a35e94cc789bde.fontdata"
+path="res://godot/imported/Forum-Regular.ttf-06f6c264817f8f4084a35e94cc789bde.fontdata"
 
 [deps]
 
 source_file="res://text_engine/resources/UI/Forum-Regular.ttf"
-dest_files=["res://.godot/imported/Forum-Regular.ttf-06f6c264817f8f4084a35e94cc789bde.fontdata"]
+dest_files=["res://godot/imported/Forum-Regular.ttf-06f6c264817f8f4084a35e94cc789bde.fontdata"]
 
 [params]
 

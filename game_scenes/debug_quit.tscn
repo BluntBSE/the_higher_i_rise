@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwn07hjfcrbcw"]
+
+[ext_resource type="Texture2D" uid="uid://rdfwu0i44ysm" path="res://content/images/aspects/moth.png" id="1_kqv2m"]
+[ext_resource type="Script" path="res://game_scenes/db_quit_btn.gd" id="2_un5nu"]
+
+[node name="Button" type="Button"]
+modulate = Color(1, 1, 1, 0.47451)
+custom_minimum_size = Vector2(100, 100)
+offset_right = 108.0
+offset_bottom = 108.0
+scale = Vector2(0.68, 0.68)
+icon = ExtResource("1_kqv2m")
+script = ExtResource("2_un5nu")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]

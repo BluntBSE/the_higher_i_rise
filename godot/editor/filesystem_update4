@@ -1,0 +1,9 @@
+res://text_engine/packed_scenes/aspect_item.tscn
+res://text_engine/resources/UI/theme.tres
+res://text_engine/themes/main_UI.tres
+res://text_engine/nodes/aspect_item.gd
+res://content/catalogs/aspects/murders.tres
+res://game_scenes/main.tscn
+res://menu_and_ui/packed_scenes/pm_button.tscn
+res://game_scenes/main_menu.tscn
+res://text_engine/utils/text_tools.gd
