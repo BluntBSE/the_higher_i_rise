@@ -1,14 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://b2gxjrh8p0ieh"]
+[gd_scene load_steps=10 format=3 uid="uid://b2gxjrh8p0ieh"]
 
 [ext_resource type="Script" path="res://game_scenes/main_menu.gd" id="1_ksker"]
 [ext_resource type="PackedScene" uid="uid://bwn07hjfcrbcw" path="res://game_scenes/debug_quit.tscn" id="2_jfalq"]
 [ext_resource type="Shader" path="res://game_scenes/main_menu.gdshader" id="3_jtmae"]
 [ext_resource type="Texture2D" uid="uid://blwhpmnqtjrqb" path="res://content/images/mansus_y.jpg" id="4_0n8h8"]
 [ext_resource type="Theme" uid="uid://cdeurf58sje0y" path="res://text_engine/themes/main_UI.tres" id="4_jsjmn"]
-[ext_resource type="PackedScene" uid="uid://cmg6a3jhpo4y3" path="res://menu_and_ui/packed_scenes/mm_buton.tscn" id="5_hu0p4"]
+[ext_resource type="PackedScene" uid="uid://cmg6a3jhpo4y3" path="res://menu_and_ui/packed_scenes/big_ui_button.tscn" id="5_hu0p4"]
+[ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="7_3c6fk"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4dajm"]
 shader = ExtResource("3_jtmae")
+
+[sub_resource type="Theme" id="Theme_s4qcg"]
 
 [node name="main_menu" type="Node2D"]
 script = ExtResource("1_ksker")
@@ -45,12 +48,14 @@ text = "[center]Start Game[/center]"
 exec_class = "MMFunctions"
 execute = "start_game"
 
-[node name="mm_button_bg2" parent="Sprite2D" instance=ExtResource("5_hu0p4")]
-modulate = Color(1, 1, 1, 0.419608)
+[node name="load_game_btn" parent="Sprite2D" instance=ExtResource("5_hu0p4")]
+offset_left = 30.1407
 offset_top = 374.383
+offset_right = 312.141
 offset_bottom = 450.383
-color = Color(0.690196, 0.701961, 0.678431, 1)
 text = "[center]Load Game[/center]"
+exec_class = "MMFunctions"
+execute = "load_game"
 
 [node name="mm_button_bg3" parent="Sprite2D" instance=ExtResource("5_hu0p4")]
 offset_left = 30.1407
@@ -68,3 +73,111 @@ offset_top = 20.0
 offset_right = 1885.0
 offset_bottom = 128.0
 tooltip_text = "TEST OF THE TOOLTIP SYSTEM"
+
+[node name="mm_screen_filter" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+offset_right = 1951.0
+offset_bottom = 1111.0
+color = Color(1, 1, 1, 0.27451)
+
+[node name="load_menu" type="ColorRect" parent="mm_screen_filter"]
+custom_minimum_size = Vector2(1000, 500)
+layout_mode = 0
+offset_left = 497.0
+offset_top = 276.0
+offset_right = 1497.0
+offset_bottom = 776.0
+color = Color(0, 0, 0, 1)
+
+[node name="mm_button_bg" parent="mm_screen_filter/load_menu" instance=ExtResource("5_hu0p4")]
+offset_left = 68.0
+offset_top = 124.0
+offset_right = 350.0
+offset_bottom = 200.0
+color = Color(0.729412, 0.729412, 0.729412, 1)
+text = "[center]Save Slot 1[/center]"
+exec_class = "mm"
+execute = "load_slot_1"
+
+[node name="mm_button_bg2" parent="mm_screen_filter/load_menu" instance=ExtResource("5_hu0p4")]
+offset_left = 68.0
+offset_top = 245.0
+offset_right = 350.0
+offset_bottom = 321.0
+color = Color(0.729412, 0.729412, 0.729412, 1)
+text = "[center]Save Slot 2[/center]"
+exec_class = "mm"
+execute = "load_slot_2"
+
+[node name="mm_button_bg3" parent="mm_screen_filter/load_menu" instance=ExtResource("5_hu0p4")]
+offset_left = 68.0
+offset_top = 370.0
+offset_right = 350.0
+offset_bottom = 446.0
+color = Color(0.729412, 0.729412, 0.729412, 1)
+text = "[center]Save Slot 3[/center]"
+exec_class = "mm"
+execute = "load_slot_3"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="mm_screen_filter/load_menu"]
+layout_mode = 0
+offset_left = 363.0
+offset_top = 20.0
+offset_right = 628.0
+offset_bottom = 87.0
+theme = SubResource("Theme_s4qcg")
+theme_override_fonts/normal_font = ExtResource("7_3c6fk")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center]LOAD GAME[/center]"
+
+[node name="new_game_menu" type="ColorRect" parent="mm_screen_filter"]
+custom_minimum_size = Vector2(1000, 500)
+layout_mode = 0
+offset_left = 497.0
+offset_top = 276.0
+offset_right = 1497.0
+offset_bottom = 776.0
+color = Color(0, 0, 0, 1)
+
+[node name="mm_button_bg" parent="mm_screen_filter/new_game_menu" instance=ExtResource("5_hu0p4")]
+offset_left = 68.0
+offset_top = 124.0
+offset_right = 350.0
+offset_bottom = 200.0
+color = Color(0.729412, 0.729412, 0.729412, 1)
+text = "[center]Save Slot 1[/center]"
+exec_class = "mm"
+execute = "load_slot_1"
+
+[node name="mm_button_bg2" parent="mm_screen_filter/new_game_menu" instance=ExtResource("5_hu0p4")]
+offset_left = 68.0
+offset_top = 245.0
+offset_right = 350.0
+offset_bottom = 321.0
+color = Color(0.729412, 0.729412, 0.729412, 1)
+text = "[center]Save Slot 2[/center]"
+exec_class = "mm"
+execute = "load_slot_2"
+
+[node name="mm_button_bg3" parent="mm_screen_filter/new_game_menu" instance=ExtResource("5_hu0p4")]
+offset_left = 68.0
+offset_top = 370.0
+offset_right = 350.0
+offset_bottom = 446.0
+color = Color(0.729412, 0.729412, 0.729412, 1)
+text = "[center]Save Slot 3[/center]"
+exec_class = "mm"
+execute = "load_slot_3"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="mm_screen_filter/new_game_menu"]
+layout_mode = 0
+offset_left = 363.0
+offset_top = 20.0
+offset_right = 628.0
+offset_bottom = 87.0
+theme = SubResource("Theme_s4qcg")
+theme_override_fonts/normal_font = ExtResource("7_3c6fk")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center]New Game[/center]"

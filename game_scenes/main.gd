@@ -3,6 +3,10 @@ extends Control
 
 var state_machine = StateMachine2.new()
 
+var consts = {
+	"save_file": null
+}
+
 
 # Called when the node enters the scene tree for the first time.
 

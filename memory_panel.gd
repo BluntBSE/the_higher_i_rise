@@ -1,4 +1,5 @@
 extends ColorRect
+class_name MemoryPanel
 
 var state_machine: StateMachine2 = StateMachine2.new()
 var mem_inventory = []#Array of strings containing word ids, like "noun_wound"

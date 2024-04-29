@@ -1,7 +1,7 @@
 extends Resource
 class_name SaveFile
 
-@export var active_interaction:String
+@export var active_interaction:Interaction
 @export var aspects:Dictionary
 @export var words:Array
 @export var decision_tree:Dictionary

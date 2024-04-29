@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://wdnval5ovhem"]
+[gd_scene load_steps=4 format=3 uid="uid://wdnval5ovhem"]
 
 [ext_resource type="Script" path="res://game_scenes/main.gd" id="1_6f7jw"]
 [ext_resource type="PackedScene" uid="uid://beimt6ww35m54" path="res://game_scenes/interaction_parser.tscn" id="1_vboil"]
+[ext_resource type="PackedScene" uid="uid://cmg6a3jhpo4y3" path="res://menu_and_ui/packed_scenes/big_ui_button.tscn" id="3_iqb5y"]
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -16,16 +17,31 @@ script = ExtResource("1_6f7jw")
 layout_mode = 1
 
 [node name="pause_filter" type="ColorRect" parent="."]
+visible = false
 z_index = 1
 layout_mode = 0
 offset_right = 1912.0
 offset_bottom = 1058.0
 color = Color(0.164706, 0.164706, 0.164706, 0.701961)
 
-[node name="ColorRect" type="ColorRect" parent="pause_filter"]
+[node name="mm_button_bg" parent="pause_filter" instance=ExtResource("3_iqb5y")]
+z_index = 3
 layout_mode = 0
-offset_left = 513.0
-offset_top = 227.0
-offset_right = 1010.0
-offset_bottom = 325.0
-color = Color(0.0901961, 0.0901961, 0.0901961, 1)
+offset_left = 503.0
+offset_top = 432.0
+offset_right = 785.0
+offset_bottom = 508.0
+text = "[center]Save Game[/center]"
+exec_class = "PMFunctions"
+execute = "save_game"
+
+[node name="mm_button_bg2" parent="pause_filter" instance=ExtResource("3_iqb5y")]
+z_index = 3
+layout_mode = 0
+offset_left = 835.0
+offset_top = 432.0
+offset_right = 1117.0
+offset_bottom = 508.0
+text = "[center]Main Menu[/center]"
+exec_class = "PMFunctions"
+execute = "return_to_main"
