@@ -31,9 +31,6 @@ func stateEnter(args):
 func stateUpdate(_dt):
 	if Input.is_action_just_pressed("left_click"):
 		var local_class = GlobalUtils.instantiate_class(_reference.exec_class)
-		print("LOCAL CLASS:")
-		print(local_class)
-		print(local_class)
 		var args_to_exec = [_reference]
 		if _args != null:
 			for arg in _args:

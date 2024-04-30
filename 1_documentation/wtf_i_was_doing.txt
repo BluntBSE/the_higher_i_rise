@@ -1,8 +1,6 @@
 NEXT UP:
-	Saving the game, loading the game. Main menu screen.
-	
-	(Done?) Configure for diff resolutions
-	(Done?)Configure for macs -- Why don't the aspects work right?
+	Make selected word clear on option select
+	Make swappable words stand out with relative font size detection
 	Make options available based on aspects
 
 	

@@ -28,7 +28,7 @@ static func start_game(node:Node, slot_number):
 	root.get_node("main_menu").free()
 
 
-static func load_game(node:Node, save:SaveFile):#Needs arg for save slot
+static func load_game(node:Node, save:SaveFile, slot_number:int):#Needs arg for save slot
 
 
 	var root = node.get_tree().root
@@ -37,13 +37,13 @@ static func load_game(node:Node, save:SaveFile):#Needs arg for save slot
 	#Do some graphics here to cover the little glitchy load-in.
 	
 	var main = load("res://game_scenes/main.tscn").instantiate()
+	main.active_save = slot_number
 	root.add_child(main)
 	main.visible = false
 	
 	var parser:InteractionParser = root.get_node("main/interaction_parser")
 	var aspect_panel:AspectPanel = root.find_child("aspects_panel", true, false)
 	var memory_panel:MemoryPanel = root.find_child("memory_panel", true, false)
-	
 	parser.state_machine.Change("load_interaction", save.active_interaction)
 	aspect_panel.aspect_dict = save.aspects
 	memory_panel.mem_inventory = save.words

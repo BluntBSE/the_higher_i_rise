@@ -16,3 +16,11 @@ res://menu_and_ui/resources/mm_functions.gd
 res://menu_and_ui/packed_scenes/slot_button.gd
 res://menu_and_ui/packed_scenes/start_game_menu.gd
 res://1_documentation/how_saves_work.txt
+res://menu_and_ui/states/main_menu/mm_hover_button.gd
+res://text_engine/nodes/interaction_parser.gd
+res://text_engine/states/interaction_parser/choose_option_state.gd
+res://text_engine/utils/text_tools.gd
+res://text_engine/utils/img_tools.gd
+res://1_documentation/wtf_i_was_doing.txt
+res://text_engine/states/interaction_parser/load_option_state.gd
+res://menu_and_ui/states/main_menu/start_menu_hover.gd

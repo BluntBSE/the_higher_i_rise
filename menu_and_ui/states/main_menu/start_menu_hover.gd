@@ -35,7 +35,7 @@ func stateUpdate(_dt):
 			MMFunctions.start_game(_reference, _reference.slot_number)
 			return
 		if _reference.start_or_load == "load":
-			MMFunctions.load_game(_reference, _reference.save_file)
+			MMFunctions.load_game(_reference, _reference.save_file, _reference.slot_number)
 	pass
 	
 	

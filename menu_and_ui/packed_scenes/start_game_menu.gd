@@ -18,6 +18,7 @@ func unpack():
 		slots = ResourceLoader.load(file_path)
 	
 	var slot_num = 1
+	print(slots.saves)
 	for save in slots.saves:
 		var data = slots.saves[save]
 		"""
@@ -27,6 +28,7 @@ func unpack():
 		@export var decision_tree:Dictionary
 		"""
 		var slot_str = "slot_button_"+str(slot_num)
+		print(slot_str)
 		var slot_button = get_node(slot_str)
 		slot_button.unpack(slot_num, data)
 		slot_num += 1

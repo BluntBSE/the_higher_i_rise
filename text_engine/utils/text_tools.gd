@@ -163,12 +163,10 @@ static func parseText(input_string: String, interaction: Interaction):
 			var word_str = applyStyling(word)
 			#Here is where we would add anything to modify it to be a sentence, such as capitalization.
 			if text.contains("<" + slot + "/ia>"):
-				print("CONTAINMENT FOUND")
 				var ia_replace = "<" + slot + "/ia>"
 				print(ia_replace)
 				text = text.replace(ia_replace, word.indef_article)
 			if text.contains("<" + slot + "/ia>"):
-				print("CONTAINMENT FOUND")
 				var ia_replace = "<" + slot + "/da>"
 				print(ia_replace)
 				text = text.replace(ia_replace, word.def_article)
@@ -182,8 +180,7 @@ static func parseText(input_string: String, interaction: Interaction):
 				print("No wound found!")
 			var wound_IWord = applyWound(wound_word)
 			var word_text = applyStyling(wound_IWord)
-			#Currently I like wounds more without the underlines
-			print(word_text)	
+			#Currently I like wounds more without the underlines	
 			text = text.replace( "<" + wound + "/>", word_text)
 	
 	

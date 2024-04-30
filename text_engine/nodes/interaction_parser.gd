@@ -117,7 +117,6 @@ func _on_text_content_meta_hover_ended(meta): #When the user stops hovering over
 
 
 func _on_options_content_meta_clicked(meta):
-	print("Parser attempting to fire options")
 	state_machine.Change("choose_option", meta)
 
 
@@ -137,7 +136,6 @@ func _on_text_content_meta_clicked(meta):
 			var all_wounds = active_interaction.wounds.keys()
 			for wound in all_wounds:
 				if active_interaction.wounds[wound].word_id == meta:
-					print("Yes verily I do believe this to be a wound")
 					is_wound = true
 					break
 	if is_wound == false:

@@ -74,7 +74,12 @@ func stateEnter(args: Interaction):
 	content_node = _reference.get_node("interaction_fg/text_content")
 	options_node = _reference.get_node("interaction_fg/options_organizer")
 	portrait_node_0 = _reference.get_node("interaction_fg/portrait_controller/portrait_0")
-	portrait_node_1 = _reference.get_node("Interaction_fg/portrait_controller/portrait_1")
+	portrait_node_1 = _reference.get_node("interaction_fg/portrait_controller/portrait_1")
+	_reference.selected_word = null
+	_reference.selected_slot = null
+	_reference.hovered_word = null
+	_reference.hovered_slot = null
+	_reference.selected_memory = null
 	
 func stateExit():
 

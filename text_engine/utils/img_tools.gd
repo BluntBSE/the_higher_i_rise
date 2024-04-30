@@ -19,9 +19,6 @@ static func parsePortraits(_reference, interaction: Interaction):
 			portrait_name = portrait_name
 			var respath = TextTools.getResourceFromDirectory('res://content/catalogs/characters/', portrait_name)
 			var res = load(respath)
-			print(res)
-			print(res.portrait)
-			print(res.display_name)
 			#var img = Image.new()
 			#img.load(res.portrait)
 			var portrait_node = _reference.get_node('interaction_fg/portrait_controller/'+output_name)
