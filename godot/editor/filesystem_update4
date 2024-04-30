@@ -24,3 +24,4 @@ res://text_engine/utils/img_tools.gd
 res://1_documentation/wtf_i_was_doing.txt
 res://text_engine/states/interaction_parser/load_option_state.gd
 res://menu_and_ui/states/main_menu/start_menu_hover.gd
+res://content/stories/02_the_first_morning/nine_pm_1.tres

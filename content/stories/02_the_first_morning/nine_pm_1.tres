@@ -14,9 +14,6 @@ text = "The first thing you think when you wake up is:
 
 "
 slots = {}
-options = [{
-"links_to": "the_watchmans_way_3",
-"text": "And again!"
-}]
+options = []
 wounds = {}
 portraits = []
