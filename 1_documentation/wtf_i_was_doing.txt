@@ -12,6 +12,8 @@ NEXT UP:
 	Create a fixed data type for Interactions so we don't run into future issues - Maybe not?
 	Modify background color based on aspects
 	
+SAVE & LOAD:
+On game start, Main Menu should search for a file in which the slots are contained. If it doesn't exist, make it.
 
 NOTES:
 	WHEN YOU'RE FINALLY DONE: using find_child() is inefficient, and you should probably do something different

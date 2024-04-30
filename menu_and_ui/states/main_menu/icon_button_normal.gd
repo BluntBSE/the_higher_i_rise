@@ -1,5 +1,5 @@
 extends EmptyState
-class_name UINormalButtonState
+class_name IconButtonNormalState
 
 
 '''
@@ -17,15 +17,16 @@ class_name EmptyState
 '''
 #Args that get passed in through the state machine
 var _args 
-var _reference #usually 'self'
+var _reference:IconButton#usually 'self'
 var state_machine #state machine attached to the reference passed in
 
 
+
 func stateEnter(args):
-	
 	_args = args
-	var rtl:RichTextLabel = _reference.find_child("button_text")
-	rtl.add_theme_color_override("default_color", Color.WHITE)
+	_reference.material.set("shader_parameter/replace_0", _reference.shader_normal)
+	#_reference.material.shader_parameter.replace_0 = _reference.shader_normal
+
 
 func stateUpdate(_dt):
 	pass

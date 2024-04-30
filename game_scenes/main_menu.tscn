@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b2gxjrh8p0ieh"]
+[gd_scene load_steps=12 format=3 uid="uid://b2gxjrh8p0ieh"]
 
 [ext_resource type="Script" path="res://game_scenes/main_menu.gd" id="1_ksker"]
 [ext_resource type="PackedScene" uid="uid://bwn07hjfcrbcw" path="res://game_scenes/debug_quit.tscn" id="2_jfalq"]
@@ -7,6 +7,8 @@
 [ext_resource type="Theme" uid="uid://cdeurf58sje0y" path="res://text_engine/themes/main_UI.tres" id="4_jsjmn"]
 [ext_resource type="PackedScene" uid="uid://cmg6a3jhpo4y3" path="res://menu_and_ui/packed_scenes/big_ui_button.tscn" id="5_hu0p4"]
 [ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="7_3c6fk"]
+[ext_resource type="PackedScene" uid="uid://5w0anhbqgx3a" path="res://menu_and_ui/packed_scenes/slot_button.tscn" id="8_lg3ad"]
+[ext_resource type="Script" path="res://menu_and_ui/packed_scenes/start_game_menu.gd" id="8_pje5x"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4dajm"]
 shader = ExtResource("3_jtmae")
@@ -46,16 +48,17 @@ text = "[center]THE HIGHER I RISE[/center]"
 tooltip_text = "TEST OF THE TOOLTIP SYSTEM"
 text = "[center]Start Game[/center]"
 exec_class = "MMFunctions"
-execute = "start_game"
+execute = "start_game_menu"
 
-[node name="load_game_btn" parent="Sprite2D" instance=ExtResource("5_hu0p4")]
+[node name="mm_button_bg2" parent="Sprite2D" instance=ExtResource("5_hu0p4")]
 offset_left = 30.1407
-offset_top = 374.383
+offset_top = 366.826
 offset_right = 312.141
-offset_bottom = 450.383
-text = "[center]Load Game[/center]"
+offset_bottom = 442.826
+tooltip_text = "TEST OF THE TOOLTIP SYSTEM"
+text = "[center]Options[/center]"
 exec_class = "MMFunctions"
-execute = "load_game"
+execute = "start_game"
 
 [node name="mm_button_bg3" parent="Sprite2D" instance=ExtResource("5_hu0p4")]
 offset_left = 30.1407
@@ -66,6 +69,69 @@ text = "[center]Quit[/center]"
 exec_class = "MMFunctions"
 execute = "quit_game"
 
+[node name="mm_screen_filter" type="ColorRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(1920, 1080)
+offset_right = 1951.0
+offset_bottom = 1111.0
+color = Color(1, 1, 1, 0.27451)
+
+[node name="start_game_menu" type="ColorRect" parent="mm_screen_filter"]
+custom_minimum_size = Vector2(1000, 500)
+layout_mode = 0
+offset_left = 497.0
+offset_top = 276.0
+offset_right = 1497.0
+offset_bottom = 776.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("8_pje5x")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="mm_screen_filter/start_game_menu"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 306.0
+offset_top = 11.0
+offset_right = -252.0
+offset_bottom = 81.0
+grow_horizontal = 2
+theme = SubResource("Theme_s4qcg")
+theme_override_fonts/normal_font = ExtResource("7_3c6fk")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center]Start or Load Game[/center]"
+
+[node name="slot_button_1" parent="mm_screen_filter/start_game_menu" instance=ExtResource("8_lg3ad")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 99.0
+offset_right = 962.0
+offset_bottom = 159.0
+
+[node name="slot_button_2" parent="mm_screen_filter/start_game_menu" instance=ExtResource("8_lg3ad")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 192.0
+offset_right = 962.0
+offset_bottom = 252.0
+
+[node name="slot_button_3" parent="mm_screen_filter/start_game_menu" instance=ExtResource("8_lg3ad")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 285.0
+offset_right = 962.0
+offset_bottom = 345.0
+
+[node name="cancel_start_btn" parent="mm_screen_filter/start_game_menu" instance=ExtResource("5_hu0p4")]
+layout_mode = 0
+offset_left = 386.0
+offset_top = 395.0
+offset_right = 668.0
+offset_bottom = 471.0
+text = "[center]Cancel[/center]"
+exec_class = "MMFunctions"
+execute = "cancel_start"
+
 [node name="Button" parent="." instance=ExtResource("2_jfalq")]
 custom_minimum_size = Vector2(50, 50)
 offset_left = 1777.0
@@ -73,111 +139,3 @@ offset_top = 20.0
 offset_right = 1885.0
 offset_bottom = 128.0
 tooltip_text = "TEST OF THE TOOLTIP SYSTEM"
-
-[node name="mm_screen_filter" type="ColorRect" parent="."]
-custom_minimum_size = Vector2(1920, 1080)
-offset_right = 1951.0
-offset_bottom = 1111.0
-color = Color(1, 1, 1, 0.27451)
-
-[node name="load_menu" type="ColorRect" parent="mm_screen_filter"]
-custom_minimum_size = Vector2(1000, 500)
-layout_mode = 0
-offset_left = 497.0
-offset_top = 276.0
-offset_right = 1497.0
-offset_bottom = 776.0
-color = Color(0, 0, 0, 1)
-
-[node name="mm_button_bg" parent="mm_screen_filter/load_menu" instance=ExtResource("5_hu0p4")]
-offset_left = 68.0
-offset_top = 124.0
-offset_right = 350.0
-offset_bottom = 200.0
-color = Color(0.729412, 0.729412, 0.729412, 1)
-text = "[center]Save Slot 1[/center]"
-exec_class = "mm"
-execute = "load_slot_1"
-
-[node name="mm_button_bg2" parent="mm_screen_filter/load_menu" instance=ExtResource("5_hu0p4")]
-offset_left = 68.0
-offset_top = 245.0
-offset_right = 350.0
-offset_bottom = 321.0
-color = Color(0.729412, 0.729412, 0.729412, 1)
-text = "[center]Save Slot 2[/center]"
-exec_class = "mm"
-execute = "load_slot_2"
-
-[node name="mm_button_bg3" parent="mm_screen_filter/load_menu" instance=ExtResource("5_hu0p4")]
-offset_left = 68.0
-offset_top = 370.0
-offset_right = 350.0
-offset_bottom = 446.0
-color = Color(0.729412, 0.729412, 0.729412, 1)
-text = "[center]Save Slot 3[/center]"
-exec_class = "mm"
-execute = "load_slot_3"
-
-[node name="RichTextLabel" type="RichTextLabel" parent="mm_screen_filter/load_menu"]
-layout_mode = 0
-offset_left = 363.0
-offset_top = 20.0
-offset_right = 628.0
-offset_bottom = 87.0
-theme = SubResource("Theme_s4qcg")
-theme_override_fonts/normal_font = ExtResource("7_3c6fk")
-theme_override_font_sizes/normal_font_size = 30
-bbcode_enabled = true
-text = "[center]LOAD GAME[/center]"
-
-[node name="new_game_menu" type="ColorRect" parent="mm_screen_filter"]
-custom_minimum_size = Vector2(1000, 500)
-layout_mode = 0
-offset_left = 497.0
-offset_top = 276.0
-offset_right = 1497.0
-offset_bottom = 776.0
-color = Color(0, 0, 0, 1)
-
-[node name="mm_button_bg" parent="mm_screen_filter/new_game_menu" instance=ExtResource("5_hu0p4")]
-offset_left = 68.0
-offset_top = 124.0
-offset_right = 350.0
-offset_bottom = 200.0
-color = Color(0.729412, 0.729412, 0.729412, 1)
-text = "[center]Save Slot 1[/center]"
-exec_class = "mm"
-execute = "load_slot_1"
-
-[node name="mm_button_bg2" parent="mm_screen_filter/new_game_menu" instance=ExtResource("5_hu0p4")]
-offset_left = 68.0
-offset_top = 245.0
-offset_right = 350.0
-offset_bottom = 321.0
-color = Color(0.729412, 0.729412, 0.729412, 1)
-text = "[center]Save Slot 2[/center]"
-exec_class = "mm"
-execute = "load_slot_2"
-
-[node name="mm_button_bg3" parent="mm_screen_filter/new_game_menu" instance=ExtResource("5_hu0p4")]
-offset_left = 68.0
-offset_top = 370.0
-offset_right = 350.0
-offset_bottom = 446.0
-color = Color(0.729412, 0.729412, 0.729412, 1)
-text = "[center]Save Slot 3[/center]"
-exec_class = "mm"
-execute = "load_slot_3"
-
-[node name="RichTextLabel" type="RichTextLabel" parent="mm_screen_filter/new_game_menu"]
-layout_mode = 0
-offset_left = 363.0
-offset_top = 20.0
-offset_right = 628.0
-offset_bottom = 87.0
-theme = SubResource("Theme_s4qcg")
-theme_override_fonts/normal_font = ExtResource("7_3c6fk")
-theme_override_font_sizes/normal_font_size = 30
-bbcode_enabled = true
-text = "[center]New Game[/center]"

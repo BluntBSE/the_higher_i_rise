@@ -1,0 +1,88 @@
+[gd_scene load_steps=9 format=3 uid="uid://5w0anhbqgx3a"]
+
+[ext_resource type="Theme" uid="uid://cdeurf58sje0y" path="res://text_engine/themes/main_UI.tres" id="1_fnlwa"]
+[ext_resource type="Script" path="res://menu_and_ui/packed_scenes/slot_button.gd" id="1_qkryl"]
+[ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="2_71i28"]
+[ext_resource type="FontFile" uid="uid://co5vsscgrr63x" path="res://text_engine/resources/UI/fonts/CrimsonText-Bold.ttf" id="3_42daf"]
+[ext_resource type="Shader" path="res://text_engine/shaders/2d_palette_swap.gdshader" id="5_ogvj2"]
+[ext_resource type="Texture2D" uid="uid://ouy7w1ck42e3" path="res://menu_and_ui/icons/close-square-icon.png" id="6_cygxa"]
+[ext_resource type="Script" path="res://menu_and_ui/packed_scenes/icon_ui_button.gd" id="7_6nnfi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nsypg"]
+resource_local_to_scene = true
+shader = ExtResource("5_ogvj2")
+shader_parameter/original_0 = Color(0, 0, 0, 1)
+shader_parameter/original_1 = null
+shader_parameter/original_2 = null
+shader_parameter/original_3 = null
+shader_parameter/original_4 = null
+shader_parameter/replace_0 = Color(0.639216, 0, 0.164706, 1)
+shader_parameter/replace_1 = Color(0, 0, 0, 1)
+shader_parameter/replace_2 = null
+shader_parameter/replace_3 = null
+shader_parameter/replace_4 = null
+
+[node name="slot_button_2" type="ColorRect"]
+offset_left = 8.0
+offset_top = 70.0
+offset_right = 940.0
+offset_bottom = 130.0
+script = ExtResource("1_qkryl")
+
+[node name="slot_fg" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 928.0
+offset_bottom = 58.0
+color = Color(0, 0, 0, 1)
+
+[node name="slot_text" type="RichTextLabel" parent="slot_fg"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 120.0
+offset_bottom = 51.0
+mouse_filter = 2
+theme = ExtResource("1_fnlwa")
+theme_override_fonts/normal_font = ExtResource("2_71i28")
+theme_override_fonts/bold_font = ExtResource("3_42daf")
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]SAVE #1:[/b]"
+
+[node name="active_scene_text" type="RichTextLabel" parent="slot_fg"]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 6.0
+offset_right = 355.0
+offset_bottom = 51.0
+mouse_filter = 2
+theme = ExtResource("1_fnlwa")
+theme_override_fonts/normal_font = ExtResource("2_71i28")
+theme_override_fonts/bold_font = ExtResource("3_42daf")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "An Obscure Alley"
+
+[node name="delete" type="TextureRect" parent="slot_fg"]
+material = SubResource("ShaderMaterial_nsypg")
+layout_mode = 0
+offset_left = 873.0
+offset_top = 4.00001
+offset_right = 1385.0
+offset_bottom = 516.0
+scale = Vector2(0.0927734, 0.0927734)
+mouse_filter = 0
+texture = ExtResource("6_cygxa")
+script = ExtResource("7_6nnfi")
+shader_normal = Color(0.639216, 0, 0.164706, 1)
+shader_hover = Color(1, 1, 1, 1)
+exec_class = "MMFunctions"
+execute = "delete_slot"
+
+[connection signal="mouse_entered" from="slot_fg" to="." method="_on_slot_fg_mouse_entered"]
+[connection signal="mouse_exited" from="slot_fg" to="." method="_on_slot_fg_mouse_exited"]
+[connection signal="mouse_entered" from="slot_fg/delete" to="slot_fg/delete" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="slot_fg/delete" to="slot_fg/delete" method="_on_mouse_exited"]

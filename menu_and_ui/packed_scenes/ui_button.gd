@@ -1,10 +1,19 @@
+@tool
 extends ColorRect
-class_name UIButton
+class_name BigUIButton
+
 
 var state_machine = StateMachine2.new()
 @export var text:String
 @export var exec_class:String #Name of the class to search for the function in execute.
 @export var execute:String
+
+
+var is_engine_configured = false
+
+func _init():
+	pass
+	
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,8 +25,16 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	state_machine.stateUpdate(delta)
-	pass
+	#Just to make UI visible in editor
+	if Engine.is_editor_hint():
+		if is_engine_configured == false:
+			var child = self.get_node("button_text")
+			child.text += text
+			is_engine_configured = true
+	
+	else:
+		state_machine.stateUpdate(delta)
+
 
 
 func _on_mouse_entered():

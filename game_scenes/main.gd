@@ -2,6 +2,7 @@ extends Control
 #Script for governing things like opening menus, controlling settings, etc.
 
 var state_machine = StateMachine2.new()
+var active_save
 
 var consts = {
 	"save_file": null
@@ -15,6 +16,8 @@ func _init():
 	state_machine.Add("playing", PlayingGameState.new(self, "init playing state"))
 	
 func _ready():
+	print("ACTIVE SAVE IS")
+	print(active_save)
 	state_machine.Change("playing", null)
 
 
