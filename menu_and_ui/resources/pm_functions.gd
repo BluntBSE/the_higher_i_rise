@@ -4,8 +4,9 @@ class_name PMFunctions
 
 
  
-static func save_game(node:Node, slot:String): #Needs arg for save slot
+static func save_game(node:Node):
 	var root = node.get_tree().root #used for accessing data in the scene
+	var active_save = root.get_node("main").active_save
 	var new_file = SaveFile.new()
 	var active_interaction = root.get_node("main/interaction_parser").active_interaction
 	var word_inventory = root.find_child("memory_panel", true, false).mem_inventory
@@ -17,9 +18,10 @@ static func save_game(node:Node, slot:String): #Needs arg for save slot
 	new_file.aspects = aspect_inventory
 	
 	#var filename = "single_user.tres" #TODO: Replace with slot
-	var filename = slot
-	var save_path = "user://"+filename
-	ResourceSaver.save(new_file, save_path)
+	var key = "slot_"+str(active_save)
+	var slots = ResourceLoader.load("user://slots.tres")
+	slots.saves[key] = new_file
+	ResourceSaver.save(slots, "user://slots.tres")
 	
 	
 

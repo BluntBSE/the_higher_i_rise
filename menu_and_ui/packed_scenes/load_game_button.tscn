@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1mkyph8r4epi"]
+
+[ext_resource type="PackedScene" uid="uid://cmg6a3jhpo4y3" path="res://menu_and_ui/packed_scenes/big_ui_button.tscn" id="1_de2we"]
+
+[node name="mm_button_bg" instance=ExtResource("1_de2we")]
+script = null

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy6ui4b52twv"]
+
+[ext_resource type="PackedScene" uid="uid://cmg6a3jhpo4y3" path="res://menu_and_ui/packed_scenes/big_ui_button.tscn" id="1_s6k4j"]
+
+[node name="mm_button_bg" instance=ExtResource("1_s6k4j")]
+
+[node name="button_text" parent="." index="0"]
+offset_left = 37.0
+offset_top = -2.0
+offset_right = 37.0
+offset_bottom = -2.0

@@ -1,6 +1,5 @@
 extends EmptyState
-class_name UIHoverButtonState
-
+class_name UINormalButtonState
 
 '''
 class_name EmptyState
@@ -17,24 +16,17 @@ class_name EmptyState
 '''
 #Args that get passed in through the state machine
 var _args 
-var _reference: UIButton#usually 'self'
+var _reference #usually 'self'
 var state_machine #state machine attached to the reference passed in
 
 
-
 func stateEnter(args):
+	
 	_args = args
 	var rtl:RichTextLabel = _reference.find_child("button_text")
-	var hover_hex = Principles.lantern.color
-	var hover_color = Color(hover_hex)
-	rtl.add_theme_color_override("default_color", hover_color)
+	rtl.add_theme_color_override("default_color", Color.WHITE)
 
 func stateUpdate(_dt):
-	if Input.is_action_just_pressed("left_click"):
-		var local_class = GlobalUtils.instantiate_class(_reference.exec_class)
-		print(local_class)
-		local_class.callv(_reference.execute, [_reference]) #Because main menu functions often interact with the scene tree, it is helpful to pass in the node of the button as a starting point by which the tree can be traversed.
-		local_class.queue_free()
 	pass
 	
 	
