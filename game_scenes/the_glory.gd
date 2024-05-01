@@ -3,6 +3,7 @@ class_name TheGlory
 
 #Background Nodes
 @export var music_player:MusicPlayer
+@export var sfx_player:SFXPlayer
 
 #Sound Settings
 @export var current_volume: int  = 100

@@ -6,9 +6,10 @@
 [ext_resource type="Script" path="res://game_scenes/music_player.gd" id="12_yl5ef"]
 [ext_resource type="Script" path="res://game_scenes/sfx_player.gd" id="14_pfhaw"]
 
-[node name="the_glory" type="Node" node_paths=PackedStringArray("music_player")]
+[node name="the_glory" type="Node" node_paths=PackedStringArray("music_player", "sfx_player")]
 script = ExtResource("1_bkfpe")
 music_player = NodePath("music_player")
+sfx_player = NodePath("sfx_player")
 
 [node name="main_menu" parent="." instance=ExtResource("2_0ajm0")]
 

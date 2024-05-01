@@ -64,7 +64,7 @@ offset_bottom = 442.826
 tooltip_text = "TEST OF THE TOOLTIP SYSTEM"
 text = "[center]Options[/center]"
 exec_class = "MMFunctions"
-execute = "start_game"
+execute = "open_opts_menu"
 
 [node name="mm_button_bg3" parent="Sprite2D" instance=ExtResource("5_hu0p4")]
 offset_left = 30.1407
@@ -83,6 +83,7 @@ offset_bottom = 1111.0
 color = Color(1, 1, 1, 0.27451)
 
 [node name="start_game_menu" type="ColorRect" parent="mm_screen_filter"]
+visible = false
 custom_minimum_size = Vector2(1000, 500)
 layout_mode = 0
 offset_left = 497.0

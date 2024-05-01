@@ -1,17 +1,37 @@
 extends Node
 class_name MMFunctions
 
+#These menus are starting to look like they should all be a shared class...Let's see if we make more than start + opts
+
 static func start_game_menu(node: Node):
 
 	var root = node.get_tree().root
 	var filter = root.find_child("mm_screen_filter", true, false)
 	filter.visible = true
 	var s_game_menu = root.find_child("start_game_menu", true, false)
+	s_game_menu.visible=true
 	s_game_menu.unpack()
+	
+static func open_opts_menu(node:Node):
+	var root = node.get_tree().root
+	var filter = root.find_child("mm_screen_filter", true, false)
+	filter.visible = true
+	var opts_menu = root.find_child("options_menu", true, false)
+	opts_menu.visible=true
+	#opts_menu.unpack()
 	
 static func cancel_start(node: Node):
 	var root = node.get_tree().root
 	var filter = root.find_child("mm_screen_filter", true, false)
+	var start_menu = root.find_child("start_game_menu", true, false)
+	start_menu.visible=false;
+	filter.visible = false	
+
+static func cancel_opts(node: Node):
+	var root = node.get_tree().root
+	var filter = root.find_child("mm_screen_filter", true, false)
+	var opts_menu = root.find_child("options_menu", true, false)
+	opts_menu.visible = false
 	filter.visible = false	
 	
 

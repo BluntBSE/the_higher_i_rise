@@ -11,7 +11,6 @@ var track_list = {
 func play_song(song:String):
 	var audiostream = track_list[song]
 	audiostream = ResourceLoader.load(audiostream)
-	print(audiostream)
 	asp.stream = audiostream
 	asp.playing = true
 
