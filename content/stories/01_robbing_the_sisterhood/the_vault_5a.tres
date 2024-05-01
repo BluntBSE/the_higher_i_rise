@@ -16,7 +16,7 @@ And down comes the knife."
 slots = {}
 options = [{
 "links_to": "the_vault_6",
-"text": "You can't"
+"text": "Continue"
 }]
 wounds = {}
 portraits = ["schaefer"]

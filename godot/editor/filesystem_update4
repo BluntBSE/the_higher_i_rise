@@ -15,3 +15,6 @@ res://game_scenes/main_menu.tscn
 res://game_scenes/sfx_player.gd
 res://menu_and_ui/resources/pm_functions.gd
 res://menu_and_ui/resources/mm_functions.gd
+res://content/stories/01_robbing_the_sisterhood/the_vault_5.tres
+res://content/stories/01_robbing_the_sisterhood/the_vault_5a.tres
+res://content/stories/01_robbing_the_sisterhood/labyrinth_ward_2.tres
