@@ -7,9 +7,10 @@ var state_machine = StateMachine2.new()
 @export var text:String
 @export var exec_class:String #Name of the class to search for the function in execute.
 @export var execute:String
+@export var text_node:RichTextLabel
 
 
-var is_engine_configured = false
+@export var is_engine_configured = false
 
 func _init():
 	pass
@@ -27,10 +28,9 @@ func _ready():
 func _process(delta):
 	#Just to make UI visible in editor
 	if Engine.is_editor_hint():
-		if is_engine_configured == false:
-			var child = self.get_node("button_text")
-			child.text += text
-			is_engine_configured = true
+		#if is_engine_configured == false:
+		text_node.text =  text
+	
 	
 	else:
 		state_machine.stateUpdate(delta)

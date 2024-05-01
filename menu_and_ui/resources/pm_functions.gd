@@ -27,10 +27,12 @@ static func save_game(node:Node):
 
 	
 static func return_to_main(node:Node):
-	var root = node.get_tree().root
-	root.get_node("main").queue_free()
+	var glory:TheGlory = node.get_tree().root.get_node("the_glory")
+	glory.get_node("main").queue_free()
 	var main_menu = load("res://game_scenes/main_menu.tscn").instantiate()
-	root.add_child(main_menu)
+	glory.add_child(main_menu)
+	glory.music_player.play_song("air_in_time")
+	
 	
 
 

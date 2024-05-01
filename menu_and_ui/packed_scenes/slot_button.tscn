@@ -31,10 +31,15 @@ script = ExtResource("1_qkryl")
 
 [node name="slot_fg" type="ColorRect" parent="."]
 layout_mode = 1
-offset_left = 4.0
-offset_top = 2.0
-offset_right = 928.0
-offset_bottom = 58.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="slot_text" type="RichTextLabel" parent="slot_fg"]
@@ -68,11 +73,15 @@ text = "An Obscure Alley"
 
 [node name="delete" type="TextureRect" parent="slot_fg"]
 material = SubResource("ShaderMaterial_nsypg")
-layout_mode = 0
-offset_left = 873.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -51.0
 offset_top = 4.00001
-offset_right = 1385.0
+offset_right = 461.0
 offset_bottom = 516.0
+grow_horizontal = 0
 scale = Vector2(0.0927734, 0.0927734)
 mouse_filter = 0
 texture = ExtResource("6_cygxa")

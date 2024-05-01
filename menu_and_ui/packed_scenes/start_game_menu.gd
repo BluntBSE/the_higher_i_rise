@@ -5,6 +5,9 @@ class_name StartGameMenu
 var slot_path = "user://"
 var filename = "slots.tres"
 var file_path = slot_path + filename
+var is_open = false
+@export var volume_number:RichTextLabel
+@export var glory:TheGlory #Singleton for configuration variables
 
 func unpack():
 	var slots #SaveSlots or Null
@@ -28,7 +31,6 @@ func unpack():
 		@export var decision_tree:Dictionary
 		"""
 		var slot_str = "slot_button_"+str(slot_num)
-		print(slot_str)
 		var slot_button = get_node(slot_str)
 		slot_button.unpack(slot_num, data)
 		slot_num += 1
@@ -43,4 +45,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if is_open == true:
+		volume_number.text = str(glory.current_volume)
+		
 	pass
