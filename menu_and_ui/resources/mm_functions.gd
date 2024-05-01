@@ -16,22 +16,25 @@ static func cancel_start(node: Node):
 	
 
 static func start_game(node:Node, slot_number):
-	var root = node.get_tree().root
+	var glory:TheGlory = node.get_tree().root.get_node("the_glory")
 
-	root.get_node("main_menu").visible = false
+	glory.get_node("main_menu").visible = false
 	var main_scene = load("res://game_scenes/main.tscn").instantiate()
 	main_scene.active_save = slot_number
-	root.add_child(main_scene)
+	glory.add_child(main_scene)
+	
 	
 	#Deleting the main menu from the tree before the new thing is instanced
 	#Can cause a crash.
-	root.get_node("main_menu").free()
+	glory.get_node("main_menu").free()
 
 
 static func load_game(node:Node, save:SaveFile, slot_number:int):#Needs arg for save slot
 
-
+	
 	var root = node.get_tree().root
+	root = root.get_node("the_glory")
+	root.print_tree_pretty()
 	root.get_node("main_menu").visible = false
 	
 	#Do some graphics here to cover the little glitchy load-in.

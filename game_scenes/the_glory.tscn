@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://dlxwgk6jjsfv"]
+
+[ext_resource type="Script" path="res://game_scenes/the_glory.gd" id="1_bkfpe"]
+[ext_resource type="PackedScene" uid="uid://b2gxjrh8p0ieh" path="res://game_scenes/main_menu.tscn" id="2_0ajm0"]
+[ext_resource type="AudioStream" uid="uid://c4td14hdgxd5h" path="res://content/music/air_in_time.mp3" id="12_0ecbl"]
+[ext_resource type="Script" path="res://game_scenes/music_player.gd" id="12_yl5ef"]
+[ext_resource type="Script" path="res://game_scenes/sfx_player.gd" id="14_pfhaw"]
+
+[node name="the_glory" type="Node" node_paths=PackedStringArray("music_player")]
+script = ExtResource("1_bkfpe")
+music_player = NodePath("music_player")
+
+[node name="main_menu" parent="." instance=ExtResource("2_0ajm0")]
+
+[node name="music_player" type="Node" parent="." node_paths=PackedStringArray("asp")]
+script = ExtResource("12_yl5ef")
+asp = NodePath("asp")
+
+[node name="asp" type="AudioStreamPlayer" parent="music_player"]
+stream = ExtResource("12_0ecbl")
+max_polyphony = 2
+
+[node name="sfx_player" type="Node" parent="." node_paths=PackedStringArray("asp")]
+script = ExtResource("14_pfhaw")
+asp = NodePath("sfx_asp")
+
+[node name="sfx_asp" type="AudioStreamPlayer" parent="sfx_player"]
+max_polyphony = 2
