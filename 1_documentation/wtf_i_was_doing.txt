@@ -1,5 +1,5 @@
 NEXT UP:
-	Make selected word clear on option select
+	Add effect on aspects...Maybe time for new UI?
 	Make swappable words stand out with relative font size detection
 	Make options available based on aspects
 
