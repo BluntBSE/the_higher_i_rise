@@ -49,7 +49,7 @@ static func start_game(node:Node, slot_number):
 	#Can cause a crash.
 	glory.get_node("main_menu").free()
 	var music_player:MusicPlayer = glory.get_node("music_player")
-	music_player.play_song("shadow_journal")
+	music_player.play_song("last_hour")
 
 
 static func load_game(node:Node, save:SaveFile, slot_number:int):#Needs arg for save slot
@@ -81,7 +81,7 @@ static func load_game(node:Node, save:SaveFile, slot_number:int):#Needs arg for 
 	#Can cause a crash.
 	root.get_node("main_menu").free()
 	var music_player:MusicPlayer = glory.get_node("music_player")
-	music_player.play_song("shadow_journal")
+	music_player.play_song("last_hour")
 	
 	
 	

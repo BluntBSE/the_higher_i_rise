@@ -7,7 +7,8 @@ var glory
 
 var track_list = {
 	"air_in_time": "res://godot/imported/air_in_time.mp3-7e9bd8a1daadd8c6480e42d6fb626b0b.mp3str",
-	"shadow_journal": "res://godot/imported/shadow_journal.mp3-0d08f12408cebaf1fbcc6a8d1de59e3b.mp3str"
+	"shadow_journal": "res://godot/imported/shadow_journal.mp3-0d08f12408cebaf1fbcc6a8d1de59e3b.mp3str",
+	"last_hour": "res://content/music/unlicensed_last_hour.mp3"
 }
 
 
