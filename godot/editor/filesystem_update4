@@ -18,3 +18,5 @@ res://menu_and_ui/utils/mm_functions.gd
 res://menu_and_ui/packed_scenes/start_game_menu.gd
 res://game_scenes/options_menu.gd
 res://game_scenes/main_menu.gd
+res://game_scenes/sfx_player.gd
+res://menu_and_ui/states/main_menu/mm_hover_button.gd

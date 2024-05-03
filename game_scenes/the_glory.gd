@@ -12,6 +12,7 @@ signal sfx_volume_changed(sfx_volume)
 #Graphic Settings
 @export var scene_type = "main_menu" #"main_menu", "main_game"
 #Bird/Worm
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if scene_type == "main_menu":

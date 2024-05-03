@@ -9,6 +9,7 @@ var state_machine = StateMachine2.new()
 @export var execute:String
 @export var text_node:RichTextLabel
 @export var args:Array
+@export var click_fx:AudioStream
 
 
 @export var is_engine_configured = false

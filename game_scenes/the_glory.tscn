@@ -21,9 +21,10 @@ asp = NodePath("asp")
 stream = ExtResource("12_0ecbl")
 max_polyphony = 2
 
-[node name="sfx_player" type="Node" parent="." node_paths=PackedStringArray("asp")]
+[node name="sfx_player" type="Node" parent="." node_paths=PackedStringArray("asp", "glory")]
 script = ExtResource("14_pfhaw")
 asp = NodePath("sfx_asp")
+glory = NodePath("..")
 
 [node name="sfx_asp" type="AudioStreamPlayer" parent="sfx_player"]
 max_polyphony = 2

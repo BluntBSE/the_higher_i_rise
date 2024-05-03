@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b2gxjrh8p0ieh"]
+[gd_scene load_steps=15 format=3 uid="uid://b2gxjrh8p0ieh"]
 
 [ext_resource type="Script" path="res://game_scenes/main_menu.gd" id="1_ksker"]
 [ext_resource type="PackedScene" uid="uid://bwn07hjfcrbcw" path="res://game_scenes/debug_quit.tscn" id="2_jfalq"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://blwhpmnqtjrqb" path="res://content/images/mansus_y.jpg" id="4_0n8h8"]
 [ext_resource type="Theme" uid="uid://cdeurf58sje0y" path="res://text_engine/themes/main_UI.tres" id="4_jsjmn"]
 [ext_resource type="PackedScene" uid="uid://cmg6a3jhpo4y3" path="res://menu_and_ui/packed_scenes/big_ui_button.tscn" id="5_hu0p4"]
+[ext_resource type="AudioStream" uid="uid://b3piyu3n4fxb8" path="res://content/sfx/click_effect_1.mp3" id="6_fqpiy"]
 [ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="7_3c6fk"]
 [ext_resource type="PackedScene" uid="uid://5w0anhbqgx3a" path="res://menu_and_ui/packed_scenes/slot_button.tscn" id="8_lg3ad"]
 [ext_resource type="Script" path="res://menu_and_ui/packed_scenes/start_game_menu.gd" id="8_pje5x"]
@@ -57,6 +58,7 @@ exec_class = "MMFunctions"
 execute = "start_game_menu"
 text_node = NodePath("../../mm_screen_filter/options_menu/add_vol/button_text")
 args = []
+click_fx = ExtResource("6_fqpiy")
 
 [node name="mm_button_bg2" parent="Sprite2D" instance=ExtResource("5_hu0p4")]
 offset_left = 30.1407
@@ -68,6 +70,7 @@ text = "[center]Options[/center]"
 exec_class = "MMFunctions"
 execute = "open_opts_menu"
 args = []
+click_fx = ExtResource("6_fqpiy")
 
 [node name="mm_button_bg3" parent="Sprite2D" instance=ExtResource("5_hu0p4")]
 offset_left = 30.1407
@@ -78,8 +81,10 @@ text = "[center]Quit[/center]"
 exec_class = "MMFunctions"
 execute = "quit_game"
 args = []
+click_fx = ExtResource("6_fqpiy")
 
 [node name="mm_screen_filter" type="ColorRect" parent="."]
+visible = false
 custom_minimum_size = Vector2(1920, 1080)
 offset_right = 1951.0
 offset_bottom = 1111.0
@@ -142,8 +147,10 @@ text = "[center]Cancel[/center]"
 exec_class = "MMFunctions"
 execute = "cancel_start"
 args = []
+click_fx = ExtResource("6_fqpiy")
 
 [node name="options_menu" type="ColorRect" parent="mm_screen_filter" node_paths=PackedStringArray("volume_number", "sfx_vol")]
+visible = false
 custom_minimum_size = Vector2(1000, 500)
 layout_mode = 0
 offset_left = 497.0
@@ -240,6 +247,7 @@ text = "[center]Cancel[/center]"
 exec_class = "MMFunctions"
 execute = "cancel_opts"
 args = []
+click_fx = ExtResource("6_fqpiy")
 
 [node name="add_vol" type="ColorRect" parent="mm_screen_filter/options_menu" node_paths=PackedStringArray("text_node")]
 layout_mode = 0
@@ -255,6 +263,7 @@ exec_class = "OptFunctions"
 execute = "add_music_volume"
 text_node = NodePath("button_text")
 args = [1]
+click_fx = ExtResource("6_fqpiy")
 
 [node name="button_text" type="RichTextLabel" parent="mm_screen_filter/options_menu/add_vol"]
 layout_mode = 1
@@ -288,6 +297,7 @@ exec_class = "OptFunctions"
 execute = "reduce_music_volume"
 text_node = NodePath("button_text")
 args = [1]
+click_fx = ExtResource("6_fqpiy")
 is_engine_configured = true
 
 [node name="button_text" type="RichTextLabel" parent="mm_screen_filter/options_menu/reduce_vol"]
@@ -322,6 +332,7 @@ exec_class = "OptFunctions"
 execute = "add_sfx_volume"
 text_node = NodePath("../add_vol/button_text")
 args = [1]
+click_fx = ExtResource("6_fqpiy")
 
 [node name="button_text" type="RichTextLabel" parent="mm_screen_filter/options_menu/add_sfx_vol"]
 layout_mode = 1
@@ -355,6 +366,7 @@ exec_class = "OptFunctions"
 execute = "reduce_sfx_volume"
 text_node = NodePath("../reduce_vol/button_text")
 args = [1]
+click_fx = ExtResource("6_fqpiy")
 is_engine_configured = true
 
 [node name="button_text" type="RichTextLabel" parent="mm_screen_filter/options_menu/reduce_sfx_vol"]
