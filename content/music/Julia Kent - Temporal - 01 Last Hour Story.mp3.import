@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://doo33ekk6h67k"
+path="res://godot/imported/Julia Kent - Temporal - 01 Last Hour Story.mp3-ac86763c44e66054a8dbd91dc7b8e7d5.mp3str"
+
+[deps]
+
+source_file="res://content/music/Julia Kent - Temporal - 01 Last Hour Story.mp3"
+dest_files=["res://godot/imported/Julia Kent - Temporal - 01 Last Hour Story.mp3-ac86763c44e66054a8dbd91dc7b8e7d5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

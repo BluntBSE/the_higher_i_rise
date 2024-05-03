@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b2gxjrh8p0ieh"]
+[gd_scene load_steps=14 format=3 uid="uid://b2gxjrh8p0ieh"]
 
 [ext_resource type="Script" path="res://game_scenes/main_menu.gd" id="1_ksker"]
 [ext_resource type="PackedScene" uid="uid://bwn07hjfcrbcw" path="res://game_scenes/debug_quit.tscn" id="2_jfalq"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://5w0anhbqgx3a" path="res://menu_and_ui/packed_scenes/slot_button.tscn" id="8_lg3ad"]
 [ext_resource type="Script" path="res://menu_and_ui/packed_scenes/start_game_menu.gd" id="8_pje5x"]
 [ext_resource type="Script" path="res://menu_and_ui/packed_scenes/ui_button.gd" id="9_5v7no"]
+[ext_resource type="Script" path="res://game_scenes/options_menu.gd" id="9_hmdki"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4dajm"]
 shader = ExtResource("3_jtmae")
@@ -55,6 +56,7 @@ text = "[center]Start Game[/center]"
 exec_class = "MMFunctions"
 execute = "start_game_menu"
 text_node = NodePath("../../mm_screen_filter/options_menu/add_vol/button_text")
+args = []
 
 [node name="mm_button_bg2" parent="Sprite2D" instance=ExtResource("5_hu0p4")]
 offset_left = 30.1407
@@ -65,6 +67,7 @@ tooltip_text = "TEST OF THE TOOLTIP SYSTEM"
 text = "[center]Options[/center]"
 exec_class = "MMFunctions"
 execute = "open_opts_menu"
+args = []
 
 [node name="mm_button_bg3" parent="Sprite2D" instance=ExtResource("5_hu0p4")]
 offset_left = 30.1407
@@ -74,9 +77,9 @@ offset_bottom = 560.293
 text = "[center]Quit[/center]"
 exec_class = "MMFunctions"
 execute = "quit_game"
+args = []
 
 [node name="mm_screen_filter" type="ColorRect" parent="."]
-visible = false
 custom_minimum_size = Vector2(1920, 1080)
 offset_right = 1951.0
 offset_bottom = 1111.0
@@ -138,9 +141,9 @@ offset_bottom = 471.0
 text = "[center]Cancel[/center]"
 exec_class = "MMFunctions"
 execute = "cancel_start"
+args = []
 
-[node name="options_menu" type="ColorRect" parent="mm_screen_filter" node_paths=PackedStringArray("volume_number")]
-visible = false
+[node name="options_menu" type="ColorRect" parent="mm_screen_filter" node_paths=PackedStringArray("volume_number", "sfx_vol")]
 custom_minimum_size = Vector2(1000, 500)
 layout_mode = 0
 offset_left = 497.0
@@ -148,8 +151,9 @@ offset_top = 276.0
 offset_right = 1497.0
 offset_bottom = 776.0
 color = Color(0, 0, 0, 1)
-script = ExtResource("8_pje5x")
+script = ExtResource("9_hmdki")
 volume_number = NodePath("vol_num")
+sfx_vol = NodePath("sfx_vol")
 
 [node name="options_label" type="RichTextLabel" parent="mm_screen_filter/options_menu"]
 layout_mode = 1
@@ -170,25 +174,55 @@ text = "[center]Options[/center]"
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 1.0
+offset_left = 44.0
 offset_top = 125.0
-offset_right = -664.0
+offset_right = -621.0
 offset_bottom = 195.0
 grow_horizontal = 2
 theme = SubResource("Theme_s4qcg")
 theme_override_fonts/normal_font = ExtResource("7_3c6fk")
 theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true
-text = "[center]Volume[/center]"
+text = "[center]Music Volume[/center]"
+
+[node name="vol_label2" type="RichTextLabel" parent="mm_screen_filter/options_menu"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 44.0
+offset_top = 248.0
+offset_right = -621.0
+offset_bottom = 318.0
+grow_horizontal = 2
+theme = SubResource("Theme_s4qcg")
+theme_override_fonts/normal_font = ExtResource("7_3c6fk")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center]Sfx Volume[/center]"
 
 [node name="vol_num" type="RichTextLabel" parent="mm_screen_filter/options_menu"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 329.0
+offset_left = 515.0
 offset_top = 125.0
-offset_right = -287.0
+offset_right = -101.0
 offset_bottom = 195.0
+grow_horizontal = 2
+theme = SubResource("Theme_s4qcg")
+theme_override_fonts/normal_font = ExtResource("7_3c6fk")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center]100[/center]"
+
+[node name="sfx_vol" type="RichTextLabel" parent="mm_screen_filter/options_menu"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 515.0
+offset_top = 244.0
+offset_right = -101.0
+offset_bottom = 314.0
 grow_horizontal = 2
 theme = SubResource("Theme_s4qcg")
 theme_override_fonts/normal_font = ExtResource("7_3c6fk")
@@ -204,22 +238,23 @@ offset_right = 668.0
 offset_bottom = 471.0
 text = "[center]Cancel[/center]"
 exec_class = "MMFunctions"
-execute = "cancel_start"
+execute = "cancel_opts"
+args = []
 
 [node name="add_vol" type="ColorRect" parent="mm_screen_filter/options_menu" node_paths=PackedStringArray("text_node")]
 layout_mode = 0
-offset_left = 704.0
+offset_left = 890.0
 offset_top = 120.0
-offset_right = 772.0
+offset_right = 958.0
 offset_bottom = 196.0
 tooltip_text = "TEST OF THE TOOLTIP SYSTEM"
 color = Color(0.0901961, 0.0901961, 0.0901961, 1)
 script = ExtResource("9_5v7no")
 text = "[center]+[/center]"
 exec_class = "OptFunctions"
-execute = "reduce_vol"
+execute = "add_music_volume"
 text_node = NodePath("button_text")
-is_engine_configured = true
+args = [1]
 
 [node name="button_text" type="RichTextLabel" parent="mm_screen_filter/options_menu/add_vol"]
 layout_mode = 1
@@ -241,20 +276,88 @@ text = "[center]+[/center]"
 
 [node name="reduce_vol" type="ColorRect" parent="mm_screen_filter/options_menu" node_paths=PackedStringArray("text_node")]
 layout_mode = 0
-offset_left = 269.0
+offset_left = 455.0
 offset_top = 123.0
-offset_right = 337.0
+offset_right = 523.0
 offset_bottom = 199.0
 tooltip_text = "TEST OF THE TOOLTIP SYSTEM"
 color = Color(0.0901961, 0.0901961, 0.0901961, 1)
 script = ExtResource("9_5v7no")
 text = "[center]-[/center]"
 exec_class = "OptFunctions"
-execute = "reduce_vol"
+execute = "reduce_music_volume"
 text_node = NodePath("button_text")
+args = [1]
 is_engine_configured = true
 
 [node name="button_text" type="RichTextLabel" parent="mm_screen_filter/options_menu/reduce_vol"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.140675
+offset_top = -0.0930163
+offset_right = 0.140686
+offset_bottom = -0.0930176
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("4_jsjmn")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 0
+bbcode_enabled = true
+text = "[center]-[/center]"
+
+[node name="add_sfx_vol" type="ColorRect" parent="mm_screen_filter/options_menu" node_paths=PackedStringArray("text_node")]
+layout_mode = 0
+offset_left = 890.0
+offset_top = 236.0
+offset_right = 958.0
+offset_bottom = 312.0
+tooltip_text = "TEST OF THE TOOLTIP SYSTEM"
+color = Color(0.0901961, 0.0901961, 0.0901961, 1)
+script = ExtResource("9_5v7no")
+text = "[center]+[/center]"
+exec_class = "OptFunctions"
+execute = "add_sfx_volume"
+text_node = NodePath("../add_vol/button_text")
+args = [1]
+
+[node name="button_text" type="RichTextLabel" parent="mm_screen_filter/options_menu/add_sfx_vol"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.140675
+offset_top = -0.0930163
+offset_right = 0.140686
+offset_bottom = -0.0930176
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("4_jsjmn")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 0
+bbcode_enabled = true
+text = "[center]+[/center]"
+
+[node name="reduce_sfx_vol" type="ColorRect" parent="mm_screen_filter/options_menu" node_paths=PackedStringArray("text_node")]
+layout_mode = 0
+offset_left = 455.0
+offset_top = 239.0
+offset_right = 523.0
+offset_bottom = 315.0
+tooltip_text = "TEST OF THE TOOLTIP SYSTEM"
+color = Color(0.0901961, 0.0901961, 0.0901961, 1)
+script = ExtResource("9_5v7no")
+text = "[center]-[/center]"
+exec_class = "OptFunctions"
+execute = "reduce_sfx_volume"
+text_node = NodePath("../reduce_vol/button_text")
+args = [1]
+is_engine_configured = true
+
+[node name="button_text" type="RichTextLabel" parent="mm_screen_filter/options_menu/reduce_sfx_vol"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -284,3 +387,7 @@ tooltip_text = "TEST OF THE TOOLTIP SYSTEM"
 [connection signal="mouse_exited" from="mm_screen_filter/options_menu/add_vol" to="mm_screen_filter/options_menu/add_vol" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="mm_screen_filter/options_menu/reduce_vol" to="mm_screen_filter/options_menu/reduce_vol" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="mm_screen_filter/options_menu/reduce_vol" to="mm_screen_filter/options_menu/reduce_vol" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="mm_screen_filter/options_menu/add_sfx_vol" to="mm_screen_filter/options_menu/add_sfx_vol" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="mm_screen_filter/options_menu/add_sfx_vol" to="mm_screen_filter/options_menu/add_sfx_vol" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="mm_screen_filter/options_menu/reduce_sfx_vol" to="mm_screen_filter/options_menu/reduce_sfx_vol" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="mm_screen_filter/options_menu/reduce_sfx_vol" to="mm_screen_filter/options_menu/reduce_sfx_vol" method="_on_mouse_exited"]

@@ -1,0 +1,291 @@
+[gd_scene load_steps=13 format=3 uid="uid://b2gxjrh8p0ieh"]
+
+[ext_resource type="Script" path="res://game_scenes/main_menu.gd" id="1_ksker"]
+[ext_resource type="PackedScene" uid="uid://bwn07hjfcrbcw" path="res://game_scenes/debug_quit.tscn" id="2_jfalq"]
+[ext_resource type="Shader" path="res://game_scenes/main_menu.gdshader" id="3_jtmae"]
+[ext_resource type="Texture2D" uid="uid://blwhpmnqtjrqb" path="res://content/images/mansus_y.jpg" id="4_0n8h8"]
+[ext_resource type="Theme" uid="uid://cdeurf58sje0y" path="res://text_engine/themes/main_UI.tres" id="4_jsjmn"]
+[ext_resource type="PackedScene" uid="uid://cmg6a3jhpo4y3" path="res://menu_and_ui/packed_scenes/big_ui_button.tscn" id="5_hu0p4"]
+[ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="7_3c6fk"]
+[ext_resource type="PackedScene" uid="uid://5w0anhbqgx3a" path="res://menu_and_ui/packed_scenes/slot_button.tscn" id="8_lg3ad"]
+[ext_resource type="Script" path="res://menu_and_ui/packed_scenes/start_game_menu.gd" id="8_pje5x"]
+[ext_resource type="Script" path="res://menu_and_ui/packed_scenes/ui_button.gd" id="9_5v7no"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4dajm"]
+shader = ExtResource("3_jtmae")
+
+[sub_resource type="Theme" id="Theme_s4qcg"]
+
+[node name="main_menu" type="Node2D"]
+script = ExtResource("1_ksker")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_4dajm")
+scale = Vector2(1.45982, 1.45573)
+texture = ExtResource("4_0n8h8")
+centered = false
+
+[node name="ColorRect2" type="ColorRect" parent="Sprite2D"]
+offset_left = 30.0
+offset_top = 168.0
+offset_right = 631.0
+offset_bottom = 244.0
+color = Color(0.0901961, 0.0901961, 0.0901961, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D/ColorRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_jsjmn")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 0
+bbcode_enabled = true
+text = "[center]THE HIGHER I RISE[/center]"
+
+[node name="mm_button_bg4" parent="Sprite2D" node_paths=PackedStringArray("text_node") instance=ExtResource("5_hu0p4")]
+offset_left = 32.1958
+offset_top = 262.411
+offset_right = 314.196
+offset_bottom = 338.411
+tooltip_text = "TEST OF THE TOOLTIP SYSTEM"
+text = "[center]Start Game[/center]"
+exec_class = "MMFunctions"
+execute = "start_game_menu"
+text_node = NodePath("../../mm_screen_filter/options_menu/add_vol/button_text")
+args = null
+
+[node name="mm_button_bg2" parent="Sprite2D" instance=ExtResource("5_hu0p4")]
+offset_left = 30.1407
+offset_top = 366.826
+offset_right = 312.141
+offset_bottom = 442.826
+tooltip_text = "TEST OF THE TOOLTIP SYSTEM"
+text = "[center]Options[/center]"
+exec_class = "MMFunctions"
+execute = "open_opts_menu"
+args = null
+
+[node name="mm_button_bg3" parent="Sprite2D" instance=ExtResource("5_hu0p4")]
+offset_left = 30.1407
+offset_top = 484.293
+offset_right = 312.141
+offset_bottom = 560.293
+text = "[center]Quit[/center]"
+exec_class = "MMFunctions"
+execute = "quit_game"
+args = null
+
+[node name="mm_screen_filter" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+offset_right = 1951.0
+offset_bottom = 1111.0
+color = Color(1, 1, 1, 0.27451)
+
+[node name="start_game_menu" type="ColorRect" parent="mm_screen_filter"]
+visible = false
+custom_minimum_size = Vector2(1000, 500)
+layout_mode = 0
+offset_left = 497.0
+offset_top = 276.0
+offset_right = 1497.0
+offset_bottom = 776.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("8_pje5x")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="mm_screen_filter/start_game_menu"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 306.0
+offset_top = 11.0
+offset_right = -252.0
+offset_bottom = 81.0
+grow_horizontal = 2
+theme = SubResource("Theme_s4qcg")
+theme_override_fonts/normal_font = ExtResource("7_3c6fk")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center]Start or Load Game[/center]"
+
+[node name="slot_button_1" parent="mm_screen_filter/start_game_menu" instance=ExtResource("8_lg3ad")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 99.0
+offset_right = 962.0
+offset_bottom = 159.0
+
+[node name="slot_button_2" parent="mm_screen_filter/start_game_menu" instance=ExtResource("8_lg3ad")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 192.0
+offset_right = 962.0
+offset_bottom = 252.0
+
+[node name="slot_button_3" parent="mm_screen_filter/start_game_menu" instance=ExtResource("8_lg3ad")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 285.0
+offset_right = 962.0
+offset_bottom = 345.0
+
+[node name="cancel_start_btn" parent="mm_screen_filter/start_game_menu" instance=ExtResource("5_hu0p4")]
+layout_mode = 0
+offset_left = 386.0
+offset_top = 395.0
+offset_right = 668.0
+offset_bottom = 471.0
+text = "[center]Cancel[/center]"
+exec_class = "MMFunctions"
+execute = "cancel_start"
+args = null
+
+[node name="options_menu" type="ColorRect" parent="mm_screen_filter" node_paths=PackedStringArray("volume_number")]
+custom_minimum_size = Vector2(1000, 500)
+layout_mode = 0
+offset_left = 497.0
+offset_top = 276.0
+offset_right = 1497.0
+offset_bottom = 776.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("8_pje5x")
+volume_number = NodePath("vol_num")
+
+[node name="options_label" type="RichTextLabel" parent="mm_screen_filter/options_menu"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 306.0
+offset_top = 11.0
+offset_right = -252.0
+offset_bottom = 81.0
+grow_horizontal = 2
+theme = SubResource("Theme_s4qcg")
+theme_override_fonts/normal_font = ExtResource("7_3c6fk")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center]Options[/center]"
+
+[node name="vol_label" type="RichTextLabel" parent="mm_screen_filter/options_menu"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 1.0
+offset_top = 125.0
+offset_right = -664.0
+offset_bottom = 195.0
+grow_horizontal = 2
+theme = SubResource("Theme_s4qcg")
+theme_override_fonts/normal_font = ExtResource("7_3c6fk")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center]Volume[/center]"
+
+[node name="vol_num" type="RichTextLabel" parent="mm_screen_filter/options_menu"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 329.0
+offset_top = 125.0
+offset_right = -287.0
+offset_bottom = 195.0
+grow_horizontal = 2
+theme = SubResource("Theme_s4qcg")
+theme_override_fonts/normal_font = ExtResource("7_3c6fk")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center]100[/center]"
+
+[node name="cancel_start_btn" parent="mm_screen_filter/options_menu" instance=ExtResource("5_hu0p4")]
+layout_mode = 0
+offset_left = 386.0
+offset_top = 395.0
+offset_right = 668.0
+offset_bottom = 471.0
+text = "[center]Cancel[/center]"
+exec_class = "MMFunctions"
+execute = "cancel_start"
+args = null
+
+[node name="add_vol" type="ColorRect" parent="mm_screen_filter/options_menu" node_paths=PackedStringArray("text_node")]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 120.0
+offset_right = 772.0
+offset_bottom = 196.0
+tooltip_text = "TEST OF THE TOOLTIP SYSTEM"
+color = Color(0.0901961, 0.0901961, 0.0901961, 1)
+script = ExtResource("9_5v7no")
+text = "[center]+[/center]"
+exec_class = "OptFunctions"
+execute = "reduce_vol"
+text_node = NodePath("button_text")
+args = null
+is_engine_configured = true
+
+[node name="button_text" type="RichTextLabel" parent="mm_screen_filter/options_menu/add_vol"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.140675
+offset_top = -0.0930163
+offset_right = 0.140686
+offset_bottom = -0.0930176
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("4_jsjmn")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 0
+bbcode_enabled = true
+text = "[center]+[/center]"
+
+[node name="reduce_vol" type="ColorRect" parent="mm_screen_filter/options_menu" node_paths=PackedStringArray("text_node")]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 123.0
+offset_right = 337.0
+offset_bottom = 199.0
+tooltip_text = "TEST OF THE TOOLTIP SYSTEM"
+color = Color(0.0901961, 0.0901961, 0.0901961, 1)
+script = ExtResource("9_5v7no")
+text = "[center]-[/center]"
+exec_class = "OptFunctions"
+execute = "reduce_vol"
+text_node = NodePath("button_text")
+args = [10]
+is_engine_configured = true
+
+[node name="button_text" type="RichTextLabel" parent="mm_screen_filter/options_menu/reduce_vol"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.140675
+offset_top = -0.0930163
+offset_right = 0.140686
+offset_bottom = -0.0930176
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("4_jsjmn")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 0
+bbcode_enabled = true
+text = "[center]-[/center]"
+
+[node name="Button" parent="." instance=ExtResource("2_jfalq")]
+custom_minimum_size = Vector2(50, 50)
+offset_left = 1777.0
+offset_top = 20.0
+offset_right = 1885.0
+offset_bottom = 128.0
+tooltip_text = "TEST OF THE TOOLTIP SYSTEM"
+
+[connection signal="mouse_entered" from="mm_screen_filter/options_menu/add_vol" to="mm_screen_filter/options_menu/add_vol" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="mm_screen_filter/options_menu/add_vol" to="mm_screen_filter/options_menu/add_vol" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="mm_screen_filter/options_menu/reduce_vol" to="mm_screen_filter/options_menu/reduce_vol" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="mm_screen_filter/options_menu/reduce_vol" to="mm_screen_filter/options_menu/reduce_vol" method="_on_mouse_exited"]

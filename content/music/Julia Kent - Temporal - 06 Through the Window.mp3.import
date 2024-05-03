@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhmyq3mmyi3j3"
+path="res://godot/imported/Julia Kent - Temporal - 06 Through the Window.mp3-3762e8e415dc41879471f19b786acd89.mp3str"
+
+[deps]
+
+source_file="res://content/music/Julia Kent - Temporal - 06 Through the Window.mp3"
+dest_files=["res://godot/imported/Julia Kent - Temporal - 06 Through the Window.mp3-3762e8e415dc41879471f19b786acd89.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

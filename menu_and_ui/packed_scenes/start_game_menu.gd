@@ -38,14 +38,19 @@ func unpack():
 			
  	
 
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if is_open == true:
-		volume_number.text = str(glory.current_volume)
+		var num = (glory.music_volume + 20) * 5
+		var output = "[center]" + str(num) + "[/center]"
+		volume_number.text = output
 		
 	pass

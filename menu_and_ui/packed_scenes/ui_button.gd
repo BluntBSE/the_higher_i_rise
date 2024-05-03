@@ -8,6 +8,7 @@ var state_machine = StateMachine2.new()
 @export var exec_class:String #Name of the class to search for the function in execute.
 @export var execute:String
 @export var text_node:RichTextLabel
+@export var args:Array
 
 
 @export var is_engine_configured = false
@@ -38,7 +39,7 @@ func _process(delta):
 
 
 func _on_mouse_entered():
-	state_machine.Change("hover_state", null)
+	state_machine.Change("hover_state", args)
 	pass # Replace with function body.
 
 

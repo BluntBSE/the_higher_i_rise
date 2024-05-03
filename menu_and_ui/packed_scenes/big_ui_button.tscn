@@ -10,6 +10,7 @@ offset_bottom = 76.0
 color = Color(0.0901961, 0.0901961, 0.0901961, 1)
 script = ExtResource("1_gy4rx")
 text_node = NodePath("button_text")
+args = null
 is_engine_configured = true
 
 [node name="button_text" type="RichTextLabel" parent="."]
