@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://ct5gcpkk1logh"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_qqy2s"]
+
+[resource]
+script = ExtResource("1_qqy2s")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Swimsuit Edition"
+text = "Oh yeah. Lookin' good."
+slots = {}
+options = [{
+"functions": [],
+"links_to": "out_the_door_1",
+"text": "Out the door"
+}]
+wounds = {}
+portraits = []

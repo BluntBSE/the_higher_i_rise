@@ -13,7 +13,7 @@ Thinking is difficult. But you know  that you are alive, and you know also that 
 "
 slots = {}
 options = [{
-"links_to": "nine_pm_1",
+"links_to": "early_morning_1",
 "text": "To the House with no walls"
 }]
 wounds = {}

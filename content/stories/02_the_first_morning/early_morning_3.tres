@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bkxssfrni3ih8"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_qvlvw"]
+
+[resource]
+script = ExtResource("1_qvlvw")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "7:00 P.M"
+text = "..."
+slots = {}
+options = [{
+"links_to": "early_morning_4",
+"text": "Groan"
+}, {
+"links_to": "early_morning_4",
+"text": "Up and at 'em"
+}]
+wounds = {}
+portraits = []

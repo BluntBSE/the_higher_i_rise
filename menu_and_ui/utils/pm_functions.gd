@@ -6,9 +6,9 @@ class_name PMFunctions
  
 static func save_game(node:Node):
 	var root = node.get_tree().root #used for accessing data in the scene
-	var active_save = root.get_node("main").active_save
+	var active_save = root.find_child("main", true, false).active_save
 	var new_file = SaveFile.new()
-	var active_interaction = root.get_node("main/interaction_parser").active_interaction
+	var active_interaction = root.find_child("interaction_parser",true, false).active_interaction
 	var word_inventory = root.find_child("memory_panel", true, false).mem_inventory
 	var aspect_inventory = root.find_child("aspects_panel", true, false).aspect_dict
 	#var decision_tree ... record of all choices player has made for future nodemap

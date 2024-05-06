@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dmjgyls1jec3h"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_0nnuq"]
+
+[resource]
+script = ExtResource("1_0nnuq")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "An Early Morning...?"
+text = "Your eyes pop open.
+
+
+"
+slots = {}
+options = [{
+"links_to": "early_morning_2",
+"text": "What the fuck was that?"
+}]
+wounds = {}
+portraits = []

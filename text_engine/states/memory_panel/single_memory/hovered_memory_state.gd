@@ -30,7 +30,7 @@ func stateEnter(args):
 	start_pos = _reference.position
 	root = _reference.get_tree().get_root()
 	print(root)
-	parser = root.get_node('main/interaction_parser')
+	parser = root.get_node('the_glory/main/interaction_parser')
 	_args = args
 	#_reference.memory_selected.emit(_reference)	
 	_reference.z_index += 10

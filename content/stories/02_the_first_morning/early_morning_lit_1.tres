@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cf2apw8s1vjlr"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_2oj02"]
+
+[resource]
+script = ExtResource("1_2oj02")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "7:00 P.M"
+text = "The best cure for a bad dream, you decide, is a [i]good[/i] one. You brew your morning coffee, you warm up a scone in the microwave, and soon you lose yourself in the pages of [i]Shot in the Dark[/i], a steamy noir mystery that follows two spies on opposite sides of the Cold War. 
+
+Billionaire oligarchs are silenced in the dead of night.
+
+Vows of vengeance are taken.
+
+A treasonous love affair blooms between our spies as a pair of garters is slowly, tantalizingly, checked for weapons.
+
+You're interested primarily in the plot, of course.
+
+//Of course// [[Apartment at Dusk 4]]
+"
+slots = {}
+options = [{
+"links_to": "early_morning_4",
+"text": "Groan"
+}, {
+"links_to": "early_morning_4",
+"text": "Up and at 'em"
+}]
+wounds = {}
+portraits = []

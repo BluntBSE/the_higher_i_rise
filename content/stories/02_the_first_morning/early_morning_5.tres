@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cuch7yhkut46g"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_egpn0"]
+
+[resource]
+script = ExtResource("1_egpn0")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "In the Bathroom"
+text = "Around 10:00 PM you change into your scrubs, pack your lunch, and make a last stop in the bathroom. You check yourself out in the mirror on the way out. Your haircut's still looking sharp, your beard, you decide, still passes for 'loveably scruffy.' Before you leave, you...
+"
+slots = {}
+options = [{
+"functions": [["update_aspects", [{
+"finger_guns": 1
+}]]],
+"links_to": "early_morning_fg_1",
+"text": "Finger guns"
+}, {
+"links_to": "early_morning_pose_1",
+"text": "Strike a pose"
+}, {
+"links_to": "early_morning_composed_1",
+"text": "..."
+}]
+wounds = {}
+portraits = []

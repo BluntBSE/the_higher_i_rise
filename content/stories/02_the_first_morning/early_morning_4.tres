@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b1atvpta417df"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_r0c7w"]
+
+[resource]
+script = ExtResource("1_r0c7w")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "An Early Start"
+text = "There's no way you're going back to bed after a dream like that. You can still see the shine of the sister's knife. You can still hear the screams echoing through the chapel...
+
+You'll just have to make the most of it. You have two whole hours before you should even start getting ready for work. \"Bonus time,\" you tell yourself. You decide to use it by..."
+slots = {}
+options = [{
+"links_to": "early_morning_lit_1",
+"text": "Reading romantic literature"
+}, {
+"links_to": "early_morning_study",
+"text": "Studying patient cases"
+}, {
+"links_to": "early_morning_prep",
+"text": "Exercise and meal prep"
+}]
+wounds = {}
+portraits = []

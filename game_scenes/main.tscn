@@ -34,7 +34,6 @@ offset_bottom = 508.0
 text = "[center]Save Game[/center]"
 exec_class = "PMFunctions"
 execute = "save_game"
-args = []
 
 [node name="mm_button_bg2" parent="pause_filter" instance=ExtResource("3_iqb5y")]
 z_index = 3
@@ -46,4 +45,3 @@ offset_bottom = 508.0
 text = "[center]Main Menu[/center]"
 exec_class = "PMFunctions"
 execute = "return_to_main"
-args = []

@@ -57,7 +57,6 @@ text = "[center]Start Game[/center]"
 exec_class = "MMFunctions"
 execute = "start_game_menu"
 text_node = NodePath("../../mm_screen_filter/options_menu/add_vol/button_text")
-args = []
 click_fx = ExtResource("6_fqpiy")
 
 [node name="mm_button_bg2" parent="Sprite2D" instance=ExtResource("5_hu0p4")]
@@ -69,7 +68,6 @@ tooltip_text = "TEST OF THE TOOLTIP SYSTEM"
 text = "[center]Options[/center]"
 exec_class = "MMFunctions"
 execute = "open_opts_menu"
-args = []
 click_fx = ExtResource("6_fqpiy")
 
 [node name="mm_button_bg3" parent="Sprite2D" instance=ExtResource("5_hu0p4")]
@@ -80,7 +78,6 @@ offset_bottom = 560.293
 text = "[center]Quit[/center]"
 exec_class = "MMFunctions"
 execute = "quit_game"
-args = []
 click_fx = ExtResource("6_fqpiy")
 
 [node name="mm_screen_filter" type="ColorRect" parent="."]
@@ -146,7 +143,6 @@ offset_bottom = 471.0
 text = "[center]Cancel[/center]"
 exec_class = "MMFunctions"
 execute = "cancel_start"
-args = []
 click_fx = ExtResource("6_fqpiy")
 
 [node name="options_menu" type="ColorRect" parent="mm_screen_filter" node_paths=PackedStringArray("volume_number", "sfx_vol")]
@@ -246,7 +242,6 @@ offset_bottom = 471.0
 text = "[center]Cancel[/center]"
 exec_class = "MMFunctions"
 execute = "cancel_opts"
-args = []
 click_fx = ExtResource("6_fqpiy")
 
 [node name="add_vol" type="ColorRect" parent="mm_screen_filter/options_menu" node_paths=PackedStringArray("text_node")]

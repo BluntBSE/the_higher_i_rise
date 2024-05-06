@@ -46,7 +46,7 @@ func stateUpdate(_dt):
 		child_node.position = child_node.position + Vector2(0, calc_offset)
 		#Subscribe parser to child signals
 		var root:Node = child_node.get_tree().get_root()
-		var parser = root.get_node("main/interaction_parser") #TODO: Eventually, interaction_parser won't be the root and we have to change this.
+		var parser = root.get_node("the_glory/main/interaction_parser") #TODO: Eventually, interaction_parser won't be the root and we have to change this.
 		var callback = parser._on_select_memory
 		child_node.memory_selected.connect(callback)
 		#Positioning
