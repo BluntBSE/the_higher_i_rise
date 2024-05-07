@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b487vdt21ujkm"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_sokjj"]
+
+[resource]
+script = ExtResource("1_sokjj")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Zoe's Diner"
+text = "[KRISTIN]: Okay, so the lamb hash with rosemary? This fucks. The shakshuka also fucks. The pie, though, this is fuckless.
+
+She holds up a piece of sfanikopita which sags on either side of her fork.
+
+[KRISTIN]: Didn't wilt the spinach before baking, I bet. 
+
+[KRISTIN]: Can I try a blintz? You haven't really touched them.
+
+Asking, of course, is a formality. She chews one of your blitnzes thoughtfully. You don't even remember ordering them.
+"
+slots = {}
+options = [{
+"links_to": "diner_2",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["kristin"]

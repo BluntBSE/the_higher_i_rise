@@ -15,12 +15,21 @@ You determine what to prioritize during your treatment.
 //TODO: Add aspect pickups"
 slots = {}
 options = [{
+"functions": [["update_aspects", [{
+"curious": 1
+}]]],
 "links_to": "mgh_8a",
 "text": "Determining what caused his injuries"
 }, {
+"functions": [["update_aspects", [{
+"compassionate": 1
+}]]],
 "links_to": "mgh_8b",
 "text": "Making him comfortable"
 }, {
+"functions": [["update_aspects", [{
+"pragmatic": 1
+}]]],
 "links_to": "mgh_8c",
 "text": "Making sure you're safe"
 }]

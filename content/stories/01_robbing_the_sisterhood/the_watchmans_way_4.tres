@@ -13,6 +13,7 @@ Thinking is difficult. But you know  that you are alive, and you know also that 
 "
 slots = {}
 options = [{
+"functions": [["purge_speech", []], ["purge_aspects", [true]]],
 "links_to": "early_morning_1",
 "text": "To the House with no walls"
 }]

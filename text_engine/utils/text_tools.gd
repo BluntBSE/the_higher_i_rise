@@ -208,7 +208,7 @@ static func parseOptions(_reference, interaction: Interaction):
 			var player_aspects = _reference.get_tree().root.find_child("aspects_panel", true, false).aspect_dict
 			for aspect in specific_aspect_conditions:
 				if player_aspects.has(aspect):
-					if player_aspects[aspect] == specific_aspect_conditions[aspect]:
+					if player_aspects[aspect] >= specific_aspect_conditions[aspect]:
 						specific_aspect_array.append(true)
 				else:
 					specific_aspect_array.append(false)
@@ -303,6 +303,7 @@ static func executeFunctions(_reference, functions:Array):
 			_engine_functions.queue_free()
 		else:
 		#You cannot use .callv() on a static class, so must make an instance.
+			print("Made it to the engineFunctions")
 			_engine_functions.callv(function_id, function_args)
 			#Do I need to delete that _engine_functions? Queue_free does that. Might as well.
 			_engine_functions.queue_free()		

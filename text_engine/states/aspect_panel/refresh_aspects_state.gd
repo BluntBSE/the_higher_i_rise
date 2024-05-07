@@ -32,8 +32,11 @@ func stateUpdate(_dt):
 	#Clear existing aspect icons
 	var grid = _reference.get_node("aspect_grid")
 	for child in grid.get_children():
+		print("HELLO FROM THE QUEUE FREE MOTHERFUCKER")
+		print(child)
 		child.queue_free()
 	var aspects = _reference.aspect_dict
+	print(aspects)
 	for aspect in aspects:
 		#If it is a new aspect
 		#OR

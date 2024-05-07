@@ -4,7 +4,7 @@ class_name InteractionParser
 var state_machine: StateMachine2 = StateMachine2.new()
 #var _current_text: String = ""
 var active_interaction: Interaction = Interaction.new()
-var default_interaction_id = "mgh_1"
+var default_interaction_id = "the_watchmans_way_4"
 var default_interaction#Must be loaded in after initialziation
 
 

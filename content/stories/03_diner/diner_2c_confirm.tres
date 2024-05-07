@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://c7nqaa85j3fks"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_sacw7"]
+
+[resource]
+script = ExtResource("1_sacw7")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Zoe's Diner"
+text = "You get dinner with Kristin all the time, but this is a nicer restaurant than usual, especially for 7:30 AM. Getting anything other than Standard-Issue Diner Breakfast is a treat. You should make the most of it.
+
+Kristin just had an art show the other day, and she hasn't even brought it up yet. Maybe you could ask her about it?"
+slots = {}
+options = [{
+"links_to": "diner_2",
+"text": "Back"
+}, {
+"links_to": "diner_2c1",
+"text": "Ask about her show"
+}]
+wounds = {}
+portraits = ["kristin"]
