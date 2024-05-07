@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cq51g03n2m375"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_0e3vs"]
+
+[resource]
+script = ExtResource("1_0e3vs")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Room 323"
+text = "[GABE]: You wouldn't believe me if I told you, Doc.
+
+[YOU]: You see all kinds of crazy stuff in here. Try me.
+
+[GABE]: Fine. It was a moth.
+
+[YOU]: Must have been a bear-sized moth.
+
+[GABE]: That's about right, yeah.
+
+Your patient looks anxiously towards the corner of his room. He still looks very out-of-it from the drugs he's on. You decide not to press, though you make a note on his chart.
+
+"
+slots = {}
+options = [{
+"links_to": "mgh_9",
+"text": "Ask him about what happened"
+}]
+wounds = {}
+portraits = ["gabe"]

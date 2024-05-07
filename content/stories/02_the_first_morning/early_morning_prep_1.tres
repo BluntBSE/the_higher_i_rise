@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b3tu4lstju4qi"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_pdf1q"]
+
+[resource]
+script = ExtResource("1_pdf1q")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Making the Most of It"
+text = "First, you go for a quick jog around the block. It's a warm and beautiful evening, and it's a rare treat to see a little bit of daylight before you go to work. You pet someone's dog on the street, and you pick up a hot coffee during the walk back.
+
+You rinse off your light sweat,, then it's straight into meal prep. It takes an entire hour, but at the end of it you've got a row of glass containers filled with food for the week.  
+
+There's not much you can do about missing sleep, but you've won something back by making the most of it. Your future self will thank you.
+
+//Add \"contentment\" modifier here."
+slots = {}
+options = [{
+"links_to": "early_morning_5",
+"text": "Get ready for work"
+}]
+wounds = {}
+portraits = []

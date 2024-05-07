@@ -198,8 +198,51 @@ static func parseOptions(_reference, interaction: Interaction):
 	var output_container = _reference.find_child("options_container")
 	for child in output_container.get_children():
 		child.queue_free()
+		
+	#TODO: We repeat ourselves a lot in this section. Fix this.
 	for option in interaction.options:
 		#var conditions_met = false
+		if option.has("conditions_aspect"):
+			var specific_aspect_array = [] #Tracks how many conditions are met. Only render choices if all indices true.
+			var specific_aspect_conditions = option.conditions_aspect #{"aspect": 2}
+			var player_aspects = _reference.get_tree().root.find_child("aspects_panel", true, false).aspect_dict
+			for aspect in specific_aspect_conditions:
+				if player_aspects.has(aspect):
+					if player_aspects[aspect] == specific_aspect_conditions[aspect]:
+						specific_aspect_array.append(true)
+				else:
+					specific_aspect_array.append(false)
+			
+	
+			if specific_aspect_array.has(false):	
+				#Load hint version if there is an unmet condition
+				var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
+				var content = '[hint="'
+				content += option.hint_tooltip
+				content += '"]'
+				content += TextEffects.locked_option.open
+				content += option.hint
+				content += TextEffects.locked_option.close
+				content += "[/hint]"
+				option_node.unpack(content, _reference) #Load content into the option node
+				option_node.find_child("option_bullet").color.a = 0.5
+				output_container.add_child(option_node) #Assign to organizer on screen
+				
+			if !specific_aspect_array.has(false):
+				#Else, load real version
+				var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
+				var content = '[url="'
+				content += option.links_to
+				content += '"]'
+				content += option.text
+				content += '[/url]'
+				option_node.unpack(content, _reference)
+				output_container.add_child(option_node)	
+				#No conditions? Load normally
+			
+			
+			
+		
 		if option.has("conditions_word"):
 			var specific_word_array = [] #array of bools. All true == all specific words met
 			var specific_word_condition = option.conditions_word
@@ -236,7 +279,7 @@ static func parseOptions(_reference, interaction: Interaction):
 				option_node.unpack(content, _reference)
 				output_container.add_child(option_node)	
 				#No conditions? Load normally
-		if !option.has("conditions_word"):
+		if !option.has("conditions_word") && !option.has("conditions_aspect"):
 				var option_node = load("res://text_engine/packed_scenes/single_option.tscn").instantiate()
 				var content = '[url="'
 				content += option.links_to

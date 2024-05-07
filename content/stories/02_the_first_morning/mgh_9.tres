@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bqcxgu2xgwqqk"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_qwicj"]
+
+[resource]
+script = ExtResource("1_qwicj")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Room 323"
+text = "After you've done everything else, it's time to change his dressings. Unfortunately, your patient's still in a bad state. His heart remains stubbornly off-beat, and you can tell that his wounds are weeping under his bandages. You wonder why his blood just won't clot.
+
+You peel away the bandages and...
+
+What were they [i]doing[/i] in the ER?"
+slots = {}
+options = [{
+"links_to": "mgh_10",
+"text": "Take a look"
+}]
+wounds = {}
+portraits = []

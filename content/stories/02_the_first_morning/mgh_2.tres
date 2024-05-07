@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://coyw3mqyo6xuv"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_uvki2"]
+
+[resource]
+script = ExtResource("1_uvki2")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Mass General Hospital"
+text = "Mr. Gladman — It's hard not to add 'Mr.' to a face like that — peers up at you from over his walrus mustache as you approach. 
+
+[MR. GLADMAN]: \"Ten-fifty-five pee-em. You know what they say, Maleek...\"
+
+[YOU] \"'On time' means late.\"
+
+[MR. GLADMAN]: \"'On time' means late.\"
+
+Mr. Gladman draws up his considerable bulk, preparing to lecture you for the nth time, but he stops. He studies you with his rheumy eyes.
+
+[MR. GLADMAN}: \"Maleek. You look like shit. Did you get any sleep?\""
+slots = {}
+options = [{
+"links_to": "mgh_3",
+"text": "\"Not really\""
+}]
+wounds = {}
+portraits = ["stan"]

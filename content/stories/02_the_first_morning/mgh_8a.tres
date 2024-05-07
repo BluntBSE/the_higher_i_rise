@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bi4jo6i4hqg6t"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_omrc4"]
+
+[resource]
+script = ExtResource("1_omrc4")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Room 323"
+text = "Your patient's obviously been through a lot, but you can't shake the nagging feeling that his file doesn't actually make sense. 
+
+First: What kind of animal local to Boston can even land someone in the ICU? 
+
+Second: Dr. Brown suspected blood thinners because of the persistent bleeding, but the coagulation panel shows a normal clotting factor.
+
+Third: Urine screening didn't show any drugs except cannabis, which doesn't explain the arrythmia. But the physical damage doesn't explain it either.
+"
+slots = {}
+options = [{
+"links_to": "mgh_8a1",
+"text": "Ask him about what happened"
+}]
+wounds = {}
+portraits = ["gabe"]

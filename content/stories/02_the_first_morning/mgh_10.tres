@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://kiwhtl3rrtcd"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_fqxd3"]
+
+[resource]
+script = ExtResource("1_fqxd3")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "A Closer Look"
+text = "For one thing, they didn't even stitch him up all the way. It looks that way at first, but once you clean up some of the blood you see that there's so much [i]space[/i] between the stitches. 
+
+They didn't fix the orthogonal damage, either. You can't see it head-on, but you can picture it in your mind: the radial bruising must come from where the bites are on the inside. If all you closed was the surface, it would be so easy to miss. 
+
+It's a good thing you're here. "
+slots = {}
+options = [{
+"conditions_aspect": {
+"DEBUG_NEVER": 1
+},
+"hint": "Bites on the inside?",
+"hint_tooltip": "",
+"links_to": "mgh_10",
+"text": "HIDDEN TEXT"
+}, {
+"conditions_aspect": {
+"DEBUG_NEVER": 1
+},
+"hint": "What are you talking about?",
+"hint_tooltip": "",
+"links_to": "mgh_10",
+"text": "HIDDEN TEXT"
+}, {
+"links_to": "mgh_11",
+"text": "Why are you sweating?"
+}]
+wounds = {}
+portraits = []

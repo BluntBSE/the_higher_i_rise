@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b7ac2elgky8qo"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_73n01"]
+
+[resource]
+script = ExtResource("1_73n01")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "A Miracle?"
+text = "You come back to yourself, unsure of what's just happened. When you look down, your patient's injuries are almost perfectly closed. There's only a network of thin lines where the damage used to be. You can't even see your sutures, though you hold the needle in your hand.
+
+You try to hide your own confusion.
+
+[GABE]: It's a good thing they have someone like you, huh?
+
+You don't know what he means. The room feels like it's closing in. There's a buzzing in your ears, sweat on your hands..."
+slots = {}
+options = [{
+"links_to": "mgh_15",
+"text": "Get out of here"
+}]
+wounds = {}
+portraits = ["gabe"]

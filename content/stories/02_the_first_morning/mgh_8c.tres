@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dk806rnf3lftn"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_fmxjl"]
+
+[resource]
+script = ExtResource("1_fmxjl")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Safety First"
+text = "You remember the man's file. He's in a bad state, but he caused a mess in the ER and you have no clue how he's going to feel today. As you go through your checklist, you make sure to be as polite as you can while remaining as far away as you can. You move carefully. You talk slowly.
+
+He gives you a stupid grin.
+
+[GABE]: Come on, Doc. I don't bite.
+
+[YOU]: That's not what I heard about last night, though.
+
+Gabe denies nothing. He just smiles."
+slots = {}
+options = [{
+"links_to": "mgh_9",
+"text": "Change his dressings"
+}]
+wounds = {}
+portraits = ["gabe"]

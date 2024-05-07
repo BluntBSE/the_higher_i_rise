@@ -6,7 +6,8 @@
 script = ExtResource("1_e2g4v")
 base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
 display_title = "Staying Cool"
-text = "You keep it together.
+text = "No. You keep it together.
+
 At least for today."
 slots = {}
 options = [{

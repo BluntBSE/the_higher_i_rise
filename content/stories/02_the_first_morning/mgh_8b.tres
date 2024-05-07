@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bdx86gcybg47u"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_lexyh"]
+
+[resource]
+script = ExtResource("1_lexyh")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Room 323"
+text = "Everything about this patient's file looks traumatic, and while you start going through your checklist you realize this guy probably wasn't in great shape even [i]before[/i] whatever happened to him. It takes time to get this kind of gaunt.
+
+You'll do your job, but maybe you can do a little bit more.
+"
+slots = {}
+options = [{
+"links_to": "mgh_8b1",
+"text": "Change his dressings"
+}]
+wounds = {}
+portraits = ["gabe"]

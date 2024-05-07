@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://c4ht2iw3pp7mt"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/character.gd" id="1_xfymi"]
+
+[resource]
+script = ExtResource("1_xfymi")
+portrait = "res://content/images/portraits/kristin.png"
+display_name = "Kristin"

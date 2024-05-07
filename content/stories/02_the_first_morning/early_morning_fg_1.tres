@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_vcwxh")
 base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
-display_title = "Finger Guns!"
+display_title = "Finger Guns"
 text = "Fuck yes."
 slots = {}
 options = [{

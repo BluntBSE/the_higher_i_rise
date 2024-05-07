@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://c8uhxrir25ixb"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_31vb4"]
+
+[resource]
+script = ExtResource("1_31vb4")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "A Closer Look"
+text = "You're not supposed to do this all by yourself, but that seems suddenly unimportant. You think you hear the patient say something, but that seems unimportant too.
+
+Now you're unpacking a suture kit. 
+
+Now you're focused on the cuts.
+
+They run in direction that's hard to see, but if you lay your head just [i]so[/i], and you move the needle like [i]this...[/i]
+"
+slots = {}
+options = [{
+"conditions_aspect": {
+"DEBUG_NEVER": 1
+},
+"hint": "A goody two-shoes?",
+"hint_tooltip": "",
+"links_to": "mgh_11",
+"text": "HIDDEN TEXT"
+}, {
+"conditions_aspect": {
+"DEBUG_NEVER": 1
+},
+"hint": "Fine",
+"hint_tooltip": "",
+"links_to": "mgh_11",
+"text": "HIDDEN TEXT"
+}, {
+"links_to": "mgh_12",
+"text": "You know what to do"
+}]
+wounds = {}
+portraits = []

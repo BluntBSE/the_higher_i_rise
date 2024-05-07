@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b1orsqcql6apl"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_5didf"]
+
+[resource]
+script = ExtResource("1_5didf")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Room 323"
+text = "
+[YOU]: When's the last time you had something to eat?
+
+[GABE]: I don't know? Two days ago? Something like that. Why, you gonna feed me?
+
+[YOU]: I will if you ask nicely. You want me to get you something when we're done? Mostly I've got donuts, but I can get you something from the cafeteria.
+
+[GABE]: I'd [i]stab[/i] someone for a donut!
+
+Gabe beams at you. You can't shake the feeling that he's not joking about the stabbing.
+"
+slots = {}
+options = [{
+"links_to": "mgh_9",
+"text": "Change his dressings"
+}]
+wounds = {}
+portraits = ["gabe"]

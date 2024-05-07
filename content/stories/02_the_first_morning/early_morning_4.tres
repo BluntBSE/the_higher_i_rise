@@ -11,13 +11,23 @@ text = "There's no way you're going back to bed after a dream like that. You can
 You'll just have to make the most of it. You have two whole hours before you should even start getting ready for work. \"Bonus time,\" you tell yourself. You decide to use it by..."
 slots = {}
 options = [{
+"functions": [["update_aspects", [{
+"compassionate": 1
+}]]],
 "links_to": "early_morning_lit_1",
 "text": "Reading romantic literature"
 }, {
+"functions": [["update_aspects", [{
+"curious": 1
+}]]],
 "links_to": "early_morning_study",
 "text": "Studying patient cases"
 }, {
-"links_to": "early_morning_prep",
+"functions": [["update_aspects", [{
+"contentment": 1,
+"pragmatic": 1
+}]]],
+"links_to": "early_morning_prep_1",
 "text": "Exercise and meal prep"
 }]
 wounds = {}

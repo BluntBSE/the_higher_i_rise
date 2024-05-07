@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dgad7gaja3d0y"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_vn1tc"]
+
+[resource]
+script = ExtResource("1_vn1tc")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Mass General Hospital"
+text = "The patient was then transferred to intensive care after the patient continued to present with an irregular heartbeat, as well as persistent bleeding. Dr. Brown indicates that she suspects the presence of powerful blood-thinners and recreational drugs.
+
+Your task list is as follows:
+
+-Check on his wounds
+-Change his dressing if you have to
+-Administer drugs for the arrhthymia 
+-Report on vitals and any psychotic presentation
+"
+slots = {}
+options = [{
+"links_to": "mgh_8",
+"text": "Meet your patient"
+}]
+wounds = {}
+portraits = []

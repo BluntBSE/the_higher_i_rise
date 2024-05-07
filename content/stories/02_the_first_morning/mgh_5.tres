@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bvf32yxlphswa"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_vn8m3"]
+
+[resource]
+script = ExtResource("1_vn8m3")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Mass General Hospital"
+text = "You squeeze your belongings into your cubby and hide your food in the back of the lounge refrigerator. You run into Kristin on your way out. She has mastered the art of finding you, talking to you, and leaving you behind without looking up from her phone.
+
+[KRISTIN] \"New Greek breakfast spot just opened up. Four point four stars already. Text me when you get off!\"
+
+She's gone before you can respond.
+
+Kristin's mostly motivated by her stomach, but the options for late-night nurses are few and far between, so she's always hunting for new spots for the team. Somehow, you've become her de-facto deputy in this quest."
+slots = {}
+options = [{
+"links_to": "mgh_6",
+"text": "Something to look forward to"
+}]
+wounds = {}
+portraits = ["kristin"]

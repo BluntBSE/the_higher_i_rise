@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://d0rvg68nljo71"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_80yn4"]
+
+[resource]
+script = ExtResource("1_80yn4")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Room 323"
+text = "You enter the patient's room. On any other day, this guy must look kind of tough. But like most patients, he doesn't look like much at all any more. The facts are this:  his skin is paper-white, he's got a tight cut of blonde hair, and a ring of tattoos peeks out from his hospital gown.
+
+But it doesn't add up to anything. He just looks sort of rumpled, especially when he meets your eyes with a glazed, sedated look.
+
+You determine what to prioritize during your treatment.
+
+//TODO: Add aspect pickups"
+slots = {}
+options = [{
+"links_to": "mgh_8a",
+"text": "Determining what caused his injuries"
+}, {
+"links_to": "mgh_8b",
+"text": "Making him comfortable"
+}, {
+"links_to": "mgh_8c",
+"text": "Making sure you're safe"
+}]
+wounds = {}
+portraits = ["gabe"]

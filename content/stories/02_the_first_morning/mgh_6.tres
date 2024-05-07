@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://gxvpnuyoe5tq"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_61eem"]
+
+[resource]
+script = ExtResource("1_61eem")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Mass General Hospital"
+text = "You get to work, starting with the patient Stan put on top of your clipboard. You review the notes as you make your way to room 323.
+
+The patient, Gabriel Wright, 27, was admitted to the emergency room last night after being delivered by ambulance. He presented with numerous lacerations and bite marks across his body. 
+
+Unfortunately, the patient was in an agitated, combatative state, and was difficult to both assess and treat.  The team was able to close the patient's wounds only after the administering tranquilizes. Then, given the resemblance of the patient's wounds to a mauling incident, along with several comments from the patient regarding a \"wild animal,\" the team administered the rabies vaccine as well."
+slots = {}
+options = [{
+"links_to": "mgh_7",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

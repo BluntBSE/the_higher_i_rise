@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b07qr0kcuj7p2"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_8ycmh"]
+
+[resource]
+script = ExtResource("1_8ycmh")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = ""
+text = "[font_size=70]You can take this <wound_1/>[/font_size]"
+slots = {}
+options = []
+wounds = {
+"wound_1": {
+"word_id": "noun_wound",
+"wound_link": "mgh_14"
+}
+}
+portraits = []

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b8lrahqdfadf6"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_w6bw6"]
+
+[resource]
+script = ExtResource("1_w6bw6")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "A Miracle?"
+text = "The rest of your shift continues without incident, but it's several hours before you feel like you can really catch your breath. You're still a little dizzy even by the time Kristin drags you to your post-shift dinner."
+slots = {}
+options = [{
+"links_to": "diner_1",
+"text": "Get something to eat"
+}]
+wounds = {}
+portraits = []

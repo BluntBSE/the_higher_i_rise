@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://c50rg6ee6w40l"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_nt36o"]
+
+[resource]
+script = ExtResource("1_nt36o")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "A Curious Case"
+text = "Under Mr. Gladman's bellyaching stewardship, the nurses on the night shift have learned to keep fastidious notes. You skim the papers as you make your way to the staff lounge to stash your belongings.
+
+\"Animal attack...\"
+
+\"Deep lacerations...\"
+
+\"Difficulty breathing...\"
+
+What a good start."
+slots = {}
+options = [{
+"links_to": "mgh_5",
+"text": "Stash your stuff in the lounge"
+}]
+wounds = {}
+portraits = []

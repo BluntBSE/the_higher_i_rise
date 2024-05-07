@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_n0qp7")
-aspect_id = "pose"
+aspect_id = "poser"
 icon = "res://content/images/aspects/AI_pose.jpg"
-display_name = "Pose"
-tooltip = "Pose"
+display_name = "Poser"
+tooltip = "Poser"

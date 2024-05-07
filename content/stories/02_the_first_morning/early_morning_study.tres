@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://ceo2o56g8jcbw"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_pllh3"]
+
+[resource]
+script = ExtResource("1_pllh3")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Making the Most of It"
+text = "Yesterday, a patient at your hospital presented with a litany of digestive issues. The doctor's diagnosis was inconclusive, but one detail stuck out to you, the attending nurse: the woman claimed a total inability to burp. 
+
+You spend your free time this morning browsing the internet for similar cases, and soon you're going down the rabbit-hole of [i]retrograde cricopharyngeal dysfunction[/i]. You learn about the systemic pathology of people who can't burp, and learn about the exotic botox procedures being developed to fix it.
+
+You're not a doctor yet, but you might be able to use this to get one to reconsider his diagnosis. With any luck, someone's life will improve from this.
+"
+slots = {}
+options = [{
+"links_to": "early_morning_5",
+"text": "Fascinating stuff"
+}]
+wounds = {}
+portraits = []

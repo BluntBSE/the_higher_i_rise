@@ -16,9 +16,15 @@ options = [{
 "links_to": "early_morning_fg_1",
 "text": "Finger guns"
 }, {
+"functions": [["update_aspects", [{
+"poser": 1
+}]]],
 "links_to": "early_morning_pose_1",
 "text": "Strike a pose"
 }, {
+"functions": [["update_aspects", [{
+"composed": 1
+}]]],
 "links_to": "early_morning_composed_1",
 "text": "..."
 }]
