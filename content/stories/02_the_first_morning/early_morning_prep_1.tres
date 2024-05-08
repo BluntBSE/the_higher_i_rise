@@ -10,9 +10,7 @@ text = "First, you go for a quick jog around the block. It's a warm and beautifu
 
 You rinse off your light sweat,, then it's straight into meal prep. It takes an entire hour, but at the end of it you've got a row of glass containers filled with food for the week.  
 
-There's not much you can do about missing sleep, but you've won something back by making the most of it. Your future self will thank you.
-
-//Add \"contentment\" modifier here."
+There's not much you can do about missing sleep, but you've won something back by making the most of it. Your future self will thank you."
 slots = {}
 options = [{
 "links_to": "early_morning_5",

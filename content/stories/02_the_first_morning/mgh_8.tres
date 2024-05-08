@@ -10,9 +10,7 @@ text = "You enter the patient's room. On any other day, this guy must look kind 
 
 But it doesn't add up to anything. He just looks sort of rumpled, especially when he meets your eyes with a glazed, sedated look.
 
-You determine what to prioritize during your treatment.
-
-//TODO: Add aspect pickups"
+You determine what to prioritize during your treatment."
 slots = {}
 options = [{
 "functions": [["update_aspects", [{

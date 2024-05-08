@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_rh8a3")
 aspect_id = "Compassionate"
-icon = "res://content/images/aspects/AI_Compassionate.png"
+icon = "res://content/images/aspects/AI_Compassionate.jpg"
 display_name = "Compassionate"
 tooltip = "Compassionate"

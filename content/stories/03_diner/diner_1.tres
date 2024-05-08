@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bhmx2dglg11j0"]
 
-[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_th167"]
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_2svgd"]
 
 [resource]
-script = ExtResource("1_th167")
+script = ExtResource("1_2svgd")
 base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
 display_title = "Zoe's Diner"
 text = "[KRISTIN]: Okay, so the lamb hash with rosemary? This fucks. The shakshuka also fucks. The pie, though, this is fuckless.
@@ -16,15 +16,10 @@ She holds up a piece of sfanikopita which sags on either side of her fork.
 
 Asking, of course, is a formality. She chews one of your blitnzes thoughtfully. You don't even remember ordering them.
 
-[KRISTIN]: Actually, you're barely eating at all.
+[font_size=50]END OF DEMO[/font_size]
 
-She doesn't say it out loud, but you know what she means is: [i]Are you okay?[/i]
-
-Only, how can you answer that question?"
+Continue"
 slots = {}
-options = [{
-"links_to": "diner_2",
-"text": "Continue"
-}]
+options = []
 wounds = {}
 portraits = ["kristin"]

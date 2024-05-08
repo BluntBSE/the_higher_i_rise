@@ -61,3 +61,8 @@ res://text_engine/states/interaction_parser/choose_option_state.gd
 res://text_engine/states/aspect_panel/refresh_aspects_state.gd
 res://text_engine/nodes/aspects_panel.gd
 res://memory_panel.gd
+res://content/stories/03_diner/diner_1.tres
+res://content/stories/01_robbing_the_sisterhood/the_vault_5a.tres
+res://content/stories/01_robbing_the_sisterhood/the_vault_5.tres
+res://content/stories/01_robbing_the_sisterhood/the_vault_4.tres
+res://content/catalogs/aspects/contentment.tres

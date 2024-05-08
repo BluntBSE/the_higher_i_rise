@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Aspect" load_steps=2 format=3 uid="uid://dku1s02m8uros"]
 
-[ext_resource type="Script" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_l6ltv"]
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_icm8j"]
 
 [resource]
-script = ExtResource("1_l6ltv")
+script = ExtResource("1_icm8j")
 aspect_id = "contentment"
-icon = "res://content/images/aspects/red_hood.png"
+icon = "res://content/images/aspects/AI_Church.png"
 display_name = "Contentment"
 tooltip = "Contentment"
