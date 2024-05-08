@@ -86,6 +86,9 @@ func stateUpdate(dt):
 		#I believe, though am not certain, that a redirect function would work
 		#Since it comes before this load option
 		#load option is used to fade in/out
+		
+		#Save the current game state to the_glory.the_memory
+		
 		_reference.state_machine.Change("load_option", interaction_to_load)
 	
 	#If text is done updating, we should do state_machine.Change("finished")

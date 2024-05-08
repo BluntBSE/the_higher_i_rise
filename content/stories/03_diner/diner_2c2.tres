@@ -6,11 +6,13 @@
 script = ExtResource("1_5br5h")
 base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
 display_title = "Zoe's Diner"
-text = "[KRISTIN]: That one might be my favorite, too. Like three different people broke up with me about it, though.
+text = "[KRISTIN]: I'll get over the gallery thing in time. It's really only part of the job.
 
-[KRISTIN]: Talk about a self-fulfilling prophecy! Maybe I should paint about being a billionaire.
+[KRISTIN]: If I don't like it, I'll just take my art somewhere else!
 
-[KRISTIN] I'm glad you like it, though."
+Kristin smiles at you. You realize she has somehow eaten all of your blintzes.
+
+"
 slots = {}
 options = [{
 "links_to": "diner_2c2",
