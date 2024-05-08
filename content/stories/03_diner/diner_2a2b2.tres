@@ -21,6 +21,9 @@ options = [{
 "links_to": "diner_2a2b1",
 "text": "You shouldnt' see this"
 }, {
+"functions": [["update_aspects", [{
+"fascination": 1
+}]]],
 "links_to": "diner_2a2b1",
 "text": "Shake your head"
 }]
