@@ -26,6 +26,14 @@ var portrait_node_1
 var a #alpha, for fading
 var t# For handling animations
 
+func record_history():
+		var recorded_at = Time.get_datetime_string_from_system()
+		var interaction_name = _args #This is the "meta" that is passed in from click
+		var aspect_dict = _reference.find_child("aspects_panel", true, false).aspect_dict
+		var mem_array = _reference.find_child("memory_panel", true, false).mem_array
+		var the_history = _reference.get_tree().root.get_node("the_glory").the_history
+		the_history[interaction_name] = {"aspect_dict": aspect_dict, "mem_array": mem_array, "recorded_at": recorded_at}
+
 	
 func determineOptionIndex(interaction_id):
 	var index = 0
@@ -75,7 +83,7 @@ func stateUpdate(dt):
 	if !_reference.active_interaction.options[index].has("functions"):
 		var interaction_to_load = TextTools.getInteractionResource(_args)
 		#load option is used to fade in/out
-
+		record_history()
 		_reference.state_machine.Change("load_option", interaction_to_load)
 		#push_error("No functions found on this option")
 	if _reference.active_interaction.options[index].has("functions"):
@@ -88,7 +96,7 @@ func stateUpdate(dt):
 		#load option is used to fade in/out
 		
 		#Save the current game state to the_glory.the_memory
-		
+		record_history()
 		_reference.state_machine.Change("load_option", interaction_to_load)
 	
 	#If text is done updating, we should do state_machine.Change("finished")

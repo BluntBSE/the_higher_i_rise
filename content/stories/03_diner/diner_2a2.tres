@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cqjlkchpdqvbv"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_vtbxp"]
+
+[resource]
+script = ExtResource("1_vtbxp")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Zoe's Diner"
+text = "[KRISTIN]: But let's entertain option three. Do you think you could do it again?
+
+You tell her you're not sure.
+
+[KRISTIN]: Then I propose an experiment.
+
+She lifts up a steak knife with her right hand, then she presents her left thumb.
+
+[KRISTIN]: You work ICU. You're not squeamish, right?"
+slots = {}
+options = [{
+"links_to": "diner_2a2a",
+"text": "Stop her"
+}, {
+"links_to": "diner_2a2b",
+"text": "Let her cut her thumb"
+}]
+wounds = {}
+portraits = ["kristin"]

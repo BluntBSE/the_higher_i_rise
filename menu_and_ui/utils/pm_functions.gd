@@ -9,13 +9,14 @@ static func save_game(node:Node):
 	var active_save = root.find_child("main", true, false).active_save
 	var new_file = SaveFile.new()
 	var active_interaction = root.find_child("interaction_parser",true, false).active_interaction
-	var word_inventory = root.find_child("memory_panel", true, false).mem_inventory
+	var word_inventory = root.find_child("memory_panel", true, false).mem_array
 	var aspect_inventory = root.find_child("aspects_panel", true, false).aspect_dict
-	#var decision_tree ... record of all choices player has made for future nodemap
+	var the_history = root.get_node("the_glory").the_history
 	
 	new_file.active_interaction = active_interaction
 	new_file.words = word_inventory
 	new_file.aspects = aspect_inventory
+	new_file.the_history = the_history
 	
 	#var filename = "single_user.tres" #TODO: Replace with slot
 	var key = "slot_"+str(active_save)

@@ -50,7 +50,7 @@ func stateEnter(args):
 		
 func stateUpdate(_dt):
 	#TODO: If the player already has a word, consider making it impossible to take it
-	#Add the wound_id to the aspects_panel mem_inventory
+	#Add the wound_id to the aspects_panel mem_array
 	if !(is_equal_approx(a, 0.0)):
 		a = lerp(a, 0.0, .2) #TODO: Add smoothstep. Also make this a generic function.
 		title_node.modulate.a = a
@@ -60,7 +60,7 @@ func stateUpdate(_dt):
 		portrait_node_0.modulate.a =a
 		return
 			
-	memory_panel.mem_inventory.push_back(_args)
+	memory_panel.mem_array.push_back(_args)
 	
 	
 	#Either trigger a state update on the side panel, or directly update the aspects

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cxfo6kh8fhhyt"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_pf5s2"]
+
+[resource]
+script = ExtResource("1_pf5s2")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Zoe's Diner"
+text = " When you're finished, Kristin takes a long sip of orange juice.
+
+[KRISTIN]: I won't call you crazy. I saw the patient later, and I was wondering why they even put him in the ICU. His lacerations were almost entirely healed, so you did [i]something[/i] His heart was totally normal, too.
+
+[KRISTIN]: That gives us three possibilities. One: You're a wizard. Two: You hit your head and became a nurse savant. Three: The ER made a huge mistake and we have the wrong patient in there somehow.
+
+[KRISTIN]: Three is possible, but it raises the question why the patient stayed. Two is also possible, so we should check you for concussion...
+
+
+"
+slots = {}
+options = [{
+"links_to": "diner_2a2",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["kristin"]

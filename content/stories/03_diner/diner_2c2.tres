@@ -6,7 +6,7 @@
 script = ExtResource("1_5br5h")
 base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
 display_title = "Zoe's Diner"
-text = "[KRISTIN]: I'll get over the gallery thing in time. It's really only part of the job.
+text = "[KRISTIN]: I'll get over the gallery thing eventually. Only part of the job.
 
 [KRISTIN]: If I don't like it, I'll just take my art somewhere else!
 
@@ -15,8 +15,19 @@ Kristin smiles at you. You realize she has somehow eaten all of your blintzes.
 "
 slots = {}
 options = [{
-"links_to": "diner_2c2",
-"text": "Continue"
+"links_to": "diner_2x",
+"text": "Finish dinner"
+}, {
+"links_to": "diner_2b_confirm_copy",
+"requires_unvisited": true,
+"text": "Change topics: Vent about your day",
+"unvisited_link": "diner_2bxa",
+"visited_link": "diner_2bxa"
+}, {
+"links_to": "diner_2a_confirm_copy",
+"requires_unvisited": true,
+"text": "Change topics: Tell her what happened earlier",
+"unvisited_links": ["diner_2a1", "diner_2b1"]
 }]
 wounds = {}
 portraits = ["kristin"]
