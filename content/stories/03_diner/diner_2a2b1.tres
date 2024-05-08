@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cl0gejbj33bxk"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_7wudk"]
+
+[resource]
+script = ExtResource("1_7wudk")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Zoe's Diner"
+text = "[KRISTIN]: Ah, well. Too good to be true, I guess.
+
+[KRISTIN]: You don't look so good, though. Do you want to get out of here?"
+slots = {
+"slot_1": "noun_wound"
+}
+options = [{
+"links_to": "diner_2x",
+"text": "Finish dinner"
+}, {
+"links_to": "diner_2c1",
+"requires_unvisited": true,
+"text": "No: Ask about her art show",
+"unvisited_links": ["diner_2c1"]
+}]
+wounds = {}
+portraits = ["kristin"]

@@ -17,7 +17,9 @@ Kristin pouts a little.
 slots = {}
 options = [{
 "links_to": "diner_2c1",
-"text": "Change the topic: Ask about her recent art show"
+"requires_unvisited": true,
+"text": "Change the topic: Ask about her recent art show",
+"unvisited_links": ["diner_2c1"]
 }, {
 "links_to": "diner_f",
 "text": "Finish dinner"

@@ -11,8 +11,8 @@ text = "[KRISTIN]: Yeah, I know. But that's not really motivating either.
 [KRISTIN]: If I can't even trick people stupid people into coming to my show, what's that say about me?"
 slots = {}
 options = [{
-"links_to": "diner_2c1a",
-"text": "It just takes time"
+"links_to": "diner_2c2",
+"text": "Continue"
 }]
 wounds = {}
 portraits = ["kristin"]

@@ -15,10 +15,10 @@ options = [{
 "text": "Molotov Polycule!"
 }, {
 "links_to": "diner_2c1bb",
-"text": "Cocaine Supernova"
+"text": "Cocaine Supernova!"
 }, {
 "links_to": "diner_2c1bc",
-"text": "Magellan of the Iliac Crest"
+"text": "Magellan of the Iliac Crest!"
 }]
 wounds = {}
 portraits = ["kristin"]

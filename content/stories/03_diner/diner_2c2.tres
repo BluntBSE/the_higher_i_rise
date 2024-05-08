@@ -21,8 +21,7 @@ options = [{
 "links_to": "diner_2b_confirm_copy",
 "requires_unvisited": true,
 "text": "Change topics: Vent about your day",
-"unvisited_link": "diner_2bxa",
-"visited_link": "diner_2bxa"
+"unvisited_links": ["diner_2a1", "diner_2b1"]
 }, {
 "links_to": "diner_2a_confirm_copy",
 "requires_unvisited": true,

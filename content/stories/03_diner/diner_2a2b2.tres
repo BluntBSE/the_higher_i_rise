@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://droeniq1yxr63"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_ai1ii"]
+
+[resource]
+script = ExtResource("1_ai1ii")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Blood, Again"
+text = "You focus on the blood and try to recall the strange, nauseous feelings you felt back in Gabriel's room.  It's enough to bring them back to the present moment, and soon you're sweating again. You start to feel a pressure.
+
+At first you think it's in your head, but then you're aware that it's coming from Kristin's <slot_1/>"
+slots = {
+"slot_1": "noun_wound"
+}
+options = [{
+"conditions_aspect": {
+"DEBUG_NEVER": 1
+},
+"hint": "Not bad",
+"hint_tooltip": "But that isn't how this works",
+"links_to": "diner_2a2b1",
+"text": "You shouldnt' see this"
+}, {
+"links_to": "diner_2a2b1",
+"text": "Shake your head"
+}]
+wounds = {}
+portraits = ["kristin"]

@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_icm8j")
 aspect_id = "contentment"
-icon = "res://content/images/aspects/AI_Church.png"
+icon = "res://content/images/aspects/AI_church.jpg"
 display_name = "Contentment"
 tooltip = "Contentment"

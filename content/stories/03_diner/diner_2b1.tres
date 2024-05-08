@@ -15,6 +15,9 @@ Kristin listens quietly. When you're done, she produces a little tin, opens it a
 [KRISTIN]: Weed gummies. I think you deserve some weed, my friend. Want some?"
 slots = {}
 options = [{
+"functions": [["update_aspects", [{
+"contentment": 1
+}]]],
 "links_to": "diner_2b1a",
 "text": "Take one"
 }, {

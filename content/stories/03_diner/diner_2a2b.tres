@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bagt3o1kqw0er"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_teerl"]
+
+[resource]
+script = ExtResource("1_teerl")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Zoe's Diner"
+text = "Kristin makes the smallest incision on her thumb, and then squeezes the skin until a few beads of blood well up. She then extends her bleeding thumb towards like it's the most casual thing in the world.
+
+You're aware of some side-eye from one of the waiters."
+slots = {}
+options = [{
+"links_to": "diner_2a2b2",
+"text": "Concentrate"
+}]
+wounds = {}
+portraits = ["kristin"]

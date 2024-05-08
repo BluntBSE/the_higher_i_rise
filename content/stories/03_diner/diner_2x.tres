@@ -11,11 +11,6 @@ slots = {}
 options = [{
 "links_to": "diner_2c2",
 "text": "Continue"
-}, {
-"links_to": "diner_2bxa",
-"requires_unvisited": true,
-"text": "Change topics: Vent about your day",
-"unvisited_link": "diner_2bxa"
 }]
 wounds = {}
 portraits = ["kristin"]
