@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cdiw7ncdgy8oe"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_jsslu"]
+
+[resource]
+script = ExtResource("1_jsslu")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Zoe's Diner"
+text = "Only, what exactly [i]did[/i] happen? 
+
+You went into a trance and saw wounds on your patient that the emergency room missed?
+
+You stitched him up while you were blacked out, but you did such a good job he doesn't look hurt at all? 
+
+How will you explain the fact that you couldn't breathe, about the dizziness that's still killing your appetite?"
+slots = {}
+options = [{
+"links_to": "diner_2a1",
+"text": "Tell her, you have to try"
+}, {
+"links_to": "diner_2c2",
+"text": "Back"
+}]
+wounds = {}
+portraits = ["kristin"]

@@ -31,7 +31,7 @@ func stateUpdate(_dt):
 	var children = organizer.get_children()
 	for child in children:
 		child.queue_free()
-	var memories = _reference.mem_inventory
+	var memories = _reference.mem_array
 	var index = 0
 	var offset = 50
 	for memory in memories:

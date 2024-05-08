@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://caigndmwqqs84"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_k03ck"]
+
+[resource]
+script = ExtResource("1_k03ck")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Zoe's Diner"
+text = "[KRISTIN]: Sounds like you've had a shitty day, and I don't blame you about that guy stressing you out. 
+
+[KRISTIN]: I checked on him later, and he watched me the whole time with these kind of...Eyes. I don't know. Like he was so happy to see me. Like, I don't know you like that.
+
+[KRISTIN]: And why'd they even keep him in the ICU? Maybe it looked worse than it was.
+
+[KRISTIN]: Anyway, you let me know next time you're burning out on shift, okay? I feel like you always work too hard. We can do it too, you know.
+"
+slots = {}
+options = [{
+"links_to": "diner_2x",
+"text": "Finish dinner"
+}, {
+"links_to": "diner_2c1",
+"requires_unvisited": true,
+"text": "Change topics: Ask about her art show",
+"unvisited_link": "diner_2c1"
+}]
+wounds = {}
+portraits = ["kristin"]

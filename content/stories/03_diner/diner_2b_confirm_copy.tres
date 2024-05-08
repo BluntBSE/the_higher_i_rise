@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dqc2jb24exxs8"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_gemvf"]
+
+[resource]
+script = ExtResource("1_gemvf")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Zoe's Diner"
+text = "You can't hide that you're having a hard time. You're still dizzy, so eating is hard, and you're not very good conversation right now. You might as well vent a little bit about how bad you're feeling. 
+
+Kristin's a good listener. You might even feel better afterwards."
+slots = {}
+options = [{
+"links_to": "diner_2b1",
+"text": "Vent about your day"
+}, {
+"links_to": "diner_2c2",
+"text": "Back"
+}]
+wounds = {}
+portraits = ["kristin"]

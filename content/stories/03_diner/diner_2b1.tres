@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://8cnqum72hd14"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_j80w3"]
+
+[resource]
+script = ExtResource("1_j80w3")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Zoe's Diner"
+text = "You don't get into [i]everything[/i], but you tell her about the insane dream you had last night, and how you didn't get enough sleep. You tell her that your patient, Gabriel, stressed you out for your whole shift. 
+
+You tell her how sick you feel.
+
+Kristin listens quietly. When you're done, she produces a little tin, opens it and places it on the table. 
+
+[KRISTIN]: Weed gummies. I think you deserve some weed, my friend. Want some?"
+slots = {}
+options = [{
+"links_to": "diner_2b1a",
+"text": "Take one"
+}, {
+"links_to": "diner_2b1b",
+"text": "Don't take one"
+}]
+wounds = {}
+portraits = ["kristin"]

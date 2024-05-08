@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bm66w0kpxeeyu"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_w01nb"]
+
+[resource]
+script = ExtResource("1_w01nb")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Zoe's Diner"
+text = "[KRISTIN]: Yeah, I know. But that's not really motivating either. 
+
+[KRISTIN]: If I can't even trick people stupid people into coming to my show, what's that say about me?"
+slots = {}
+options = [{
+"links_to": "diner_2c1a",
+"text": "It just takes time"
+}]
+wounds = {}
+portraits = ["kristin"]

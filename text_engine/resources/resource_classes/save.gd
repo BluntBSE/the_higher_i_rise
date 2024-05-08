@@ -5,7 +5,7 @@ class_name SaveFile
 @export var active_interaction:Interaction
 @export var aspects:Dictionary
 @export var words:Array
-@export var decision_tree:Dictionary
+@export var the_history:Dictionary
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

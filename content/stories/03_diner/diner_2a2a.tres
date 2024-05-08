@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://pyxit5qowjej"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_7w3pm"]
+
+[resource]
+script = ExtResource("1_7w3pm")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Zoe's Diner"
+text = "Hold on!
+
+You're in the middle of a restaurant, and while it's great that Kristin doesn't think you're crazy, you have no idea how to do it again. Whatever [i]it[/i] even is.
+
+Kristin pouts a little. 
+
+[KRISTIN]: You must like me or something. Fine. But if you won't do science about it, I'm checking you for concussion before you leave.
+"
+slots = {}
+options = [{
+"links_to": "diner_2c1",
+"text": "Change the topic: Ask about her recent art show"
+}, {
+"links_to": "diner_f",
+"text": "Finish dinner"
+}]
+wounds = {}
+portraits = ["kristin"]

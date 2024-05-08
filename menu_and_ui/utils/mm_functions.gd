@@ -70,8 +70,9 @@ static func load_game(node:Node, save:SaveFile, slot_number:int):#Needs arg for 
 	var aspect_panel:AspectPanel = root.find_child("aspects_panel", true, false)
 	var memory_panel:MemoryPanel = root.find_child("memory_panel", true, false)
 	parser.state_machine.Change("load_interaction", save.active_interaction)
+	glory.the_history = save.the_history
 	aspect_panel.aspect_dict = save.aspects
-	memory_panel.mem_inventory = save.words
+	memory_panel.mem_array = save.words
 	aspect_panel.state_machine.Change("refresh", null)
 	memory_panel.state_machine.Change("refresh", null)
 	

@@ -191,6 +191,7 @@ static func parseText(input_string: String, interaction: Interaction):
 # Called when the node enters the scene tree for the first time.
 
 static func parseOptions(_reference, interaction: Interaction):
+	var glory = _reference.get_tree().root.get_node("the_glory")
 	if !interaction:
 		push_error("null interaction in parseOptions")
 		return null 
@@ -201,6 +202,25 @@ static func parseOptions(_reference, interaction: Interaction):
 		
 	#TODO: We repeat ourselves a lot in this section. Fix this.
 	for option in interaction.options:
+		
+		if option.has("requires_unvisited"):
+			if option.has("unvisited_link"):
+				var unvisited_interaction = option.unvisited_link
+				if glory.the_history.has(option.unvisited_link):
+					continue 
+			if option.has("unvisited_links"):
+				var any_visited = false
+				for link in option.unvisited_links:
+					if glory.the_history.has(link):
+						
+						any_visited = true
+				if any_visited == true:
+					continue
+					
+			else:
+				pass
+				
+		
 		#var conditions_met = false
 		if option.has("conditions_aspect"):
 			var specific_aspect_array = [] #Tracks how many conditions are met. Only render choices if all indices true.

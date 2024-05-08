@@ -45,11 +45,11 @@ func stateUpdate(_dt):
 	var word_in_parser = _args[0]
 	var word_in_memory = _args[1]
 	var parser_slot = getSlotKey(word_in_parser)
-	var memory_index = memory_panel.mem_inventory.find(word_in_memory)
+	var memory_index = memory_panel.mem_array.find(word_in_memory)
 	var interaction = _reference.active_interaction
 	interaction.slots[parser_slot] = word_in_memory
-	memory_panel.mem_inventory.erase(word_in_memory)
-	memory_panel.mem_inventory.insert(memory_index, word_in_parser)
+	memory_panel.mem_array.erase(word_in_memory)
+	memory_panel.mem_array.insert(memory_index, word_in_parser)
 	var interaction_text = interaction.text
 	var open_tags = TextEffects.selected.open
 	var close_tags = TextEffects.selected.close
