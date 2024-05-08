@@ -18,8 +18,11 @@ Asking, of course, is a formality. She chews one of your blitnzes thoughtfully. 
 
 [font_size=50]END OF DEMO[/font_size]
 
-Continue"
+"
 slots = {}
-options = []
+options = [{
+"links_to": "diner_2",
+"text": "Continue"
+}]
 wounds = {}
 portraits = ["kristin"]

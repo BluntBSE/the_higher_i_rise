@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dgvmbb7r014y6"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_5br5h"]
+
+[resource]
+script = ExtResource("1_5br5h")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Zoe's Diner"
+text = "[KRISTIN]: That one might be my favorite, too. Like three different people broke up with me about it, though.
+
+[KRISTIN]: Talk about a self-fulfilling prophecy! Maybe I should paint about being a billionaire.
+
+[KRISTIN] I'm glad you like it, though."
+slots = {}
+options = [{
+"links_to": "diner_2c2",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["kristin"]

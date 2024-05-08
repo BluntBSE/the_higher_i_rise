@@ -73,7 +73,18 @@ func stateUpdate(_dt):
 	var wound_slot = determine_wound_number(_args, _reference.active_interaction.wounds)
 	var next_interaction_id = _reference.active_interaction.wounds[wound_slot].wound_link
 	var next_interaction = TextTools.getInteractionResource(next_interaction_id)
-	#_reference.can_hover = true
+	if _reference.active_interaction.wounds[wound_slot].has("functions"):
+		var funcs_to_execute = _reference.active_interaction.wounds[wound_slot].functions
+		TextTools.executeFunctions(_reference, funcs_to_execute)
+		var interaction_to_load = TextTools.getInteractionResource(_args)
+		#I believe, though am not certain, that a redirect function would work
+		#Since it comes before this load option
+		#load option is used to fade in/out
+		_reference.state_machine.Change("load_option", interaction_to_load)
+		#_reference.can_hover = true
+	
+	
+	
 	state_machine.Change("load_option", next_interaction)
 func _init(reference, args=null): #usually self, {args}
 	_reference = reference

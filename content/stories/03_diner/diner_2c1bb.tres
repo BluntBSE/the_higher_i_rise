@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b8f21xcebkyw2"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_11u5e"]
+
+[resource]
+script = ExtResource("1_11u5e")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Cocaine Supernova"
+text = "[KRISTIN]: Oh yeah, that one's probably the most popular. It's like: who doesn't love the idea of cocaine? Kids think it's edgy, rich people think it's a status symbol. It's like just risky enough to make you feel like you're doing something different, while really just kind of being a shittier, more expensive adderall.
+
+[KRISTIN]: It's also probably the prettiest thing I've painted, so it could be that too! I'm glad you like it."
+slots = {}
+options = [{
+"links_to": "diner_2c2",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["kristin"]

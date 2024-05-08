@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://lkmghodxatip"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_h62sd"]
+
+[resource]
+script = ExtResource("1_h62sd")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Magellan of the Iliac Crest"
+text = "[KRISTIN]: Really? I feel like that's nobody's favorite. Sometimes I don't know if I like myself. Sometimes I feel like everyone's said everything already in feminist art, but being a woman is still...Important? To me? And I feel like we're still figuring that out, but I didn't want to be all \"discovering the sexy body\", so I thought, you know...
+
+[KRISTIN]: Bones and blood. Big, dying, waters. 
+
+[KRISTIN]: I don't know, maybe I lost the plot. But I'm glad you like it!"
+slots = {}
+options = [{
+"links_to": "diner_2c2",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["kristin"]

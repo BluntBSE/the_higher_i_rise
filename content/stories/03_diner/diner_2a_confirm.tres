@@ -6,20 +6,20 @@
 script = ExtResource("1_tctnc")
 base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
 display_title = "Zoe's Diner"
-text = "[KRISTIN]: Okay, so the lamb hash with rosemary? This fucks. The shakshuka also fucks. The pie, though, this is fuckless.
+text = "Only, what exactly [i]did[/i] happen? 
 
-She holds up a piece of sfanikopita which sags on either side of her fork.
+You went into a trance and saw wounds on your patient that the emergency room missed?
 
-[KRISTIN]: Didn't wilt the spinach before baking, I bet. 
+You stitched him up while you were blacked out, but you did such a good job he doesn't look hurt at all? 
 
-[KRISTIN]: Can I try a blintz? You haven't really touched them.
-
-Asking, of course, is a formality. She chews one of your blitnzes thoughtfully. You don't even remember ordering them.
-"
+How will you explain the fact that you couldn't breathe, about the dizziness that's still killing your appetite?"
 slots = {}
 options = [{
+"links_to": "diner_2a1",
+"text": "Tell her, you have to try"
+}, {
 "links_to": "diner_2",
-"text": "Continue"
+"text": "Back"
 }]
 wounds = {}
 portraits = ["kristin"]

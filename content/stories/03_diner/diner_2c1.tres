@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cg67rhqced154"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_til5b"]
+
+[resource]
+script = ExtResource("1_til5b")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Zoe's Diner"
+text = "[KRISTIN]: It went...Okay, I guess. I mean, I got good feedback from the gallery and the board. But I don't know. I just kind of sat there all day, and I think maybe four people who weren't part of the gallery or members came to look at it.
+
+[KRISTIN]: I know art isn't everyone's thing, and I know I should feel lucky that I'm in a gallery at all. Last year I thought that would mean I really \"made it,\" you know?
+
+[KRISTIN]: It's just like: If I'm making sculptures in my house and nobody sees it, that's what you expect. When you put them out there to be seen and nobody comes? That's hard.
+"
+slots = {}
+options = [{
+"links_to": "diner_2c1a",
+"text": "It just takes time"
+}, {
+"links_to": "diner_2c1b",
+"text": "You like her art!"
+}, {
+"links_to": "diner_2c1c",
+"text": "People are stupid anyway"
+}]
+wounds = {}
+portraits = ["kristin"]

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://37pl8k7j2qeu"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_gj5cb"]
+
+[resource]
+script = ExtResource("1_gj5cb")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Zoe's Diner"
+text = "[KRISTIN]: Aw! Say more nice things about me.
+
+[KRISTIN]: What's your favorite piece?"
+slots = {}
+options = [{
+"links_to": "diner_2c1ba",
+"text": "Molotov Polycule!"
+}, {
+"links_to": "diner_2c1bb",
+"text": "Cocaine Supernova"
+}, {
+"links_to": "diner_2c1bc",
+"text": "Magellan of the Iliac Crest"
+}]
+wounds = {}
+portraits = ["kristin"]

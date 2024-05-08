@@ -4,7 +4,7 @@ class_name InteractionParser
 var state_machine: StateMachine2 = StateMachine2.new()
 #var _current_text: String = ""
 var active_interaction: Interaction = Interaction.new()
-var default_interaction_id = "obscure_alley_1"
+var default_interaction_id = "early_morning_1"
 var default_interaction#Must be loaded in after initialziation
 
 
@@ -86,6 +86,8 @@ func highlight_word_from_content(word):
 	var new_interaction = active_interaction #Not sure if this is in place or a copy
 	new_interaction.text = replaced_text
 	hovered_slot = slot_key
+	
+	
 	state_machine.Change("load_interaction", new_interaction)
 	
 func remove_highlight_from_word(word):

@@ -11,11 +11,11 @@ text = "You get dinner with Kristin all the time, but this is a nicer restaurant
 Kristin just had an art show the other day, and she hasn't even brought it up yet. Maybe you could ask her about it?"
 slots = {}
 options = [{
-"links_to": "diner_2",
-"text": "Back"
-}, {
 "links_to": "diner_2c1",
 "text": "Ask about her show"
+}, {
+"links_to": "diner_2",
+"text": "Back"
 }]
 wounds = {}
 portraits = ["kristin"]

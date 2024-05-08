@@ -6,20 +6,16 @@
 script = ExtResource("1_sokjj")
 base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
 display_title = "Zoe's Diner"
-text = "[KRISTIN]: Okay, so the lamb hash with rosemary? This fucks. The shakshuka also fucks. The pie, though, this is fuckless.
+text = "You can't hide that you're having a hard time. You're still dizzy, so eating is hard, and you're not very good conversation right now. You might as well vent a little bit about how bad you're feeling. 
 
-She holds up a piece of sfanikopita which sags on either side of her fork.
-
-[KRISTIN]: Didn't wilt the spinach before baking, I bet. 
-
-[KRISTIN]: Can I try a blintz? You haven't really touched them.
-
-Asking, of course, is a formality. She chews one of your blitnzes thoughtfully. You don't even remember ordering them.
-"
+Kristin's a good listener. You might even feel better afterwards."
 slots = {}
 options = [{
+"links_to": "diner_2b1",
+"text": "Vent about your day"
+}, {
 "links_to": "diner_2",
-"text": "Continue"
+"text": "Back"
 }]
 wounds = {}
 portraits = ["kristin"]

@@ -11,6 +11,9 @@ slots = {}
 options = []
 wounds = {
 "wound_1": {
+"functions": [["update_aspects", [{
+"fascination": 1
+}]]],
 "word_id": "noun_wound",
 "wound_link": "mgh_14"
 }
