@@ -81,13 +81,17 @@ func stateUpdate(dt):
 		return
 	#need to wait for complete...
 	if !_reference.active_interaction.options[index].has("functions"):
+		print("No functions")
 		var interaction_to_load = TextTools.getInteractionResource(_args)
 		#load option is used to fade in/out
 		record_history()
 		_reference.state_machine.Change("load_option", interaction_to_load)
 		#push_error("No functions found on this option")
 	if _reference.active_interaction.options[index].has("functions"):
+
 		var funcs_to_execute = _reference.active_interaction.options[index].functions
+		print("Functions found")
+		print(funcs_to_execute)		
 		TextTools.executeFunctions(_reference, funcs_to_execute)
 
 		var interaction_to_load = TextTools.getInteractionResource(_args)

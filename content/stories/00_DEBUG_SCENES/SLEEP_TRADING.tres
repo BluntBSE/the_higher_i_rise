@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://ch8d1rns5erpc"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_a2ci0"]
+
+[resource]
+script = ExtResource("1_a2ci0")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Preparing for Bed"
+text = "Finally, it's time for bed. You put on your sleep mask, put in your earplugs, and try to get settled. The fact that you don't have work tomorrow takes some of the edge off.
+
+Soon, you begin to dream..."
+slots = {}
+options = [{
+"conditions_aspect": {
+"curious": 1
+},
+"functions": [["update_aspects", [{
+"dread": 1
+}]]],
+"hint": "[CURIOUS > 1]: Researching cases similar to Gabriel's",
+"hint_tooltip": "",
+"links_to": "home_1a",
+"text": "[CURIOUS > 1]: Researching cases similar to Gabriel's"
+}, {
+"conditions_aspect": {
+"pragmatic": 1
+},
+"functions": [["update_aspects", [{
+"dread": 1
+}]]],
+"hint": "[PRAGMATIC > 1]: Assess your own symptoms",
+"hint_tooltip": "",
+"links_to": "home_1b",
+"text": "[PRAGMATIC > 1]: Assess your own symptoms"
+}, {
+"conditions_aspect": {
+"compassionate": 1
+},
+"functions": [["update_aspects", [{
+"dread": 1
+}]]],
+"hint": "[COMPASSIONATE > 1Look up Gabriel online",
+"hint_tooltip": "",
+"links_to": "home_1c",
+"text": "[COMPASSIONATE > 1]: Look up Gabriel online"
+}]
+wounds = {}
+portraits = []

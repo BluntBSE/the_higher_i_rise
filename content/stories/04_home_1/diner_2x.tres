@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cg4thfibi076y"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_qeeuu"]
+
+[resource]
+script = ExtResource("1_qeeuu")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Coming Home"
+text = "You head home after dinner, and by the time you're back you start to feel a little bit better. Your usual bedtime, noon, is still a few hours away.
+
+You decide to use some of your free time by...
+
+
+[font_size=50]END OF DEMO[/font_size]"
+slots = {}
+options = [{
+"conditions_aspect": {
+"curious": 1
+},
+"functions": [["update_aspects", [{
+"dread": 1
+}]]],
+"hint": "[CURIOUS > 1]: Researching cases similar to Gabriel's",
+"hint_tooltip": "",
+"links_to": "home_1a",
+"text": "[CURIOUS > 1]: Researching cases similar to Gabriel's"
+}, {
+"conditions_aspect": {
+"pragmatic": 1
+},
+"functions": [["update_aspects", [{
+"dread": 1
+}]]],
+"hint": "[PRAGMATIC > 1]: Assess your own symptoms",
+"hint_tooltip": "",
+"links_to": "home_1b",
+"text": "[PRAGMATIC > 1]: Assess your own symptoms"
+}, {
+"conditions_aspect": {
+"compassionate": 1
+},
+"functions": [["update_aspects", [{
+"dread": 1
+}]]],
+"hint": "[COMPASSIONATE > 1Look up Gabriel online",
+"hint_tooltip": "",
+"links_to": "home_1c",
+"text": "[COMPASSIONATE > 1]: Look up Gabriel online"
+}]
+wounds = {}
+portraits = []

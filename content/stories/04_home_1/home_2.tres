@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b4gen5duxtpxe"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_0bcno"]
+
+[resource]
+script = ExtResource("1_0bcno")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Preparing for Bed"
+text = "Finally, it's time for bed. You put on your sleep mask, put in your earplugs, and try to get settled. The fact that you don't have work tomorrow takes some of the edge off.
+
+Soon, you begin to dream..."
+slots = {}
+options = [{
+"links_to": "home_2",
+"text": "Sleep"
+}]
+wounds = {}
+portraits = []

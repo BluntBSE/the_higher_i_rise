@@ -15,6 +15,7 @@ func remove_memory(word_id:String):
 	
 func update_aspects(update_dict:Dictionary):
 	#var current_tree = get_tree()
+	print("UPDATE ASPECTS RUNNING")
 	
 	var current_parent = get_parent()
 	var aspects_panel:AspectPanel = current_parent.get_node("side_panel/aspects_panel")

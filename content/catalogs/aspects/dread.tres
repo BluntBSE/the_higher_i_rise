@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Aspect" load_steps=2 format=3 uid="uid://dpn5umiva607l"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_vg0bw"]
+
+[resource]
+script = ExtResource("1_vg0bw")
+aspect_id = "dread"
+icon = "res://content/images/aspects/dread.png"
+display_name = "Dread"
+tooltip = "Dread. Go to sleep with three of these, and this will end badly."

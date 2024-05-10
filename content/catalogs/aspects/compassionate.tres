@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_rh8a3")
-aspect_id = "Compassionate"
+aspect_id = "compassionate"
 icon = "res://content/images/aspects/AI_Compassionate.jpg"
 display_name = "Compassionate"
 tooltip = "Compassionate"

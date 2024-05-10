@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Aspect" load_steps=2 format=3 uid="uid://dxna3gvorirri"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_278ri"]
+
+[resource]
+script = ExtResource("1_278ri")
+aspect_id = "control"
+icon = "res://content/images/aspects/AI_Compassionate.jpg"
+display_name = "Control"
+tooltip = "Control"

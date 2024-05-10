@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://01drxworn3w5"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_leihv"]
+
+[resource]
+script = ExtResource("1_leihv")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Not Quite Professional"
+text = "Looking up patients on the internet isn't usually a good idea for nurses, but some impulse leads you to look up Gabriel Wright. Maybe you just want to know that he'll be okay after he's discharged.
+
+Unfortunately, what you find doesn't put your mind at ease. Gabe shows up in the news a few times. Once, for his involvement in a robbery. Later, as a witness in a drug trafficking case, and later still as an interviewee for a reporter covering Boston's overstressed resources for the homeless.
+
+His social media feeds suggest he's not homeless anymore, but clips of him partying reveal a sort of frenetic, high-strung energy that just makes you worry more. You hope he's getting it together and you just can't see it.
+
+"
+slots = {}
+options = [{
+"links_to": "home_2",
+"text": "Worrying"
+}]
+wounds = {}
+portraits = []

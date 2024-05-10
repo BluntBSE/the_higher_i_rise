@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://ca66des3klr3q"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_syydy"]
+
+[resource]
+script = ExtResource("1_syydy")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Mysterious Mauling"
+text = "The ER never got a straight answer about what caused Gabriel's mauling, but there are a few specific details about his case that stick out to you. You recall his arrythmia, and that nagging certainty you felt about there being some kind of damage on the inside of him.
+
+It's enough to search through the papers you have access to through work. Most of what you read focuses on what you should do if a patient presents with mauling symptoms but can't identify the animal that caused it. One paper, however, covers a case that resonates with you.
+
+Back in 2010, a 31-year-old man in Point Pleasant, West Virginia, was admitted to the local Rivers Health Hospital with widespread lacerations across the chest. The patient claimed his injuries were caused by an unknown animal during an evening hike."
+slots = {}
+options = [{
+"links_to": "home_1a2",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

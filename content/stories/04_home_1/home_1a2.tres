@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cnnxajiun5mk5"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_0i4c4"]
+
+[resource]
+script = ExtResource("1_0i4c4")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Mysterious Mauling"
+text = "Although the lacerations appeared superficial, the patient developed a worsening case of arrythmia along with signs of septic shock despite the administration of antibiotics, despite the lack of visible infection, and despite signs of major trauma that might indicate organ damage. 
+
+The patient died.
+
+Afterwards, an autopsy revealed numerous perforations in the patient's stomach and intestine that resulted in the fatal sepsis. The paper's author vaguely concludes that imaging be conducted in all cases of unexplained mauling, but you can read the doctor's confusion between the lines.  "
+slots = {}
+options = []
+wounds = {}
+portraits = []
