@@ -1,0 +1,165 @@
+[gd_scene load_steps=8 format=3 uid="uid://dv6jb3bsfekvq"]
+
+[ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="1_hmh5b"]
+[ext_resource type="FontFile" uid="uid://co5vsscgrr63x" path="res://text_engine/resources/UI/fonts/CrimsonText-Bold.ttf" id="2_npv5p"]
+[ext_resource type="FontFile" uid="uid://ywagpyk071of" path="res://text_engine/resources/UI/fonts/CrimsonText-Italic.ttf" id="3_sddeh"]
+[ext_resource type="FontFile" uid="uid://b51v2ipfr6ldx" path="res://text_engine/resources/UI/fonts/CrimsonText-BoldItalic.ttf" id="4_ngy7v"]
+[ext_resource type="Texture2D" uid="uid://bvwkeu64x7qx6" path="res://content/images/portraits/gristwood.png" id="5_xm2ob"]
+[ext_resource type="Texture2D" uid="uid://ctjy60erxr2jl" path="res://content/images/portraits/benefactorf.png" id="6_5tmqi"]
+[ext_resource type="PackedScene" uid="uid://c37hmyricmehv" path="res://text_engine/packed_scenes/single_option.tscn" id="7_d2lde"]
+
+[node name="interaction_fg" type="ColorRect"]
+z_index = 1
+custom_minimum_size = Vector2(50, 50)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 36.0
+offset_top = 33.0
+offset_right = -464.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00784314, 0.227451, 0.356863, 1)
+
+[node name="text_title" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 73.0
+offset_right = 946.0
+offset_bottom = 185.0
+theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
+theme_override_fonts/normal_font = ExtResource("1_hmh5b")
+theme_override_fonts/bold_font = ExtResource("2_npv5p")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 58
+bbcode_enabled = true
+text = "[u][b]An Obscure Alley[/b][/u]"
+
+[node name="text_content" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 175.0
+offset_right = 973.0
+offset_bottom = 708.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("1_hmh5b")
+theme_override_fonts/bold_font = ExtResource("2_npv5p")
+theme_override_fonts/italics_font = ExtResource("3_sddeh")
+theme_override_fonts/bold_italics_font = ExtResource("4_ngy7v")
+theme_override_font_sizes/normal_font_size = 28
+theme_override_font_sizes/bold_font_size = 28
+theme_override_font_sizes/italics_font_size = 28
+theme_override_font_sizes/bold_italics_font_size = 28
+theme_override_font_sizes/mono_font_size = 28
+bbcode_enabled = true
+text = "[ghost]You are in a dark, damp alleyway sandwiched[/ghost] between a failed deli and St. Jude's School for Blind Girls. Here the smell of votive incense mingles with weeks-old sauerkraut and, recently, the smell of blood.
+
+You are <slot_1/> here, and your killer is feeling awfully <slot_2/>.
+
+
+"
+meta_underlined = false
+hint_underlined = false
+
+[node name="portrait_controller" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="portrait_0" type="Control" parent="portrait_controller"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="img" type="TextureRect" parent="portrait_controller/portrait_0"]
+layout_mode = 0
+offset_left = 1074.0
+offset_top = 171.0
+offset_right = 1674.0
+offset_bottom = 771.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_xm2ob")
+expand_mode = 1
+
+[node name="text_bg" type="ColorRect" parent="portrait_controller/portrait_0"]
+layout_mode = 0
+offset_left = 1074.0
+offset_top = 411.0
+offset_right = 1314.0
+offset_bottom = 447.0
+
+[node name="label" type="RichTextLabel" parent="portrait_controller/portrait_0/text_bg"]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 37.0
+bbcode_enabled = true
+text = "[center]Gristwood[/center]"
+
+[node name="portrait_1" type="Control" parent="portrait_controller"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="img" type="TextureRect" parent="portrait_controller/portrait_1"]
+layout_mode = 0
+offset_left = 1074.0
+offset_top = 490.0
+offset_right = 1674.0
+offset_bottom = 1090.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("6_5tmqi")
+expand_mode = 1
+
+[node name="text_bg" type="ColorRect" parent="portrait_controller/portrait_1"]
+layout_mode = 0
+offset_left = 1074.0
+offset_top = 730.0
+offset_right = 1314.0
+offset_bottom = 766.0
+
+[node name="label" type="RichTextLabel" parent="portrait_controller/portrait_1/text_bg"]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 37.0
+bbcode_enabled = true
+text = "[center]Lady Piper
+[/center]"
+
+[node name="options_organizer" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 108.0
+offset_top = 549.0
+offset_right = 902.0
+offset_bottom = 902.0
+
+[node name="options_content" type="RichTextLabel" parent="options_organizer"]
+visible = false
+layout_mode = 0
+offset_top = 43.0
+offset_right = 853.0
+offset_bottom = 198.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+bbcode_enabled = true
+text = "I am a whole bunch of options"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="options_organizer"]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = 78.0
+offset_right = 2.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="options_container" type="VBoxContainer" parent="options_organizer/ScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/separation = 30
+
+[node name="option_bg" parent="options_organizer/ScrollContainer/options_container" instance=ExtResource("7_d2lde")]
+layout_mode = 2
