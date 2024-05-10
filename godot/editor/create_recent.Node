@@ -1,5 +1,7 @@
+Control
+Container
+RichTextLabel
+TextureRect
+ColorRect
 AudioStreamPlayer
 Node
-TextureRect
-RichTextLabel
-ColorRect
