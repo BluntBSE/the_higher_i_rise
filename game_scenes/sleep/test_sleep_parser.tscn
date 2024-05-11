@@ -1,0 +1,1027 @@
+[gd_scene load_steps=20 format=3 uid="uid://crte4355ukqm3"]
+
+[ext_resource type="Theme" uid="uid://b5cu5776o44se" path="res://text_engine/resources/UI/theme.tres" id="1_rwdmj"]
+[ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="2_4bbqn"]
+[ext_resource type="FontFile" uid="uid://co5vsscgrr63x" path="res://text_engine/resources/UI/fonts/CrimsonText-Bold.ttf" id="3_7i00h"]
+[ext_resource type="FontFile" uid="uid://ywagpyk071of" path="res://text_engine/resources/UI/fonts/CrimsonText-Italic.ttf" id="4_rhath"]
+[ext_resource type="FontFile" uid="uid://b51v2ipfr6ldx" path="res://text_engine/resources/UI/fonts/CrimsonText-BoldItalic.ttf" id="5_8rkhj"]
+[ext_resource type="Texture2D" uid="uid://dayohxir6nbk7" path="res://content/images/aspects/dread.png" id="6_ekpyw"]
+[ext_resource type="Texture2D" uid="uid://t0gj4fghbpf2" path="res://content/images/aspects/contentment.png" id="7_8whly"]
+[ext_resource type="Texture2D" uid="uid://vrr31nm83ikc" path="res://content/images/aspects/fascination.png" id="8_fbde0"]
+[ext_resource type="Texture2D" uid="uid://bvwkeu64x7qx6" path="res://content/images/portraits/gristwood.png" id="9_wlmc1"]
+[ext_resource type="Texture2D" uid="uid://ctjy60erxr2jl" path="res://content/images/portraits/benefactorf.png" id="10_r4k6x"]
+[ext_resource type="PackedScene" uid="uid://c37hmyricmehv" path="res://text_engine/packed_scenes/single_option.tscn" id="11_gfm26"]
+[ext_resource type="Theme" uid="uid://b8pgkx4ittskt" path="res://test_theme.tres" id="12_q66dr"]
+[ext_resource type="Script" path="res://memory_panel.gd" id="13_20ns6"]
+[ext_resource type="Script" path="res://text_engine/nodes/aspects_panel.gd" id="14_ponwi"]
+[ext_resource type="PackedScene" uid="uid://dxncpx8tc4a73" path="res://text_engine/packed_scenes/aspect_item.tscn" id="15_jqylm"]
+[ext_resource type="Texture2D" uid="uid://btfqqn1ckfu0d" path="res://content/images/aspects/secrethistories.png" id="16_w4ldt"]
+[ext_resource type="Texture2D" uid="uid://yhbrxqwgllni" path="res://content/images/aspects/lantern.png" id="17_egayn"]
+[ext_resource type="Texture2D" uid="uid://bq16ga14wh62f" path="res://content/images/aspects/heart.png" id="18_ds682"]
+[ext_resource type="PackedScene" uid="uid://bwn07hjfcrbcw" path="res://game_scenes/debug_quit.tscn" id="19_7nih1"]
+
+[node name="interaction_parser" type="Control"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_rwdmj")
+
+[node name="interaction_bg" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.984314, 0.882353, 1)
+
+[node name="interaction_fg" type="ColorRect" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 36.0
+offset_top = 33.0
+offset_right = -464.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00784314, 0.227451, 0.356863, 1)
+
+[node name="sleep_controller" type="Control" parent="interaction_fg"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="text_title" type="RichTextLabel" parent="interaction_fg/sleep_controller"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 13.0
+offset_right = 1426.0
+offset_bottom = 99.0
+theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_fonts/bold_font = ExtResource("3_7i00h")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 58
+bbcode_enabled = true
+text = "[center][u][b]The Kingdoms of Sleep[/b][/u][/center]"
+
+[node name="text_content" type="RichTextLabel" parent="interaction_fg/sleep_controller"]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 86.0
+offset_right = 1147.0
+offset_bottom = 133.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_fonts/bold_font = ExtResource("3_7i00h")
+theme_override_fonts/italics_font = ExtResource("4_rhath")
+theme_override_fonts/bold_italics_font = ExtResource("5_8rkhj")
+theme_override_font_sizes/normal_font_size = 28
+theme_override_font_sizes/bold_font_size = 28
+theme_override_font_sizes/italics_font_size = 28
+theme_override_font_sizes/bold_italics_font_size = 28
+theme_override_font_sizes/mono_font_size = 28
+bbcode_enabled = true
+text = "[center]Sometimes, the wandering mind may stumble upon peace [/center]"
+meta_underlined = false
+hint_underlined = false
+
+[node name="trade_aspect_button" type="ColorRect" parent="interaction_fg/sleep_controller"]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 472.0
+offset_right = 638.0
+offset_bottom = 598.0
+
+[node name="button_fg" type="ColorRect" parent="interaction_fg/sleep_controller/trade_aspect_button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.921
+offset_left = 7.0
+offset_top = 5.0
+offset_right = -7.0
+offset_bottom = 4.95399
+grow_horizontal = 2
+color = Color(0.0156863, 0.0156863, 0.0156863, 1)
+
+[node name="TextureRect" type="TextureRect" parent="interaction_fg/sleep_controller/trade_aspect_button/button_fg"]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 6.0
+offset_right = 1260.0
+offset_bottom = 1105.0
+scale = Vector2(0.0906166, 0.0906166)
+texture = ExtResource("6_ekpyw")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="interaction_fg/sleep_controller/trade_aspect_button/button_fg"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 30.0
+offset_right = 120.0
+offset_bottom = 78.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_fonts/bold_font = ExtResource("3_7i00h")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]SPEND[/b]"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="interaction_fg/sleep_controller/trade_aspect_button/button_fg"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 30.0
+offset_right = 346.0
+offset_bottom = 78.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_fonts/bold_font = ExtResource("3_7i00h")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]REDUCE[/b]"
+
+[node name="TextureRect2" type="TextureRect" parent="interaction_fg/sleep_controller/trade_aspect_button/button_fg"]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 5.0
+offset_right = 1038.0
+offset_bottom = 1104.0
+scale = Vector2(0.0906166, 0.0906166)
+texture = ExtResource("7_8whly")
+
+[node name="trade_aspect_button2" type="ColorRect" parent="interaction_fg/sleep_controller"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 626.0
+offset_right = 636.0
+offset_bottom = 752.0
+
+[node name="button_fg" type="ColorRect" parent="interaction_fg/sleep_controller/trade_aspect_button2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.921
+offset_left = 7.0
+offset_top = 5.0
+offset_right = -7.0
+offset_bottom = 4.95399
+grow_horizontal = 2
+color = Color(0.0156863, 0.0156863, 0.0156863, 1)
+
+[node name="TextureRect" type="TextureRect" parent="interaction_fg/sleep_controller/trade_aspect_button2/button_fg"]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 6.0
+offset_right = 1260.0
+offset_bottom = 1105.0
+scale = Vector2(0.0906166, 0.0906166)
+texture = ExtResource("6_ekpyw")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="interaction_fg/sleep_controller/trade_aspect_button2/button_fg"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 30.0
+offset_right = 120.0
+offset_bottom = 78.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_fonts/bold_font = ExtResource("3_7i00h")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]SPEND[/b]"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="interaction_fg/sleep_controller/trade_aspect_button2/button_fg"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 30.0
+offset_right = 346.0
+offset_bottom = 78.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_fonts/bold_font = ExtResource("3_7i00h")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]REDUCE[/b]"
+
+[node name="TextureRect2" type="TextureRect" parent="interaction_fg/sleep_controller/trade_aspect_button2/button_fg"]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 5.0
+offset_right = 1038.0
+offset_bottom = 1104.0
+scale = Vector2(0.0906166, 0.0906166)
+texture = ExtResource("7_8whly")
+
+[node name="trade_aspect_button3" type="ColorRect" parent="interaction_fg/sleep_controller"]
+layout_mode = 0
+offset_left = 776.0
+offset_top = 624.0
+offset_right = 1232.0
+offset_bottom = 750.0
+
+[node name="button_fg" type="ColorRect" parent="interaction_fg/sleep_controller/trade_aspect_button3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.921
+offset_left = 7.0
+offset_top = 5.0
+offset_right = -7.0
+offset_bottom = 4.95399
+grow_horizontal = 2
+color = Color(0.0156863, 0.0156863, 0.0156863, 1)
+
+[node name="TextureRect" type="TextureRect" parent="interaction_fg/sleep_controller/trade_aspect_button3/button_fg"]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 6.0
+offset_right = 1260.0
+offset_bottom = 1105.0
+scale = Vector2(0.0906166, 0.0906166)
+texture = ExtResource("6_ekpyw")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="interaction_fg/sleep_controller/trade_aspect_button3/button_fg"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 30.0
+offset_right = 120.0
+offset_bottom = 78.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_fonts/bold_font = ExtResource("3_7i00h")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]SPEND[/b]"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="interaction_fg/sleep_controller/trade_aspect_button3/button_fg"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 30.0
+offset_right = 346.0
+offset_bottom = 78.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_fonts/bold_font = ExtResource("3_7i00h")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]REDUCE[/b]"
+
+[node name="TextureRect2" type="TextureRect" parent="interaction_fg/sleep_controller/trade_aspect_button3/button_fg"]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 5.0
+offset_right = 1038.0
+offset_bottom = 1104.0
+scale = Vector2(0.0906166, 0.0906166)
+texture = ExtResource("7_8whly")
+
+[node name="trade_aspect_button4" type="ColorRect" parent="interaction_fg/sleep_controller"]
+layout_mode = 0
+offset_left = 774.0
+offset_top = 469.0
+offset_right = 1230.0
+offset_bottom = 595.0
+
+[node name="button_fg" type="ColorRect" parent="interaction_fg/sleep_controller/trade_aspect_button4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.921
+offset_left = 7.0
+offset_top = 5.0
+offset_right = -7.0
+offset_bottom = 4.95399
+grow_horizontal = 2
+color = Color(0.0156863, 0.0156863, 0.0156863, 1)
+
+[node name="TextureRect" type="TextureRect" parent="interaction_fg/sleep_controller/trade_aspect_button4/button_fg"]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 6.0
+offset_right = 1260.0
+offset_bottom = 1105.0
+scale = Vector2(0.0906166, 0.0906166)
+texture = ExtResource("6_ekpyw")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="interaction_fg/sleep_controller/trade_aspect_button4/button_fg"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 30.0
+offset_right = 120.0
+offset_bottom = 78.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_fonts/bold_font = ExtResource("3_7i00h")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]SPEND[/b]"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="interaction_fg/sleep_controller/trade_aspect_button4/button_fg"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 30.0
+offset_right = 346.0
+offset_bottom = 78.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_fonts/bold_font = ExtResource("3_7i00h")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]REDUCE[/b]"
+
+[node name="TextureRect2" type="TextureRect" parent="interaction_fg/sleep_controller/trade_aspect_button4/button_fg"]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 5.0
+offset_right = 1038.0
+offset_bottom = 1104.0
+scale = Vector2(0.0906166, 0.0906166)
+texture = ExtResource("7_8whly")
+
+[node name="dread_display2" type="Control" parent="interaction_fg/sleep_controller"]
+anchors_preset = 0
+offset_left = 649.0
+offset_top = 210.0
+offset_right = 749.0
+offset_bottom = 359.0
+
+[node name="dread_count_texture" type="TextureRect" parent="interaction_fg/sleep_controller/dread_display2"]
+modulate = Color(0.560784, 0.560784, 0.560784, 1)
+layout_mode = 1
+offset_right = 1015.0
+offset_bottom = 1218.0
+scale = Vector2(0.0906166, 0.0906166)
+texture = ExtResource("7_8whly")
+
+[node name="dread_label" type="RichTextLabel" parent="interaction_fg/sleep_controller/dread_display2"]
+layout_mode = 0
+offset_left = -84.0
+offset_top = 113.0
+offset_right = 180.0
+offset_bottom = 162.0
+theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_fonts/bold_font = ExtResource("3_7i00h")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[center][b]CONTENTMENT[/b][/center]"
+
+[node name="text_title3" type="RichTextLabel" parent="interaction_fg/sleep_controller/dread_display2"]
+z_index = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = 18.0
+offset_right = 80.0
+offset_bottom = 98.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_fonts/bold_font = ExtResource("3_7i00h")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 58
+bbcode_enabled = true
+text = "[center][b]3[/b][/center]"
+
+[node name="dread_display3" type="Control" parent="interaction_fg/sleep_controller"]
+anchors_preset = 0
+offset_left = 969.0
+offset_top = 210.0
+offset_right = 1069.0
+offset_bottom = 359.0
+
+[node name="dread_count_texture" type="TextureRect" parent="interaction_fg/sleep_controller/dread_display3"]
+modulate = Color(0.560784, 0.560784, 0.560784, 1)
+layout_mode = 1
+offset_right = 1015.0
+offset_bottom = 1218.0
+scale = Vector2(0.0906166, 0.0906166)
+texture = ExtResource("8_fbde0")
+
+[node name="dread_label" type="RichTextLabel" parent="interaction_fg/sleep_controller/dread_display3"]
+layout_mode = 0
+offset_left = -71.0
+offset_top = 110.0
+offset_right = 168.0
+offset_bottom = 159.0
+theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_fonts/bold_font = ExtResource("3_7i00h")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[center][b]FASCINATION[/b][/center]"
+
+[node name="text_title3" type="RichTextLabel" parent="interaction_fg/sleep_controller/dread_display3"]
+z_index = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = 18.0
+offset_right = 80.0
+offset_bottom = 98.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_fonts/bold_font = ExtResource("3_7i00h")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 58
+bbcode_enabled = true
+text = "[center][b]3[/b][/center]"
+
+[node name="dread_display4" type="Control" parent="interaction_fg/sleep_controller"]
+anchors_preset = 0
+offset_left = 330.0
+offset_top = 210.0
+offset_right = 430.0
+offset_bottom = 359.0
+
+[node name="dread_count_texture" type="TextureRect" parent="interaction_fg/sleep_controller/dread_display4"]
+modulate = Color(0.560784, 0.560784, 0.560784, 1)
+layout_mode = 1
+offset_right = 1015.0
+offset_bottom = 1218.0
+scale = Vector2(0.0906166, 0.0906166)
+texture = ExtResource("6_ekpyw")
+
+[node name="dread_label" type="RichTextLabel" parent="interaction_fg/sleep_controller/dread_display4"]
+layout_mode = 0
+offset_left = -35.0
+offset_top = 110.0
+offset_right = 131.0
+offset_bottom = 159.0
+theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_fonts/bold_font = ExtResource("3_7i00h")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[center][b]DREAD[/b][/center]"
+
+[node name="text_title3" type="RichTextLabel" parent="interaction_fg/sleep_controller/dread_display4"]
+z_index = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = 18.0
+offset_right = 80.0
+offset_bottom = 98.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_fonts/bold_font = ExtResource("3_7i00h")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 58
+bbcode_enabled = true
+text = "[center][b]3[/b][/center]"
+
+[node name="portrait_controller" type="Control" parent="interaction_fg"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="portrait_0" type="Control" parent="interaction_fg/portrait_controller"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="img" type="TextureRect" parent="interaction_fg/portrait_controller/portrait_0"]
+layout_mode = 0
+offset_left = 1074.0
+offset_top = 171.0
+offset_right = 1674.0
+offset_bottom = 771.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_wlmc1")
+expand_mode = 1
+
+[node name="text_bg" type="ColorRect" parent="interaction_fg/portrait_controller/portrait_0"]
+layout_mode = 0
+offset_left = 1074.0
+offset_top = 411.0
+offset_right = 1314.0
+offset_bottom = 447.0
+
+[node name="label" type="RichTextLabel" parent="interaction_fg/portrait_controller/portrait_0/text_bg"]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 37.0
+bbcode_enabled = true
+text = "[center]Gristwood[/center]"
+
+[node name="portrait_1" type="Control" parent="interaction_fg/portrait_controller"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="img" type="TextureRect" parent="interaction_fg/portrait_controller/portrait_1"]
+layout_mode = 0
+offset_left = 1074.0
+offset_top = 490.0
+offset_right = 1674.0
+offset_bottom = 1090.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("10_r4k6x")
+expand_mode = 1
+
+[node name="text_bg" type="ColorRect" parent="interaction_fg/portrait_controller/portrait_1"]
+layout_mode = 0
+offset_left = 1074.0
+offset_top = 730.0
+offset_right = 1314.0
+offset_bottom = 766.0
+
+[node name="label" type="RichTextLabel" parent="interaction_fg/portrait_controller/portrait_1/text_bg"]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 37.0
+bbcode_enabled = true
+text = "[center]Lady Piper
+[/center]"
+
+[node name="options_organizer" type="Control" parent="interaction_fg"]
+visible = false
+anchors_preset = 0
+offset_left = 108.0
+offset_top = 549.0
+offset_right = 902.0
+offset_bottom = 902.0
+
+[node name="options_content" type="RichTextLabel" parent="interaction_fg/options_organizer"]
+visible = false
+layout_mode = 0
+offset_top = 43.0
+offset_right = 853.0
+offset_bottom = 198.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+bbcode_enabled = true
+text = "I am a whole bunch of options"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="interaction_fg/options_organizer"]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = 78.0
+offset_right = 2.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="options_container" type="VBoxContainer" parent="interaction_fg/options_organizer/ScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/separation = 30
+
+[node name="option_bg" parent="interaction_fg/options_organizer/ScrollContainer/options_container" instance=ExtResource("11_gfm26")]
+layout_mode = 2
+
+[node name="side_panel" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1454.0
+offset_top = 33.0
+offset_right = -36.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00392157, 0.184314, 0.294118, 1)
+
+[node name="text_title" type="RichTextLabel" parent="side_panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -193.0
+offset_top = 129.0
+offset_right = 193.0
+offset_bottom = 241.0
+grow_horizontal = 2
+theme = ExtResource("12_q66dr")
+theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
+theme_override_fonts/bold_font = ExtResource("3_7i00h")
+theme_override_fonts/italics_font = ExtResource("4_rhath")
+theme_override_fonts/bold_italics_font = ExtResource("5_8rkhj")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/bold_italics_font_size = 40
+bbcode_enabled = true
+text = "[b]Speech[/b]"
+
+[node name="ColorRect" type="ColorRect" parent="side_panel/text_title"]
+layout_mode = 0
+offset_top = 43.0
+offset_right = 370.0
+offset_bottom = 44.0
+
+[node name="memory_panel" type="ColorRect" parent="side_panel"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 25.0
+offset_top = 210.0
+offset_right = -17.0
+offset_bottom = 633.0
+grow_horizontal = 2
+color = Color(0.792157, 0.898039, 0.984314, 0)
+script = ExtResource("13_20ns6")
+
+[node name="card_organizer" type="Control" parent="side_panel/memory_panel"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -8.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="aspects_title" type="RichTextLabel" parent="side_panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -190.0
+offset_top = 628.0
+offset_right = 177.0
+offset_bottom = 685.0
+grow_horizontal = 2
+theme = ExtResource("12_q66dr")
+theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
+theme_override_fonts/bold_font = ExtResource("3_7i00h")
+theme_override_fonts/italics_font = ExtResource("4_rhath")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+bbcode_enabled = true
+text = "[b]Aspects[/b]"
+
+[node name="ColorRect2" type="ColorRect" parent="side_panel/aspects_title"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 41.0
+offset_right = 371.0
+offset_bottom = 42.0
+
+[node name="aspects_panel" type="ColorRect" parent="side_panel"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = 702.0
+offset_right = -20.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.792157, 0.898039, 0.984314, 0)
+script = ExtResource("14_ponwi")
+
+[node name="aspect_grid" type="GridContainer" parent="side_panel/aspects_panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 371.0
+offset_bottom = 129.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.502, 0.5)
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 40
+columns = 4
+
+[node name="aspect_item_1" parent="side_panel/aspects_panel/aspect_grid" instance=ExtResource("15_jqylm")]
+layout_mode = 2
+
+[node name="aspect_item_2" type="HBoxContainer" parent="side_panel/aspects_panel/aspect_grid"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_2"]
+layout_mode = 2
+texture = ExtResource("16_w4ldt")
+
+[node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_2"]
+custom_minimum_size = Vector2(70, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_rwdmj")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_font_sizes/normal_font_size = 70
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
+bbcode_enabled = true
+text = "16"
+
+[node name="aspect_item_3" type="HBoxContainer" parent="side_panel/aspects_panel/aspect_grid"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_3"]
+layout_mode = 2
+texture = ExtResource("16_w4ldt")
+
+[node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_3"]
+custom_minimum_size = Vector2(70, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_rwdmj")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_font_sizes/normal_font_size = 70
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
+bbcode_enabled = true
+text = "16"
+
+[node name="aspect_item_4" type="HBoxContainer" parent="side_panel/aspects_panel/aspect_grid"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_4"]
+layout_mode = 2
+texture = ExtResource("16_w4ldt")
+
+[node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_4"]
+custom_minimum_size = Vector2(70, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_rwdmj")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_font_sizes/normal_font_size = 70
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
+bbcode_enabled = true
+text = "16"
+
+[node name="aspect_item_5" type="HBoxContainer" parent="side_panel/aspects_panel/aspect_grid"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_5"]
+layout_mode = 2
+texture = ExtResource("16_w4ldt")
+
+[node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_5"]
+custom_minimum_size = Vector2(70, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_rwdmj")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_font_sizes/normal_font_size = 70
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
+bbcode_enabled = true
+text = "16"
+
+[node name="aspect_item_9" type="HBoxContainer" parent="side_panel/aspects_panel/aspect_grid"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_9"]
+layout_mode = 2
+texture = ExtResource("16_w4ldt")
+
+[node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_9"]
+custom_minimum_size = Vector2(70, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_rwdmj")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_font_sizes/normal_font_size = 70
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
+bbcode_enabled = true
+text = "16"
+
+[node name="aspect_item_6" type="HBoxContainer" parent="side_panel/aspects_panel/aspect_grid"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_6"]
+layout_mode = 2
+texture = ExtResource("16_w4ldt")
+
+[node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_6"]
+custom_minimum_size = Vector2(70, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_rwdmj")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_font_sizes/normal_font_size = 70
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
+bbcode_enabled = true
+text = "16"
+
+[node name="aspect_item_10" type="HBoxContainer" parent="side_panel/aspects_panel/aspect_grid"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_10"]
+layout_mode = 2
+texture = ExtResource("16_w4ldt")
+
+[node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_10"]
+custom_minimum_size = Vector2(70, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_rwdmj")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_font_sizes/normal_font_size = 70
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
+bbcode_enabled = true
+text = "16"
+
+[node name="aspect_item_7" type="HBoxContainer" parent="side_panel/aspects_panel/aspect_grid"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_7"]
+layout_mode = 2
+texture = ExtResource("17_egayn")
+
+[node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_7"]
+custom_minimum_size = Vector2(70, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_rwdmj")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_font_sizes/normal_font_size = 70
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
+bbcode_enabled = true
+text = "16"
+
+[node name="aspect_item_11" type="HBoxContainer" parent="side_panel/aspects_panel/aspect_grid"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_11"]
+layout_mode = 2
+texture = ExtResource("17_egayn")
+
+[node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_11"]
+custom_minimum_size = Vector2(70, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_rwdmj")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_font_sizes/normal_font_size = 70
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
+bbcode_enabled = true
+text = "16"
+
+[node name="aspect_item_8" type="HBoxContainer" parent="side_panel/aspects_panel/aspect_grid"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_8"]
+layout_mode = 2
+texture = ExtResource("18_ds682")
+stretch_mode = 6
+
+[node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_8"]
+custom_minimum_size = Vector2(70, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_rwdmj")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_font_sizes/normal_font_size = 70
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
+bbcode_enabled = true
+text = "16"
+
+[node name="aspect_item_12" type="HBoxContainer" parent="side_panel/aspects_panel/aspect_grid"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="side_panel/aspects_panel/aspect_grid/aspect_item_12"]
+layout_mode = 2
+texture = ExtResource("18_ds682")
+stretch_mode = 6
+
+[node name="principle_box2" type="RichTextLabel" parent="side_panel/aspects_panel/aspect_grid/aspect_item_12"]
+custom_minimum_size = Vector2(70, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_rwdmj")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_4bbqn")
+theme_override_font_sizes/normal_font_size = 70
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
+bbcode_enabled = true
+text = "16"
+
+[node name="rememberlink" type="RichTextLabel" parent="side_panel"]
+modulate = Color(0.0313726, 0.47451, 0.717647, 0.760784)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -191.0
+offset_top = 12.0
+offset_right = 176.0
+offset_bottom = 69.0
+grow_horizontal = 2
+theme = ExtResource("12_q66dr")
+theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
+theme_override_fonts/bold_font = ExtResource("3_7i00h")
+theme_override_fonts/italics_font = ExtResource("4_rhath")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+bbcode_enabled = true
+text = "[i]Remember?[/i]"
+
+[node name="Button" parent="." instance=ExtResource("19_7nih1")]
+layout_mode = 0
+offset_left = 1800.0
+offset_top = 42.0
+offset_right = 1908.0
+offset_bottom = 150.0
+
+[connection signal="meta_hover_ended" from="interaction_fg/sleep_controller/text_title" to="." method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="interaction_fg/sleep_controller/text_title" to="." method="_on_text_content_meta_hover_started"]
+[connection signal="meta_clicked" from="interaction_fg/sleep_controller/text_content" to="." method="_on_text_content_meta_clicked"]
+[connection signal="meta_hover_ended" from="interaction_fg/sleep_controller/text_content" to="." method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="interaction_fg/sleep_controller/text_content" to="." method="_on_text_content_meta_hover_started"]
+[connection signal="meta_hover_ended" from="interaction_fg/sleep_controller/dread_display2/dread_label" to="." method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="interaction_fg/sleep_controller/dread_display2/dread_label" to="." method="_on_text_content_meta_hover_started"]
+[connection signal="meta_hover_ended" from="interaction_fg/sleep_controller/dread_display2/text_title3" to="." method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="interaction_fg/sleep_controller/dread_display2/text_title3" to="." method="_on_text_content_meta_hover_started"]
+[connection signal="meta_hover_ended" from="interaction_fg/sleep_controller/dread_display3/dread_label" to="." method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="interaction_fg/sleep_controller/dread_display3/dread_label" to="." method="_on_text_content_meta_hover_started"]
+[connection signal="meta_hover_ended" from="interaction_fg/sleep_controller/dread_display3/text_title3" to="." method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="interaction_fg/sleep_controller/dread_display3/text_title3" to="." method="_on_text_content_meta_hover_started"]
+[connection signal="meta_hover_ended" from="interaction_fg/sleep_controller/dread_display4/dread_label" to="." method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="interaction_fg/sleep_controller/dread_display4/dread_label" to="." method="_on_text_content_meta_hover_started"]
+[connection signal="meta_hover_ended" from="interaction_fg/sleep_controller/dread_display4/text_title3" to="." method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="interaction_fg/sleep_controller/dread_display4/text_title3" to="." method="_on_text_content_meta_hover_started"]
+[connection signal="meta_clicked" from="interaction_fg/options_organizer/options_content" to="." method="_on_options_content_meta_clicked"]
+[connection signal="meta_hover_ended" from="side_panel/text_title" to="." method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="side_panel/text_title" to="." method="_on_text_content_meta_hover_started"]
+[connection signal="meta_hover_ended" from="side_panel/aspects_title" to="." method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="side_panel/aspects_title" to="." method="_on_text_content_meta_hover_started"]
+[connection signal="meta_hover_ended" from="side_panel/rememberlink" to="." method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="side_panel/rememberlink" to="." method="_on_text_content_meta_hover_started"]
