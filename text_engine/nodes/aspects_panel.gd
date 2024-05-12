@@ -2,7 +2,7 @@ extends ColorRect
 class_name AspectPanel
 
 var state_machine: StateMachine2 = StateMachine2.new()
-var aspect_dict = {"curious": 2, "compassionate": 2, "pragmatic": 2}
+var aspect_dict = {}
 
 func _init():
 	#Add various states to the state_machine here"))
