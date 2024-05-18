@@ -601,6 +601,9 @@ offset_top = 42.0
 offset_right = 1908.0
 offset_bottom = 150.0
 
+[connection signal="meta_clicked" from="interaction_fg/text_content" to="." method="_on_text_content_meta_clicked"]
+[connection signal="meta_hover_ended" from="interaction_fg/text_content" to="." method="_on_text_content_meta_hover_ended"]
+[connection signal="meta_hover_started" from="interaction_fg/text_content" to="." method="_on_text_content_meta_hover_started"]
 [connection signal="meta_hover_ended" from="side_panel/text_title" to="." method="_on_text_content_meta_hover_ended"]
 [connection signal="meta_hover_started" from="side_panel/text_title" to="." method="_on_text_content_meta_hover_started"]
 [connection signal="meta_hover_ended" from="side_panel/aspects_title" to="." method="_on_text_content_meta_hover_ended"]
