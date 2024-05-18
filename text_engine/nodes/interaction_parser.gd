@@ -108,6 +108,7 @@ func remove_highlight_from_word(word):
 
 func _on_text_content_meta_hover_started(meta): #Aka when the user hovers over a URL
 	#Display popup at mouse location
+	print("HOVERING")
 	highlight_word_from_content(meta)
 
 
@@ -127,7 +128,7 @@ func _on_text_content_meta_clicked(meta):
 	#Save the first thing clicked to memory. Perhaps a variable called "first_selected"
 	#Still determining whether or not this is the place to save the variable, as words can exist in inventory outside of it.
 	#Update the effect on the text to indicate it has beeen selected
-	
+	print("Clicked fired")
 	
 	var is_wound = false
 	if selected_word == null and selected_memory == null:
@@ -137,6 +138,7 @@ func _on_text_content_meta_clicked(meta):
 		if active_interaction.wounds.size() > 0:
 			var all_wounds = active_interaction.wounds.keys()
 			for wound in all_wounds:
+				print("Checking wounds from interaction parser")
 				if active_interaction.wounds[wound].word_id == meta:
 					is_wound = true
 					break

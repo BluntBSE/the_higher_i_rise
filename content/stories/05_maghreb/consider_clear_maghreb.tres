@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://br3t1uhgri5h5"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_doumr"]
+
+[resource]
+script = ExtResource("1_doumr")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "The Dunes"
+text = "Light exists for a reason: it permits sight and shows us the hidden things. For this reason the Watchman carries his lantern.
+
+Light is not, however, a goal unto itself, and to be blinded by radiance is as useless to the adept as stumbling in the dark.
+
+Clarity is what matters in the end.
+
+Is this the gift you take from this place? "
+slots = {}
+options = [{
+"links_to": "maghreb_3",
+"text": "Reconsider"
+}, {
+"links_to": "maghreb_4",
+"text": "Yes, continue"
+}]
+wounds = {}
+portraits = []

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b6fr4ui66lec3"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_0qvg7"]
+
+[resource]
+script = ExtResource("1_0qvg7")
+id = "verb_glow"
+text = "glow"
+bbcode = ""
+part_speech = "verb"
+description = "\"How metal yearns for change\""
+aspects = []
+principles = {
+"forge": 1,
+"lantern": 1
+}
+indef_article = "a"
+def_article = "the"
+plural = false

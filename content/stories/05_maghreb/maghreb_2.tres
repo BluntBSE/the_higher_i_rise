@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://qx6k0runj0t1"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_noeiq"]
+
+[resource]
+script = ExtResource("1_noeiq")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "The Dunes"
+text = "To find your quarry, you will follow the Watchman.
+
+To follow the Watchman, you will not be merciful.
+
+This is because mercy is found only in shadow.
+
+You will illuminate the Way, but you will not forget:
+
+What is without, within. What is within, without.
+
+"
+slots = {}
+options = [{
+"links_to": "maghreb_3",
+"text": "There will be more than one Way"
+}]
+wounds = {}
+portraits = []
