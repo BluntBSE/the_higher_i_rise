@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://btlhms2itprnp"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_ym61k"]
+
+[resource]
+script = ExtResource("1_ym61k")
+id = "noun_shadows"
+text = "shadows"
+bbcode = ""
+part_speech = "noun"
+description = "\"The only place where mercy is found.\""
+aspects = ["plural"]
+principles = {
+"heart": 1,
+"moth": 2
+}
+indef_article = "some"
+def_article = "the"
+plural = true

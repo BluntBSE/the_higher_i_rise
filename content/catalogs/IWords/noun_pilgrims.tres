@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://p41dms48itng"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_j77f2"]
+
+[resource]
+script = ExtResource("1_j77f2")
+id = "noun_pilgrims"
+text = "pilgrims"
+bbcode = ""
+part_speech = "noun"
+description = "\"The higher they rise, the more they see.\""
+aspects = ["plural"]
+principles = {
+"heart": 1,
+"lantern": 2,
+"moth": 1
+}
+indef_article = "some"
+def_article = "the"
+plural = false

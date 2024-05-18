@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bt35hve52ea8a"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_mys22"]
+
+[resource]
+script = ExtResource("1_mys22")
+id = "noun_stones"
+text = "stones"
+bbcode = ""
+part_speech = "noun"
+description = "\"The children of earthquakes.\""
+aspects = ["plural"]
+principles = {
+"grail": 1,
+"heart": 2
+}
+indef_article = "some"
+def_article = "the"
+plural = false

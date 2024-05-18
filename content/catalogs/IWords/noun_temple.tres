@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bm63wycvn5xy8"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_sjsul"]
+
+[resource]
+script = ExtResource("1_sjsul")
+id = "noun_temple"
+text = "temple"
+bbcode = ""
+part_speech = "noun"
+description = "\"Where the world is abandoned, or kept at bay.\""
+aspects = ["building"]
+principles = {
+"heart": 1,
+"lantern": 2
+}
+indef_article = "a"
+def_article = "the"
+plural = false

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dpf2fbdiovjdr"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_qivdo"]
+
+[resource]
+script = ExtResource("1_qivdo")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "Approaching the Summit"
+text = "You climb and you climb. 
+
+Somewhere in these mountains lives the hermit Foucauld, who gave up his military career to live among the Tuaregs. You've never met the man, but you understand why he chose this place. 
+
+Here the sun is almost the color of Glory, and when it sets, the night sky watches you through a million glittering <wound_1/>.
+
+This stretch is dotted with hidden springs that shimmer in the punishing <wound_3/>."
+slots = {}
+options = []
+wounds = {
+"wound_1": {
+"word_id": "noun_eyes",
+"wound_link": "maghreb_6"
+},
+"wound_3": {
+"word_id": "noun_light",
+"wound_link": "maghreb_6"
+}
+}
+portraits = []

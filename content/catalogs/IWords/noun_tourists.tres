@@ -9,7 +9,7 @@ text = "tourists"
 bbcode = ""
 part_speech = "noun"
 description = "\"Not unlike a flock of birds.\""
-aspects = ["plural", "tool"]
+aspects = ["plural"]
 principles = {
 "history": 1
 }

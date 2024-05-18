@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://c2r83icehvqsi"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_cag3n"]
+
+[resource]
+script = ExtResource("1_cag3n")
+id = "adj_heavy"
+text = "heavy"
+bbcode = ""
+part_speech = "adjective"
+description = "\"Like a lead ball or a wrong word.\""
+aspects = []
+principles = {
+"forge": 2
+}
+indef_article = ""
+def_article = ""
+plural = false

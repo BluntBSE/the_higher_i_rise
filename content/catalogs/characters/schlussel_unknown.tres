@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://crckvj0w4bwf1"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/character.gd" id="1_uvwan"]
+
+[resource]
+script = ExtResource("1_uvwan")
+portrait = "res://content/images/aspects/AI_schlussel_snake.jpg"
+display_name = "???"

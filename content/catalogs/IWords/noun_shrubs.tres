@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bmyl6qir1raiy"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_ycr35"]
+
+[resource]
+script = ExtResource("1_ycr35")
+id = "noun_shrubs"
+text = "shrubs"
+bbcode = ""
+part_speech = "noun"
+description = "\"Nature abhors a vacuum. Here is her solution.\""
+aspects = ["plural", "plant"]
+principles = {
+"grail": 1,
+"heart": 2
+}
+indef_article = "some"
+def_article = "the"
+plural = false

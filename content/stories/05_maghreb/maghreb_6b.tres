@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://by5oir6u0adfd"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_fpjgs"]
+
+[resource]
+script = ExtResource("1_fpjgs")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "Focusing"
+text = "You focus your senses here, at this ceiling of the world, where the sun banishes all shadow..."
+slots = {}
+options = [{
+"links_to": "maghreb_6b1",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

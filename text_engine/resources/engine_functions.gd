@@ -13,6 +13,15 @@ func remove_memory(word_id:String):
 	memory_panel.state_machine.Change("refresh", null)
 	return null
 	
+func set_speech(word_array:Array):
+	print("Setting speech", word_array)
+	var current_parent = get_parent()
+	var memory_panel = current_parent.get_node("side_panel/memory_panel")
+	memory_panel.mem_array = []
+	memory_panel.mem_array = word_array.duplicate() #Assignemtn by memory thing here.
+	memory_panel.state_machine.Change("refresh", null)
+		
+	
 func update_aspects(update_dict:Dictionary):
 	#var current_tree = get_tree()
 	print("UPDATE ASPECTS RUNNING")

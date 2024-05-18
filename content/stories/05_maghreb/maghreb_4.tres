@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://r0j1pnspctwd"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_j0i0r"]
+
+[resource]
+script = ExtResource("1_j0i0r")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "To Assekrem"
+text = "You approach the Hoggar mountains, which rise not like the gentle pyramids of the Appalachians, but in massive columns like the pillars of a <wound_1/> or the bars of a <wound_2/>
+
+Jagged-looking <slot_1/> burst from the feet of these pillars while <slot_2/> weave through the valleys in silence."
+slots = {
+"slot_1": "noun_shrubs",
+"slot_2": "noun_pilgrims"
+}
+options = [{
+"conditions_word": {
+"slot_1": {
+"specific_id": "noun_stones"
+},
+"slot_2": {
+"specific_id": "noun_vultures"
+}
+},
+"hint": "Closer...",
+"hint_tooltip": "This land is too merciful to its inhabitants",
+"links_to": "maghreb_4a",
+"text": "Closer, still"
+}]
+wounds = {
+"wound_1": {
+"word_id": "noun_temple",
+"wound_link": "consider_temple_maghreb"
+},
+"wound_2": {
+"word_id": "noun_jail",
+"wound_link": "consider_jail_maghreb"
+}
+}
+portraits = []

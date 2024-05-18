@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cp277517qd3ja"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_8qj7l"]
+
+[resource]
+script = ExtResource("1_8qj7l")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "The Shadowless Circle"
+text = "[FRAU SCHLÜSSEL]: THIS IS HIS ADDRESS? THANK YOU. I HAVE FEW SENTIMENTALITIES. THE DOG IS ONE OF THEM. I WILL DEVOUR THIS MAN IN HIS OWN BED.
+
+[FRAU SCHLÜSSEL]: NOW. I CANNOT IMAGINE YOU HAVE COME HERE FROM THE GOODNESS OF YOUR OWN HEART. YOU GAVE YOURS UP, AFTER ALL.
+
+[FRAU SCHLÜSSEL]: WHAT DO YOU WANT FROM ME?
+
+[YOU]: I want to interact with the mortal world again. Unless I am summoned, the laws of the Mansus bind me...
+
+[FRAU SCHLÜSSEL]: AND SO YOU SEEK AN ALUKITE."
+slots = {}
+options = [{
+"links_to": "alukites",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["schlussel_snake"]

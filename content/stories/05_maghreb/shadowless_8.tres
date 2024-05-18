@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://drkru3depwii5"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_emq12"]
+
+[resource]
+script = ExtResource("1_emq12")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "A Serpent's Lessons"
+text = "[FRAU SCHLÜSSEL]: I CANNOT RETURN YOUR BODY. BUT I CAN TEACH YOU THE ART OF SCRINING.
+
+[FRAU SCHLÜSSEL]: WHAT IS WITHIN, WITHOUT. ALWAYS. AND SO WHEN A MORTAL PUTS THEIR REFLECTION IN A MIRROR, THERE IS AN OPPORTUNITY FOR YOU TO ENTER.
+
+[FRAU SCHLÜSSEL]: COME. FACE THIS MIRROR. LET ME SHOW YOU...
+
+
+[font_size=50]END OF DEMO[/font_size]"
+slots = {}
+options = [{
+"links_to": "shadowless_8",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["schlussel_snake"]

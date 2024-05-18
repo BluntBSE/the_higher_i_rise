@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cva0t6ojbrek5"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_05wqs"]
+
+[resource]
+script = ExtResource("1_05wqs")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "The Shadowless Circle"
+text = "Like most powerful men, he stopped paying attention to the woman working for him. One day, when you had finished whatever murder (or robbery, or deception) he had arranged for you, he simply forgot to dismiss you back to the Mansus.
+
+You began your journey to Algeria that day.
+"
+slots = {}
+options = [{
+"links_to": "shadowless_7",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["schlussel_snake"]

@@ -100,9 +100,10 @@ static func applyWound(wound: IWord):
 	var new_word = IWord.new()
 	new_word = wound #New instance allows us to pass it to the apply styling function with no issues. I hope.
 	var text = ""
-	text += "[shake rate=40.0 level=30 connected=1]"
+
+	text += TextEffects.wound.open
 	text += wound.text
-	text += "[/shake]"
+	text += TextEffects.wound.close
 	new_word.text = text
 	return new_word
 		
@@ -162,6 +163,7 @@ static func parseText(input_string: String, interaction: Interaction):
 				return "WORD NOT FOUND"
 			var word_str = applyStyling(word)
 			#Here is where we would add anything to modify it to be a sentence, such as capitalization.
+			print("SEEKING", "<", slot, "/ia>")
 			if text.contains("<" + slot + "/ia>"):
 				var ia_replace = "<" + slot + "/ia>"
 				print(ia_replace)

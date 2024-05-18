@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cpxtqannt3vxq"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_kvxds"]
+
+[resource]
+script = ExtResource("1_kvxds")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "The Shadowless Circle"
+text = "[???]: YOU ARE EXTREMELY PERSISTENT. I AM MEDITATING. TELL ME WHY I SHOULD NOT BANISH YOU AT ONCE.
+
+[YOU]: Someone in Vienna wants to kidnap your dog!
+
+[???]: ..."
+slots = {}
+options = [{
+"links_to": "shadowless_4",
+"text": "..."
+}]
+wounds = {}
+portraits = ["schlussel_unknown"]

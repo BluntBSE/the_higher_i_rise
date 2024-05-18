@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dfgnujwmlf5ir"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_cj5df"]
+
+[resource]
+script = ExtResource("1_cj5df")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "The Shadowless Circle"
+text = "In this history, the summit is surrounded by a perfect circle of enormous mirrors that seem to channel and multiply the light of the sun, focusing it into a single point in the center. If you still had a body you would be blinded immediately, or perhaps even cooked to death, but in your incorporeal form you can appreciate the purity of this place.
+
+There are no embellishments. The floor has been leveled and polished so as to be devoid of shadow. There is only the sky, the sun, and this intensity of radiance.
+
+There is also the serpent.
+"
+slots = {}
+options = [{
+"links_to": "shadowless_2",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

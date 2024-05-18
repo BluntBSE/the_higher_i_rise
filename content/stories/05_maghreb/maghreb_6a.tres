@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://coj3woxlxn1f5"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_tpfj4"]
+
+[resource]
+script = ExtResource("1_tpfj4")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "Behind the Watchman"
+text = "The sun shines terribly overhead.
+
+The pillars of the Hoggar mountains are filled with sharp <slot_1/>.
+
+You are so close to Him here.
+
+You can almost see..."
+slots = {
+"slot_1": "noun_shadows"
+}
+options = [{
+"conditions_word": {
+"slot_1": {
+"specific_id": "noun_light"
+}
+},
+"hint": "So close...",
+"hint_tooltip": "",
+"links_to": "shadowless_1",
+"text": "There is another history here"
+}, {
+"links_to": "home_2",
+"text": "[DEBUG]: Start over"
+}]
+wounds = {}
+portraits = []

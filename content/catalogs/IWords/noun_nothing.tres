@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ced2qvby7i0uu"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_nu8od"]
+
+[resource]
+script = ExtResource("1_nu8od")
+id = "noun_nothing"
+text = "nothing"
+bbcode = ""
+part_speech = "noun"
+description = "\"...\""
+aspects = []
+principles = {
+"heart": 1,
+"lantern": 2
+}
+indef_article = ""
+def_article = ""
+plural = false

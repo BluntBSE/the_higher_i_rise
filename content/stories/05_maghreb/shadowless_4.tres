@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://xbrrgpseg02u"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_kereh"]
+
+[resource]
+script = ExtResource("1_kereh")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "The Shadowless Circle"
+text = "A sentence like that sounds like sacrilege in a place like this. But if this serpent is who you think it is, it's the truth, and it might just save you.
+
+After several long and uncomfortable moments, you are still neither banished nor eaten. You made the right call.
+
+[FRAU SCHLÜSSEL]: A SERIOUS ACCUSATION. DO YOU HAVE PROOF OF YOUR CLAIMS?"
+slots = {}
+options = [{
+"links_to": "shadowless_5",
+"text": "You do"
+}]
+wounds = {}
+portraits = ["schlussel_snake"]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Aspect" load_steps=2 format=3 uid="uid://bhx36clvsgjnx"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_5w353"]
+
+[resource]
+script = ExtResource("1_5w353")
+aspect_id = "illuminator"
+icon = "res://content/images/aspects/fascination.png"
+display_name = "Illuminator"
+tooltip = "Illuminator"

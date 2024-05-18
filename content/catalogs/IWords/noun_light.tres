@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://c63quhbnrjhxd"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_cj808"]
+
+[resource]
+script = ExtResource("1_cj808")
+id = "noun_light"
+text = "light"
+bbcode = ""
+part_speech = "noun"
+description = "\"Light dews the skin and suffuses the air.\""
+aspects = ["bright"]
+principles = {
+"lantern": 2
+}
+indef_article = ""
+def_article = ""
+plural = false

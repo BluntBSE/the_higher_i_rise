@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://d3u2281vk2g6g"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_n3ruk"]
+
+[resource]
+script = ExtResource("1_n3ruk")
+id = "verb_burns"
+text = "burns"
+bbcode = ""
+part_speech = "verb"
+description = "\"Some things change so fiercely they demand the world change with them.\""
+aspects = []
+principles = {
+"lantern": 2
+}
+indef_article = "a"
+def_article = "the"
+plural = false

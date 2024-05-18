@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://djacrnm1ruxo5"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_jye8c"]
+
+[resource]
+script = ExtResource("1_jye8c")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "Clarity"
+text = "People have always built temples. It is in our nature to rise, like embers, or moths to a great light.
+
+Is this the gift you take from this place? "
+slots = {}
+options = [{
+"functions": [["remove_memory", ["noun_temple"]]],
+"links_to": "maghreb_4",
+"text": "Reconsider"
+}, {
+"links_to": "maghreb_5",
+"text": "Yes, continue"
+}]
+wounds = {}
+portraits = []
