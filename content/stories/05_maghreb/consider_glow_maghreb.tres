@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://mc8mda0hfqeb"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_np2kh"]
+
+[resource]
+script = ExtResource("1_np2kh")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "The Dunes"
+text = "Even the faintest radiance is holy. When a thing glows, it provides light so that others may pass behind. 
+
+Is this the gift you will take from this place?"
+slots = {}
+options = [{
+"links_to": "maghreb_3",
+"text": "Reconsider"
+}, {
+"links_to": "maghreb_4",
+"text": "Yes, continue"
+}]
+wounds = {}
+portraits = []

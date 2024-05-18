@@ -22,7 +22,7 @@ Your patient looks anxiously towards the corner of his room. He still looks out-
 slots = {}
 options = [{
 "links_to": "mgh_9",
-"text": "Ask him about what happened"
+"text": "Change his dressings"
 }]
 wounds = {}
 portraits = ["gabe"]

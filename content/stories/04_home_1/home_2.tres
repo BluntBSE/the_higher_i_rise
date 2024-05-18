@@ -13,7 +13,7 @@ Soon, you begin to dream...
 [font_size=50] END OF DEMO [/font_size]"
 slots = {}
 options = [{
-"links_to": "home_2",
+"links_to": "maghreb_1",
 "text": "Sleep"
 }]
 wounds = {}

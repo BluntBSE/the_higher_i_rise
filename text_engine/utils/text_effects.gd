@@ -17,7 +17,7 @@ static var hover = {
 }
 
 static var wound = {
-	"open": "[shake rate=20.0 level=5 connected=1]{text}[/shake]",
+	"open": "[shake rate=8.0 level=3 connected=1]{text}[/shake]",
 	"close": "[/shake]"
 } 
 

@@ -2,7 +2,7 @@ extends ColorRect
 class_name MemoryPanel
 
 var state_machine: StateMachine2 = StateMachine2.new()
-var mem_array = []#Array of strings containing word ids, like "noun_wound"
+var mem_array = ["noun_revelation"]#Array of strings containing word ids, like "noun_wound"
 
 func _init():
 	#Add various states to the state_machine here"))

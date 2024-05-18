@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cwfvosvxewat4"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_fynoj"]
+
+[resource]
+script = ExtResource("1_fynoj")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "Onwards"
+text = "You descend into the dunes of the Maghreb. Today the sun BURNS through the <wound_1/> sky. The dunes themselves seem to <wound_2/> in the heat. 
+
+In the distance,  you see a PARCHED oasis surrounded by DYING trees."
+slots = {}
+options = [{
+"links_to": "maghreb_1",
+"text": "Sleep"
+}]
+wounds = {
+"wound_1": {
+"word_id": "adj_clear",
+"wound_link": "consider_clear_maghreb"
+},
+"wound_2": {
+"word_id": "verb_glow",
+"wound_link": "consider_glow_maghreb"
+}
+}
+portraits = []

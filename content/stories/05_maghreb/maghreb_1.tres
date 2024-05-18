@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://h1niaxrdfo3o"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_2eofn"]
+
+[resource]
+script = ExtResource("1_2eofn")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "The Dunes"
+text = "When you arrive, you find yourself at the top of an enormous dune of sand on a hot day. The breeze stirs, and grains of sand float through you. You're not here, not really, but you might be present enough to get some answers. 
+
+Frau Schlüssel. you've heard, has left her apartments in Vienna to \"summer in the Maghreb.\" Most people imagine she's joking, but if you want to be close to the Glory, the Maghreb isn't a bad place to be."
+slots = {}
+options = [{
+"links_to": "maghreb_2",
+"text": "Search for Frau Schlüssel"
+}]
+wounds = {}
+portraits = []

@@ -38,6 +38,7 @@ func determine_wound_number(word_id:String, wound_dict:Dictionary):
 	
 
 func stateEnter(args):
+	print("ENTERED HANDLE WOUND")
 	_args = args
 	memory_panel = _reference.get_node("side_panel/memory_panel")
 	a = 1.0
@@ -72,6 +73,7 @@ func stateUpdate(_dt):
 	#If text is done updating, we should do state_machine.Change("finished")
 	var wound_slot = determine_wound_number(_args, _reference.active_interaction.wounds)
 	var next_interaction_id = _reference.active_interaction.wounds[wound_slot].wound_link
+	print(next_interaction_id)
 	var next_interaction = TextTools.getInteractionResource(next_interaction_id)
 	if _reference.active_interaction.wounds[wound_slot].has("functions"):
 		var funcs_to_execute = _reference.active_interaction.wounds[wound_slot].functions

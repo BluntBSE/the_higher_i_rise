@@ -205,7 +205,7 @@ static func parseOptions(_reference, interaction: Interaction):
 		
 		if option.has("requires_unvisited"):
 			if option.has("unvisited_link"):
-				var unvisited_interaction = option.unvisited_link
+				var _unvisited_interaction = option.unvisited_link
 				if glory.the_history.has(option.unvisited_link):
 					continue 
 			if option.has("unvisited_links"):
