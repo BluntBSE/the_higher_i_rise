@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b1nmvdcqqk1ve"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_wla6b"]
+
+[resource]
+script = ExtResource("1_wla6b")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "At the Summit"
+text = "And with <slot_1/> <slot_2/>, see there is <slot_3/ia> <slot_3/> here."
+slots = {
+"slot_1": "adj_heavy",
+"slot_2": "noun_heart",
+"slot_3": "noun_nothing"
+}
+options = [{
+"conditions_word": {
+"slot_1": {
+"specific_id": "adj_clear"
+},
+"slot_2": {
+"specific_id": "noun_eyes"
+},
+"slot_3": {
+"specific_id": "noun_temple"
+}
+},
+"hint": "Not yet...",
+"hint_tooltip": "If you see clearly enough, you may discover something here",
+"links_to": "shadowless_1",
+"text": "At last!"
+}, {
+"links_to": "failure_maghreb",
+"text": "Failure?"
+}]
+wounds = {}
+portraits = []

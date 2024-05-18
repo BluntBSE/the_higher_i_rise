@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://nnjf7h5lhvve"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_ulky7"]
+
+[resource]
+script = ExtResource("1_ulky7")
+id = "adj_dying"
+text = "dying"
+bbcode = ""
+part_speech = "adjective"
+description = "\"We're all going to die, all of us, what a circus!\""
+aspects = []
+principles = {
+"edge": 1,
+"winter": 2
+}
+indef_article = "a"
+def_article = "the"
+plural = false

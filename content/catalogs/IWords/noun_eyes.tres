@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://d1jd4o7c7gjnd"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_i8nno"]
+
+[resource]
+script = ExtResource("1_i8nno")
+id = "noun_eyes"
+text = "eyes"
+bbcode = ""
+part_speech = "noun"
+description = "\"A pair of doors by which 'without' becomes 'within'.\""
+aspects = ["plural"]
+principles = {
+"knock": 1,
+"lantern": 2
+}
+indef_article = ""
+def_article = ""
+plural = false

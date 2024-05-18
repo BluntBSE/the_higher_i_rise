@@ -29,11 +29,9 @@ var a #alpha, for fading
 func determine_wound_number(word_id:String, wound_dict:Dictionary):
 	for wound in wound_dict:
 		if wound_dict[wound].word_id == word_id:
-			print("Wound slot determined to be " + wound)
 			return str(wound)
-		else:
-			print("Could not find wound's word ID in the wound list")
-			return null
+	print("Could not find wound's word ID in the wound list")
+	return null
 	
 	
 
@@ -73,7 +71,6 @@ func stateUpdate(_dt):
 	#If text is done updating, we should do state_machine.Change("finished")
 	var wound_slot = determine_wound_number(_args, _reference.active_interaction.wounds)
 	var next_interaction_id = _reference.active_interaction.wounds[wound_slot].wound_link
-	print(next_interaction_id)
 	var next_interaction = TextTools.getInteractionResource(next_interaction_id)
 	if _reference.active_interaction.wounds[wound_slot].has("functions"):
 		var funcs_to_execute = _reference.active_interaction.wounds[wound_slot].functions

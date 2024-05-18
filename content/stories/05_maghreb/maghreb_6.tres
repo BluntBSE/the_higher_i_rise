@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://psma4u0sctgc"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_82fvw"]
+
+[resource]
+script = ExtResource("1_82fvw")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "Behind the Watchman"
+text = "At long last your instincts guide you to the top of a lonely summit, a you are standing on a huge table of rock, maybe a hundred feet wide. From the edge, you can see the troubled landscape sprawl towards the horizon."
+slots = {}
+options = [{
+"links_to": "maghreb_6a",
+"text": "[ ILLUMINATOR > 2 ]: You follow the Watchman"
+}, {
+"links_to": "maghreb_6b",
+"text": "You will illuminate this place yourself"
+}]
+wounds = {}
+portraits = []

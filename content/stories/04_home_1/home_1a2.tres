@@ -12,6 +12,9 @@ The patient died.
 
 Afterwards, an autopsy revealed numerous perforations in the patient's stomach and intestine that resulted in the fatal sepsis. The paper's author vaguely concludes that imaging be conducted in all cases of unexplained mauling, but you can read the doctor's confusion between the lines.  "
 slots = {}
-options = []
+options = [{
+"links_to": "home_2",
+"text": "How unpleasant"
+}]
 wounds = {}
 portraits = []

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://clegqntw7afwn"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_8du00"]
+
+[resource]
+script = ExtResource("1_8du00")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "The Shadowless Circle"
+text = "You spend the next few minutes hastily describing what you saw in Vienna: a small room crowded with records, rented by an unshaven adept who summoned you for a thousand tiresome chores. You did not care about his goals, but one day you spied one of his notes:
+
+\"Lady K. Green Chalcedony. Three-lobed. Spring leaves...\"
+
+A description of a key to the Mansus. You started paying attention.
+
+In time you learned of his plan. It was crude, in the way the plans of powerful men often are. Instead of asking for Frau Schlüssel's blessing to open the Mansus — or anyone's, for that matter — he would kidnap her precious dog at the groomer's and demand the Chalcedony Key for ransom."
+slots = {}
+options = [{
+"links_to": "shadowless_6",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["schlussel_snake"]

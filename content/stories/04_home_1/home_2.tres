@@ -6,13 +6,12 @@
 script = ExtResource("1_0bcno")
 base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
 display_title = "Preparing for Bed"
-text = "Finally, it's time for bed. You put on your sleep mask, put in your earplugs, and try to get settled. The fact that you don't have work tomorrow takes some of the edge off.
+text = "Finally, it's time for bed, and you settle in. The fact that you don't have work tomorrow takes some of the edge off.
 
-Soon, you begin to dream...
-
-[font_size=50] END OF DEMO [/font_size]"
+Soon, you begin to dream..."
 slots = {}
 options = [{
+"functions": [["set_speech", [["noun_stones", "adj_dying", "noun_vultures"]]]],
 "links_to": "maghreb_1",
 "text": "Sleep"
 }]

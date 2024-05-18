@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://7ivr4p4jikjy"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_84j38"]
+
+[resource]
+script = ExtResource("1_84j38")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "On Alukites"
+text = "If two immortal beings commit the Crime of the Sky, they risk being expelled from the Mansus and cursed with a terrible hunger. This hunger drives them to devour their own children and become monstrous, and yet...
+
+To be expelled from the Mansus is also to be beyond its Laws, and even this has its uses. It is not for nothing that the keys to the Mansus are held by alukites."
+slots = {}
+options = [{
+"links_to": "shadowless_8",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["schlussel_snake"]

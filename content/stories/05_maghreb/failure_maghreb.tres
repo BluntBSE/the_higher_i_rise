@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dfdsfywwj85th"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_83led"]
+
+[resource]
+script = ExtResource("1_83led")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "The Watchman's Light"
+text = "Your quarry eludes you for now. If you carried a greater radiance, you could illuminate the path to them.
+
+Perhaps if you remember...
+
+"
+slots = {}
+options = [{
+"links_to": "home_2",
+"text": "[TEMPORARY DEBUG RESET]"
+}]
+wounds = {}
+portraits = []

@@ -5,12 +5,13 @@
 [resource]
 script = ExtResource("1_np2kh")
 base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
-display_title = "The Dunes"
+display_title = "Glow"
 text = "Even the faintest radiance is holy. When a thing glows, it provides light so that others may pass behind. 
 
 Is this the gift you will take from this place?"
 slots = {}
 options = [{
+"functions": [["remove_memory", ["verb_glow"]]],
 "links_to": "maghreb_3",
 "text": "Reconsider"
 }, {

@@ -6,13 +6,30 @@
 script = ExtResource("1_fynoj")
 base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
 display_title = "Onwards"
-text = "You descend into the dunes of the Maghreb. Today the sun BURNS through the <wound_1/> sky. The dunes themselves seem to <wound_2/> in the heat. 
+text = "You descend into the dunes of the Maghreb. Today the sun <slot_1/> through the <wound_1/> sky. The dunes themselves seem to <wound_2/> in the heat. 
 
-In the distance,  you see a PARCHED oasis surrounded by DYING trees."
-slots = {}
+In the distance,  you see a <slot_2/> oasis surrounded by <slot_3/> trees."
+slots = {
+"slot_1": "verb_burns",
+"slot_2": "adj_parched",
+"slot_3": "adj_defiant"
+}
 options = [{
-"links_to": "maghreb_1",
-"text": "Sleep"
+"conditions_word": {
+"slot_1": {
+"specific_id": "verb_burns"
+},
+"slot_2": {
+"specific_id": "adj_parched"
+},
+"slot_3": {
+"specific_id": "adj_dying"
+}
+},
+"hint": "Closer...",
+"hint_tooltip": "This place is not yet close to the Watchman",
+"links_to": "maghreb_4",
+"text": "Closer, now"
 }]
 wounds = {
 "wound_1": {

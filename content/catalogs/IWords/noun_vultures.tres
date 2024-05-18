@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cotbgli46kg2v"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_muip7"]
+
+[resource]
+script = ExtResource("1_muip7")
+id = "noun_vultures"
+text = "vultures"
+bbcode = ""
+part_speech = "noun"
+description = "\"Experts in opportunity, if not cooperation.\""
+aspects = ["plural", "animal"]
+principles = {
+"edge": 2,
+"grail": 1
+}
+indef_article = "some"
+def_article = "the"
+plural = false

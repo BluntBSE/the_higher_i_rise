@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dsr7ejlysse8g"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_63oky"]
+
+[resource]
+script = ExtResource("1_63oky")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "The Watchman's Light"
+text = "The Watchman does not view the world with malice. The places closest to him are not barren because He spites life. It is only that few creatures have evolved to weather such persistent and unrelenting light."
+slots = {}
+options = [{
+"links_to": "maghreb_5",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

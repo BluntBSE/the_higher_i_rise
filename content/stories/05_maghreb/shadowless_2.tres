@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b0y6yommuu2qg"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_b4l2g"]
+
+[resource]
+script = ExtResource("1_b4l2g")
+base_bg_color = Color(0.972549, 0.85098, 0.486275, 1)
+display_title = "The Shadowless Circle"
+text = "At the center of the temple there lies a serpent with a body as thick as an old tree. Its scales are a perfect white, and its eyes — each the size of a dinner plate — are perfectly black. When it speaks, you see that even its mouth is colorless, from its delicately forked tongue to its swordlike teeth.
+"
+slots = {}
+options = [{
+"links_to": "shadowless_3",
+"text": "The serpent speaks"
+}]
+wounds = {}
+portraits = ["schlussel_unknown"]
