@@ -26,6 +26,9 @@ options = [{
 "specific_id": "adj_dying"
 }
 },
+"functions": [["update_aspects", [{
+"illuminator": 1
+}]]],
 "hint": "Closer...",
 "hint_tooltip": "This place is not yet close to the Watchman",
 "links_to": "maghreb_4",

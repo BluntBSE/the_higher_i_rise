@@ -22,6 +22,9 @@ options = [{
 "specific_id": "noun_vultures"
 }
 },
+"functions": [["update_aspects", [{
+"illuminator": 1
+}]]],
 "hint": "Closer...",
 "hint_tooltip": "This land is too merciful to its inhabitants",
 "links_to": "maghreb_4a",

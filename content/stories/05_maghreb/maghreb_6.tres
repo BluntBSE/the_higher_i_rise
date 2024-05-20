@@ -9,8 +9,13 @@ display_title = "Behind the Watchman"
 text = "At long last your instincts guide you to the top of a lonely summit, a you are standing on a huge table of rock, maybe a hundred feet wide. From the edge, you can see the troubled landscape sprawl towards the horizon."
 slots = {}
 options = [{
+"conditions_aspect": {
+"illuminator": 2
+},
+"hint": "[ILLUMINATOR > 2]: You have followed the Watchman",
+"hint_tooltip": "Perhaps you have focused too much on acquiring speech to follow this path",
 "links_to": "maghreb_6a",
-"text": "[ ILLUMINATOR > 2 ]: You follow the Watchman"
+"text": "[ILLUMINATOR > 2]: You follow the Watchman"
 }, {
 "links_to": "maghreb_6b",
 "text": "You will illuminate this place yourself"
