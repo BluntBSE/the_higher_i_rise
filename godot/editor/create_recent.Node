@@ -1,7 +1,9 @@
+VBoxContainer
+ScrollContainer
+ColorRect
 Control
 Container
 RichTextLabel
 TextureRect
-ColorRect
 AudioStreamPlayer
 Node

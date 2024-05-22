@@ -17,7 +17,7 @@ class_name EmptyState
 '''
 #Args that get passed in through the state machine
 var _args 
-var _reference: SlotButton#usually 'self'
+var _reference#usually 'self'
 var state_machine #state machine attached to the reference passed in
 
 

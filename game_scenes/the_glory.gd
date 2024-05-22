@@ -13,8 +13,10 @@ signal sfx_volume_changed(sfx_volume)
 @export var scene_type = "main_menu" #"main_menu", "main_game"
 #Bird/Worm
 
-var the_history = {}#this huge dictionary contains all the interaction keys the player has visited, along with the memories and aspects they had at the time.
+var pages = 1 #every time the player clicks an option, pages increments by 1. This is to establish relative distance in remembering.
 
+#var the_history = {}#this huge dictionary contains all the interaction keys the player has visited, along with the memories and aspects they had at the time.
+var the_history = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if scene_type == "main_menu":

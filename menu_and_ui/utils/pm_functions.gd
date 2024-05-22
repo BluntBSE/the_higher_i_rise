@@ -12,11 +12,13 @@ static func save_game(node:Node):
 	var word_inventory = root.find_child("memory_panel", true, false).mem_array
 	var aspect_inventory = root.find_child("aspects_panel", true, false).aspect_dict
 	var the_history = root.get_node("the_glory").the_history
+	var pages = root.get_node("the_glory").pages
 	
 	new_file.active_interaction = active_interaction
 	new_file.words = word_inventory
 	new_file.aspects = aspect_inventory
 	new_file.the_history = the_history
+	new_file.pages = pages
 	
 	#var filename = "single_user.tres" #TODO: Replace with slot
 	var key = "slot_"+str(active_save)

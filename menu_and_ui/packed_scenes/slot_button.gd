@@ -13,6 +13,7 @@ func unpack(slot_num, save): #SaveFile or NUll
 	var delete_button = get_node("slot_fg/delete")
 	slot_node.text = "[b]SLOT " + str(slot_num) +":[/b]"
 	if save == null:
+		print("Detected null save")
 		scene_node.text = "Start new game"	
 		start_or_load = "start"
 		delete_button.visible = false

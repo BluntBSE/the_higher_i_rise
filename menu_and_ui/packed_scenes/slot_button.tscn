@@ -42,6 +42,26 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="delete" type="TextureRect" parent="slot_fg"]
+material = SubResource("ShaderMaterial_nsypg")
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -51.0
+offset_top = 4.00001
+offset_right = 461.0
+offset_bottom = 516.0
+grow_horizontal = 0
+scale = Vector2(0.0927734, 0.0927734)
+mouse_filter = 0
+texture = ExtResource("6_cygxa")
+script = ExtResource("7_6nnfi")
+shader_normal = Color(0.639216, 0, 0.164706, 1)
+shader_hover = Color(1, 1, 1, 1)
+exec_class = "MMFunctions"
+execute = "delete_slot"
+
 [node name="slot_text" type="RichTextLabel" parent="slot_fg"]
 layout_mode = 0
 offset_left = 7.0
@@ -70,26 +90,6 @@ theme_override_font_sizes/normal_font_size = 30
 theme_override_font_sizes/bold_font_size = 30
 bbcode_enabled = true
 text = "An Obscure Alley"
-
-[node name="delete" type="TextureRect" parent="slot_fg"]
-material = SubResource("ShaderMaterial_nsypg")
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -51.0
-offset_top = 4.00001
-offset_right = 461.0
-offset_bottom = 516.0
-grow_horizontal = 0
-scale = Vector2(0.0927734, 0.0927734)
-mouse_filter = 0
-texture = ExtResource("6_cygxa")
-script = ExtResource("7_6nnfi")
-shader_normal = Color(0.639216, 0, 0.164706, 1)
-shader_hover = Color(1, 1, 1, 1)
-exec_class = "MMFunctions"
-execute = "delete_slot"
 
 [connection signal="mouse_entered" from="slot_fg" to="." method="_on_slot_fg_mouse_entered"]
 [connection signal="mouse_exited" from="slot_fg" to="." method="_on_slot_fg_mouse_exited"]
