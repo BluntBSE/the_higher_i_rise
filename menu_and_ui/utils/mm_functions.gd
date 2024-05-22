@@ -84,7 +84,26 @@ static func load_game(node:Node, save:SaveFile, slot_number:int):#Needs arg for 
 	var music_player:MusicPlayer = glory.get_node("music_player")
 	music_player.play_song("last_hour")
 	
-	
+static func remember_game(glory, history_item, history_key):#Needs arg for save slot
+	var root = glory.get_tree().root
+	root = root.get_node("the_glory")
+	var main = glory.get_node("main")
+	var parser:InteractionParser = glory.find_child("interaction_parser", true, false)
+	var aspect_panel:AspectPanel = glory.find_child("aspects_panel", true, false)
+	var memory_panel:MemoryPanel = glory.find_child("memory_panel", true, false)
+	print("HISTORY KEY", history_key)
+	var interaction_to_load = TextTools.getInteractionResource(history_key)
+	print("INTERACTION", interaction_to_load)
+	parser.state_machine.Change("load_interaction", interaction_to_load)
+	main.state_machine.Change("playing", null)
+	#glory.the_history = save.the_history Voting against overwriting the history now
+	#...But maybe we want to preserve the pages? Unsure as of yet.
+	aspect_panel.aspect_dict = history_item.aspect_dict
+	memory_panel.mem_array = history_item.mem_array
+	aspect_panel.state_machine.Change("refresh", null)
+	memory_panel.state_machine.Change("refresh", null)
+	var music_player:MusicPlayer = glory.get_node("music_player")
+	music_player.play_song("last_hour")	
 	
 static func quit_game(node:Node):
 	node.get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)

@@ -163,14 +163,12 @@ static func parseText(input_string: String, interaction: Interaction):
 				return "WORD NOT FOUND"
 			var word_str = applyStyling(word)
 			#Here is where we would add anything to modify it to be a sentence, such as capitalization.
-			print("SEEKING", "<", slot, "/ia>")
 			if text.contains("<" + slot + "/ia>"):
 				var ia_replace = "<" + slot + "/ia>"
 				print(ia_replace)
 				text = text.replace(ia_replace, word.indef_article)
 			if text.contains("<" + slot + "/ia>"):
 				var ia_replace = "<" + slot + "/da>"
-				print(ia_replace)
 				text = text.replace(ia_replace, word.def_article)
 			text = text.replace("<" + slot + "/>", word_str)
 		

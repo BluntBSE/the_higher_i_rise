@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_ufh3k")
 base_bg_color = Color(0.584314, 0.211765, 0, 1)
-display_title = "An Obscure Alley"
+display_title = "An Obscure Alley 2"
 text = "Just a quick swap.
 "
 slots = {}

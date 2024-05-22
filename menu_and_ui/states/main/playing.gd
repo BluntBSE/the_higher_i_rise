@@ -32,7 +32,7 @@ func stateEnter(args):
 func stateUpdate(_dt):
 	if Input.is_action_just_released("ui_cancel"):
 		print("Detected escape key")
-		_reference.state_machine.Change("menu_open", null)
+		_reference.state_machine.Change("pause_menu_open", null)
 
 	pass
 	

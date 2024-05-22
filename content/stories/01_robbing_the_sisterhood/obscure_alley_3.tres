@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_bsotg")
 base_bg_color = Color(0.243137, 0.188235, 0.196078, 1)
-display_title = "An Obscure Alley"
+display_title = "An Obscure Alley 3"
 text = "The young novice on the ground lies sprawled in an unnatural position. Her hands are still tight around the body of her rifle, but the rest of her...
 
 You haven't had to make an adjustment like [i]that[/i] in a long time..

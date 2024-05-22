@@ -23,6 +23,7 @@ var state_machine #state machine attached to the reference passed in
 
 func stateEnter(args):
 	_reference.get_node("pause_filter").visible = true
+	_reference.get_node("pause_filter/pause_menu").visible = true
 	#Stop input from happening on the parser
 	#Maybe darken the screen a bit
 	#pause_filter.mouse_filter = Stop?
@@ -36,6 +37,8 @@ func stateUpdate(_dt):
 	
 	
 func stateExit():
+	_reference.get_node("pause_filter").visible = false
+	_reference.get_node("pause_filter/pause_menu").visible = false
 	pass
 	
 	#If text is done updating, we should do state_machine.Change("finished")

@@ -105,7 +105,6 @@ func remove_highlight_from_word(word):
 
 func _on_text_content_meta_hover_started(meta): #Aka when the user hovers over a URL
 	#Display popup at mouse location
-	print("HOVERING")
 	highlight_word_from_content(meta)
 
 
