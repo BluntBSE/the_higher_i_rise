@@ -26,7 +26,7 @@ var portrait_node_1
 var a #alpha, for fading
 var t# For handling animations
 
-func record_history(interaction_resource:Interaction):
+func record_history(interaction_resource:Interaction, interaction_key):
 		var recorded_at = Time.get_datetime_string_from_system()
 		var interaction_name = _args #This is the "meta" that is passed in from click
 		var aspect_dict = _reference.find_child("aspects_panel", true, false).aspect_dict
@@ -35,7 +35,7 @@ func record_history(interaction_resource:Interaction):
 		var display_title = interaction_resource.display_title
 		_reference.get_tree().root.get_node("the_glory").pages += 1
 		#print("Glory pages", _reference.get_tree().root.get_node("the_glory").pages)
-		the_history.append ( {"aspect_dict": aspect_dict, "mem_array": mem_array, "pages_at_recording": _reference.get_tree().root.get_node("the_glory").pages, "recorded_at": recorded_at, "display_title": display_title} )
+		the_history.append ( {"aspect_dict": aspect_dict, "mem_array": mem_array, "pages_at_recording": _reference.get_tree().root.get_node("the_glory").pages, "recorded_at": recorded_at, "display_title": display_title, "interaction_key": interaction_key } )
 		print("History")
 		print(the_history)
 
@@ -89,7 +89,7 @@ func stateUpdate(dt):
 		print("No functions")
 		var interaction_to_load = TextTools.getInteractionResource(_args)
 		#load option is used to fade in/out
-		record_history(interaction_to_load)
+		record_history(interaction_to_load, _args)
 		_reference.state_machine.Change("load_option", interaction_to_load)
 		#push_error("No functions found on this option")
 	if _reference.active_interaction.options[index].has("functions"):
@@ -105,7 +105,7 @@ func stateUpdate(dt):
 		#load option is used to fade in/out
 		
 		#Save the current game state to the_glory.the_memory
-		record_history(interaction_to_load)
+		record_history(interaction_to_load, _args)
 		_reference.state_machine.Change("load_option", interaction_to_load)
 	
 	#If text is done updating, we should do state_machine.Change("finished")

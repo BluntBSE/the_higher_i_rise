@@ -12,7 +12,7 @@ func unpack(history): #Maybe rename to refresh
 	for item in history: #Sorting this every single time you open this is gonna be inefficient..
 		#OPTIONS: We can either order here, or save the history as an index unto itself...
 		#But is that always the same as N pages ago?
-		var history_button = load("res://menu_and_ui/packed_scenes/history_button.tscn").instantiate()
+		var history_button:HistoryButton = load("res://menu_and_ui/packed_scenes/history_button.tscn").instantiate()
 		button_container.add_child(history_button)
 		history_button.unpack(item) #data, key
 

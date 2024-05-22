@@ -6,7 +6,7 @@ var state_machine:StateMachine2 = StateMachine2.new()
 var _history_item
 var _history_key
 
-func unpack(history_item, history_key):
+func unpack(history_item):
 	print("HISTORY ITEM", history_item)
 	var increment_text = get_node("slot_fg/increment_text")
 	var interaction_name = get_node("slot_fg/interaction_name")
@@ -14,7 +14,7 @@ func unpack(history_item, history_key):
 	#This is to show "how many pages ago" somethign was.
 	var page_difference = get_tree().root.get_node("the_glory").pages - history_item.pages_at_recording
 	_history_item = history_item
-	_history_key = history_key
+	_history_key = history_item.interaction_key
 	interaction_name.text = history_item.display_title
 	increment_text.text = "[b]" + str(page_difference) + " Pages ago[/b]"
 	date_text.text = history_item.recorded_at

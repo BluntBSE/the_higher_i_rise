@@ -5,7 +5,8 @@ class_name SaveFile
 @export var active_interaction:Interaction
 @export var aspects:Dictionary
 @export var words:Array
-@export var the_history:Dictionary
+#@export var the_history:Dictionary
+@export var the_history:Array
 @export var pages:int
 # Called when the node enters the scene tree for the first time.
 func _ready():

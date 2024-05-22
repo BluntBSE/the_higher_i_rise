@@ -57,6 +57,7 @@ execute = "return_to_main"
 click_fx = ExtResource("4_pr4q4")
 
 [node name="history_menu" type="Control" parent="pause_filter"]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
