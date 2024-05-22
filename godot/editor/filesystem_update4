@@ -30,3 +30,4 @@ res://content/stories/01_robbing_the_sisterhood/adjacent_history_1.tres
 res://text_engine/states/interaction_parser/choose_option_state.gd
 res://game_scenes/the_glory.gd
 res://text_engine/resources/resource_classes/save.gd
+res://1_documentation/wtf_i_was_doing.txt

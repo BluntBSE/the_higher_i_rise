@@ -1,6 +1,7 @@
 NEXT UP:
+	Page history not quite working
 	Add the "Remember" function
-	Fix the fuckin functions bug in krisin thumg cut scene
+	Fix the fuckin functions bug in kristin thumb cut scene
 	Add effect on aspects...Maybe time for new UI?
 	Make swappable words stand out with relative font size detection
 	Make options available based on aspects
