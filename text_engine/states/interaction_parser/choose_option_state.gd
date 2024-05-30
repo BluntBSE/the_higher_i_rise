@@ -38,8 +38,8 @@ func record_history(interaction_resource:Interaction, interaction_key):
 		the_history.append ( {"aspect_dict": aspect_dict, "mem_array": mem_array, "pages_at_recording": _reference.get_tree().root.get_node("the_glory").pages, "recorded_at": recorded_at, "display_title": display_title, "interaction_key": interaction_key } )
 		print("History")
 		print(the_history)
-
 	
+
 func determineOptionIndex(interaction_id):
 	var index = 0
 	for option in _reference.active_interaction.options:

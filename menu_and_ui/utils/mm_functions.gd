@@ -3,6 +3,21 @@ class_name MMFunctions
 
 #These menus are starting to look like they should all be a shared class...Let's see if we make more than start + opts
 
+#This is terrible programming, fix it before anyone finds out
+static func _record_history(glory, interaction_resource:Interaction, interaction_key):
+		var recorded_at = Time.get_datetime_string_from_system()
+		var interaction_name = interaction_key #This is the "meta" that is passed in from click
+		var aspect_dict = glory.find_child("aspects_panel", true, false).aspect_dict
+		var mem_array = glory.find_child("memory_panel", true, false).mem_array
+		var the_history = glory.the_history
+		var display_title = interaction_resource.display_title
+		glory.pages += 1
+		#print("Glory pages", _reference.get_tree().root.get_node("the_glory").pages)
+		the_history.append ( {"aspect_dict": aspect_dict, "mem_array": mem_array, "pages_at_recording":glory.pages, "recorded_at": recorded_at, "display_title": display_title, "interaction_key": interaction_key } )
+		print("History")
+		print(the_history)
+
+
 static func start_game_menu(node: Node):
 	var root = node.get_tree().root
 	var filter = root.find_child("mm_screen_filter", true, false)
@@ -84,7 +99,7 @@ static func load_game(node:Node, save:SaveFile, slot_number:int):#Needs arg for 
 	root.get_node("main_menu").free()
 	var music_player:MusicPlayer = glory.get_node("music_player")
 	music_player.play_song("last_hour")
-	
+
 static func remember_game(glory, history_item, history_key):#Needs arg for save slot
 	var root = glory.get_tree().root
 	root = root.get_node("the_glory")
@@ -101,6 +116,11 @@ static func remember_game(glory, history_item, history_key):#Needs arg for save 
 	#...But maybe we want to preserve the pages? Unsure as of yet.
 	aspect_panel.aspect_dict = history_item.aspect_dict
 	memory_panel.mem_array = history_item.mem_array
+	#Record history
+	#var interaction_path = parser.active_interaction.resource_path
+	#var interaction_key = interaction_path.split("/")[-1]
+	_record_history(glory, interaction_to_load, history_key)
+	#glory.pages += 0
 	aspect_panel.state_machine.Change("refresh", null)
 	memory_panel.state_machine.Change("refresh", null)
 	var music_player:MusicPlayer = glory.get_node("music_player")
