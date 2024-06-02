@@ -27,6 +27,7 @@ func stateEnter(args):
 	_reference.get_node("pause_filter").visible = true
 	_reference.get_node("pause_filter/history_menu").visible = true
 	var glory  = _reference.get_tree().root.get_node("the_glory")
+	_reference.get_node("pause_filter/history_menu").unpack()
 	_reference.get_node("pause_filter/history_menu/history_rect").unpack(glory.the_history)
 	pass
 

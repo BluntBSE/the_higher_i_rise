@@ -14,3 +14,6 @@ res://menu_and_ui/packed_scenes/load_game_button.tscn
 res://game_scenes/parser/interaction_parser.tscn
 res://menu_and_ui/utils/mm_functions.gd
 res://text_engine/states/interaction_parser/choose_option_state.gd
+res://1_documentation/wtf_i_was_doing.txt
+res://game_scenes/parser/history_menu.gd
+res://menu_and_ui/states/main/history.gd

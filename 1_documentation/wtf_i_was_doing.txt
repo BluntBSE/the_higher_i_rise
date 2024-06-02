@@ -1,7 +1,7 @@
 NEXT UP:
-	Page history not quite working
-	Add the "Remember" function
-	Fix the fuckin functions bug in kristin thumb cut scene
+	Make max size of memory window equal to the composite height of all the items
+	Make the scroll default to the bottom
+	Fix the fuckin functions bug in kristin thumb cut scene -- Fixed?
 	Add effect on aspects...Maybe time for new UI?
 	Make swappable words stand out with relative font size detection
 	Make options available based on aspects
