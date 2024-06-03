@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bqvssqjdpnxh7"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_08pb8"]
+
+[resource]
+script = ExtResource("1_08pb8")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Club Fuego: Line"
+text = "Soon you're in line at Club Fuego, one of the best-known spots for latin dance, and one of the only places you'll catch a line at the door on a Thursday night. You've been coming here for a while now, and since starting salsa has slowly become your all-in-one social activity, exercise routine, and creative outlet.
+
+Most importantly, you love it because..."
+slots = {}
+options = [{
+"functions": [["update_aspects", [{
+"compassionate": 1
+}]]],
+"links_to": "second_day_fg",
+"text": "You enjoy the connection it creates"
+}, {
+"functions": [["update_aspects", [{
+"curious": 1
+}]]],
+"links_to": "second_day_pose",
+"text": "It allows you to explore and express the music"
+}, {
+"functions": [["update_aspects", [{
+"pragmatic": 1
+}]]],
+"links_to": "second_day_composed",
+"text": "It keeps you fit [i]as hell[/i]"
+}]
+wounds = {}
+portraits = []

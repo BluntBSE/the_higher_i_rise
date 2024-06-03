@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://c4s4ll4rai0sd"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_ig7tj"]
+
+[resource]
+script = ExtResource("1_ig7tj")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Dream Fatigue"
+text = "When you wake up, you can still feel the sand in your eyes.
+"
+slots = {}
+options = [{
+"links_to": "second_day_2",
+"text": "Another bewildering dream"
+}]
+wounds = {}
+portraits = []
