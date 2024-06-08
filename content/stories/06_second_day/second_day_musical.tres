@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cifouc211h1eg"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_f7lt2"]
+
+[resource]
+script = ExtResource("1_f7lt2")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Finger Guns"
+text = "You were never really musical growing up, so when you discovered dance as an adult you found a whole new world. You learned how to find the instruments and feelings in a song and turn them into something you can [i]see[/i] and [i]feel[/i] with your body. 
+
+Now, every time you dance you look for a new way to listen, a new way to express, or a new technique to use. It keeps your mind sharper than your work ever could."
+slots = {}
+options = [{
+"links_to": "second_day_cf_2",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

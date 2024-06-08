@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://3o6k3tulndjf"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_yle35"]
+
+[resource]
+script = ExtResource("1_yle35")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "Club Fuego: Line"
+text = "[ANSIN]: I'm Ansin. It's a pleasure to meet you.
+
+[ANSIN]: I hear you helped Gabriel out of a bind yesterday.
+
+[GABE]: Gabe, actually.
+
+[ANSIN]: And so we're very grateful. I also hear that we may have certain [i]historical[/i] interests in common.
+
+[GABE]: Oh, that's right!"
+slots = {}
+options = [{
+"links_to": "second_day_cf_7",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["ansin", "gabe"]

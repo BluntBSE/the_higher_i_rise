@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bqfcvj5osu82t"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_h257d"]
+
+[resource]
+script = ExtResource("1_h257d")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "Club Fuego: Line"
+text = "Even on a Thursday night, the line seems to take forever, so you spend a few minutes killing time on your phone.
+
+ When you look up, you're suddenly staring into a wide grin and a whole lot of tattoos.
+"
+slots = {}
+options = [{
+"links_to": "second_day_cf_3",
+"text": "Your patient...?"
+}]
+wounds = {}
+portraits = []

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://ck3onwid0g7p2"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_pwi53"]
+
+[resource]
+script = ExtResource("1_pwi53")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "Club Fuego: Line"
+text = "[GABE]: Yeah. You're still carrying that shit from yesterday.
+
+[GABE]: Look at me. Listen.
+
+[GABE]:I saw the SUNRISE this morning from up in the hospital. I saw the birds lining up on the smaller buildings, and I could hear them singing through the glass. The floor was quiet, and the glass blocks out all the other sound, so it was really perfect. Just me, the birds, and their music.
+
+[GABE]: It was <wound_1/>. You can have it."
+slots = {}
+options = [{
+"links_to": "second_day_cf_6",
+"text": "Continue"
+}]
+wounds = {
+"wound_1": {
+"word_id": "adj_beautiful",
+"wound_link": "second_day_cf_8"
+}
+}
+portraits = ["ansin", "gabe"]

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://bqbnfcl1aylo8"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/character.gd" id="1_u3k70"]
+
+[resource]
+script = ExtResource("1_u3k70")
+portrait = "res://content/images/portraits/weathervane.jpg"
+display_name = "Weathervane"

@@ -4,12 +4,9 @@
 
 [resource]
 script = ExtResource("1_xxban")
-base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+base_bg_color = Color(0.411765, 0.670588, 0.94902, 1)
 display_title = "In the Bathroom"
 text = "You take a deep, steadying breath and...
-
-//Add finger guns, etc.//
-
 
 "
 slots = {}

@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_nljw0")
-base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+base_bg_color = Color(0.411765, 0.670588, 0.94902, 1)
 display_title = "Dream Fatigue"
 text = "Luckily you don't work today, and here's the the thing about the night shift lifestyle: On your days off, you get to party [i]for breakfast[/i]. It's salsa night at Club Fuego just one hour from now, and God knows you need it. 
 
@@ -15,7 +15,7 @@ You wolf down some breakfast. You shower, you shave, you apply your best cologne
 slots = {}
 options = [{
 "links_to": "second_day_4",
-"text": "Get out of bed"
+"text": "Continue"
 }]
 wounds = {}
 portraits = []

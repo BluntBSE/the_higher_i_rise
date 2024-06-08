@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://ca0ikkkkvkkaq"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_2hf0k"]
+
+[resource]
+script = ExtResource("1_2hf0k")
+base_bg_color = Color(0.333333, 0.219608, 0.564706, 1)
+display_title = "Club Fuego"
+text = "After an hour or so, you suddenly spot a familiar shape in the crowd. Is that [i]Kristin[/i] at the bar? You've never seen her here before, and she has that sort of \"on the wall\" look about her.
+
+You start heading over to go say hello, but you're interrupted by an alarming tug at your arm."
+slots = {}
+options = [{
+"links_to": "second_day_cf_15",
+"text": "Who the...?"
+}]
+wounds = {}
+portraits = ["kristin"]

@@ -4,9 +4,9 @@
 
 [resource]
 script = ExtResource("1_08pb8")
-base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
 display_title = "Club Fuego: Line"
-text = "Soon you're in line at Club Fuego, one of the best-known spots for latin dance, and one of the only places you'll catch a line at the door on a Thursday night. You've been coming here for a while now, and since starting salsa has slowly become your all-in-one social activity, exercise routine, and creative outlet.
+text = "Soon you're in line at Club Fuego, one of the best-known spots for latin dance, and one of the only places you'll catch a line at the door on a Thursday night. You've been coming here for a while now, and these days salsa has become your all-in-one social activity, exercise routine, and creative outlet.
 
 Most importantly, you love it because..."
 slots = {}
@@ -14,20 +14,20 @@ options = [{
 "functions": [["update_aspects", [{
 "compassionate": 1
 }]]],
-"links_to": "second_day_fg",
+"links_to": "second_day_connection",
 "text": "You enjoy the connection it creates"
 }, {
 "functions": [["update_aspects", [{
 "curious": 1
 }]]],
-"links_to": "second_day_pose",
-"text": "It allows you to explore and express the music"
+"links_to": "second_day_musical",
+"text": "You can explore the music"
 }, {
 "functions": [["update_aspects", [{
 "pragmatic": 1
 }]]],
-"links_to": "second_day_composed",
-"text": "It keeps you fit [i]as hell[/i]"
+"links_to": "second_day_fit",
+"text": "It brings your body to life"
 }]
 wounds = {}
 portraits = []

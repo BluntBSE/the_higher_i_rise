@@ -4,13 +4,13 @@
 
 [resource]
 script = ExtResource("1_yd34y")
-base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+base_bg_color = Color(0.411765, 0.670588, 0.94902, 1)
 display_title = "Finger Guns"
 text = "Fuck yeah."
 slots = {}
 options = [{
-"links_to": "second_day_3",
-"text": "Get out of bed"
+"links_to": "second_day_cf_1",
+"text": "Out the door"
 }]
 wounds = {}
 portraits = []

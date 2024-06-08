@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_ig7tj")
-base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+base_bg_color = Color(0.411765, 0.670588, 0.94902, 1)
 display_title = "Dream Fatigue"
 text = "When you wake up, you can still feel the sand in your eyes.
 "

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://sts6ove448vb"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_5dmm7"]
+
+[resource]
+script = ExtResource("1_5dmm7")
+base_bg_color = Color(0.643137, 0.415686, 0.764706, 1)
+display_title = "Weight, Lifted"
+text = "Suddenly, you realize that you're [i]relaxed[/i]. How much tension were you carrying in your body? And why is it gone? What exactly did this man just [i]do?[/i] Ansin speaks before you can ask any questions.
+"
+slots = {}
+options = [{
+"links_to": "second_day_cf_10",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

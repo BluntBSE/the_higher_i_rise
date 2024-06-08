@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bhc3a6l61c57t"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_xf2jl"]
+
+[resource]
+script = ExtResource("1_xf2jl")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "The Night, Again"
+text = "The wall turns suddenly ordinary. Gabe looks at you with a panicked expression and you realize that it — whatever exactly \"it\" is — now inhabits the shadows at your feet. It peers up at you from every crack in the gravel lot. It sings to you like a crowd of cicadas.
+
+[WEATHERVANE]: This one is already changing.
+
+[WEATHERVANE]: How fun!"
+slots = {}
+options = [{
+"links_to": "weathervane_1a9",
+"text": "And then it kicks you in the chest"
+}]
+wounds = {}
+portraits = ["weathervane"]

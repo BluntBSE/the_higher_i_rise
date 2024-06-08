@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://y7wnej72yx2e"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_gcmpq"]
+
+[resource]
+script = ExtResource("1_gcmpq")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "Club Fuego: Line"
+text = "[GABE]: Do I even go here, you mean? Nah. It's my first time.
+
+[GABE]: But yesterday sucked. I mean, you were there. And actually you were the best part! But I deserve a pick-me-up,  you know? So I thought I'd try something new.
+
+[GABE]: Real quick, though. You should meet my friend!"
+slots = {}
+options = [{
+"links_to": "second_day_cf_4",
+"text": "He motions to someone behind him"
+}]
+wounds = {}
+portraits = ["gabe"]

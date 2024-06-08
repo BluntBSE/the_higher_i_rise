@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b632u6j52dk8o"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_wlole"]
+
+[resource]
+script = ExtResource("1_wlole")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "Club Fuego: Line"
+text = "[GABE]: Yeah, yeah. Think of it this way, you did such a good job with me that I can go fucking [i]dance.[/i]
+
+[GABE]: And after all that blood!
+
+[GABE]: Besides. My friend and I figure I deserve a little celebration after everything I've been through. So we're trying something new.
+
+[GABE]: But first, you two should meet!
+"
+slots = {}
+options = [{
+"links_to": "second_day_shouldnt_be_1",
+"text": "You shouldn't be here!"
+}, {
+"links_to": "second_day_how_long_1",
+"text": "Since when do you dance here?"
+}, {
+"links_to": "second_day_how_feeling_1",
+"text": "How are you feeling?"
+}]
+wounds = {}
+portraits = ["gabe"]

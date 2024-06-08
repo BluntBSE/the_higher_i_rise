@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://c0m3lvtgynvs0"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_sjs4k"]
+
+[resource]
+script = ExtResource("1_sjs4k")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "Too Weird"
+text = "todo
+"
+slots = {}
+options = [{
+"functions": [["update_aspects", [{
+"straightedge": 1
+}]]],
+"links_to": "weathervane_1b2",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["gabe"]

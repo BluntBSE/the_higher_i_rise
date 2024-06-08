@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://je875q0htlju"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_2c2e4"]
+
+[resource]
+script = ExtResource("1_2c2e4")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "Club Fuego: Line"
+text = "[GABE]: Pretty damn good, thanks to you!
+
+[GABE]: I'll be honest. I thought I was a gonner. I'm lucky I was on your shift, huh? 
+
+[GABE]: I figure I deserve a little pick-me-up, so me and my friend here thought we'd try something new.
+
+[GABE]: Speaking of, you should meet!"
+slots = {}
+options = [{
+"links_to": "second_day_cf_4",
+"text": "He motions to someone behind him"
+}]
+wounds = {}
+portraits = ["gabe"]

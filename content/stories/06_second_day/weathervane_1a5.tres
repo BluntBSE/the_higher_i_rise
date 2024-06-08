@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bghcd6fouxtfk"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_pgyfm"]
+
+[resource]
+script = ExtResource("1_pgyfm")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "The Night, Again"
+text = "Gabe pockets his lighter and his pipe and takes out a flask from his pocket, then he approaches the wall where the shadows dance. He opens his arms wide, and starts to sing in a voice that feels totally unfamiliar to you now:
+
+[GABE]: Weathervane, Weathervane, won't you come play?
+
+[GABE]: Weathervane, Weathervane, I hope you don't stay!
+
+He repeats this a few times, and in some deep, judgmental part of yourself you wonder: Is this it? A stoned man singing a silly rhyme at a wall? If Gabe's magical creature really existed, it would probably be too embarassed to show itself.
+
+But then...
+"
+slots = {}
+options = [{
+"links_to": "weathervane_1a6",
+"text": "You see it"
+}]
+wounds = {}
+portraits = ["gabe"]

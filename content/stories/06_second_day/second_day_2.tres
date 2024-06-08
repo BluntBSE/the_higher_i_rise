@@ -4,9 +4,9 @@
 
 [resource]
 script = ExtResource("1_nbtcl")
-base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+base_bg_color = Color(0.411765, 0.670588, 0.94902, 1)
 display_title = "Dream Fatigue"
-text = "What's with these dreams? It's strange enough that you can remember them so clearly, but that's not all. You've never dreamt of yourself as a woman, and there's this [b]solid[/b] quality to these dreams, too.
+text = "What's with these dreams? It's strange enough that you can remember them so clearly, but it feels like you're having the same dream on different nights. You've never dreamt of yourself as a woman, either, and there's this [b]solid[/b] quality to them, too.
 
 You feel like you just walked across a desert for real. It's not a great way to wake up.
 

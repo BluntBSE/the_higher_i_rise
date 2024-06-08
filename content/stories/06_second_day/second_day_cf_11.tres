@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bwkyanse85h1t"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_hlf2c"]
+
+[resource]
+script = ExtResource("1_hlf2c")
+base_bg_color = Color(0.333333, 0.219608, 0.564706, 1)
+display_title = "Club Fuego"
+text = "The three of you finally make it into the club, and the other two seem pretty serious about \"taking the night off\", and don't say any more about what just happened. They split off into the beginner class — there's a crash-course before every dance party — and leave you to your own devices."
+slots = {}
+options = [{
+"links_to": "second_day_cf_12",
+"text": "Put on your dancing shoes"
+}]
+wounds = {}
+portraits = ["ansin", "gabe"]

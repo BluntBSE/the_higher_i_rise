@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://1ob6x1lo7287"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_88y8k"]
+
+[resource]
+script = ExtResource("1_88y8k")
+id = "adj_beautiful"
+text = "beautiful"
+bbcode = ""
+part_speech = "adjective"
+description = "\"One of very few reasons to remain\""
+aspects = []
+principles = {
+"grail": 2,
+"heart": 1
+}
+indef_article = "a"
+def_article = "the"
+plural = false

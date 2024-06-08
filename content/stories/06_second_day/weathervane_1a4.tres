@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bp8o3xxasdyrd"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_hdydg"]
+
+[resource]
+script = ExtResource("1_hdydg")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "The Night, Again"
+text = "And he's right. In just a few seconds your skin starts to go all numb. A few seconds more, and you feel like your point of view is starting to creep outside of your body somehow. You don't start hallucinating, not in the way you imagined it, but starry patterns bloom behind your eyelids whenever you blink. 
+
+And suddenly blinking takes a long, long, time.
+
+"
+slots = {}
+options = [{
+"links_to": "weathervane_1a5",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["gabe"]
