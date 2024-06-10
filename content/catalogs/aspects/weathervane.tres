@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Aspect" load_steps=2 format=3 uid="uid://8niw4w50fiun"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_turjl"]
+
+[resource]
+script = ExtResource("1_turjl")
+aspect_id = "weathervane"
+icon = "res://content/images/portraits/weathervane.jpg"
+display_name = "Weathervane"
+tooltip = "Weathervane"

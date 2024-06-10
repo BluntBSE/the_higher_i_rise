@@ -20,10 +20,13 @@ options = [{
 "links_to": "weathervane_1a",
 "text": "What's in the pipe?"
 }, {
+"functions": [["update_aspects", [{
+"straightedge": 1
+}]]],
 "links_to": "weathervane_1b",
 "text": "[DON'T SMOKE]: Absolutely not!"
 }, {
-"links_to": "weathervane_1c",
+"links_to": "weathervane_1a2",
 "text": "[SMOKE]: Roll with it"
 }]
 wounds = {}

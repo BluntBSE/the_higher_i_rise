@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bnrkii7143dia"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_lvbwc"]
+
+[resource]
+script = ExtResource("1_lvbwc")
+base_bg_color = Color(0.333333, 0.219608, 0.564706, 1)
+display_title = "Club Fuego"
+text = "Call it a hunch, but maybe the dance club isn't the place to get into whatever Gabe has in mind. You politely decline, leaving Gabe looking a little crestfallen, and make your way to Kristin."
+slots = {}
+options = [{
+"links_to": "second_day_cf_15a2",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["gabe"]

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://5d5pq6tx6xgu"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_q0k0v"]
+
+[resource]
+script = ExtResource("1_q0k0v")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "Home"
+text = "Your body is warm with exertion when you get home that morning, and there's a pleasant ache in your legs. 
+
+Living on the night shift means your weekend mornings are packed with errands, but they pass like a pleasant breeze. When they're over,  you hit the bed satisfied and soon fall asleep."
+slots = {}
+options = [{
+"links_to": "weathervane_1b4",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

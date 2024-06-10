@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dnjbn8jmc0puf"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_mabir"]
+
+[resource]
+script = ExtResource("1_mabir")
+base_bg_color = Color(0.333333, 0.219608, 0.564706, 1)
+display_title = "Club Fuego"
+text = "[KRISTIN]: What? Of course not, why...
+
+[KRISTIN]: Oh, shut up. I take your point.
+
+[KRISTIN]: But \"knowing you have hang ups\" and \"not having hang ups\" are two different things. I'm about at my limit for being the bad one here."
+slots = {}
+options = [{
+"links_to": "second_day_cf_15aac",
+"text": "Teach her some steps"
+}, {
+"links_to": "second_day_cf_15aac",
+"text": "[LEAVE]: Walk out with her"
+}]
+wounds = {}
+portraits = ["kristin"]

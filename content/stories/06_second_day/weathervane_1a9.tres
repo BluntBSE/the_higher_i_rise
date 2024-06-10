@@ -13,7 +13,10 @@ text = "The wall turns suddenly ordinary. Gabe looks at you with a panicked expr
 [WEATHERVANE]: How fun!"
 slots = {}
 options = [{
-"links_to": "weathervane_1a9",
+"functions": [["update_aspects", [{
+"weathervane": 1
+}]]],
+"links_to": "weathervane_1a10",
 "text": "And then it kicks you in the chest"
 }]
 wounds = {}

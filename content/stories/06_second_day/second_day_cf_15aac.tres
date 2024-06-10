@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://c48eapld6g7mq"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_3dnrj"]
+
+[resource]
+script = ExtResource("1_3dnrj")
+base_bg_color = Color(0.333333, 0.219608, 0.564706, 1)
+display_title = "Club Fuego"
+text = "You're not a teacher, but you've been doing this for long enough to walk someone through the basics. You give Kristin a little crash course in the corner, then take her out onto the floor for a few songs. Kristin's thoughtful scowl slowly melts into a smile. Skill isn't necessarily what makes someone fun to dance with, but you can tell that having a little more knowledge makes it a lot more fun for her. 
+"
+slots = {}
+options = [{
+"links_to": "second_day_cf_15a2aac2",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["kristin"]

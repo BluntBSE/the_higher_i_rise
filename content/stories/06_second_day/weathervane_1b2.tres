@@ -4,17 +4,13 @@
 
 [resource]
 script = ExtResource("1_sjs4k")
-base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
-display_title = "Too Weird"
-text = "todo
-"
+base_bg_color = Color(0.333333, 0.219608, 0.564706, 1)
+display_title = "Club Fuego, Again"
+text = "The doorman gives you a confused look as you enter the club a second time, but once you're in you know you've made the right call. The familiar music washes away the stress of whatever [i]that[/i] was, and soon you're ready to dance again. Maybe, you realize, it's not too late to find Kristin."
 slots = {}
 options = [{
-"functions": [["update_aspects", [{
-"straightedge": 1
-}]]],
-"links_to": "weathervane_1b2",
-"text": "Continue"
+"links_to": "weathervane_1b3",
+"text": "Look for her"
 }]
 wounds = {}
 portraits = ["gabe"]
