@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Aspect" load_steps=2 format=3 uid="uid://l16opfpkuwlb"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_wkfef"]
+
+[resource]
+script = ExtResource("1_wkfef")
+aspect_id = "relationship_kristin"
+icon = "res://content/images/aspects/red_hood.png"
+display_name = "Relationship: Kristin"
+tooltip = "Relationship: Kristin"
+debug = false
