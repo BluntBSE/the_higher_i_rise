@@ -192,6 +192,7 @@ static func parseText(input_string: String, interaction: Interaction):
 
 static func parseOptions(_reference, interaction: Interaction):
 	var glory = _reference.get_tree().root.get_node("the_glory")
+	var aspect_dict = glory.find_child("aspects_panel", true, false).aspect_dict
 	if !interaction:
 		push_error("null interaction in parseOptions")
 		return null 
@@ -204,19 +205,12 @@ static func parseOptions(_reference, interaction: Interaction):
 	for option in interaction.options:
 		
 		if option.has("requires_unvisited"):
-			if option.has("unvisited_link"):
-				print("UNVISITED REQUIREMENT DETECTED")
-				var _unvisited_interaction = option.unvisited_link
-				if glory.the_history.has(option.unvisited_link):
-					continue 
-			if option.has("unvisited_links"):
-				print("PLURAL UNVISITED REQUIREMENT DETECTED")
+			if option.has("unvisited_aspects"):
 				var any_visited = false
-				for link in option.unvisited_links:
-					for item in glory.the_history:
-						if glory.the_history.has(link):
-							print("FOUND IN GLORY")
-							any_visited = true
+				for aspect in option.unvisited_aspects:
+					print("SEEKING ", aspect)
+					if aspect_dict.has(aspect):
+						any_visited = true
 				if any_visited == true:
 					continue
 					
