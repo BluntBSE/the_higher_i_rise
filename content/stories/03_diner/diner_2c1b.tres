@@ -11,6 +11,9 @@ text = "[KRISTIN]: Aw! Say more nice things about me.
 [KRISTIN]: What's your favorite piece?"
 slots = {}
 options = [{
+"functions": [["update_aspects", [{
+"relationship_kristin": 1
+}]]],
 "links_to": "diner_2c1ba",
 "text": "Molotov Polycule!"
 }, {

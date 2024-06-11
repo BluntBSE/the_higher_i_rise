@@ -22,7 +22,7 @@ options = [{
 "links_to": "diner_2c1",
 "requires_unvisited": true,
 "text": "Change topics: Ask about her art show",
-"unvisited_link": "diner_2c1"
+"unvisited_aspects": ["diner_art"]
 }]
 wounds = {}
 portraits = ["kristin"]
