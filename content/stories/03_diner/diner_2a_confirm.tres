@@ -15,6 +15,9 @@ You stitched him up while you were blacked out, but you did such a good job he d
 How will you explain the fact that you couldn't breathe, about the dizziness that's still killing your appetite?"
 slots = {}
 options = [{
+"functions": [["update_aspects", [{
+"diner_magic": 1
+}]]],
 "links_to": "diner_2a1",
 "text": "Tell her, you have to try"
 }, {

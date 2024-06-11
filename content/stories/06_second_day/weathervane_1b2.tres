@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://c0m3lvtgynvs0"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_sjs4k"]
+
+[resource]
+script = ExtResource("1_sjs4k")
+base_bg_color = Color(0.333333, 0.219608, 0.564706, 1)
+display_title = "Club Fuego, Again"
+text = "The doorman gives you a confused look as you enter the club a second time, but once you're in you know you've made the right call. The familiar music washes away the stress of whatever [i]that[/i] was, and soon you're ready to dance again. Maybe, you realize, it's not too late to find Kristin."
+slots = {}
+options = [{
+"links_to": "weathervane_1b3",
+"text": "Look for her"
+}]
+wounds = {}
+portraits = ["gabe"]

@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://k7qfs7cwopw0"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_8cra6"]
+
+[resource]
+script = ExtResource("1_8cra6")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "The Night, Again"
+text = "[GABE]: Yup. He's here, alright. See how the shadows are kind of big on the wall?
+
+You follow his eyes but can't tell what he's looking at. The shadows on the wall are moving, but that's hardly surprising with the bugs circling the light.
+
+When you look back at him, Gabe is suddenly holding a glass pipe and a lighter. 
+
+[GABE]: So what we're gonna do is we're gonna smoke a little bit of this, and then we'll be able to talk to him. I'll go first because I can handle it, but we should really do it at the same time.
+
+"
+slots = {}
+options = [{
+"links_to": "weathervane_1a",
+"text": "What's in the pipe?"
+}, {
+"functions": [["update_aspects", [{
+"straightedge": 1
+}]]],
+"links_to": "weathervane_1b",
+"text": "[DON'T SMOKE]: Absolutely not!"
+}, {
+"links_to": "weathervane_1a2",
+"text": "[SMOKE]: Roll with it"
+}]
+wounds = {}
+portraits = ["gabe"]

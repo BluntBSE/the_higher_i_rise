@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dk5xklkvd6add"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_pr7qx"]
+
+[resource]
+script = ExtResource("1_pr7qx")
+base_bg_color = Color(0.411765, 0.670588, 0.94902, 1)
+display_title = "Striking a Pose"
+text = "Looking [i]real[/i] good today!"
+slots = {}
+options = [{
+"links_to": "second_day_cf_1",
+"text": "Out the door"
+}]
+wounds = {}
+portraits = []

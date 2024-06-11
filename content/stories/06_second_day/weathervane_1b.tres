@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cvriaonhdkk37"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_gsj3f"]
+
+[resource]
+script = ExtResource("1_gsj3f")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "Too Weird"
+text = "No. This is too weird for you. When Gabe said he wanted you to \"see something,\" you didn't think he meant \"smoke drugs behind the club.\"
+
+You decide it's better to just get back to dancing. You leave an offended-looking Gabe in the gravel lot. "
+slots = {}
+options = [{
+"functions": [["update_aspects", [{
+"straightedge": 1
+}]]],
+"links_to": "weathervane_1b2",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["gabe"]

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bl2rm7qssxo4p"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_ulohw"]
+
+[resource]
+script = ExtResource("1_ulohw")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "Club Fuego: Line"
+text = "His grip is almost unpleasantly weak."
+slots = {}
+options = [{
+"links_to": "second_day_cf_6",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["ansin"]

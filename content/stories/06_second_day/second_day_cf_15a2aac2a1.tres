@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://rdwtycaj0qv2"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_7mwpk"]
+
+[resource]
+script = ExtResource("1_7mwpk")
+base_bg_color = Color(0.333333, 0.219608, 0.564706, 1)
+display_title = "Club Fuego"
+text = "And with that, \"one more song\" turns into three, and then five, and Kristin is all smiles until she finally shuffles off the dance floor because she's run out of breath.
+
+[KRISTIN]: Shoot. I've actually got a lot to do today, so I think I have to call a car.
+
+[KRISTIN]: This was great, though. Really. It was kind of weird here at first but you made my night."
+slots = {}
+options = [{
+"links_to": "weathervane_1b4",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["kristin"]

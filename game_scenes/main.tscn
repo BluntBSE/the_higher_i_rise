@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://wdnval5ovhem"]
+[gd_scene load_steps=7 format=3 uid="uid://wdnval5ovhem"]
 
 [ext_resource type="Script" path="res://game_scenes/main.gd" id="1_6f7jw"]
 [ext_resource type="PackedScene" uid="uid://beimt6ww35m54" path="res://game_scenes/parser/interaction_parser.tscn" id="2_8hrlm"]
 [ext_resource type="PackedScene" uid="uid://cmg6a3jhpo4y3" path="res://menu_and_ui/packed_scenes/big_ui_button.tscn" id="3_iqb5y"]
 [ext_resource type="Script" path="res://menu_and_ui/packed_scenes/history_rect.gd" id="4_0dkyt"]
 [ext_resource type="AudioStream" uid="uid://b3piyu3n4fxb8" path="res://content/sfx/click_effect_1.mp3" id="4_pr4q4"]
+[ext_resource type="Script" path="res://game_scenes/parser/history_menu.gd" id="5_pv8hf"]
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -61,6 +62,7 @@ visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("5_pv8hf")
 
 [node name="history_rect" type="ColorRect" parent="pause_filter/history_menu"]
 layout_mode = 0

@@ -16,7 +16,7 @@ text = "[FRAU SCHLÜSSEL]: I CANNOT RETURN YOUR BODY. BUT I CAN TEACH YOU THE AR
 [font_size=50]END OF DEMO[/font_size]"
 slots = {}
 options = [{
-"links_to": "shadowless_8",
+"links_to": "second_day_1",
 "text": "Continue"
 }]
 wounds = {}

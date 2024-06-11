@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bg880iaiqphdn"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_pfuox"]
+
+[resource]
+script = ExtResource("1_pfuox")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "Club Fuego: Line"
+text = "[ANSIN]: Anyone can hold history in their hands, but it's important to maintain balance. Carry too much of one influence, especially the heavy ones, and you can get into trouble.
+
+[ANSIN]: Maybe you know all this. But Gabriel-
+
+[GABE]: Gabe.
+
+[ANSIN]: -Tells me you seemed a little confused. We've had a challenging few days, so we're taking tonight off, but here's my number. Call me if you have questions about your new situation."
+slots = {}
+options = [{
+"links_to": "second_day_cf_11",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["ansin", "gabe"]

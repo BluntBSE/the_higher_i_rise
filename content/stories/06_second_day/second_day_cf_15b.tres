@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://d34w64eqs2ewd"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_5eafv"]
+
+[resource]
+script = ExtResource("1_5eafv")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "The Night, Again"
+text = "Gabe gives you a heartfelt
+
+[GABE]: Hell yeah!
+
+And leads you quickly out of the club. He loiters for a moment to make sure you aren't being followed, then takes you down the street before ducking into a nearby alley. On the other side, you emerge into a plain gravel yard filled with trash cans used by the business out front. Glass crunches under your shoes, and weird shadows fill the space as insects whirl around the yard's single light. 
+
+You're pretty sure you see a needle.
+
+Gabe, meanwhile, studies the shadows on the wall."
+slots = {}
+options = [{
+"links_to": "weathervane_1",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["gabe"]

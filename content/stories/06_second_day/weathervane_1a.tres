@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://o23vv2olo6an"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_sslu0"]
+
+[resource]
+script = ExtResource("1_sslu0")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "The Night, Again"
+text = "[GABE]: It's DMT. They use it in the Amazon to do all kinds of things. It opens up your third eye. Your inner sight. However you want to call it.
+
+[GABE]: Don't worry, though. It only lasts like ten minutes. Just long enough to get in and get out, so to speak.
+
+[GABE]: You ready?
+
+"
+slots = {}
+options = [{
+"links_to": "weathervane_1a2",
+"text": "[SMOKE]: Accept"
+}, {
+"links_to": "weathervane_1b",
+"text": "[DON'T SMOKE]: Get out of here"
+}]
+wounds = {}
+portraits = ["gabe"]

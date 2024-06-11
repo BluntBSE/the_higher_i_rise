@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://ddk0bvnvp4xh6"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_7mwpk"]
+
+[resource]
+script = ExtResource("1_7mwpk")
+base_bg_color = Color(0.333333, 0.219608, 0.564706, 1)
+display_title = "Club Fuego"
+text = "After all, you come here all the time. You can dance with the regulars any day, and you love sharing this with other people. She doesn't need to stop dancing on your account."
+slots = {}
+options = [{
+"links_to": "second_day_cf_15a2aac2a1",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["kristin"]

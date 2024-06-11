@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dak72i128tv20"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_udcs1"]
+
+[resource]
+script = ExtResource("1_udcs1")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Dance: The Body"
+text = "You dabble in the gym, but there's something uniquely boring about that kind of exercise. There's nothing boring about salsa It's whole-body movement at 200 beats per minute. It's partnerwork. It's coordination. Sometimes you make elegant figures. Others, you move like an animal.
+
+It feels right to live in your body this way. You don't have the biggest muscles, but you know how to move what you've got. And medically speaking, you can't beat the cardio."
+slots = {}
+options = [{
+"links_to": "second_day_cf_2",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

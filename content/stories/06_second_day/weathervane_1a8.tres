@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cl3pdcxfds1kl"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_p7qpp"]
+
+[resource]
+script = ExtResource("1_p7qpp")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "The Night, Again"
+text = "[GABE]: It's good, right?
+
+[GABE]: No, I don't want anything. This is just to make up for the other day.
+
+[GABE]: Him? He's just watching. He's starting to see your world,  so I thought he should see—Wait, no!
+"
+slots = {}
+options = [{
+"links_to": "weathervane_1a9",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["gabe"]

@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://djt0pwbsiltd6"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_1rdu4"]
+
+[resource]
+script = ExtResource("1_1rdu4")
+base_bg_color = Color(0.333333, 0.219608, 0.564706, 1)
+display_title = "Club Fuego"
+text = "[GABE]: Hey! Sorry! Didn't mean to spook you.
+
+[GABE]: I just wanted to tell you: I saw something on my way in you might want to see too.
+
+[GABE]: This place is cool and all, but I'm pretty bad at dancing, and, uh, this could be a little more interesting.
+
+[GABE]: Ansin hates it when I fuck with magic stuff in public, but if you're one of us maybe it's good for you to see some of it for yourself.
+
+[GABE]: Without any \"adult supervision.\"
+
+Ansin, you realize, is nowhere to be seen."
+slots = {}
+options = [{
+"links_to": "second_day_cf_15a",
+"text": "[DECLINE] Talk to Kristin"
+}, {
+"links_to": "second_day_cf_15b",
+"text": "[ACCEPT] Go see what Gabe is talking about"
+}]
+wounds = {}
+portraits = ["gabe"]

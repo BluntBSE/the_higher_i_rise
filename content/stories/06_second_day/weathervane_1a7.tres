@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bmlnj2j6tsyqb"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_ik24m"]
+
+[resource]
+script = ExtResource("1_ik24m")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "The Night, Again"
+text = "[GABE]: Weathervane! I've uh, come to apologize. I know I was real stupid a couple days ago, and I want to make it up to you.
+
+[GABE]: I brought you a treat! I mean, uh, I brought you an offering! It's good stuff. Really top-shelf. Come here.
+
+Gabe opens the flask and begins to pour it out right into the corner where the wall meets the ground, where it vanishes.
+
+You're high. You [i]know[/i] you're high. But you also know for a fact that there's no splash. No vodka pools on the floor. It just leaves Gabe's flask and is deleted from this world.
+
+"
+slots = {}
+options = [{
+"links_to": "weathervane_1a8",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["gabe"]

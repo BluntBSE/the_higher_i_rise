@@ -34,12 +34,19 @@ func stateUpdate(_dt):
 	for child in grid.get_children():
 		child.queue_free()
 	var aspects = _reference.aspect_dict
-	print(aspects)
 	for aspect in aspects:
 		#If it is a new aspect
 		#OR
 		#An aspect has been incremented...
+		#Hide debug aspects
+		var loaded_aspect = load(TextTools.getResourceFromDirectory('res://content/catalogs/aspects/', aspect))
+		if loaded_aspect.debug == true:
+			print("DEBUG ASPECT FOUND", aspect)
+			#Don't render any debug aspects. Used to track story variables, like passages you've visited.
+			continue
+
 		var single_aspect:SingleAspect = load("res://text_engine/packed_scenes/aspect_item.tscn").instantiate()
+
 		single_aspect.unpack(aspect, aspects[aspect])
 		grid.add_child(single_aspect)
 		#Can do the check after it's been added actually to update its state.

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cgf0fipb2f1ek"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_aq7jo"]
+
+[resource]
+script = ExtResource("1_aq7jo")
+base_bg_color = Color(0.333333, 0.219608, 0.564706, 1)
+display_title = "Club Fuego"
+text = "[KRISTIN]: Alright, alright. This is great, but I'm hogging you.
+
+[KRISTIN]: You should probably dance with some other people, and I should probably get out of here. 
+"
+slots = {}
+options = [{
+"links_to": "second_day_cf_15a2aac2a",
+"text": "She can hog you if she wants"
+}, {
+"links_to": "second_day_cf_15a2aac2b",
+"text": "Walk out with her"
+}, {
+"links_to": "second_day_cf_15a2aac2c",
+"text": "Say goodnight, keep dancing"
+}]
+wounds = {}
+portraits = ["kristin"]

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b0s14ic8gqk5a"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_fv030"]
+
+[resource]
+script = ExtResource("1_fv030")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "The Night, Again"
+text = "Somehow you make it home again and collapse, alone, into your own bed. The world keeps spinning, so you draw your sheets around you in a tight cocoon, and you keep tightening it, closer and closer against your own body, until everything goes still and you, half-suffocated, fall asleep."
+slots = {}
+options = [{
+"links_to": "weathervane_1a11",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

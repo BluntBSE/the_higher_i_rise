@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://d36xrbuao641n"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_pel6r"]
+
+[resource]
+script = ExtResource("1_pel6r")
+base_bg_color = Color(0.333333, 0.219608, 0.564706, 1)
+display_title = "Club Fuego, Again"
+text = "Sadly, you can't find her.  You resolve to text her later. 
+
+For now, it's time to dance. "
+slots = {}
+options = [{
+"functions": [["update_aspects", [{
+"tarantellist": 1
+}]]],
+"links_to": "weathervane_1b4",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

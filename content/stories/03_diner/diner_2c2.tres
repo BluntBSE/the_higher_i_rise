@@ -21,12 +21,12 @@ options = [{
 "links_to": "diner_2b_confirm_copy",
 "requires_unvisited": true,
 "text": "Change topics: Vent about your day",
-"unvisited_links": ["diner_2a1", "diner_2b1"]
+"unvisited_aspects": ["diner_vent"]
 }, {
 "links_to": "diner_2a_confirm_copy",
 "requires_unvisited": true,
 "text": "Change topics: Tell her what happened earlier",
-"unvisited_links": ["diner_2a1", "diner_2b1"]
+"unvisited_aspects": ["diner_magic"]
 }]
 wounds = {}
 portraits = ["kristin"]

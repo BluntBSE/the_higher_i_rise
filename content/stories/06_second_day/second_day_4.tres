@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b2udkrkerln0r"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_xxban"]
+
+[resource]
+script = ExtResource("1_xxban")
+base_bg_color = Color(0.411765, 0.670588, 0.94902, 1)
+display_title = "In the Bathroom"
+text = "You take a deep, steadying breath and...
+
+"
+slots = {}
+options = [{
+"functions": [["update_aspects", [{
+"finger_guns": 1
+}]]],
+"links_to": "second_day_fg",
+"text": "Finger guns"
+}, {
+"functions": [["update_aspects", [{
+"poser": 1
+}]]],
+"links_to": "second_day_pose",
+"text": "Strike a pose"
+}, {
+"functions": [["update_aspects", [{
+"composed": 1
+}]]],
+"links_to": "second_day_composed",
+"text": "..."
+}]
+wounds = {}
+portraits = []

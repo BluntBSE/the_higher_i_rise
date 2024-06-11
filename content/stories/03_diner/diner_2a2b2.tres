@@ -18,11 +18,12 @@ options = [{
 },
 "hint": "Not bad",
 "hint_tooltip": "But that isn't how this works",
-"links_to": "diner_2a2b1",
+"links_to": "DEBUG_NOPE",
 "text": "You shouldnt' see this"
 }, {
 "functions": [["update_aspects", [{
-"fascination": 1
+"awareness_kristin": 1,
+"control": 1
 }]]],
 "links_to": "diner_2a2b1",
 "text": "Shake your head"

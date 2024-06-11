@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cpsox3jvxwmts"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_nh3y7"]
+
+[resource]
+script = ExtResource("1_nh3y7")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "The Night, Again"
+text = "You watch as one of the biggest shadows on the wall takes on a distinctly [i]insect[/i] quality. Nothing moves, exactly, but suddenly there's the flash of carapace, the suggestion of feelers and wings. It puts you in the mind of an enormous beetle, or perhaps a moth. You try very hard not to think of spiders this size.
+
+You blink. Now the insect-shadow is on the other side of the wall. You blink again, and it is somewhere else. You never catch it moving, but it seems to flicker with every lapse of your attention.
+
+You watch Gabe approach the wall and drop to his knees."
+slots = {}
+options = [{
+"links_to": "weathervane_1a7",
+"text": "You see it"
+}]
+wounds = {}
+portraits = ["gabe"]

@@ -5,6 +5,7 @@ class_name Aspect
 @export var icon:String
 @export var display_name:String
 @export var tooltip:String
+@export var debug:bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

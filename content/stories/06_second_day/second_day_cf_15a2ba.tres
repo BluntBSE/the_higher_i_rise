@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b64n6urf4puts"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_ap58f"]
+
+[resource]
+script = ExtResource("1_ap58f")
+base_bg_color = Color(0.333333, 0.219608, 0.564706, 1)
+display_title = "Club Fuego"
+text = "[KRISTIN]: Whoa. So they think you did, like, [i]magic[/i] about it? 
+
+[KRISTIN]: Sounds crazy to me, but maybe you'll get some groupies out of the deal. 
+
+[KRISTIN]: And in fairness, it [i]is[/i] kind of crazy that he's even here right now, isn't it? Keep me posted if you decide to hang out with them."
+slots = {}
+options = [{
+"links_to": "second_day_cf_15a2ba",
+"text": "Share their mystical insinuations"
+}]
+wounds = {}
+portraits = ["kristin"]

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b8n35irgmtuei"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_w1l5h"]
+
+[resource]
+script = ExtResource("1_w1l5h")
+base_bg_color = Color(0.333333, 0.219608, 0.564706, 1)
+display_title = "Club Fuego"
+text = "Bewildering encounter aside, the night looks like it's going to be an amazing time. There are lots of excited people here, and when you warm up with the intermediate class you can see that most of them even know what they're doing. 
+
+When the party starts, the dancefloor erupts with music and laughing, dancing, people. You build up a sweat in no time, and your head becomes joyfully empty of everything but the music. Your muscles move automatically, and almost every partner you dance with walks away with a smile.
+"
+slots = {}
+options = [{
+"links_to": "second_day_cf_14",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

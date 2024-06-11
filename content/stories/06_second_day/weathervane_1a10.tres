@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://c082au4qq5jwk"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_khql3"]
+
+[resource]
+script = ExtResource("1_khql3")
+base_bg_color = Color(0.780392, 0.694118, 0.72549, 1)
+display_title = "The Night, Shattered"
+text = "Or it kisses you on the cheek. Or it smothers you in a hundred of its legs until you pass out. You never remember exactly what happens here, but this is when the night exploded.
+
+Later, what little you can recall comes back to you in a kaleidoscope of colors and sensations. There are scenes of you drinking in unfamiliar venues with Gabe. Here's a picture of you staggering into a stranger's house party. There's a kiss in there somewhere, but also the smell of vomit. There are people everywhere in your memories, all of them reaching for the same thing. In your broken memory, you can almost hear it:
+
+ \"Death is around the corner,\" they seem to shout, \"let us do anything, anything at all!\""
+slots = {}
+options = [{
+"links_to": "weathervane_1a11",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["weathervane"]

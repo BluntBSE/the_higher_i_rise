@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://c48qlp6fdyqtt"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_nrg5c"]
+
+[resource]
+script = ExtResource("1_nrg5c")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "Dance: Connection"
+text = "Partner dance is special because you can't do it by yourself. To do it well you need to learn how to connect with lots of different people, both mentally and with your body. Here you get to meet and connect with people you'd never meet in the daytime world. You don't always get their names, you don't always see them often, but you form bonds with them in a way that you can't find anywhere else."
+slots = {}
+options = [{
+"links_to": "second_day_cf_2",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

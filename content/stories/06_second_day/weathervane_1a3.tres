@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://duyo0pp6o72e2"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_qyiri"]
+
+[resource]
+script = ExtResource("1_qyiri")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "The Night, Again"
+text = "[GABE]: Now, we wait. It shouldn't take long..."
+slots = {}
+options = [{
+"links_to": "weathervane_1a4",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["gabe"]
