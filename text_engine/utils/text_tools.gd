@@ -205,15 +205,18 @@ static func parseOptions(_reference, interaction: Interaction):
 		
 		if option.has("requires_unvisited"):
 			if option.has("unvisited_link"):
+				print("UNVISITED REQUIREMENT DETECTED")
 				var _unvisited_interaction = option.unvisited_link
 				if glory.the_history.has(option.unvisited_link):
 					continue 
 			if option.has("unvisited_links"):
+				print("PLURAL UNVISITED REQUIREMENT DETECTED")
 				var any_visited = false
 				for link in option.unvisited_links:
-					if glory.the_history.has(link):
-						
-						any_visited = true
+					for item in glory.the_history:
+						if glory.the_history.has(link):
+							print("FOUND IN GLORY")
+							any_visited = true
 				if any_visited == true:
 					continue
 					

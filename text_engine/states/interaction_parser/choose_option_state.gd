@@ -43,6 +43,7 @@ func record_history(interaction_resource:Interaction, interaction_key):
 func determineOptionIndex(interaction_id):
 	var index = 0
 	for option in _reference.active_interaction.options:
+		#CAREFUL WITH YOUR DUMMY INTERACTION IDS HERE
 		if option.links_to == interaction_id:
 			return index
 		else:
@@ -85,8 +86,9 @@ func stateUpdate(dt):
 	if t < .15:
 		return
 	#need to wait for complete...
+	print("Options are", _reference.active_interaction.options)
 	if !_reference.active_interaction.options[index].has("functions"):
-		print("No functions")
+		print("No functions in:", _reference.active_interaction.options[index])
 		var interaction_to_load = TextTools.getInteractionResource(_args)
 		#load option is used to fade in/out
 		record_history(interaction_to_load, _args)

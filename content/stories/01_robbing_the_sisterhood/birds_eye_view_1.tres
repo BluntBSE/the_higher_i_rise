@@ -6,7 +6,7 @@
 script = ExtResource("1_vno7c")
 base_bg_color = Color(1, 0.890196, 0, 1)
 display_title = "Bird's Eye View"
-text = "Your consciousness expands until you are floating over the entire school. It's a U-shaped brick building, maybe five stories tall, with a little courtyard garden in the front. Up here the sounds of New York, with its motor carriages and its street cars, relax into a dull roar."
+text = "Your consciousness expands until you are floating over the entire school. It's a U-shaped brick building, maybe five stories tall, with a little courtyard garden in the front. Up here the sounds of Boston, with its motor carriages and its street cars, relax into a dull roar."
 slots = {}
 options = [{
 "id": "foo",

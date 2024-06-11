@@ -6,13 +6,13 @@
 script = ExtResource("1_q0k0v")
 base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
 display_title = "Home"
-text = "Your body is warm with exertion when you get home that morning, and there's a pleasant ache in your legs. 
+text = "When you return home that morning, your body is warm with exertion and there's a pleasant ache in your legs. 
 
-Living on the night shift means your weekend mornings are packed with errands, but they pass like a pleasant breeze. When they're over,  you hit the bed satisfied and soon fall asleep."
+The rest of your day passes like a pleasant breeze."
 slots = {}
 options = [{
 "links_to": "weathervane_1b4",
-"text": "Continue"
+"text": "Go to bed"
 }]
 wounds = {}
 portraits = []
