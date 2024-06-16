@@ -5,4 +5,11 @@ res://text_engine/shaders/2d_palette_swap.gdshader
 res://text_engine/resources/UI/theme.tres
 res://game_scenes/title_screen/main_menu.gdshader
 res://text_engine/shaders/2d_glow_shader_2.gdshader
-res://text_engine/nodes/interaction_parser.gd
+res://menu_and_ui/utils/mm_functions.gd
+res://menu_and_ui/packed_scenes/slot_button.tscn
+res://game_scenes/main.tscn
+res://menu_and_ui/packed_scenes/big_ui_button.tscn
+res://game_scenes/the_glory.tscn
+res://game_scenes/title_screen/main_menu.tscn
+res://menu_and_ui/packed_scenes/history_button.tscn
+res://menu_and_ui/packed_scenes/load_game_button.tscn
