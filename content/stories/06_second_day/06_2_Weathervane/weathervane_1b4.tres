@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://5d5pq6tx6xgu"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_q0k0v"]
+
+[resource]
+script = ExtResource("1_q0k0v")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "Home"
+text = "When you return home that morning, your body is warm with exertion and there's a pleasant ache in your legs. 
+
+The rest of your day passes like a pleasant breeze."
+slots = {}
+options = [{
+"links_to": "you_dream_forge",
+"text": "Go to bed"
+}]
+wounds = {}
+portraits = []

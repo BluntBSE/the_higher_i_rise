@@ -26,7 +26,7 @@ options = [{
 "links_to": "diner_2a_confirm_copy",
 "requires_unvisited": true,
 "text": "Change topics: Tell her what happened earlier",
-"unvisited_aspects": ["diner_magic"]
+"unvisited_aspects": ["diner_magic", "diner_vent"]
 }]
 wounds = {}
 portraits = ["kristin"]

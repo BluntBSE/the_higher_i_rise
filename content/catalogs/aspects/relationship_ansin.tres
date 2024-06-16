@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Aspect" load_steps=2 format=3 uid="uid://ciqps4ylpog2p"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_a0pip"]
+
+[resource]
+script = ExtResource("1_a0pip")
+aspect_id = "awareness_ansin"
+icon = "res://content/images/aspects/AI_Compassionate.jpg"
+display_name = "Relationship: Ansin"
+tooltip = "Relationship: Ansin"
+debug = false

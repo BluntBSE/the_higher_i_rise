@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dkfc8eionox00"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_xhgnl"]
+
+[resource]
+script = ExtResource("1_xhgnl")
+base_bg_color = Color(0.0745098, 0.486275, 0.6, 1)
+display_title = "The Orchard of Lights"
+text = "[YOU]: I'm winning, yes. But I shouldn't [i]have[/i] to win. They say that before the Sun, people could come to the Mansus in all kinds of ways. There wasn't Calyptra. You didn't have to give up your body.
+
+[BALDOMERA]: Do you really miss it? I mean, you can have a body any time you want, if you put your mind to it.
+
+[YOU]: It's the principle of the thing.
+
+[BALDOMERA]: Principles are all well and good, but...
+
+She motions to to the Orchard. You can't deny that it's more beautiful than anything you ever saw on Earth.
+"
+slots = {}
+options = [{
+"links_to": "forge_dream_6",
+"text": "Still..."
+}]
+wounds = {}
+portraits = []

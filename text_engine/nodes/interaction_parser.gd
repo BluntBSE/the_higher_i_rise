@@ -4,7 +4,7 @@ class_name InteractionParser
 var state_machine: StateMachine2 = StateMachine2.new()
 #var _current_text: String = ""
 var active_interaction: Interaction = Interaction.new()
-var default_interaction_id = "diner_1"
+var default_interaction_id = "obscure_alley_1"
 var default_interaction#Must be loaded in after initialziation
 var can_hover = true
 var selected_word = null
@@ -42,6 +42,7 @@ func _init():
 	state_machine.Add("load_option", LoadOptionState.new(self, "init load option state"))
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print("Parser is ready")
 	default_interaction = TextTools.getInteractionResource(default_interaction_id)
 	#state_machine.Change("debug", null)
 	state_machine.Change("load_interaction", default_interaction)

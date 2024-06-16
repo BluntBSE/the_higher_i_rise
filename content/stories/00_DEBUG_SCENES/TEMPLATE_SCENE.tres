@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bikx64qabw1ti"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_0db8i"]
+
+[resource]
+script = ExtResource("1_0db8i")
+base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
+display_title = "TEMPLATE"
+text = "THIS IS A TEMPLATE SCENE THAT HOLDS ALL THE DIFFERENT POSSIBLE OPTION CONFIGURATIONS. I YELL BECAUSE I MUST."
+slots = {}
+options = [{
+"conditions_aspect": {
+"curious": 1
+},
+"functions": [["update_aspects", [{
+"dread": 1
+}]]],
+"hint": "[CURIOUS > 1]: Researching cases similar to Gabriel's",
+"hint_tooltip": "",
+"links_to": "home_1a",
+"text": "[CURIOUS > 1]: Researching cases similar to Gabriel's"
+}, {
+"conditions_word": {
+"slot_1": {
+"specific_id": "adj_smug"
+}
+},
+"functions": [["update_aspects", [{
+"murders": 1
+}]]],
+"hint": "If only there was something you could do about it...",
+"hint_tooltip": "If you click words with the right aspect, you might change their position.",
+"id": "obscure_alley_1_opt_1",
+"links_to": "obscure_alley_2",
+"text": "Of course..."
+}]
+wounds = {}
+portraits = []

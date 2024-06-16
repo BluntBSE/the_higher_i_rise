@@ -1,4 +1,5 @@
 NEXT UP:
+	Walk out scene w/ Kristin
 	Make max size of memory window equal to the composite height of all the items
 	Make the scroll default to the bottom
 	Fix the fuckin functions bug in kristin thumb cut scene -- Fixed?

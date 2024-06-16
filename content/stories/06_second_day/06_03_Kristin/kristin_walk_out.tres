@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://de6iudolaq0co"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_h2fad"]
+
+[resource]
+script = ExtResource("1_h2fad")
+base_bg_color = Color(0.333333, 0.219608, 0.564706, 1)
+display_title = "Club Fuego"
+text = "Truthfully, it's probably enough"
+slots = {}
+options = [{
+"functions": [["update_aspects", [{
+"relationship_kristin": 1
+}]]],
+"links_to": "weathervane_1b4",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["kristin"]

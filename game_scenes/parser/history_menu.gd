@@ -2,10 +2,8 @@ extends Control
 
 
 func unpack():
-	print("Unpacked like a motherfucker")
 	var scrollc:ScrollContainer = get_node("history_rect/scroll_container")
 	var container = get_node("history_rect/scroll_container/button_container")
-	print("Container is", container)
 	var total_height = 0
 	#for button in container.get_children():
 		#print("Found a child")

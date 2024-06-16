@@ -14,8 +14,7 @@ static func _record_history(glory, interaction_resource:Interaction, interaction
 		glory.pages += 1
 		#print("Glory pages", _reference.get_tree().root.get_node("the_glory").pages)
 		the_history.append ( {"aspect_dict": aspect_dict, "mem_array": mem_array, "pages_at_recording":glory.pages, "recorded_at": recorded_at, "display_title": display_title, "interaction_key": interaction_key } )
-		print("History")
-		print(the_history)
+
 
 
 static func start_game_menu(node: Node):
@@ -54,6 +53,7 @@ static func cancel_opts(node: Node):
 	
 
 static func start_game(node:Node, slot_number):
+	print("Got to start_game")
 	var glory:TheGlory = node.get_tree().root.get_node("the_glory")
 
 	glory.get_node("main_menu").visible = false
@@ -63,8 +63,10 @@ static func start_game(node:Node, slot_number):
 	#Deleting the main menu from the tree before the new thing is instanced
 	#Can cause a crash.
 	glory.get_node("main_menu").free()
+	print("Attempting music")
 	var music_player:MusicPlayer = glory.get_node("music_player")
 	music_player.play_song("last_hour")
+	print("Music is playing")
 
 
 static func load_game(node:Node, save:SaveFile, slot_number:int):#Needs arg for save slot

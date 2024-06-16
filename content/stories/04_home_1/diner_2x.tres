@@ -8,10 +8,7 @@ base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
 display_title = "Coming Home"
 text = "You head home after dinner, and by the time you're back you start to feel a little bit better. Your usual bedtime, noon, is still a few hours away.
 
-You decide to use some of your free time by...
-
-
-[font_size=50]END OF DEMO[/font_size]"
+You decide to use some of your free time by..."
 slots = {}
 options = [{
 "conditions_aspect": {

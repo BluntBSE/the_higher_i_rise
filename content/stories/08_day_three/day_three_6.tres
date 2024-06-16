@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dsumt1l26l6xv"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_p5stb"]
+
+[resource]
+script = ExtResource("1_p5stb")
+base_bg_color = Color(0.113725, 0.356863, 0.52549, 1)
+display_title = "In the Bathroom"
+text = "You spend some time getting ready in the bathroom. That angry feeling in your muscles doesn't do you any good here either, though, and you cut yourself while you're shaving.
+
+You spend a few irritating minutes trying to stop the bleeding.
+
+On your way out, you...
+
+"
+slots = {}
+options = [{
+"functions": [["update_aspects", [{
+"finger_guns": 1
+}]]],
+"links_to": "day_three_fg",
+"text": "Finger guns"
+}, {
+"functions": [["update_aspects", [{
+"finger_guns": 1
+}]]],
+"links_to": "day_three_pose",
+"text": "Strike a pose"
+}, {
+"functions": [["update_aspects", [{
+"finger_guns": 1
+}]]],
+"links_to": "day_three_composed",
+"text": "..."
+}]
+wounds = {}
+portraits = []

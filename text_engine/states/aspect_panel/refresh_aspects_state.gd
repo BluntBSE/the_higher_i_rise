@@ -41,7 +41,6 @@ func stateUpdate(_dt):
 		#Hide debug aspects
 		var loaded_aspect = load(TextTools.getResourceFromDirectory('res://content/catalogs/aspects/', aspect))
 		if loaded_aspect.debug == true:
-			print("DEBUG ASPECT FOUND", aspect)
 			#Don't render any debug aspects. Used to track story variables, like passages you've visited.
 			continue
 

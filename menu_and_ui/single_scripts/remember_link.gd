@@ -10,7 +10,6 @@ var highlight_color: Color = Color("#ffffff")
 
 
 func open_remember_window():
-	print("OPENING REMEMBER WINDOW")
 	var main = get_tree().root.get_node("the_glory/main")
 	main.state_machine.Change("history_open", null)
 	

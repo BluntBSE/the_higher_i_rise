@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dq47pmv7la5t8"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_8yvl7"]
+
+[resource]
+script = ExtResource("1_8yvl7")
+base_bg_color = Color(0.333333, 0.219608, 0.564706, 1)
+display_title = "Club Fuego"
+text = "You're not sure why you feel so certain, but it's probably better this way. 
+
+[KRISTIN]: Well, you could use the friends. 
+
+[KRISTIN]: Kidding! I'm kidding!
+
+[KRISTIN]: Anyway, I was thinking about heading out. This place is cool and all, but I don't know what I'm doing."
+slots = {}
+options = [{
+"links_to": "second_day_cf_15aac",
+"text": "Teach her some steps"
+}, {
+"links_to": "cf_kristin_goodnight",
+"text": "[STAY]: Say goodnight"
+}]
+wounds = {}
+portraits = ["kristin"]

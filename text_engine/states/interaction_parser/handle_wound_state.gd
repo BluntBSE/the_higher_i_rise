@@ -36,7 +36,6 @@ func determine_wound_number(word_id:String, wound_dict:Dictionary):
 	
 
 func stateEnter(args):
-	print("ENTERED HANDLE WOUND")
 	_args = args
 	memory_panel = _reference.get_node("side_panel/memory_panel")
 	a = 1.0

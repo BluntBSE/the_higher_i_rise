@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://56kjp57hs2qd"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_yhimk"]
+
+[resource]
+script = ExtResource("1_yhimk")
+base_bg_color = Color(0, 0, 0, 1)
+display_title = "You Awaken..."
+text = "..."
+slots = {}
+options = [{
+"links_to": "day_three_1",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

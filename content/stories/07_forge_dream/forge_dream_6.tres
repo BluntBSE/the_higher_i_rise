@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://coerr3076ojjb"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_pg2jw"]
+
+[resource]
+script = ExtResource("1_pg2jw")
+base_bg_color = Color(0.0745098, 0.486275, 0.6, 1)
+display_title = "The Orchard of Lights"
+text = "You realize that she's probably right. And anyway, it's not going to be your problem forever. You passed from Earth to the Mansus, and one day you will follow behind the Watchman on his pilgrimage and pass into Glory. He will take only seven of you, but one day, you will open the door for everyone.
+
+And the Sun, as the mortals say, can go [i]fuck[/i] himself.
+
+"
+slots = {}
+options = [{
+"links_to": "you_awaken_day_3",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

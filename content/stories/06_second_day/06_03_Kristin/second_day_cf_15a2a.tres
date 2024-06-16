@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bg66sdvay5oie"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_jq5xd"]
+
+[resource]
+script = ExtResource("1_jq5xd")
+base_bg_color = Color(0.333333, 0.219608, 0.564706, 1)
+display_title = "Club Fuego"
+text = "[KRISTIN]: I don't know about that. I can tell my dance partners know I have no idea what's going on. 
+
+[KRISTIN]: Everyone else here just seems like they've been dancing since they were six. I don't really belong here.
+
+[KRISTIN]: Maybe I should take some classes and come back. It seems really cool, though! You should let me get a video of you dancing before I go."
+slots = {}
+options = [{
+"links_to": "second_day_cf_15a2aa",
+"text": "So: Do art as a kid or not at all?"
+}, {
+"links_to": "cf_kristin_goodnight",
+"text": "Let her record you"
+}]
+wounds = {}
+portraits = ["kristin"]

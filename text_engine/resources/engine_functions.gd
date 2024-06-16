@@ -14,7 +14,6 @@ func remove_memory(word_id:String):
 	return null
 	
 func set_speech(word_array:Array):
-	print("Setting speech", word_array)
 	var current_parent = get_parent()
 	var memory_panel = current_parent.get_node("side_panel/memory_panel")
 	memory_panel.mem_array = []
@@ -44,7 +43,6 @@ func purge_aspects(bool): #Needs SOMETHING. Can be either
 	aspects_panel.state_machine.Change("refresh", null)
 
 func purge_speech():
-	print("Hello from purge_speech")
 	var current_parent = get_parent() #Parser
 	var memory_panel:MemoryPanel = current_parent.get_node("side_panel/memory_panel")
 	memory_panel.mem_array = []

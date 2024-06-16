@@ -18,8 +18,7 @@ func _init():
 	state_machine.Add("playing", PlayingGameState.new(self, "init playing state"))
 	
 func _ready():
-	print("ACTIVE SAVE IS")
-	print(active_save)
+
 	state_machine.Change("playing", null)
 
 

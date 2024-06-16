@@ -5,7 +5,7 @@ class_name HistoryRect
 
 func unpack(history): #Maybe rename to refresh
 	var button_container = get_node("scroll_container/button_container")
-	print("HISTORY AGAIN", history)
+
 	for n in button_container.get_children():
 		n.queue_free()	
 

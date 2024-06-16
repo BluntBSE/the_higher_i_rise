@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b4rfkixx2k2ww"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_r7vaj"]
+
+[resource]
+script = ExtResource("1_r7vaj")
+base_bg_color = Color(0.113725, 0.356863, 0.52549, 1)
+display_title = "Your Dreams"
+text = "You decide to tell them about the dreams you've been having, about how for several nights now you've been dreaming you were someone else, and how you're the same woman every time.
+
+Ansin looks especially interested when you describe the dream where you broke into St. Lucy's School for Blind Girls.
+
+[ANSIN]: And do you recall any specific figures from your dreams? Any names?"
+slots = {}
+options = [{
+"links_to": "day_three_12_dream_name_no",
+"text": "No"
+}, {
+"functions": [["update_aspects", [{
+"ansin_watchman": 1
+}]]],
+"links_to": "day_three_12_dream_watchman",
+"text": "The Watchman"
+}, {
+"links_to": "day_three_12_dream_calyptra",
+"text": "Calyptra"
+}, {
+"links_to": "day_three_12_dream_name_no",
+"text": "Baldomera"
+}]
+wounds = {}
+portraits = ["ansin", "gabe"]

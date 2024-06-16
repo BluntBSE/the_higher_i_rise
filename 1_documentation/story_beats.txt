@@ -56,4 +56,20 @@ STORY BEATS:
 	Compile an epilogue out of what you've done.
 	
 	
+	Compassionate options
+	<Can be used to boost Gabe relationship at house>
+	
+	Pragmatic Options
+	<CCan be used to boost Kristin awareness
+	
+	Curious Options
+	<Can be used to boost Ansin relationship at house
+	<Can be used to snoop at the house and gain more Secret Lore
+	
+	Awareness, Kristin
+	<Encourages you to get psych treatment
+	<Can bully a nun into helping you
+	<Trheatened or captured by Mirror of Glory
+
+	
 	

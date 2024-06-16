@@ -7,7 +7,6 @@ var _history_item
 var _history_key
 
 func unpack(history_item):
-	print("HISTORY ITEM", history_item)
 	var increment_text = get_node("slot_fg/increment_text")
 	var interaction_name = get_node("slot_fg/interaction_name")
 	var date_text = get_node("slot_fg/date_text")

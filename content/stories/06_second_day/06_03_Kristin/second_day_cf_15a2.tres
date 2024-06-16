@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bi3tv3awqwby0"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_2y76n"]
+
+[resource]
+script = ExtResource("1_2y76n")
+base_bg_color = Color(0.333333, 0.219608, 0.564706, 1)
+display_title = "Club Fuego"
+text = "[KRISTIN]: Oh! Hey! I was wondering if I'd run into you today.
+
+[KRISTIN]: I wanted to see what all the fuss was about. Sorry I didn't text you in advance.
+
+[KRISTIN]: I knew I'd be bad at this, and boy, is there nothing like being bad at stuff as an adult."
+slots = {}
+options = [{
+"links_to": "second_day_cf_15a2a",
+"text": "You don't have to be good to have fun"
+}, {
+"links_to": "second_day_cf_15a2b",
+"text": "Talk about Ansin and Gabe instead"
+}, {
+"links_to": "second_day_cf_15aac",
+"text": "Teach her some steps"
+}]
+wounds = {}
+portraits = ["kristin"]

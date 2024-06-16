@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://lrwchhg00emx"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_kxs7v"]
+
+[resource]
+script = ExtResource("1_kxs7v")
+base_bg_color = Color(0.113725, 0.356863, 0.52549, 1)
+display_title = "Ansin's House"
+text = "[ANSIN]: Please, take a seat. Can I get you anything to drink? I just made a pot of a very nice hibiscus tea that you might enjoy.
+
+[GABE]: I also brought a cooler of beer!"
+slots = {}
+options = [{
+"functions": [["update_aspects", [{
+"pragmatic": 1
+}]]],
+"links_to": "day_three_10_water",
+"text": "Ask for water"
+}, {
+"functions": [["update_aspects", [{
+"relationship_gabe": 1
+}]]],
+"links_to": "day_three_10_beer",
+"text": "Ask for beer"
+}, {
+"functions": [["update_aspects", [{
+"relationship_ansin": 1
+}]]],
+"links_to": "day_three_10_tea",
+"text": "Ask for tea"
+}]
+wounds = {}
+portraits = ["ansin"]

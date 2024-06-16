@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dwty4teia4ich"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_xw67a"]
+
+[resource]
+script = ExtResource("1_xw67a")
+base_bg_color = Color(0.635294, 0.196078, 0.180392, 1)
+display_title = "The Sun in Rags"
+text = "The Sun is not what it was. Now he is cool and distant. The Forge killed him once, and in the process gentled his fire. That was before your time, though, and in your opinion, hardly enough.
+"
+slots = {}
+options = [{
+"links_to": "forge_dream_3",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bex6pqcud83e5"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_si02v"]
+
+[resource]
+script = ExtResource("1_si02v")
+base_bg_color = Color(0.0705882, 0.137255, 0.345098, 1)
+display_title = "Club Fuego"
+text = "Actually, you've about gotten your fix, too. You offer to walk Kristin to the train stop, and together you step out into the night. It's warm outside, but the sweat on your bodies makes it feel cool and refreshing compared to the club.
+
+[KRISTIN]: Thanks again for teaching me. It's a cool spot you've got here. I'll definitely be back.
+
+[KRISTIN]: Text me when you get home, okay?
+
+
+"
+slots = {}
+options = [{
+"functions": [["update_aspects", [{
+"relationship_kristin": 1
+}]]],
+"links_to": "weathervane_1b4",
+"text": "Drop her off at the station"
+}]
+wounds = {}
+portraits = ["kristin"]

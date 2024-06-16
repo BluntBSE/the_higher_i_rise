@@ -11,6 +11,9 @@ text = "You can't hide that you're having a hard time. You're still dizzy, so ea
 Kristin's a good listener. You might even feel better afterwards."
 slots = {}
 options = [{
+"functions": [["update_aspects", [{
+"diner_vent": 1
+}]]],
 "links_to": "diner_2b1",
 "text": "Vent about your day"
 }, {

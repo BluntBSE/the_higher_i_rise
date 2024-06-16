@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://gt11cqilrgsr"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_o68r0"]
+
+[resource]
+script = ExtResource("1_o68r0")
+base_bg_color = Color(0.113725, 0.356863, 0.52549, 1)
+display_title = "Ansin's House"
+text = "A train ride and a short walk later, you find yourself in front of a beautifully-painted triple-decker house. Brass ornaments, like smiling suns, decorate the yard. It's hard to imagine Gabe have anything to do with a place like this but for Ansin, you suppose, it tracks."
+slots = {}
+options = [{
+"links_to": "day_three_8",
+"text": "Knock on the door"
+}]
+wounds = {}
+portraits = []

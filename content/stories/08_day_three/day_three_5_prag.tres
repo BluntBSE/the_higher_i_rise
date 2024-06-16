@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://c8mhsawt2t18h"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_cg743"]
+
+[resource]
+script = ExtResource("1_cg743")
+base_bg_color = Color(0.113725, 0.356863, 0.52549, 1)
+display_title = "Safety First"
+text = "You're not going to be dumb about it, though. If you're going to visit the house of a total stranger running a vaguely mystical-sounding \"study group,\" Kristin's going to know where you are.
+
+You shoot her a quick text describing the situation and share your location."
+slots = {}
+options = [{
+"links_to": "day_three_5_prag2",
+"text": "Continue"
+}, null]
+wounds = {}
+portraits = []

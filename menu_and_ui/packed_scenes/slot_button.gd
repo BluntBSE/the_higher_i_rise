@@ -23,8 +23,7 @@ func unpack(slot_num, save): #SaveFile or NUll
 		save_file = save
 		start_or_load = "load"
 		delete_button.args = [slot_number]
-		print("Delete args:")
-		print(delete_button.args)
+
 		
 
 # Called when the node enters the scene tree for the first time.

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://btmudrpv2kyr"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_eqbxl"]
+
+[resource]
+script = ExtResource("1_eqbxl")
+base_bg_color = Color(0.0745098, 0.486275, 0.6, 1)
+display_title = "The Orchard of Lights"
+text = "Your companion looks up from her book and her nest of picnic-goods. Her blanket is much softer than yours, and her spread of treats much more robust.
+
+[BALDOMERA]: Are you unhappy, Betty?
+
+[YOU]: I only think that things could be different. If he weren't in charge. If people didn't [i]want[/i] him in charge.
+
+[BALDOMERA]: And yet you are here, never aging, eating snacks delivered by faithful adepts across the globe. Nobody likes rules, but I rather think you're coming out on top, wouldn't you say?"
+slots = {}
+options = [{
+"links_to": "forge_dream_5",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

@@ -36,8 +36,8 @@ var portrait_node_0
 var portrait_node_1
 var a #alpha, for fading
 var t = 0.0 #Used for controlling animations
-var original_color
 
+var original_color
 
 	
 
