@@ -98,7 +98,7 @@ static func load_game(node:Node, save:SaveFile, slot_number:int):#Needs arg for 
 	
 	#Deleting the main menu from the tree before the new thing is instanced
 	#Can cause a crash.
-	root.get_node("main_menu").free()
+	root.get_node("main_menu").queue_free()
 	var music_player:MusicPlayer = glory.get_node("music_player")
 	music_player.play_song("last_hour")
 
