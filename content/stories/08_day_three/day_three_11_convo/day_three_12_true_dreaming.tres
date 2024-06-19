@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://cdyknwcvdkaox"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_7jboq"]
+
+[resource]
+script = ExtResource("1_7jboq")
+base_bg_color = Color(0.113725, 0.356863, 0.52549, 1)
+display_title = "Your Dreams"
+text = "Ansin listens intently. You can tell that he is calculating something, and you can tell that what he says next, for whatever reason, isn't the whole picture.
+
+[ANSIN]: 'Betty' doesn't ring a bell. But don't be surprised by the modern name.
+
+[ANSIN]: Not every spirit achieved its station in the olden times. "
+slots = {}
+options = [{
+"links_to": "day_three_12_watchman_holiest",
+"text": "Who is the holiest hour?"
+}]
+wounds = {}
+portraits = ["ansin"]

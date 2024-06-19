@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dwfim54d8lvbi"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_8vitb"]
+
+[resource]
+script = ExtResource("1_8vitb")
+base_bg_color = Color(0.113725, 0.356863, 0.52549, 1)
+display_title = "Your Dreams"
+text = "[ANSIN]: Nothing to get involved with, that one. I wouldn't say her name again. 
+
+He offers no further explanation. 
+
+"
+slots = {}
+options = [{
+"links_to": "day_three_12_watchman",
+"text": "Mention the Watchman"
+}]
+wounds = {}
+portraits = ["ansin", "gabe"]

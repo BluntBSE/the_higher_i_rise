@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dhcwvts5p2p8k"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_rr22o"]
+
+[resource]
+script = ExtResource("1_rr22o")
+base_bg_color = Color(0.113725, 0.356863, 0.52549, 1)
+display_title = "Your Dreams"
+text = "[ANSIN]: The mind comes up with such fascinating details, can't it?
+
+[ANSIN]: Your dreams seem to be significant, but 'Betty' doesn't sound like something that's part of...Well, we'll get there. But just remember that the mind can be so confused at first.
+
+Ansin gives you a smile, but there's a calculating look in his eyes."
+slots = {}
+options = [{
+"links_to": "day_three_12_watchman_holiest",
+"text": "Who is the holiest hour?"
+}]
+wounds = {}
+portraits = ["ansin"]

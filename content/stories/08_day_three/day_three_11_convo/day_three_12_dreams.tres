@@ -19,7 +19,7 @@ options = [{
 "functions": [["update_aspects", [{
 "ansin_watchman": 1
 }]]],
-"links_to": "day_three_12_dream_watchman",
+"links_to": "day_three_12_watchman",
 "text": "The Watchman"
 }, {
 "links_to": "day_three_12_dream_calyptra",
