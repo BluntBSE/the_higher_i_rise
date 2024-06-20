@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://ddjo2hijb1n48"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_kht5f"]
+
+[resource]
+script = ExtResource("1_kht5f")
+base_bg_color = Color(0.113725, 0.356863, 0.52549, 1)
+display_title = "Considering"
+text = "[ANSIN]: Of course. I understand this is an awful lot to take in at once, so take your time with it.
+
+[ANSIN]: But consider yourself fortunate. Most people live and die without learning any of this. And if you are interested in learning more about these things, some friends and I gather here at my house every week to share our latest discoveries.
+
+[ANSIN]: I'm sure everyone would love to meet a natural talent. I'll text you when we next meet. I hope you will join us.
+"
+slots = {}
+options = [{
+"links_to": "day_three_practice",
+"text": "[LINGER]: Ask to practice here"
+}, {
+"links_to": "day_three_lecture_why_you",
+"text": "[SNOOP]: Ask to go to the bathroom"
+}, {
+"links_to": "day_three_lecture_thank",
+"text": "Prepare to leave"
+}]
+wounds = {}
+portraits = ["ansin", "gabe"]

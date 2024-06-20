@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://c87vpcv0kruvf"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_8dev2"]
+
+[resource]
+script = ExtResource("1_8dev2")
+base_bg_color = Color(0.113725, 0.356863, 0.52549, 1)
+display_title = "Considering"
+text = "You can tell right away that Ansin doesn't believe you. He inspects his tea in silence for a moment.
+
+[ANSIN]: I hope in time you'll come to trust us, but I understand your hesitation. Let us get to what you came for.
+
+[ANSIN]: We offered you answers, so here they are.
+
+[ANSIN]: Pay attention."
+slots = {}
+options = [{
+"links_to": "day_three_lecture_1",
+"text": "Listen"
+}]
+wounds = {}
+portraits = ["ansin"]

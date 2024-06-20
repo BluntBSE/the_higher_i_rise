@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dgnqx74w1o4ss"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_2dr5o"]
+
+[resource]
+script = ExtResource("1_2dr5o")
+base_bg_color = Color(0.113725, 0.356863, 0.52549, 1)
+display_title = "Your Dreams"
+text = "You consider whether or not to share anything else."
+slots = {}
+options = [{
+"links_to": "day_three_12_dream_name_no",
+"text": "No"
+}, {
+"functions": [["update_aspects", [{
+"ansin_watchman": 1
+}]]],
+"links_to": "day_three_12_watchman",
+"text": "The Watchman"
+}, {
+"links_to": "day_three_12_dream_calyptra",
+"text": "Calyptra"
+}, {
+"links_to": "day_three_12_dream_name_no",
+"text": "Baldomera"
+}]
+wounds = {}
+portraits = ["ansin", "gabe"]

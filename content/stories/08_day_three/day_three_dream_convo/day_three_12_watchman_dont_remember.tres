@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://7oy1e2vkrdjt"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_th5fw"]
+
+[resource]
+script = ExtResource("1_th5fw")
+base_bg_color = Color(0.113725, 0.356863, 0.52549, 1)
+display_title = "Your Dreams"
+text = "[ANSIN]: That is unfortunate. Still, it is significant that you are hearing his name in your dreams.
+
+[ANSIN]: It bodes well for what we will discuss later."
+slots = {}
+options = [{
+"links_to": "day_three_12_watchman_holiest",
+"text": "Who is the holiest hour?"
+}]
+wounds = {}
+portraits = ["ansin"]

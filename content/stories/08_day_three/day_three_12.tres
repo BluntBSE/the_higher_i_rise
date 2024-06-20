@@ -13,6 +13,12 @@ slots = {}
 options = [{
 "links_to": "day_three_12_dreams",
 "text": "Tell them about your dreams"
+}, {
+"links_to": "day_three_12_dreams",
+"text": "Tell them about the \"wounds.\""
+}, {
+"links_to": "day_three_12_nothing_else",
+"text": "[LIE]: You haven't noticed anything else"
 }]
 wounds = {}
 portraits = ["ansin", "gabe"]

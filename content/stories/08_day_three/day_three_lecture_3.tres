@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://1j3abfmehl4u"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_i8xy4"]
+
+[resource]
+script = ExtResource("1_i8xy4")
+base_bg_color = Color(0.113725, 0.356863, 0.52549, 1)
+display_title = "ConsideringA Lecture"
+text = "[ANSIN]: It is possible, if you know what you're looking for, to find opportunities to move from one thread of History to another. 
+
+[ANSIN]: The practice is called 'stitching.' It's something Gabe is very good at. And he tells me he watched you do it, too.
+
+"
+slots = {}
+options = [{
+"links_to": "day_three_lecture_how_know",
+"text": "How does Ansin know all this?"
+}, {
+"links_to": "day_three_lecture_why_you",
+"text": "Why can you do it all of a sudden?"
+}, {
+"links_to": "day_three_lecture_thank",
+"text": "Continue to listen"
+}]
+wounds = {}
+portraits = ["ansin", "gabe"]

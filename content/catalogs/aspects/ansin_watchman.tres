@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Aspect" load_steps=2 format=3 uid="uid://1emqbgltoj5q"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_i2kya"]
+
+[resource]
+script = ExtResource("1_i2kya")
+aspect_id = "ansin_watchman"
+icon = "res://content/images/aspects/AI_Compassionate.jpg"
+display_name = "Ansin: Watchman"
+tooltip = "Ansin: Watchman"
+debug = false

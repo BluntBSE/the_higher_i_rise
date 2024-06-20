@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://ba8p8w2oab3x3"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_qsj7b"]
+
+[resource]
+script = ExtResource("1_qsj7b")
+base_bg_color = Color(0.113725, 0.356863, 0.52549, 1)
+display_title = "A Lecture"
+text = "[ANSIN]: The first thing you need to know is that this world, the world in which you and I are speaking in right now, is not the [i]whole[/i] world. There is another part to this world, and it goes by many names. You will hear it called \"The Mansus,\" \"The House of the Sun,\" or simply, \"the invisible world.\" 
+
+[ANSIN]: If our world is a world of [i]space[/i], then you may think of the invisible world as a world of [i]spirit[/i]. Think of all the emotions you experience in your daily life: Lust, anger, curiosity...This is a simplification, but you may imagine these feelings as the building blocks of the House. As these forces evolve in our world, the shape of the House changes. And when the House changes, it changes our world back."
+slots = {}
+options = [{
+"links_to": "day_three_lecture_2",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["ansin"]
