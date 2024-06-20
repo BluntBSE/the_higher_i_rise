@@ -10,13 +10,15 @@ text = "[ANSIN]: Ah, you met Teresa. Many of us have, actually. \"Baldomera\" is
 
 [ANSIN]: How interesting.
 
+[ANSIN]: She's friendly to mortals, but not always the most helpful, is she?
+
 
 
 "
 slots = {}
 options = [{
-"links_to": "day_three_12_dream_calyptra",
-"text": "Mention Calyptra"
+"links_to": "day_three_12_dreams_consider",
+"text": "Continue"
 }]
 wounds = {}
 portraits = ["ansin", "gabe"]

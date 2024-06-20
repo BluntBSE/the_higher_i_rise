@@ -11,8 +11,8 @@ text = "[ANSIN]: The Sun is the most sacred of the Hours. He presides over all t
 [ANSIN]: At least, not at the moment. "
 slots = {}
 options = [{
-"links_to": "day_three_12_watchman_holiest",
-"text": "Who is the holiest hour?"
+"links_to": "day_three_12_dreams_consider",
+"text": "Continue"
 }]
 wounds = {}
 portraits = ["ansin"]

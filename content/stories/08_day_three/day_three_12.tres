@@ -14,7 +14,7 @@ options = [{
 "links_to": "day_three_12_dreams",
 "text": "Tell them about your dreams"
 }, {
-"links_to": "day_three_12_dreams",
+"links_to": "day_three_12_wounds",
 "text": "Tell them about the \"wounds.\""
 }, {
 "links_to": "day_three_12_nothing_else",
