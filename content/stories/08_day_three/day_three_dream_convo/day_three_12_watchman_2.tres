@@ -21,7 +21,7 @@ options = [{
 "links_to": "day_three_12_watchman_holiest",
 "text": "Who is the holiest hour?"
 }, {
-"links_to": "day_three_12_dont_remember",
+"links_to": "day_three_12_watchman_dont_remember",
 "text": "[LIE]: You don't remember"
 }, {
 "links_to": "day_three_12_true_dreaming",

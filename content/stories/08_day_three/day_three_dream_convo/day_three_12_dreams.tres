@@ -13,8 +13,8 @@ Ansin looks especially interested when you describe the dream where you broke in
 [ANSIN]: And do you recall any specific figures from your dreams? Any names?"
 slots = {}
 options = [{
-"links_to": "[LIE]: day_three_12_dream_name_no",
-"text": "No"
+"links_to": "day_three_12_nothing_else",
+"text": "[LIE]: Nothing specific"
 }, {
 "functions": [["update_aspects", [{
 "ansin_watchman": 1

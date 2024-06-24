@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dulq2mpstw7tx"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_4i8ey"]
+
+[resource]
+script = ExtResource("1_4i8ey")
+base_bg_color = Color(0, 0, 0, 1)
+display_title = "Undersea"
+text = "You are floating in an ocean of empty, frigid water. You can see clearly, and you do not need to breathe, but the surface of the ocean has frozen into a solid layer of ice several feet above you. From it, thin stalagtites hang like KNIVES. 
+
+"
+slots = {}
+options = [{
+"links_to": "forge_dream_1",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

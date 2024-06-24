@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dj884oxhfp68l"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_f8arw"]
+
+[resource]
+script = ExtResource("1_f8arw")
+base_bg_color = Color(0.113725, 0.356863, 0.52549, 1)
+display_title = "Farewell"
+text = "You say your goodbyes to Gabe in the study, and then hurry out to the living room to say goodbye to Ansin.
+
+"
+slots = {}
+options = [{
+"links_to": "day_three_snoop_7",
+"text": "Replace the book"
+}]
+wounds = {}
+portraits = []

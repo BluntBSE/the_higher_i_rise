@@ -5,3 +5,16 @@ res://text_engine/shaders/2d_palette_swap.gdshader
 res://text_engine/resources/UI/theme.tres
 res://game_scenes/title_screen/main_menu.gdshader
 res://text_engine/shaders/2d_glow_shader_2.gdshader
+res://content/stories/01_robbing_the_sisterhood/the_watchmans_way_4.tres
+res://content/stories/08_day_three/day_three_12_nothing_else.tres
+res://content/stories/08_day_three/day_three_composed.tres
+res://content/stories/08_day_three/day_three_12_dream_thats_all.tres
+res://content/stories/08_day_three/day_three_pose.tres
+res://content/stories/08_day_three/day_three_fg.tres
+res://content/stories/08_day_three/day_three_12.tres
+res://content/stories/08_day_three/lecture_convo/day_three_lecture_leave.tres
+res://content/stories/08_day_three/snoop/day_three_snoop_6.tres
+res://content/stories/08_day_three/snoop/day_three_snoop_leave.tres
+res://content/stories/08_day_three/day_three_home.tres
+res://content/stories/09_day_four/day_four_underwater.tres
+res://content/stories/09_day_four/underwater_1.tres

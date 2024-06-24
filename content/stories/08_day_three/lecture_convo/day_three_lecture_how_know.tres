@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://ccbmgstgx55al"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_1505k"]
+
+[resource]
+script = ExtResource("1_1505k")
+base_bg_color = Color(0.113725, 0.356863, 0.52549, 1)
+display_title = "A Lecture"
+text = "[ANSIN]: Knowledge of the invisible world runs in my family.
+
+[ANSIN]: And at this point, I have seen enough with my own eyes to know what's happening.
+
+[ANSIN]: No mortal's knowledge is perfect, but...I do my research."
+slots = {}
+options = [{
+"links_to": "day_three_lecture_3_consider",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["ansin"]

@@ -16,11 +16,11 @@ options = [{
 "links_to": "day_three_lecture_how_know",
 "text": "How does Ansin know all this?"
 }, {
-"links_to": "day_three_lecture_why_you",
+"links_to": "day_three_lecture_why_now",
 "text": "Why can you do it all of a sudden?"
 }, {
 "links_to": "day_three_lecture_thank",
-"text": "Continue to listen"
+"text": "[END]: Continue to listen"
 }]
 wounds = {}
-portraits = ["ansin", "gabe"]
+portraits = ["ansin"]

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dt41g7b4cjuk7"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_pjjd2"]
+
+[resource]
+script = ExtResource("1_pjjd2")
+base_bg_color = Color(0, 0, 0, 1)
+display_title = "You Dream..."
+text = "..."
+slots = {}
+options = [{
+"links_to": "forge_dream_1",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b2sjj2x64hwfe"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_j7kak"]
+
+[resource]
+script = ExtResource("1_j7kak")
+base_bg_color = Color(0.113725, 0.356863, 0.52549, 1)
+display_title = "Leaving"
+text = "It certainly [i]is[/i] a lot to take in. You're going to need some time to process this. For one thing, you'll need to decide whether or not to take Ansin seriously. He seems confident, and your experiences aren't explainable otherwise, but on the other hand...
+
+Isn't that all a little crazy?
+
+You say your thank yous and steer the conversation towards 'goodbye.' Gabe presses a beer can into your hands.
+
+[GABE]: For the road. As it were. Later!"
+slots = {}
+options = [{
+"links_to": "day_three_lecture_3_consider",
+"text": "Continue"
+}]
+wounds = {}
+portraits = ["ansin"]

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dqq5pbb4bn8eu"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_ufxkb"]
+
+[resource]
+script = ExtResource("1_ufxkb")
+base_bg_color = Color(0, 0, 0, 1)
+display_title = "Undersea"
+text = "The first thing you realize is that you are yourself. That is, you're the man who fell asleep hours ago.
+
+The next thing you realize is that something is very wrong. You are floating a few feet below the surface of a vast and shimmering sea, and although you can breathe and see, you cannot move. 
+
+Panic rises in your chest. You are slowly sinking, and somehow you know that in this water, something predatory lurks just out of sight."
+slots = {}
+options = [{
+"links_to": "forge_dream_1",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

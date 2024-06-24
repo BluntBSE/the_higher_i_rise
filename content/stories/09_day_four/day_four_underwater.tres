@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://dwgfyfhwixv4l"]
+
+[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_vpbuc"]
+
+[resource]
+script = ExtResource("1_vpbuc")
+base_bg_color = Color(0, 0, 0, 1)
+display_title = "You, Undersea"
+text = "You come to your senses, and quickly discover three things.
+
+One: You are you. That is, the man who fell asleep in his apartment in Boston.
+
+Two: You are dreaming.
+
+Three: Something is very, very wrong."
+slots = {}
+options = [{
+"links_to": "forge_dream_1",
+"text": "Continue"
+}]
+wounds = {}
+portraits = []

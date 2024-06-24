@@ -6,7 +6,9 @@
 script = ExtResource("1_8vitb")
 base_bg_color = Color(0.113725, 0.356863, 0.52549, 1)
 display_title = "Your Dreams"
-text = "[ANSIN]: Nothing to get involved with. I wouldn't say that name again.
+text = "[ANSIN]: I know this isn't a satisfying answer, but I can't discuss that with you.
+
+[ANSIN]: You may be able to read about it in the future, but please don't say that name in my house again.
 
 He offers no further explanation. 
 
@@ -14,7 +16,7 @@ He offers no further explanation.
 slots = {}
 options = [{
 "links_to": "day_three_12_dreams_consider",
-"text": "Mention the Watchman"
+"text": "Continue"
 }]
 wounds = {}
 portraits = ["ansin", "gabe"]

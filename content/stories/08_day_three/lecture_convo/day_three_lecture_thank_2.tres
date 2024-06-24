@@ -20,7 +20,7 @@ options = [{
 "links_to": "day_three_lecture_why_you",
 "text": "[SNOOP]: Ask to go to the bathroom"
 }, {
-"links_to": "day_three_lecture_thank",
+"links_to": "day_three_lecture_leave",
 "text": "Prepare to leave"
 }]
 wounds = {}

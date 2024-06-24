@@ -18,4 +18,4 @@ options = [{
 "text": "Continue"
 }]
 wounds = {}
-portraits = ["ansin", "gabe"]
+portraits = ["ansin"]

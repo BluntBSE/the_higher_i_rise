@@ -11,8 +11,8 @@ text = "[ANSIN]: That is unfortunate. Still, it is significant that you are hear
 [ANSIN]: It bodes well for what we will discuss later."
 slots = {}
 options = [{
-"links_to": "day_three_12_watchman_holiest",
-"text": "Who is the holiest hour?"
+"links_to": "day_three_12_dreams_consider",
+"text": "Continue"
 }]
 wounds = {}
 portraits = ["ansin"]
