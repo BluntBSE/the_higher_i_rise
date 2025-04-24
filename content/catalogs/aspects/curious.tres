@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Aspect" load_steps=2 format=3 uid="uid://bow6e7wid6b4e"]
 
-[ext_resource type="Script" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_pb7l1"]
+[ext_resource type="Script" uid="uid://n67ei0gxkcr2" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_pb7l1"]
 
 [resource]
 script = ExtResource("1_pb7l1")
@@ -8,3 +8,4 @@ aspect_id = "compassionate"
 icon = "res://content/images/aspects/AI_Curious.jpg"
 display_name = "Compassionate"
 tooltip = "Compassionate"
+debug = false

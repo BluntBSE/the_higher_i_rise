@@ -13,7 +13,7 @@ config_version=5
 config/name="THIR_1"
 run/main_scene="res://game_scenes/the_glory.tscn"
 config/use_hidden_project_data_directory=false
-config/features=PackedStringArray("4.2", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [debug]

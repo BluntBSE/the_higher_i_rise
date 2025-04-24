@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Aspect" load_steps=2 format=3 uid="uid://x8twpikjcadm"]
+
+[ext_resource type="Script" uid="uid://n67ei0gxkcr2" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_afjog"]
+
+[resource]
+script = ExtResource("1_afjog")
+aspect_id = "stan_stan"
+icon = "res://content/images/aspects/AI_pose.jpg"
+display_name = "Stan Stan"
+tooltip = "Stan's the man"
+debug = false

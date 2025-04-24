@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://djbnikf7df3s5"]
 
-[ext_resource type="Script" path="res://text_engine/nodes/principle_box.gd" id="1_ciwt7"]
+[ext_resource type="Script" uid="uid://dhga7xufiqh5f" path="res://text_engine/nodes/principle_box.gd" id="1_ciwt7"]
 [ext_resource type="Texture2D" uid="uid://rdfwu0i44ysm" path="res://content/images/aspects/moth.png" id="2_hqgdg"]
 [ext_resource type="Theme" uid="uid://b5cu5776o44se" path="res://text_engine/resources/UI/theme.tres" id="3_73um0"]
 [ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="4_vg8dm"]

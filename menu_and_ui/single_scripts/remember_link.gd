@@ -36,4 +36,3 @@ func _on_mouse_entered():
 func _on_mouse_exited():
 	modulate = base_color
 	hovered = false
-

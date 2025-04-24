@@ -86,5 +86,3 @@ func _on_mouse_exited():
 	#Replace with a real regular state
 	
 	
-
-

@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=3 uid="uid://caiyn6qcqclct"]
 
 [ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="1_dnyaf"]
-[ext_resource type="Script" path="res://text_engine/nodes/word_card.gd" id="1_vcvdc"]
+[ext_resource type="Script" uid="uid://desko54fvieba" path="res://text_engine/nodes/word_card.gd" id="1_vcvdc"]
 [ext_resource type="FontFile" uid="uid://ywagpyk071of" path="res://text_engine/resources/UI/fonts/CrimsonText-Italic.ttf" id="2_l3ajn"]
 [ext_resource type="FontFile" uid="uid://b51v2ipfr6ldx" path="res://text_engine/resources/UI/fonts/CrimsonText-BoldItalic.ttf" id="3_0n4bc"]
 [ext_resource type="Texture2D" uid="uid://cw5v5hcn2p1b3" path="res://content/images/aspects/winter.png" id="4_0kr36"]
 [ext_resource type="PackedScene" uid="uid://djbnikf7df3s5" path="res://text_engine/packed_scenes/principle_box.tscn" id="5_qjhee"]
 [ext_resource type="Theme" uid="uid://b5cu5776o44se" path="res://text_engine/resources/UI/theme.tres" id="5_um0yh"]
 [ext_resource type="Texture2D" uid="uid://dsb60ub827nfw" path="res://content/images/aspects/edge.png" id="6_3xfjm"]
-[ext_resource type="Shader" path="res://text_engine/shaders/2d_glow_shader_2.gdshader" id="9_7kut5"]
+[ext_resource type="Shader" uid="uid://cma3ds1wpa7yu" path="res://text_engine/shaders/2d_glow_shader_2.gdshader" id="9_7kut5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_648tn"]
 

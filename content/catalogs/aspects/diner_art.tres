@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Aspect" load_steps=2 format=3 uid="uid://7x5hrafcxl14"]
 
-[ext_resource type="Script" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_hlobm"]
+[ext_resource type="Script" uid="uid://n67ei0gxkcr2" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_hlobm"]
 
 [resource]
 script = ExtResource("1_hlobm")

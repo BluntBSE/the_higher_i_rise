@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://beimt6ww35m54"]
 
 [ext_resource type="Theme" uid="uid://b5cu5776o44se" path="res://text_engine/resources/UI/theme.tres" id="1_krh5l"]
-[ext_resource type="Script" path="res://text_engine/nodes/interaction_parser.gd" id="2_x1duu"]
+[ext_resource type="Script" uid="uid://yaqyxol5fa6g" path="res://text_engine/nodes/interaction_parser.gd" id="2_x1duu"]
 [ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="3_2livl"]
 [ext_resource type="FontFile" uid="uid://co5vsscgrr63x" path="res://text_engine/resources/UI/fonts/CrimsonText-Bold.ttf" id="4_1irjp"]
 [ext_resource type="FontFile" uid="uid://ywagpyk071of" path="res://text_engine/resources/UI/fonts/CrimsonText-Italic.ttf" id="5_i2u26"]
@@ -10,13 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://ctjy60erxr2jl" path="res://content/images/portraits/benefactorf.png" id="8_8wlu6"]
 [ext_resource type="PackedScene" uid="uid://c37hmyricmehv" path="res://text_engine/packed_scenes/single_option.tscn" id="9_or5x1"]
 [ext_resource type="Theme" uid="uid://b8pgkx4ittskt" path="res://test_theme.tres" id="9_p17ku"]
-[ext_resource type="Script" path="res://memory_panel.gd" id="10_c3yyu"]
-[ext_resource type="Script" path="res://text_engine/nodes/aspects_panel.gd" id="12_6pfwr"]
+[ext_resource type="Script" uid="uid://cswee2wiecp8p" path="res://memory_panel.gd" id="10_c3yyu"]
+[ext_resource type="Script" uid="uid://xy6skhyplfgd" path="res://text_engine/nodes/aspects_panel.gd" id="12_6pfwr"]
 [ext_resource type="PackedScene" uid="uid://dxncpx8tc4a73" path="res://text_engine/packed_scenes/aspect_item.tscn" id="12_u4j84"]
 [ext_resource type="Texture2D" uid="uid://btfqqn1ckfu0d" path="res://content/images/aspects/secrethistories.png" id="13_6lhj8"]
 [ext_resource type="Texture2D" uid="uid://yhbrxqwgllni" path="res://content/images/aspects/lantern.png" id="14_1djmk"]
 [ext_resource type="Texture2D" uid="uid://bq16ga14wh62f" path="res://content/images/aspects/heart.png" id="15_ef4xy"]
-[ext_resource type="Script" path="res://menu_and_ui/single_scripts/remember_link.gd" id="17_l6pgi"]
+[ext_resource type="Script" uid="uid://c0t8q2j6sdpiu" path="res://menu_and_ui/single_scripts/remember_link.gd" id="17_l6pgi"]
 [ext_resource type="PackedScene" uid="uid://bwn07hjfcrbcw" path="res://game_scenes/debug_quit.tscn" id="17_mjt4e"]
 
 [node name="interaction_parser" type="Control"]
@@ -77,14 +77,14 @@ offset_right = 973.0
 offset_bottom = 708.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("3_2livl")
-theme_override_fonts/bold_font = ExtResource("4_1irjp")
 theme_override_fonts/italics_font = ExtResource("5_i2u26")
 theme_override_fonts/bold_italics_font = ExtResource("6_ativf")
+theme_override_fonts/bold_font = ExtResource("4_1irjp")
+theme_override_font_sizes/bold_italics_font_size = 28
+theme_override_font_sizes/italics_font_size = 28
+theme_override_font_sizes/mono_font_size = 28
 theme_override_font_sizes/normal_font_size = 28
 theme_override_font_sizes/bold_font_size = 28
-theme_override_font_sizes/italics_font_size = 28
-theme_override_font_sizes/bold_italics_font_size = 28
-theme_override_font_sizes/mono_font_size = 28
 bbcode_enabled = true
 text = "[ghost]You are in a dark, damp alleyway sandwiched[/ghost] between a failed deli and St. Jude's School for Blind Girls. Here the smell of votive incense mingles with weeks-old sauerkraut and, recently, the smell of blood.
 
@@ -224,13 +224,13 @@ offset_bottom = 241.0
 grow_horizontal = 2
 theme = ExtResource("9_p17ku")
 theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
-theme_override_fonts/bold_font = ExtResource("4_1irjp")
 theme_override_fonts/italics_font = ExtResource("5_i2u26")
 theme_override_fonts/bold_italics_font = ExtResource("6_ativf")
+theme_override_fonts/bold_font = ExtResource("4_1irjp")
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
 theme_override_font_sizes/normal_font_size = 40
 theme_override_font_sizes/bold_font_size = 40
-theme_override_font_sizes/italics_font_size = 40
-theme_override_font_sizes/bold_italics_font_size = 40
 bbcode_enabled = true
 text = "[b]Speech[/b]"
 
@@ -276,11 +276,11 @@ offset_bottom = 738.0
 grow_horizontal = 2
 theme = ExtResource("9_p17ku")
 theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
-theme_override_fonts/bold_font = ExtResource("4_1irjp")
 theme_override_fonts/italics_font = ExtResource("5_i2u26")
+theme_override_fonts/bold_font = ExtResource("4_1irjp")
+theme_override_font_sizes/italics_font_size = 40
 theme_override_font_sizes/normal_font_size = 40
 theme_override_font_sizes/bold_font_size = 40
-theme_override_font_sizes/italics_font_size = 40
 bbcode_enabled = true
 text = "[b]Aspects[/b]"
 
@@ -339,11 +339,11 @@ size_flags_horizontal = 3
 theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("3_2livl")
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
-theme_override_font_sizes/italics_font_size = 0
-theme_override_font_sizes/bold_italics_font_size = 0
-theme_override_font_sizes/mono_font_size = 0
 bbcode_enabled = true
 text = "16"
 
@@ -362,11 +362,11 @@ size_flags_horizontal = 3
 theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("3_2livl")
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
-theme_override_font_sizes/italics_font_size = 0
-theme_override_font_sizes/bold_italics_font_size = 0
-theme_override_font_sizes/mono_font_size = 0
 bbcode_enabled = true
 text = "16"
 
@@ -385,11 +385,11 @@ size_flags_horizontal = 3
 theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("3_2livl")
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
-theme_override_font_sizes/italics_font_size = 0
-theme_override_font_sizes/bold_italics_font_size = 0
-theme_override_font_sizes/mono_font_size = 0
 bbcode_enabled = true
 text = "16"
 
@@ -408,11 +408,11 @@ size_flags_horizontal = 3
 theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("3_2livl")
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
-theme_override_font_sizes/italics_font_size = 0
-theme_override_font_sizes/bold_italics_font_size = 0
-theme_override_font_sizes/mono_font_size = 0
 bbcode_enabled = true
 text = "16"
 
@@ -431,11 +431,11 @@ size_flags_horizontal = 3
 theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("3_2livl")
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
-theme_override_font_sizes/italics_font_size = 0
-theme_override_font_sizes/bold_italics_font_size = 0
-theme_override_font_sizes/mono_font_size = 0
 bbcode_enabled = true
 text = "16"
 
@@ -454,11 +454,11 @@ size_flags_horizontal = 3
 theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("3_2livl")
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
-theme_override_font_sizes/italics_font_size = 0
-theme_override_font_sizes/bold_italics_font_size = 0
-theme_override_font_sizes/mono_font_size = 0
 bbcode_enabled = true
 text = "16"
 
@@ -477,11 +477,11 @@ size_flags_horizontal = 3
 theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("3_2livl")
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
-theme_override_font_sizes/italics_font_size = 0
-theme_override_font_sizes/bold_italics_font_size = 0
-theme_override_font_sizes/mono_font_size = 0
 bbcode_enabled = true
 text = "16"
 
@@ -500,11 +500,11 @@ size_flags_horizontal = 3
 theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("3_2livl")
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
-theme_override_font_sizes/italics_font_size = 0
-theme_override_font_sizes/bold_italics_font_size = 0
-theme_override_font_sizes/mono_font_size = 0
 bbcode_enabled = true
 text = "16"
 
@@ -523,11 +523,11 @@ size_flags_horizontal = 3
 theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("3_2livl")
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
-theme_override_font_sizes/italics_font_size = 0
-theme_override_font_sizes/bold_italics_font_size = 0
-theme_override_font_sizes/mono_font_size = 0
 bbcode_enabled = true
 text = "16"
 
@@ -547,11 +547,11 @@ size_flags_horizontal = 3
 theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("3_2livl")
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
-theme_override_font_sizes/italics_font_size = 0
-theme_override_font_sizes/bold_italics_font_size = 0
-theme_override_font_sizes/mono_font_size = 0
 bbcode_enabled = true
 text = "16"
 
@@ -571,11 +571,11 @@ size_flags_horizontal = 3
 theme = ExtResource("1_krh5l")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("3_2livl")
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
 theme_override_font_sizes/normal_font_size = 70
 theme_override_font_sizes/bold_font_size = 0
-theme_override_font_sizes/italics_font_size = 0
-theme_override_font_sizes/bold_italics_font_size = 0
-theme_override_font_sizes/mono_font_size = 0
 bbcode_enabled = true
 text = "16"
 
@@ -592,11 +592,11 @@ offset_bottom = -13.32
 grow_horizontal = 2
 theme = ExtResource("9_p17ku")
 theme_override_colors/default_color = Color(0.988235, 0.988235, 0.988235, 1)
-theme_override_fonts/bold_font = ExtResource("4_1irjp")
 theme_override_fonts/italics_font = ExtResource("5_i2u26")
+theme_override_fonts/bold_font = ExtResource("4_1irjp")
+theme_override_font_sizes/italics_font_size = 40
 theme_override_font_sizes/normal_font_size = 40
 theme_override_font_sizes/bold_font_size = 40
-theme_override_font_sizes/italics_font_size = 40
 bbcode_enabled = true
 text = "[i]Remember?[/i]"
 script = ExtResource("17_l6pgi")

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Aspect" load_steps=2 format=3 uid="uid://c3b4vejgn745a"]
 
-[ext_resource type="Script" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_xh1ib"]
+[ext_resource type="Script" uid="uid://n67ei0gxkcr2" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_xh1ib"]
 
 [resource]
 script = ExtResource("1_xh1ib")
@@ -8,3 +8,4 @@ aspect_id = "tarantellist"
 icon = "res://content/images/aspects/AI_Compassionate.jpg"
 display_name = "Tarantellist"
 tooltip = "Tarantellist"
+debug = false
