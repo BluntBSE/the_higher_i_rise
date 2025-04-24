@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Aspect" load_steps=2 format=3 uid="uid://bh32q24xg1v5j"]
 
-[ext_resource type="Script" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_6ld6x"]
+[ext_resource type="Script" uid="uid://n67ei0gxkcr2" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_6ld6x"]
 
 [resource]
 script = ExtResource("1_6ld6x")
@@ -8,3 +8,4 @@ aspect_id = "composed"
 icon = "res://content/images/aspects/red_hood.png"
 display_name = "Composed"
 tooltip = "Composed"
+debug = false

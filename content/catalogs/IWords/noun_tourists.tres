@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=2 format=3 uid="uid://cehr58giv1m4h"]
 
-[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_4oqby"]
+[ext_resource type="Script" uid="uid://c5yrprl3k7jg8" path="res://text_engine/resources/resource_classes/interactive_word.gd" id="1_4oqby"]
 
 [resource]
 script = ExtResource("1_4oqby")

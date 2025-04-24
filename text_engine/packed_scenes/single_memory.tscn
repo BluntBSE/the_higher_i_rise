@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b4ywgxp1malgn"]
 
-[ext_resource type="Script" path="res://text_engine/nodes/memory.gd" id="1_lng3w"]
+[ext_resource type="Script" uid="uid://b14k32l1d6i0v" path="res://text_engine/nodes/memory.gd" id="1_lng3w"]
 [ext_resource type="Theme" uid="uid://b8pgkx4ittskt" path="res://test_theme.tres" id="2_8cbbm"]
 [ext_resource type="FontFile" uid="uid://ywagpyk071of" path="res://text_engine/resources/UI/fonts/CrimsonText-Italic.ttf" id="3_jud0b"]
 

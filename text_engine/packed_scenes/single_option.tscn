@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c37hmyricmehv"]
 
-[ext_resource type="Script" path="res://text_engine/nodes/single_option.gd" id="1_ena0y"]
+[ext_resource type="Script" uid="uid://b54c6wyulp7ut" path="res://text_engine/nodes/single_option.gd" id="1_ena0y"]
 
 [node name="option_bg" type="ColorRect"]
 self_modulate = Color(1, 1, 1, 0)

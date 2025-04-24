@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://uisb2k2dspng"]
 
-[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_6gstx"]
+[ext_resource type="Script" uid="uid://cg42p4oon1cbb" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_6gstx"]
 
 [resource]
 script = ExtResource("1_6gstx")
@@ -15,6 +15,9 @@ He motions for you to step behind the desk and, after looking both ways, conspir
 He slides you a clipboard full of papers and shoos you away."
 slots = {}
 options = [{
+"functions": [["update_aspects", [{
+"stan_stan": 1
+}]]],
 "links_to": "mgh_4",
 "text": "Thank him for the coffee"
 }]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bwn07hjfcrbcw"]
 
 [ext_resource type="Texture2D" uid="uid://rdfwu0i44ysm" path="res://content/images/aspects/moth.png" id="1_kqv2m"]
-[ext_resource type="Script" path="res://game_scenes/db_quit_btn.gd" id="2_un5nu"]
+[ext_resource type="Script" uid="uid://c7to7cu7jb8k6" path="res://game_scenes/db_quit_btn.gd" id="2_un5nu"]
 
 [node name="Button" type="Button"]
 modulate = Color(1, 1, 1, 0.47451)

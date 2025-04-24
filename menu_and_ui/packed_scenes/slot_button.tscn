@@ -1,26 +1,26 @@
 [gd_scene load_steps=9 format=3 uid="uid://5w0anhbqgx3a"]
 
 [ext_resource type="Theme" uid="uid://cdeurf58sje0y" path="res://text_engine/themes/main_UI.tres" id="1_fnlwa"]
-[ext_resource type="Script" path="res://menu_and_ui/packed_scenes/slot_button.gd" id="1_qkryl"]
+[ext_resource type="Script" uid="uid://cf6886rdf5s66" path="res://menu_and_ui/packed_scenes/slot_button.gd" id="1_qkryl"]
 [ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="2_71i28"]
 [ext_resource type="FontFile" uid="uid://co5vsscgrr63x" path="res://text_engine/resources/UI/fonts/CrimsonText-Bold.ttf" id="3_42daf"]
-[ext_resource type="Shader" path="res://text_engine/shaders/2d_palette_swap.gdshader" id="5_ogvj2"]
+[ext_resource type="Shader" uid="uid://fmdll1qyko3y" path="res://text_engine/shaders/2d_palette_swap.gdshader" id="5_ogvj2"]
 [ext_resource type="Texture2D" uid="uid://ouy7w1ck42e3" path="res://menu_and_ui/icons/close-square-icon.png" id="6_cygxa"]
-[ext_resource type="Script" path="res://menu_and_ui/packed_scenes/icon_ui_button.gd" id="7_6nnfi"]
+[ext_resource type="Script" uid="uid://jnyffgd6rndc" path="res://menu_and_ui/packed_scenes/icon_ui_button.gd" id="7_6nnfi"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nsypg"]
 resource_local_to_scene = true
 shader = ExtResource("5_ogvj2")
 shader_parameter/original_0 = Color(0, 0, 0, 1)
-shader_parameter/original_1 = null
-shader_parameter/original_2 = null
-shader_parameter/original_3 = null
-shader_parameter/original_4 = null
+shader_parameter/original_1 = Color(0, 0, 0, 1)
+shader_parameter/original_2 = Color(0, 0, 0, 1)
+shader_parameter/original_3 = Color(0, 0, 0, 1)
+shader_parameter/original_4 = Color(0, 0, 0, 1)
 shader_parameter/replace_0 = Color(0.639216, 0, 0.164706, 1)
 shader_parameter/replace_1 = Color(0, 0, 0, 1)
-shader_parameter/replace_2 = null
-shader_parameter/replace_3 = null
-shader_parameter/replace_4 = null
+shader_parameter/replace_2 = Color(0, 0, 0, 1)
+shader_parameter/replace_3 = Color(0, 0, 0, 1)
+shader_parameter/replace_4 = Color(0, 0, 0, 1)
 
 [node name="slot_button_2" type="ColorRect"]
 offset_left = 8.0

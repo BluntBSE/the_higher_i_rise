@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://dlxwgk6jjsfv"]
 
-[ext_resource type="Script" path="res://game_scenes/the_glory.gd" id="1_bkfpe"]
+[ext_resource type="Script" uid="uid://b6a6rcrhgrdqg" path="res://game_scenes/the_glory.gd" id="1_bkfpe"]
 [ext_resource type="PackedScene" uid="uid://b2gxjrh8p0ieh" path="res://game_scenes/main_menu.tscn" id="2_0ajm0"]
 [ext_resource type="AudioStream" uid="uid://2xn13ntvt1do" path="res://content/music/meniscate_re_export.wav" id="4_61qpg"]
-[ext_resource type="Script" path="res://game_scenes/music_player.gd" id="12_yl5ef"]
-[ext_resource type="Script" path="res://game_scenes/sfx_player.gd" id="14_pfhaw"]
+[ext_resource type="Script" uid="uid://ccv3cwn6p7uel" path="res://game_scenes/music_player.gd" id="12_yl5ef"]
+[ext_resource type="Script" uid="uid://ds2o5feecru68" path="res://game_scenes/sfx_player.gd" id="14_pfhaw"]
 
 [node name="the_glory" type="Node" node_paths=PackedStringArray("music_player", "sfx_player")]
 script = ExtResource("1_bkfpe")

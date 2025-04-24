@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://bnhhnhhe4n1ct"]
 
-[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_52nek"]
+[ext_resource type="Script" uid="uid://cg42p4oon1cbb" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_52nek"]
 
 [resource]
 script = ExtResource("1_52nek")
 base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
 display_title = "Out the Door"
-text = "You climb down the stairs and exit onto the street. You catch a Red Line train, and twenty minutes later you're outside of Mass General Hospital, one of the largest hospitals in the state, and your current place of employment.
+text = "You climb down the stairs and exit onto the street. You catch a Red Line train and twenty minutes later you're outside of Mass General Hospital, one of the largest hospitals in the state, and your current place of employment.
 
 This is where you work as a nurse in the Intensive Care Unit."
 slots = {}

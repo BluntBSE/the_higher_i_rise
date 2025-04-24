@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://b8khlibluikyd"]
 
-[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_ahiss"]
+[ext_resource type="Script" uid="uid://cg42p4oon1cbb" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_ahiss"]
 
 [resource]
 script = ExtResource("1_ahiss")
 base_bg_color = Color(0.0313726, 0.180392, 0.321569, 1)
 display_title = "An Early Morning...?"
-text = "You stare up at the ceiling. A little bit of sunlight plays over the stucco. It's pretty, but it's also upsetting. There shouldn''t be any sunlight when you wake up. Your shift doesn't start until 11:00 PM and if the sun's still out that means it's only...
+text = "You stare up at the ceiling. A little bit of sunlight plays over the stucco. It's pretty, but it's also upsetting. There shouldn't be any sunlight when you wake up. Your shift doesn't start until 11:00 PM and if the sun's still out that means it's only...
 "
 slots = {}
 options = [{

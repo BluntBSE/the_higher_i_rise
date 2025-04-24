@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Interaction" load_steps=2 format=3 uid="uid://coyw3mqyo6xuv"]
 
-[ext_resource type="Script" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_uvki2"]
+[ext_resource type="Script" uid="uid://cg42p4oon1cbb" path="res://text_engine/resources/resource_classes/interaction.gd" id="1_uvki2"]
 
 [resource]
 script = ExtResource("1_uvki2")
@@ -16,7 +16,7 @@ text = "Mr. Gladman — It's hard not to add 'Mr.' to a face like that — peers
 
 Mr. Gladman draws up his considerable bulk, preparing to lecture you for the nth time, but he stops. He studies you with his rheumy eyes.
 
-[MR. GLADMAN}: \"Maleek. You look like shit. Did you get any sleep?\""
+[MR. GLADMAN]: \"Maleek. You look like shit. Did you get any sleep?\""
 slots = {}
 options = [{
 "links_to": "mgh_3",

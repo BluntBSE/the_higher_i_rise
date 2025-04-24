@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dxncpx8tc4a73"]
 
-[ext_resource type="Script" path="res://text_engine/nodes/aspect_item.gd" id="1_1taik"]
-[ext_resource type="Shader" path="res://text_engine/shaders/aspects/aspect_emphasis.gdshader" id="1_y2bdl"]
+[ext_resource type="Script" uid="uid://dfyfa402lsyno" path="res://text_engine/nodes/aspect_item.gd" id="1_1taik"]
+[ext_resource type="Shader" uid="uid://5gnjasm7m7au" path="res://text_engine/shaders/aspects/aspect_emphasis.gdshader" id="1_y2bdl"]
 [ext_resource type="Texture2D" uid="uid://bh7c2oln1k0cw" path="res://content/images/aspects/AI_church.jpg" id="2_7dvx2"]
 [ext_resource type="Theme" uid="uid://b5cu5776o44se" path="res://text_engine/resources/UI/theme.tres" id="2_bj8el"]
 [ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="3_53ptm"]

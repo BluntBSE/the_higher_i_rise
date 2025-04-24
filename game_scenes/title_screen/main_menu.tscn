@@ -1,17 +1,17 @@
 [gd_scene load_steps=15 format=3 uid="uid://b2gxjrh8p0ieh"]
 
-[ext_resource type="Script" path="res://game_scenes/title_screen/main_menu.gd" id="1_ksker"]
+[ext_resource type="Script" uid="uid://7kkg4yx6rj0y" path="res://game_scenes/title_screen/main_menu.gd" id="1_ksker"]
 [ext_resource type="PackedScene" uid="uid://bwn07hjfcrbcw" path="res://game_scenes/debug_quit.tscn" id="2_jfalq"]
-[ext_resource type="Shader" path="res://game_scenes/title_screen/main_menu.gdshader" id="3_jtmae"]
+[ext_resource type="Shader" uid="uid://cna5smv1tyrk1" path="res://game_scenes/title_screen/main_menu.gdshader" id="3_jtmae"]
 [ext_resource type="Texture2D" uid="uid://blwhpmnqtjrqb" path="res://content/images/mansus_y.jpg" id="4_0n8h8"]
 [ext_resource type="Theme" uid="uid://cdeurf58sje0y" path="res://text_engine/themes/main_UI.tres" id="4_jsjmn"]
 [ext_resource type="PackedScene" uid="uid://cmg6a3jhpo4y3" path="res://menu_and_ui/packed_scenes/big_ui_button.tscn" id="5_hu0p4"]
 [ext_resource type="AudioStream" uid="uid://b3piyu3n4fxb8" path="res://content/sfx/click_effect_1.mp3" id="6_fqpiy"]
 [ext_resource type="FontFile" uid="uid://dsuxfmcdj66e3" path="res://text_engine/resources/UI/fonts/CrimsonText-Regular.ttf" id="7_3c6fk"]
 [ext_resource type="PackedScene" uid="uid://5w0anhbqgx3a" path="res://menu_and_ui/packed_scenes/slot_button.tscn" id="8_lg3ad"]
-[ext_resource type="Script" path="res://menu_and_ui/packed_scenes/start_game_menu.gd" id="8_pje5x"]
-[ext_resource type="Script" path="res://menu_and_ui/packed_scenes/ui_button.gd" id="9_5v7no"]
-[ext_resource type="Script" path="res://game_scenes/title_screen/options_menu.gd" id="9_hmdki"]
+[ext_resource type="Script" uid="uid://bwlqhuxmu5poy" path="res://menu_and_ui/packed_scenes/start_game_menu.gd" id="8_pje5x"]
+[ext_resource type="Script" uid="uid://dye08f2ensyjy" path="res://menu_and_ui/packed_scenes/ui_button.gd" id="9_5v7no"]
+[ext_resource type="Script" uid="uid://0n2r1by07qx7" path="res://game_scenes/title_screen/options_menu.gd" id="9_hmdki"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4dajm"]
 shader = ExtResource("3_jtmae")

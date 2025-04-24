@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cmg6a3jhpo4y3"]
 
-[ext_resource type="Script" path="res://menu_and_ui/packed_scenes/ui_button.gd" id="1_gy4rx"]
+[ext_resource type="Script" uid="uid://dye08f2ensyjy" path="res://menu_and_ui/packed_scenes/ui_button.gd" id="1_gy4rx"]
 [ext_resource type="Theme" uid="uid://cdeurf58sje0y" path="res://text_engine/themes/main_UI.tres" id="2_e57vr"]
 
 [node name="mm_button_bg" type="ColorRect" node_paths=PackedStringArray("text_node")]

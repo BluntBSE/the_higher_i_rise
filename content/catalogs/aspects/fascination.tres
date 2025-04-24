@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Aspect" load_steps=2 format=3 uid="uid://dw1okf8iw3nqd"]
 
-[ext_resource type="Script" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_5mm7f"]
+[ext_resource type="Script" uid="uid://n67ei0gxkcr2" path="res://text_engine/resources/resource_classes/aspect.gd" id="1_5mm7f"]
 
 [resource]
 script = ExtResource("1_5mm7f")
@@ -8,3 +8,4 @@ aspect_id = "fascination"
 icon = "res://content/images/aspects/fascination.png"
 display_name = "Fascination"
 tooltip = "Fascination. Go to sleep with three of these, and this will end badly."
+debug = false
